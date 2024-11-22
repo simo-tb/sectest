@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting started with JSON Form</title>
+    <link rel="stylesheet" style="text/css" href="deps/opt/bootstrap.css" />
+  </head>
+  <body>
+    <h1>Getting started with JSON Form</h1>
+    <form></form>
+    <div id="res" class="alert"></div>
+    <script type="text/javascript" src="deps/jquery.min.js"></script>
+    <script src="deps/lodash.min.js"></script>
+    <script src="deps/opt/ZSchema-browser.js"></script>
+    <script src="deps/tb.core.js"></script>
+    <script src="deps/tb.xerrors.js"></script>
+    <script src="deps/opt/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="lib/jsonform.js"></script>
+    <script src="deps/opt/datepicker/bootstrap-datetimepicker.js"></script>
+
+    <script type="text/javascript">
+      $('form').jsonForm({
+      "schema": {
+        "_JSONFORMS_VERSION": "2.0",
+        "_JSONFORMS_CONTENT_VERSION": "2.0",
+        "mood": {
+          "type": "string",
+          "title": "Mood of the day",
+          "description": "Describe how you feel in short"
+        },
+        "required": ["mood"]
+      },
+      "form": [
+        {
+          "key": "mood",
+          "prepend": "I feel",
+          "append": "today",
+          "htmlClass": "usermood",
+          "placeholder": "incredibly and admirably great"
+        },
+        {
+          "type": "submit",
+          "title": "Submit"
+        }
+      ]
+    });
+    </script>
+  </body>
+</html>

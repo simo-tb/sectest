@@ -1,0 +1,80 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://schemas.telebid-pro.com/jsonforms/form",
+    "type": "object",
+    "properties": {
+      "$schemaId": {
+        "id": "$schemaId",
+        "type": "string",
+        "minLength": 1,
+        "format": "uri"
+      },
+      "fields": {
+        "id": "fields",
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "additionalItems": true,
+        "items": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required": [
+      "$schemaId",
+      "fields"
+    ]
+  },
+  "form": {
+    "$schemaId": "http://schemas.telebid-pro.com/jsonforms/form",
+    "fields": [
+      {
+        "type": "tabarray",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "tabobject",
+                "items": [
+                  {
+                    "type": "section",
+                    "items": [
+                      "fields[]/{}"
+                    ],
+                    "isTemplateField": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mood",
+        "type": "textarea",
+        "htmlClass": "usermood",
+        "fieldHtmlClass": "input-medium",
+        "placeholder": "incredibly and admirably great"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}

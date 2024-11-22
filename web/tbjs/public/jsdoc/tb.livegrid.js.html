@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tb.livegrid.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="TB.Dispatcher.html">Dispatcher</a><ul class='methods'><li data-type='method'><a href="TB.Dispatcher.html#dispatch">dispatch</a></li><li data-type='method'><a href="TB.Dispatcher.html#off">off</a></li><li data-type='method'><a href="TB.Dispatcher.html#on">on</a></li></ul></li><li><a href="TB.File.html">File</a><ul class='methods'><li data-type='method'><a href="TB.File.html#_prepareData">_prepareData</a></li><li data-type='method'><a href="TB.File.html#download">download</a></li></ul></li><li><a href="TB.Livegrid.html">Livegrid</a><ul class='methods'><li data-type='method'><a href="TB.Livegrid.html#_d3GridItemsDraggable">_d3GridItemsDraggable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3GridZoomable">_d3GridZoomable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3SetupGrid">_d3SetupGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateBackgroundGrid">_d3UpdateBackgroundGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItemContents">_d3UpdateItemContents</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItems">_d3UpdateItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateResizeValues">_d3UpdateResizeValues</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateWrapper">_d3UpdateWrapper</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateZoomValue">_d3UpdateZoomValue</a></li><li data-type='method'><a href="TB.Livegrid.html#_gApplyResizeItems">_gApplyResizeItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutoscale">_gAutoscale</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutosize">_gAutosize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gGetItemAtIndex">_gGetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gRemoveItemAtIndex">_gRemoveItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gResetMinMaxPositionedXY">_gResetMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gSetItemAtIndex">_gSetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateElementSize">_gUpdateElementSize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateItemCoordinates">_gUpdateItemCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateMinMaxPositionedXY">_gUpdateMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateUnpositionedItemsCoordinates">_gUpdateUnpositionedItemsCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gZoomCallback">_gZoomCallback</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderResize">_handlerOnChangeSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderZoom">_handlerOnChangeSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnClear">_handlerOnClickBtnClear</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnResize">_handlerOnClickBtnResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnZoom">_handlerOnClickBtnZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderResize">_handlerOnInputSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderZoom">_handlerOnInputSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnMousewheelSliderResize">_handlerOnMousewheelSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_prepareGlobalCSS">_prepareGlobalCSS</a></li><li data-type='method'><a href="TB.Livegrid.html#_returnDatum">_returnDatum</a></li><li data-type='method'><a href="TB.Livegrid.html#_stringifyCssRules">_stringifyCssRules</a></li><li data-type='method'><a href="TB.Livegrid.html#_timeoutExpireObject">_timeoutExpireObject</a></li><li data-type='method'><a href="TB.Livegrid.html#disableEditMode">disableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#emit">emit</a></li><li data-type='method'><a href="TB.Livegrid.html#enableEditMode">enableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#prefixClassName">prefixClassName</a></li><li data-type='method'><a href="TB.Livegrid.html#save">save</a></li><li data-type='method'><a href="TB.Livegrid.html#setGridZoom">setGridZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#setItemsSize">setItemsSize</a></li><li data-type='method'><a href="TB.Livegrid.html#toggleEditMode">toggleEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#updateElements">updateElements</a></li><li data-type='method'><a href="TB.Livegrid.html#updateItems">updateItems</a></li></ul></li><li><a href="TB.Request.html">Request</a><ul class='methods'><li data-type='method'><a href="TB.Request.html#_buildParams">_buildParams</a></li><li data-type='method'><a href="TB.Request.html#_checkResponseStatus">_checkResponseStatus</a></li><li data-type='method'><a href="TB.Request.html#_completeCallback">_completeCallback</a></li><li data-type='method'><a href="TB.Request.html#_errorCallback">_errorCallback</a></li><li data-type='method'><a href="TB.Request.html#_getTypeFromResponseHeader">_getTypeFromResponseHeader</a></li><li data-type='method'><a href="TB.Request.html#_getXHR">_getXHR</a></li><li data-type='method'><a href="TB.Request.html#_handlerReadystatechangeXHR">_handlerReadystatechangeXHR</a></li><li data-type='method'><a href="TB.Request.html#_makeRequest">_makeRequest</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestJSONP">_makeRequestJSONP</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestXHR">_makeRequestXHR</a></li><li data-type='method'><a href="TB.Request.html#_setCredentials">_setCredentials</a></li><li data-type='method'><a href="TB.Request.html#_setHeaders">_setHeaders</a></li><li data-type='method'><a href="TB.Request.html#_successCallback">_successCallback</a></li><li data-type='method'><a href="TB.Request.html#_toQueryString">_toQueryString</a></li><li data-type='method'><a href="TB.Request.html#abort">abort</a></li></ul></li><li><a href="TB.Service.html">Service</a><ul class='methods'><li data-type='method'><a href="TB.Service.html#getNextRequestId">getNextRequestId</a></li></ul></li><li><a href="TB.Translate.html">Translate</a><ul class='methods'><li data-type='method'><a href="TB.Translate.html#.getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#.getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#.getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#.getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#.gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#_getRawTranslation">_getRawTranslation</a></li><li data-type='method'><a href="TB.Translate.html#_init">_init</a></li><li data-type='method'><a href="TB.Translate.html#getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#gethash">gethash</a></li><li data-type='method'><a href="TB.Translate.html#getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#gettext">gettext</a></li><li data-type='method'><a href="TB.Translate.html#gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#reinit">reinit</a></li><li data-type='method'><a href="TB.Translate.html#setCurrency">setCurrency</a></li><li data-type='method'><a href="TB.Translate.html#setLocale">setLocale</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-xerrors.html">xerrors</a><ul class='methods'><li data-type='method'><a href="module-xerrors.html#.ASSERT">ASSERT</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.eq">ASSERT.eq</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ge">ASSERT.ge</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.gt">ASSERT.gt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasProperty">ASSERT.hasProperty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbType">ASSERT.hasPropertyOfTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbTypes">ASSERT.hasPropertyOfTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isDefined">ASSERT.isDefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isEmpty">ASSERT.isEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isNotEmpty">ASSERT.isNotEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isUndefined">ASSERT.isUndefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.le">ASSERT.le</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.lt">ASSERT.lt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbType">ASSERT.ofTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbTypes">ASSERT.ofTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_END">BENCHMARK_END</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_START">BENCHMARK_START</a></li><li data-type='method'><a href="module-xerrors.html#.FLUSH">FLUSH</a></li><li data-type='method'><a href="module-xerrors.html#.TRACE">TRACE</a></li><li data-type='method'><a href="module-xerrors.html#~makeMsg">makeMsg</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="TB.html">TB</a><ul class='methods'><li data-type='method'><a href="TB.html#.applyCssRules">applyCssRules</a></li><li data-type='method'><a href="TB.html#.assign">assign</a></li><li data-type='method'><a href="TB.html#.camelCaseToDashes">camelCaseToDashes</a></li><li data-type='method'><a href="TB.html#.classExtend">classExtend</a></li><li data-type='method'><a href="TB.html#.cloneFunction">cloneFunction</a></li><li data-type='method'><a href="TB.html#.contains">contains</a></li><li data-type='method'><a href="TB.html#.get">get</a></li><li data-type='method'><a href="TB.html#.isArray">isArray</a></li><li data-type='method'><a href="TB.html#.isArrayLike">isArrayLike</a></li><li data-type='method'><a href="TB.html#.isBetween">isBetween</a></li><li data-type='method'><a href="TB.html#.isBoolean">isBoolean</a></li><li data-type='method'><a href="TB.html#.isDate">isDate</a></li><li data-type='method'><a href="TB.html#.isDefined">isDefined</a></li><li data-type='method'><a href="TB.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="TB.html#.isFunction">isFunction</a></li><li data-type='method'><a href="TB.html#.isNumber">isNumber</a></li><li data-type='method'><a href="TB.html#.isObject">isObject</a></li><li data-type='method'><a href="TB.html#.isString">isString</a></li><li data-type='method'><a href="TB.html#.isUndefined">isUndefined</a></li><li data-type='method'><a href="TB.html#.JSON2CSS">JSON2CSS</a></li><li data-type='method'><a href="TB.html#.limitToRange">limitToRange</a></li><li data-type='method'><a href="TB.html#.map">map</a></li><li data-type='method'><a href="TB.html#.merge">merge</a></li><li data-type='method'><a href="TB.html#.noop">noop</a></li><li data-type='method'><a href="TB.html#.normalizeDate">normalizeDate</a></li><li data-type='method'><a href="TB.html#.parseQueryParams">parseQueryParams</a></li><li data-type='method'><a href="TB.html#.set">set</a></li><li data-type='method'><a href="TB.html#.toArray">toArray</a></li><li data-type='method'><a href="TB.html#.toPx">toPx</a></li><li data-type='method'><a href="TB.html#.typeof">typeof</a></li><li data-type='method'><a href="TB.html#.underscoreToDash">underscoreToDash</a></li><li data-type='method'><a href="TB.html#.urlAppend">urlAppend</a></li><li data-type='method'><a href="TB.html#.values">values</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">tb.livegrid.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * TB.Livegrid plugin
+ * @constructor
+ * @memberof TB
+ * @alias TB.Livegrid
+ * @augments Dispatch
+ * @param {Object} settings init settings for the plugin
+ * @param {( DOMSelector|DOMElement )} settings.element parent element of the plugin
+ * @param {( DOMSelector|DOMElement )} settings.menuElement parent element of the menu
+ * @param {Object.&lt;String,InitTypeObject>} settings.types definition of types
+ * @param {Boolean} [settings.externalControlMenu=false] DEPRECATED see hideInactiveMenu
+ * @param {Boolean} [settings.hideInactiveMenu=false] do not show inactive menu
+ * @param {Boolean} [settings.menuItems=['save', 'edit', 'resize', 'zoom']] if empty array or defined falsable value, do not show menu in active mode at all, else it's array of strings, explaining order and type of menu items. Possible values: 'zoom', 'resize', 'cancel', 'save'
+ * @param {String} [settings.prefixClassName='tb-lg-class-'] prefix of all autogenerated class names
+ * @param {?Object} settings.grid if falsable value, there is no grid
+ * @param {Boolean} [settings.grid.isEditable=false] whether items are editable ( can be repositioned etc )
+ * @param {Boolean} [settings.grid.isEnabled=true] if true, there would be a grid
+ * @param {Boolean} [settings.grid.autoscale=false] if true, the grid autoscales to show all elements on the grid
+ * @param {Boolean} [settings.grid.autosize=false] DEPRECATED
+ * @param {Boolean} [settings.grid.autoheight=true] set height automatically
+ * @param {Boolean} [settings.grid.itemAutoscale=true] scale item's content until it fits
+ * @param {Number} [settings.grid.itemWidth=100] width of a single item in pixels
+ * @param {Number} [settings.grid.itemHeight=100] height of a single item in pixels
+ * @param {Number} [settings.grid.minItemWidth=50] minumum width of a single item in pixels
+ * @param {Number} [settings.grid.maxItemWidth=300] maximum width of a single item in pixels
+ * @param {Number} [settings.grid.minItemHeight=50] minumum height of a single item in pixels
+ * @param {Number} [settings.grid.maxItemHeight=300] maximum height of a single item in pixels
+ * @param {Number} [settings.grid.stepZoom=0.1] step zoom level
+ * @param {Number} [settings.grid.minZoom=0.1] minimum zoom level
+ * @param {Number} [settings.grid.maxZoom=1] maximum zoom level
+ * @param {Number} [settings.grid.disableWheelZoom=false] disable mousewheel zoom
+ * @param {Number} [settings.grid.disablePanningInNormalMode=true] enable map panning only in edit mode
+ * @param {Number} [settings.grid.itemsBuffer=10] number of spare items from the left and bottom most items
+ * @param {Number} [settings.grid.unpositionedItemsPerRow=20]
+ * @param {Number} [settings.grid.unpositionedItemsBuffer=1]
+ * @param {Array} [settings.data] block's data
+ */
+function Livegrid( settings, data ) {
+  if ( !( this instanceof Livegrid ) ) {
+    return new Livegrid( settings, data );
+  }
+
+  ASSERT.ofTbType( settings, 'object' );
+  ASSERT.hasProperty( settings, 'element' );
+  ASSERT.hasPropertyOfTbType( settings, 'types', 'object' );
+
+  TB.Dispatcher.call( this );
+
+  var defaultSettings = {
+    element: null,
+    menuElement: null,
+    types: null,
+    hideInactiveMenu: false,
+    menuItems: ['save', 'edit', 'resizeH', 'resizeW', 'zoom'],
+    prefixClassName: 'tb-lg-class-',
+    grid: {
+      isEditable: false,
+      isEnabled: false,
+      autoscale: false,
+      autosize: false,
+      itemAutoscale: true,
+      itemWidth: 100,
+      itemHeight: 100,
+      minItemWidth: 50,
+      maxItemWidth: 300,
+      minItemHeight: 50,
+      maxItemHeight: 300,
+      stepZoom: 0.1,
+      minZoom: 0.1,
+      maxZoom: 1,
+      itemsBuffer: 10,
+      unpositionedItemsPerRow: 10,
+      unpositionedItemsBuffer: 1,
+      disableWheelZoom: false,
+      autoheight: true,
+      disablePanningInNormalMode: true,
+    },
+  };
+
+  var mergedSettings = TB.merge( TB.merge( {}, defaultSettings ), settings );
+
+  if ( settings.menuItems !== undefined ) {
+    mergedSettings.menuItems = settings.menuItems;
+  }
+
+  /**
+   * Keeps d3 selection container element, passed on initialization
+   * @name TB.Livegrid#DOMel
+   * @type {D3selection}
+   */
+  this.DOMel = null;
+  /**
+   * Keeps d3 selection container menu element, passed on initialization
+   * @name TB.Livegrid#DOMmenuEl
+   * @type {D3selection}
+   */
+  this.DOMmenuEl = null;
+  /**
+   * Wraps around blocks and background grid
+   * @name TB.Livegrid#DOMWrapper
+   * @type {D3selection}
+   */
+  this.DOMwrapper = null;
+  /**
+   * Wraps around blocks
+   * @name TB.Livegrid#DOMitemsContainer
+   * @type {D3selection}
+   */
+  this.DOMitemsContainer = null;
+  /**
+   * Navbar
+   * @name TB.Livegrid#DOMnavbar
+   * @type {D3selection}
+   */
+  this.DOMnavbar = null;
+  /**
+   * Edit button
+   * @name TB.Livegrid#DOMbtnEdit
+   * @type {D3Selection}
+   */
+  this.DOMbtnEdit = null;
+  /**
+   * Save button
+   * @name TB.Livegrid#DOMbtnSave
+   * @type {D3Selection}
+   */
+  this.DOMbtnSave = null;
+  /**
+   * Plugin DOM element width
+   * @type {Number}
+   */
+  this.elWidth = null;
+  /**
+   * Plugin DOM element height
+   * @type {Number}
+   */
+  this.elHeight = null;
+  /**
+   * Holdя settings of the plugin
+   * @name TB.Livegrid#s
+   * @type {Object}
+   * @readonly
+   */
+  this.s = mergedSettings;
+  /**
+   * Flag is menu is disabled at all
+   * @type {Boolean}
+   */
+  this.disableMenu = ( TB.isArray( this.s.menuItems ) )
+    ? !( this.s.menuItems.length )
+    : ( ( this.s.menuItems !== undefined )
+      ? !!( this.s.menuItems )
+      : true
+      );
+  /**
+   * Map of defined block types
+   * @name TB.Livegrid#types
+   * @type {Object}
+   */
+  this.types = {};
+  /**
+   * Ordered CSS rules
+   * @name TB.Livegrid#css
+   * @type {Array}
+   */
+  this.css = [];
+  /**
+   * Objects list
+   * @name TB.Livegrid#objList
+   * @type {Array}
+   */
+  this.objList = [];
+  /**
+   * Objects hash map
+   * @name TB.Livegrid#objList
+   * @type {Object}
+   */
+  this.objHash = {};
+  /**
+   * Grid members holder
+   * @name TB.Livegrid#g
+   * @type {Object}
+   * @property {Boolean} isEnabled grid to be drawn
+   * @property {Boolean} editMode is in edit mode
+   * @property {Number} translateX translate position X axis
+   * @property {Number} translateY translate position Y axis
+   * @property {Number} minPositionedX minimum X coordinate of all current grid items
+   * @property {Number} maxPositionedX maximum X coordinate of all current grid items
+   * @property {Number} minPositionedY minimum Y coordinate of all current grid items
+   * @property {Number} maxPositionedY maximum Y coordinate of all current grid items
+   * @property {Number} colsCount number of grid columns
+   * @property {Number} rowsCount number of grid rows
+   * @property {Number} itemWidth width of single grid item
+   * @property {Number} itemHeight height of single grid item
+   * @property {Number} wrapperActiveWidth width of items wrapper (actual width of the whole grid)
+   * @property {Number} wrapperActiveHeight width of items wrapper (actual height of the whole grid)
+   * @property {Array} unpositionedElements unpositioned items without fixed place on the grid
+   * @property {indexTable} indexTable index table for items with fixed coordinates
+   * @property {indexTable} indexTableAll index table for items with calculated coordinates
+   * @property {indexTable} indexTableSnapshot index table for items with temporary coordinates (in editMode)
+   */
+  this.g = {
+    isEnabled: this.s.grid.isEnabled,
+    editMode: false,
+
+    translateX: 0,
+    translateY: 0,
+
+    minPositionedX: null,
+    maxPositionedX: null,
+    minPositionedY: null,
+    maxPositionedY: null,
+
+    colsCount: this.s.grid.itemsBuffer,
+    rowsCount: this.s.grid.itemsBuffer,
+
+    itemWidth: this.s.grid.itemWidth,
+    itemHeight: this.s.grid.itemHeight,
+
+    wrapperActiveWidth: null,
+    wrapperActiveHeight: null,
+
+    unpositionedElements: [],
+
+    indexTable: [],
+    indexTableAll: [],
+    indexTableSnapshot: null,
+  };
+  /**
+   * Timeouts map
+   * @type {Object}
+   */
+  this._timeouts = {};
+
+
+  this._init();
+
+
+  if ( this.g.isEnabled ) {
+    ASSERT.ofTbType( this.s.grid, 'object' );
+    ASSERT.hasPropertyOfTbType( this.s.grid, 'itemWidth', 'number' );
+    ASSERT.hasPropertyOfTbType( this.s.grid, 'itemHeight', 'number' );
+    ASSERT.hasPropertyOfTbTypes( this.s.grid, 'linesWidth', 'number|undefined' );
+
+    this._d3SetupGrid();
+  }
+
+  TB.applyCssRules( 'tb-lg-global-css', this._prepareGlobalCSS() );
+  TB.applyCssRules( 'tb-lg-styles', this._stringifyCssRules() );
+
+  if ( data ) {
+    this.updateItems( data );
+
+    if ( this.g.isEnabled &amp;&amp; this.s.grid.autoscale ) {
+      this._gAutoscale();
+    }
+
+    if ( this.g.isEnabled &amp;&amp; this.s.grid.autosize ) {
+      this._gAutosize();
+    }
+  }
+}
+
+/** @lends TB.Livegrid.prototype */
+Livegrid.prototype = {
+  templates: {
+    CSSJSON: {
+      '.tb-lg-element': {
+        'position': 'relative',
+        'overflow': 'hidden'
+      },
+      '.tb-lg-element *': {
+        'box-sizing': 'border-box',
+        'padding': '0px',
+        'margin': '0px'
+      },
+      '.tb-lg-element.tb-lg-panning': {
+        'cursor': 'move'
+      },
+      '.tb-lg-resize': {
+        'height': '100%',
+        'position': 'relative',
+        'overflow': 'visible'
+      },
+      '.tb-lg-wrapper': {
+        'position': 'relative',
+        'transform-origin': '0px 0px'
+      },
+      '.tb-lg-wrapper-container': {
+        'height': '100%',
+        'overflow': 'hidden'
+      },
+      '.tb-lg-element .tb-lg-navbar': {
+        'height': '3.5rem',
+        'display': 'initial'
+      },
+      '.tb-lg-navbar': {
+        'position': 'absolute',
+        'display': 'none',
+        'left': '0px',
+        'height': '0px',
+        'top': '-2.5rem',
+        'padding-bottom': '1rem 1rem',
+        'background': 'rgba(0, 0, 0, 0.2)',
+        'transition': '250ms all',
+        'color': 'white',
+        'font-family': 'sans-serif'
+      },
+      '.tb-lg-navbar:hover,\n        .tb-lg-navbar.tb-lg-active': {
+        'height': '2.5rem',
+        'padding': '0px',
+        'top': '0px',
+        'background': 'rgba(0, 0, 0, 0.8)',
+        'transition': '250ms all'
+      },
+      '.tb-lg-navbar input[type=\'range\']': {
+        'height': '5rem',
+        'width': '1rem',
+        'writing-mode': 'bt-lr',
+        '/* IE */\n            -webkit-appearance': 'slider-vertical'
+      },
+      '.tb-lg-navbar .tb-lg-btn': {
+        'height': '2.1rem'
+      },
+      '.tb-lg-navbar .tb-lg-btn[name=\'save\']:disabled': {
+        'max-width': '0px',
+        'padding': '0px',
+        'border': 'none',
+        'margin': '0px'
+      },
+      '.tb-lg-navbar .tb-lg-btn[name=\'save\']': {
+        'max-width': '100px'
+      },
+      '.tb-lg-navbar:hover .tb-lg-subnavbar:hover .tb-lg-content': {
+        'top': '2.5rem'
+      },
+      '.tb-lg-navbar:hover .tb-lg-subnavbar .tb-lg-content': {
+        'top': '2.5rem'
+      },
+      '.tb-lg-navbar .tb-lg-subnavbar .tb-lg-content': {
+        'top': '3.5rem'
+      },
+      '.tb-lg-subnavbar': {
+        'display': 'inline-block',
+        'position': 'relative'
+      },
+      '.tb-lg-subnavbar .tb-lg-content': {
+        'height': '0px',
+        'min-width': '100%',
+        'overflow': 'hidden',
+        'position': 'absolute',
+        'transition': '250ms all',
+        'background': 'rgba(0, 0, 0, 0.2)'
+      },
+      '.tb-lg-subnavbar:hover .tb-lg-content': {
+        'height': '12rem',
+        'background': 'rgba(0, 0, 0, 0.8)'
+      },
+      '.tb-lg-navbar table': {
+        'text-align': 'center',
+        'width': '100%',
+        'vertical-align': 'middle'
+      },
+      '.tb-lg-navbar td': {
+        'height': '1rem'
+      },
+      '.tb-lg-btn': {
+        'display': 'inline-block',
+        'font-size': '1rem',
+        'font-weight': 'normal',
+        'line-height': '1.9rem',
+        'text-align': 'center',
+        'white-space': 'nowrap',
+        'vertical-align': 'middle',
+        'touch-action': 'manipulation',
+        'cursor': 'pointer',
+        'user-select': 'none',
+        'background-image': 'none',
+        'background': 'rgba(255, 255, 255, 1)',
+        'border': '1px outset rgba(180, 180, 180, 1)',
+        'color': 'black',
+        'padding': '1px 6px',
+        'margin': '0rem 0.2rem'
+      },
+      '.tb-lg-btn:active, .tb-lg-btn.tb-lg-active': {
+        'background': 'rgba(200, 200, 200, 1)',
+        'border-style': 'inset'
+      },
+      '.tb-lg-items-container': {
+        'position': 'relative'
+      },
+      '.tb-lg-item': {
+        'display': 'inline-block',
+        'overflow': 'auto'
+      },
+      '.tb-lg-element:not(.tb-lg-editing) .tb-lg-item .tb-lg-navbar': {
+        'height': '0px'
+      },
+      '.tb-lg-element.tb-lg-editing .tb-lg-item .tb-lg-navbar': {
+        'height': '0px'
+      },
+      '.tb-lg-element.tb-lg-griddable .tb-lg-item': {
+        'position': 'absolute'
+      },
+      '.tb-lg-element.tb-lg-griddable .tb-lg-items-container': {
+        'width': '100%',
+        'height': '100%'
+      },
+      '.tb-lg-element.tb-lg-griddable .tb-lg-item .tb-lg-item-content': {
+        'width': '100%',
+        'height': '100%'
+      },
+      'svg.tb-lg-grid': {
+        'position': 'absolute',
+        'top': '0px',
+        'left': '0px',
+        'overflow': 'visible',
+        'display': 'none'
+      },
+      'svg.tb-lg-grid line': {
+        'stroke': 'rgb(6,120,155)',
+        'stroke-width': '2px'
+      },
+      '.tb-lg-editing svg.tb-lg-grid': {
+        'display': 'block'
+      }
+    },
+    elContent: ' \
+      &lt;div class="tb-lg-resize"> \
+        &lt;div class="tb-lg-wrapper-container"> \
+          &lt;div class="tb-lg-wrapper"> \
+            &lt;div class="tb-lg-items-container">&lt;/div> \
+          &lt;/div> \
+        &lt;/div>\
+        &lt;div class="tb-lg-navbar"> \
+          &lt;button class="tb-lg-btn" name="edit" data-role="none" hidden="hidden">Edit&lt;/button> \
+          &lt;button class="tb-lg-btn" name="save" data-role="none" disabled="disabled">Save&lt;/button> \
+          &lt;!-- &lt;div class="tb-lg-subnavbar tb-lg-subnavbar-resize tb-lg-subnavbar-resize-both"> \
+            &lt;button type="button" class="tb-lg-btn" data-role="none">Resize&lt;/button> \
+            &lt;div class="tb-lg-content"> \
+              &lt;table> \
+                &lt;tr> \
+                  &lt;td data-name="w-value">&lt;/td> \
+                  &lt;td data-name="h-value">&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="w-plus" data-role="none">+&lt;/button>&lt;/td> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="h-plus" data-role="none">+&lt;/button>&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;input type="range" name="w-slider" data-role="none" orient="vertical" />&lt;/td> \
+                  &lt;td>&lt;input type="range" name="h-slider" data-role="none" orient="vertical" />&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="w-minus" data-role="none">-&lt;/button>&lt;/td> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="h-minus" data-role="none">-&lt;/button>&lt;/td> \
+                &lt;/tr> \
+              &lt;/table> \
+            &lt;/div> \
+          &lt;/div> --> \
+          &lt;div class="tb-lg-subnavbar tb-lg-subnavbar-resize tb-lg-subnavbar-resize-w"> \
+            &lt;button type="button" class="tb-lg-btn" data-role="none">&amp;#8596;&lt;/button> \
+            &lt;div class="tb-lg-content"> \
+              &lt;table> \
+                &lt;tr> \
+                  &lt;td data-name="w-value">&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="w-plus" data-role="none">+&lt;/button>&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;input type="range" name="w-slider" data-role="none" orient="vertical" />&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="w-minus" data-role="none">-&lt;/button>&lt;/td> \
+                &lt;/tr> \
+              &lt;/table> \
+            &lt;/div> \
+          &lt;/div> \
+          &lt;div class="tb-lg-subnavbar tb-lg-subnavbar-resize tb-lg-subnavbar-resize-h"> \
+            &lt;button type="button" class="tb-lg-btn" data-role="none">&amp;#8597;&lt;/button> \
+            &lt;div class="tb-lg-content"> \
+              &lt;table> \
+                &lt;tr> \
+                  &lt;td data-name="h-value">&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="h-plus" data-role="none">+&lt;/button>&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;input type="range" name="h-slider" data-role="none" orient="vertical" />&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="h-minus" data-role="none">-&lt;/button>&lt;/td> \
+                &lt;/tr> \
+              &lt;/table> \
+            &lt;/div> \
+          &lt;/div> \
+          &lt;div class="tb-lg-subnavbar tb-lg-subnavbar-zoom"> \
+            &lt;span class="tb-lg-btnset"> \
+              &lt;button type="button" class="tb-lg-btn" data-role="none">Zoom&lt;/button> \
+              &lt;!-- &lt;button type="button" class="tb-lg-btn" name="zoom-in" data-role="none">+&lt;/button> --> \
+              &lt;!-- &lt;button type="button" class="tb-lg-btn" name="zoom-out" data-role="none">-&lt;/button> --> \
+            &lt;/span> \
+            &lt;div class="tb-lg-content"> \
+              &lt;table> \
+                &lt;tr> \
+                  &lt;td data-name="zoom-value">x1&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="zoom-in" data-role="none">+&lt;/button>&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;input type="range" name="scale-slider" data-role="none" orient="vertical" />&lt;/td> \
+                &lt;/tr> \
+                &lt;tr> \
+                  &lt;td>&lt;button type="button" class="tb-lg-btn" name="zoom-out" data-role="none">-&lt;/button>&lt;/td> \
+                &lt;/tr> \
+              &lt;/table> \
+            &lt;/div> \
+          &lt;/div> \
+        &lt;/div>\
+      &lt;/div>\
+      ',
+  },
+  /**
+   * Init function
+   * @memberof Livegrid
+   * @private
+   * @instance
+   */
+  _init: function() {
+    this._parseSettingsTypes();
+    this._d3init();
+  },
+  /**
+   * Parse settings types
+   * @memberof Livegrid
+   * @private
+   * @instance
+   */
+  _parseSettingsTypes: function() {
+    var types = this.s['types'];
+
+    this.css[0] = this.css[0] || [];
+
+    // Parse type, attribute, state and class definitions
+    for ( var typeName in types ) {
+      var rawTypeSettings = types[ typeName ];
+
+      ASSERT.ofTbType( typeName, 'string' );
+      ASSERT.hasPropertyOfTbType( rawTypeSettings, 'template', 'string' );
+      ASSERT.hasPropertyOfTbType( rawTypeSettings, 'attributes', 'object' );
+      ASSERT.hasPropertyOfTbType( rawTypeSettings, 'contents', 'object' );
+      ASSERT.hasPropertyOfTbTypes( rawTypeSettings, 'cssjson', 'null|object' );
+
+      var typeSettings = {
+        name: typeName,
+        template: rawTypeSettings.template,
+        contentScaleSelector: rawTypeSettings.contentScaleSelector,
+        attributesNameList: Object.keys( rawTypeSettings.attributes ),
+        contentsNameList: Object.keys( rawTypeSettings.contents ),
+        className: this.prefixClassName( typeName ),
+        attributes: {},
+        contents: {},
+      };
+
+
+      if ( rawTypeSettings.cssjson ) {
+        this._parseCSSJSON( typeSettings.className, 0, rawTypeSettings.cssjson );
+      }
+
+
+      this.types[ typeName ] = typeSettings;
+
+
+      for ( var contentName in rawTypeSettings.contents ) {
+        ASSERT.ofTbType( contentName, 'string' );
+        ASSERT.ofTbType( rawTypeSettings.contents[ contentName ], 'object' );
+        ASSERT.hasPropertyOfTbType( rawTypeSettings.contents[ contentName ], 'selector', 'string' );
+        ASSERT.hasPropertyOfTbTypes( rawTypeSettings.contents[ contentName ], 'property', 'string|undefined' );
+        ASSERT.hasPropertyOfTbTypes( rawTypeSettings.contents[ contentName ], 'attribute', 'string|undefined' );
+        ASSERT( TB.isEmpty( rawTypeSettings.contents[ contentName ].property ) || TB.isEmpty( rawTypeSettings.contents[ contentName ].attribute ) );
+
+
+        var rawContentSettings = rawTypeSettings.contents[ contentName ];
+        var contentSettings = {
+          selector: rawContentSettings.selector,
+          property: null,
+          propertyArr: null,
+          attribute: null,
+        };
+
+
+        if ( rawContentSettings.attribute ) {
+          contentSettings.attribute = rawContentSettings.attribute;
+        } else {
+          contentSettings.property = rawContentSettings.property || 'textContent';
+          contentSettings.propertyArr = contentSettings.property.split( '.' );
+        }
+
+        this.types[ typeName ].contents[contentName] = contentSettings;
+      }
+
+
+      for ( var attributeName in rawTypeSettings.attributes ) {
+        ASSERT.ofTbType( attributeName, 'string' );
+        ASSERT.ofTbType( rawTypeSettings.attributes[ attributeName ], 'object' );
+        ASSERT.hasPropertyOfTbType( rawTypeSettings.attributes[ attributeName ], 'states', 'object' );
+        ASSERT.hasPropertyOfTbType( rawTypeSettings.attributes[ attributeName ], 'priority', 'number' );
+        ASSERT.gt( rawTypeSettings.attributes[ attributeName ].priority, 0 );
+
+
+        var rawAttributeSettings = rawTypeSettings.attributes[ attributeName ];
+        var attributeSettings = {
+          name: attributeName,
+          priority: parseInt( rawAttributeSettings.priority ),
+          stateList: Object.keys( rawAttributeSettings.states ),
+          stateClassNames: {},
+        };
+
+
+        typeSettings.attributes[attributeName] = attributeSettings;
+        this.css[rawAttributeSettings.priority] = this.css[rawAttributeSettings.priority] || [];
+
+
+        for ( var stateName in rawAttributeSettings.states ) {
+          ASSERT.ofTbType( stateName, 'string' );
+          ASSERT.ofTbType( rawAttributeSettings.states[ stateName ], 'object' );
+          ASSERT.hasPropertyOfTbType( rawAttributeSettings.states[ stateName ], 'cssjson', 'object' );
+
+
+          var rawStateSettings = rawAttributeSettings.states[ stateName ];
+          var stateClassName = this.prefixClassName( [typeName, attributeName, stateName].join( '-' ) );
+
+
+          attributeSettings.stateClassNames[ stateName ] = stateClassName;
+
+
+          this._parseCSSJSON( stateClassName, rawAttributeSettings.priority, rawStateSettings.cssjson );
+        }
+      }
+    }
+  },
+  /**
+   * Converts JSON object to css and add it to this.css
+   * @memberof Livegrid
+   * @param {Object} cssjson JSON containing css // e.g. {".selector span": { borderColor: "red", "line-height": "2em"}}
+   * @todo Support cssSelector containing comma // e.g. "p .something, div .something"
+   */
+  _parseCSSJSON: function( CSSnamespace, priority, cssjson ) {
+    for ( var cssSelector in cssjson ) {
+      ASSERT.ofTbType( cssSelector, 'string' );
+      ASSERT.ofTbType( cssjson[cssSelector], 'object' );
+
+
+      // Add empty space when not matching states ( :focus, :active, :hover, etc )
+      var emptySpace = ( /^:/ ).test( cssSelector ) ? '' : ' ';
+      var fullSelector = ['.' + CSSnamespace, emptySpace, cssSelector].join( '' );
+
+      this.css[ priority ].push( {
+        selector: fullSelector,
+        originalSelector: cssSelector,
+        cssjson: cssjson[ cssSelector ],
+      } );
+    }
+  },
+  /**
+   * Set prefix to generated class names to prevent collision
+   * @param  {String} className class name to prefix
+   * @return {String}           Prefixed class name
+   */
+  prefixClassName: function( className ) {
+    return ( ( TB.isString( this.s.prefixClassName ) ) ? this.s.prefixClassName : '' ) + className;
+  },
+  /**
+   * Update element's coordinates with new value or use old ones
+   * @param  {Object} rawObj raw update object data
+   * @param  {Object} obj    object to get updated
+   */
+  _gUpdateItemCoordinates: function( rawObj, obj ) {
+    ASSERT.eq( TB.isDefined( rawObj.x ), TB.isDefined( rawObj.y ), 'Both x and y must be either defined or undefined' );
+
+    if ( TB.isDefined( rawObj.x ) ) {
+      var swapObj = this._gGetItemAtIndex( rawObj.x, rawObj.y, this.g.indexTable );
+
+      if ( swapObj === obj ) {
+        return;
+      }
+
+      ASSERT( TB.isUndefined( swapObj ) || swapObj.lastUpdate !== obj.lastUpdate, 'Two elements have the same coordinates x: %s and y: %s for obj1 %s and obj2 %s', rawObj.x, rawObj.y, rawObj, swapObj );
+
+      this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTable );
+      this._gSetItemAtIndex( rawObj.x, rawObj.y, obj, this.g.indexTable );
+      this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTableAll );
+      this._gSetItemAtIndex( rawObj.x, rawObj.y, obj, this.g.indexTableAll );
+
+      obj.xCalc = rawObj.x;
+      obj.yCalc = rawObj.y;
+      obj.x = rawObj.x;
+      obj.y = rawObj.y;
+
+      this._gUpdateMinMaxPositionedXY( obj.x, obj.y );
+
+    } else if ( TB.isEmpty( obj.x ) ) {
+      this.g.unpositionedElements.push( obj );
+    } else {
+      // TODO why this is empty?
+    }
+  },
+  /**
+   * Updates temporary coordinates for unpositioned items (items without X and Y
+   * coordinates )
+   */
+  _gUpdateUnpositionedItemsCoordinates: function() {
+    if ( this.g.unpositionedElements.length === 0 ) {
+      return;
+    }
+
+    var indexOfUnpositionedRow = ( this.g.unpositionedElements.length !== this.objList.length )
+      ? this.g.maxPositionedY + this.s.grid.unpositionedItemsBuffer
+      : 0;
+
+    outerLoop: for ( var i = indexOfUnpositionedRow; true; i++ ) {
+      innerLoop: for ( var j = 0; j &lt; this.s.grid.unpositionedItemsPerRow; j++ ) {
+        var el = this._gGetItemAtIndex( j, i, this.g.indexTable );
+
+        if ( TB.isDefined( el ) ) {
+          continue innerLoop;
+        }
+
+        var unpositionedItem = this.g.unpositionedElements.shift();
+
+        if ( TB.isUndefined( unpositionedItem ) ) {
+          break outerLoop;
+        }
+
+        unpositionedItem.xCalc = j;
+        unpositionedItem.yCalc = i;
+
+        this._gRemoveItemAtIndex( j, i, this.g.indexTableAll );
+        this._gSetItemAtIndex( j, i, unpositionedItem, this.g.indexTableAll );
+        this._gUpdateMinMaxPositionedXY( j, i );
+      }
+    }
+
+    ASSERT.isEmpty( this.g.unpositionedElements );
+  },
+  /**
+   * Event handler when zoom slider gets input
+   */
+  _handlerOnInputSliderZoom: function() {
+    this.g.zoom.scale( TB.limitToRange( this.DOMsliderZoom[0][0].value, this.s.grid.minZoom, this.s.grid.maxZoom ) );
+    this._gZoomCallback();
+  },
+  /**
+   * Event handler zoom buttons clicked
+   * @private
+   */
+  _handlerOnChangeSliderZoom: function() {
+    this.g.zoom.scale( TB.limitToRange( this.DOMsliderZoom[0][0].value, this.s.grid.minZoom, this.s.grid.maxZoom ) );
+    this._gZoomCallback();
+  },
+  /**
+   * Event handler when zoom buttons are clicked
+   * @private
+   */
+  _handlerOnClickBtnZoom: function() {
+    switch ( d3.event.target.name ) {
+    case 'zoom-in':
+      this.DOMsliderZoom[0][0].stepUp();
+      break;
+    case 'zoom-out':
+      this.DOMsliderZoom[0][0].stepDown();
+      break;
+    default:
+      THROW( 'Unknown button' );
+    }
+
+    this.g.zoom.scale( TB.limitToRange( this.DOMsliderZoom[0][0].value, this.s.grid.minZoom, this.s.grid.maxZoom ) );
+    this._gZoomCallback();
+  },
+  /**
+   * Event handler when resize slider gets input
+   * @private
+   */
+  _handlerOnInputSliderResize: function() {
+    this._gApplyResizeItems();
+  },
+  /**
+   * Event handler when resize slider is changed
+   * @private
+   */
+  _handlerOnChangeSliderResize: function() {
+    this._gApplyResizeItems();
+  },
+  /**
+   * Event handler when resize slider is mousewheeled
+   * @private
+   */
+  _handlerOnMousewheelSliderResize: function() {
+    d3.event.stopPropagation();
+    d3.event.preventDefault();
+
+    if ( d3.event.deltaY === 0 ) {
+      return;
+    } else if ( d3.event.deltaY > 0 ) {
+      d3.event.target.stepUp( 5 );
+    } else {
+      d3.event.target.stepDown( 5 );
+    }
+
+    this._gApplyResizeItems();
+  },
+  /**
+   * Event handler when resize items buttons are clicked
+   * @private
+   */
+  _handlerOnClickBtnResize: function() {
+    switch ( d3.event.target.name ) {
+    case 'w-plus':
+      this.DOMsliderWidth[0][0].stepUp();
+      break;
+    case 'w-minus':
+      this.DOMsliderWidth[0][0].stepDown();
+      break;
+    case 'h-plus':
+      this.DOMsliderHeight[0][0].stepUp();
+      break;
+    case 'h-minus':
+      this.DOMsliderHeight[0][0].stepDown();
+      break;
+    default:
+      THROW( 'Unknown button' );
+    }
+
+    this._gApplyResizeItems();
+  },
+  /**
+   * Event handler when clear coordinates of item is clicked
+   * @param  {Object} item item object
+   */
+  _handlerOnClickBtnClear: function( item ) {
+    this._gRemoveItemAtIndex( item.x, item.y, this.g.indexTable );
+    this._gRemoveItemAtIndex( item.x, item.y, this.g.indexTableAll );
+
+    item.x = null;
+    item.y = null;
+  },
+  /**
+   * Apply resize of items in the grid
+   * @private
+   */
+  _gApplyResizeItems: function() {
+    this.g.itemHeight = TB.limitToRange( this.DOMsliderHeight[0][0].value, this.s.grid.minItemHeight, this.s.grid.maxItemHeight );
+    this.g.itemWidth = TB.limitToRange( this.DOMsliderWidth[0][0].value, this.s.grid.minItemWidth, this.s.grid.maxItemWidth );
+
+    this._d3UpdateResizeValues();
+    this._d3UpdateWrapper();
+    this._d3UpdateBackgroundGrid();
+    this._d3UpdateItems();
+  },
+  /**
+   * Update grid's min and max positioned element coordinates
+   * @private
+   * @param  {Number} x check value for X axis
+   * @param  {Number} y check value for Y axis
+   */
+  _gUpdateMinMaxPositionedXY: function( x, y ) {
+    this.g.minPositionedX = ( x &lt; this.g.minPositionedX || this.g.minPositionedX === null ) ? x : this.g.minPositionedX;
+    this.g.minPositionedY = ( y &lt; this.g.minPositionedY || this.g.minPositionedY === null ) ? y : this.g.minPositionedY;
+    this.g.maxPositionedX = ( x > this.g.maxPositionedX || this.g.maxPositionedX === null ) ? x : this.g.maxPositionedX;
+    this.g.maxPositionedY = ( y > this.g.maxPositionedY || this.g.maxPositionedY === null ) ? y : this.g.maxPositionedY;
+
+    this.g.rowsCount = this.g.maxPositionedY + this.s.grid.itemsBuffer;
+    this.g.colsCount = this.g.maxPositionedX + this.s.grid.itemsBuffer;
+  },
+  /**
+   * Update grid's min and max positioned element coordinates to 0
+   * @private
+   */
+  _gResetMinMaxPositionedXY: function( ) {
+    this.g.minPositionedX = 0;
+    this.g.minPositionedY = 0;
+    this.g.maxPositionedX = 0;
+    this.g.maxPositionedY = 0;
+
+    this.g.rowsCount = this.s.grid.itemsBuffer;
+    this.g.colsCount = this.s.grid.itemsBuffer;
+  },
+  /**
+   * Autoscale container elements. Set's zoom level to value which allowes
+   * displaying all elements in current container element size
+   * @private
+   */
+  _gAutoscale: function() {
+    var positionedElementsWidth = ( this.g.maxPositionedX - this.g.minPositionedX + 1 ) * this.g.itemWidth;
+    var positionedElementsHeight = ( this.g.maxPositionedY - this.g.minPositionedY + 1 ) * this.g.itemHeight;
+    var scale = Math.min( this.elWidth / positionedElementsWidth, this.elHeight / positionedElementsHeight );
+
+    this.g.translateX = this.g.minPositionedX * this.g.itemWidth;
+    this.g.translateY = this.g.minPositionedY * this.g.itemHeight;
+
+    this.g.zoom.scale( TB.limitToRange( scale, this.s.grid.minZoom, this.s.grid.maxZoom ) );
+    this._gZoomCallback();
+  },
+  /**
+   * Autosize containers element size (width and height). grid will be shown
+   * with zoom level 1, even when screen size is not enough, so in most
+   * cases it'll produce scrollbars to the window (or overflowed parent)
+   * @deprecated Experimental feature, please do not use
+   */
+  _gAutosize: function() {
+    var positionedElementsWidth = ( this.g.maxPositionedX - this.g.minPositionedX + 1 ) * this.g.itemWidth;
+    var positionedElementsHeight = ( this.g.maxPositionedY - this.g.minPositionedY + 1 ) * this.g.itemHeight;
+
+    this.g.translateX = this.g.minPositionedX * this.g.itemWidth;
+    this.g.translateY = this.g.minPositionedY * this.g.itemHeight;
+
+    this.g.zoom.scale( 1 );
+    this._gUpdateElementSize( positionedElementsWidth, positionedElementsHeight );
+    this._gZoomCallback();
+  },
+  /**
+   * Updates container element size (width and height) with passed parameters
+   * @private
+   * @param {Number} width width in pixels
+   * @param {Number} height height in pixels
+   */
+  _gUpdateElementSize: function( width, height ) {
+    ASSERT.gt( width, 0 );
+    ASSERT.gt( height, 0 );
+
+    this.DOMel.style( 'width', TB.toPx( width ) );
+    this.DOMel.style( 'height', TB.toPx( height ) );
+  },
+  /**
+   * Set timeout to expire object
+   * @param  {Object} obj [description]
+   */
+  _timeoutExpireObject: function( obj ) {
+    obj.timeouts.expires = setTimeout( function() {
+      var index = this.objList.indexOf( obj );
+
+      if ( index &lt; 0 ) {
+        return;
+      }
+
+      delete this.objHash[ obj.id ];
+      delete this._timeouts[ obj.expiresIn ][ obj.timeouts.expires ];
+
+      this.objList.splice( index, 1 );
+
+      this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTable );
+      this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTableAll );
+
+      if ( this.g.indexTableTemp ) {
+        this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTableTemp );
+      }
+
+
+      if ( Object.keys( this._timeouts[ obj.expiresIn ] ).length === 0 ) {
+        this._d3UpdateItems();
+      }
+    }.bind( this ), obj.expiresIn * 1000 );
+
+    this._timeouts[ obj.expiresIn ] = this._timeouts[ obj.expiresIn ] || {};
+    this._timeouts[ obj.expiresIn ][ obj.timeouts.expires ] = true;
+  },
+  /**
+   * Init DOM elements
+   * @memberof Livegrid
+   * @private
+   * @instance
+   */
+  _d3init: function() {
+    var self = this;
+    var element = this.s.element;
+
+    ASSERT( element instanceof HTMLElement || TB.isString( element ), 'Element must be an HTMLElement or string' );
+
+    this.DOMel = d3.select( element )
+      .classed( 'tb-lg-element', true )
+      .html( this.templates.elContent );
+
+    ASSERT( this.DOMel.length > 0 &amp;&amp; this.DOMel[0] !== null, 'Element was not found for "%s"', element );
+
+    this.DOMwrapper = this.DOMel.select( '.tb-lg-wrapper' );
+    this.DOMitemsContainer = this.DOMwrapper.select( '.tb-lg-items-container' );
+    this.DOMnavbar = this.DOMel.select( '.tb-lg-navbar' );
+
+    this.elHeight = parseInt( this.DOMel.style( 'height' ), 10 );
+    this.elWidth = parseInt( this.DOMel.style( 'width' ), 10 );
+
+
+    if ( !this.g.isEnabled || this.s.hideInactiveMenu || this.disableMenu ) {
+      this.DOMnavbar.style( 'display', 'none' );
+      // return;
+    }
+
+    var subnavbarZoom = this.DOMnavbar.select( '.tb-lg-subnavbar-zoom' ).style( 'display', 'none' );
+    var subnavbarResizeBoth = this.DOMnavbar.select( '.tb-lg-subnavbar-resize-both' ).style( 'display', 'none' );
+    var subnavbarResizeH = this.DOMnavbar.select( '.tb-lg-subnavbar-resize-h' ).style( 'display', 'none' );
+    var subnavbarResizeW = this.DOMnavbar.select( '.tb-lg-subnavbar-resize-w' ).style( 'display', 'none' );
+
+    this.DOMbtnEdit = this.DOMnavbar.select( '.tb-lg-btn[name="edit"]' );
+    this.DOMbtnSave = this.DOMnavbar.select( '.tb-lg-btn[name="save"]' );
+
+
+    this.DOMnavbar.selectAll( '.tb-lg-subnavbar-zoom .tb-lg-btn' )
+      .on( 'click', this._handlerOnClickBtnZoom.bind( this ) );
+
+
+    this.DOMsliderZoom = this.DOMnavbar.select( '.tb-lg-subnavbar-zoom input[name="scale-slider"]' )
+      .property( 'min', this.s.grid.minZoom )
+      .property( 'max', this.s.grid.maxZoom )
+      .property( 'step', this.s.grid.stepZoom )
+      .property( 'value', Math.min( 1, this.s.grid.maxZoom ) )
+      .on( 'input', this._handlerOnInputSliderZoom.bind( this ) )
+      .on( 'change', this._handlerOnChangeSliderZoom.bind( this ) );
+
+
+    this.DOMnavbar.selectAll( '.tb-lg-subnavbar-resize .tb-lg-content .tb-lg-btn' )
+      .on( 'click', this._handlerOnClickBtnResize.bind( this ) );
+
+
+    if ( this.s.menuElement ) {
+      this.DOMmenuEl = d3.select( this.s.menuElement );
+      this.DOMmenuEl[0][0].appendChild( this.DOMnavbar[0][0] );
+    }
+
+
+    this.DOMsliderZoomValue = this.DOMnavbar.selectAll( '.tb-lg-subnavbar-zoom .tb-lg-content [data-name="zoom-value"]' );
+
+    this.DOMsliderHeightValue = this.DOMnavbar.selectAll( '.tb-lg-subnavbar-resize .tb-lg-content [data-name="h-value"]' )
+      .text( this.g.itemHeight );
+
+    this.DOMsliderHeight = this.DOMnavbar.selectAll( '.tb-lg-subnavbar-resize .tb-lg-content input[name="h-slider"]' )
+      .property( 'min', this.s.grid.minItemHeight )
+      .property( 'max', this.s.grid.maxItemHeight )
+      .property( 'value', this.g.itemHeight )
+      .on( 'input', this._handlerOnInputSliderResize.bind( this ) )
+      .on( 'change', this._handlerOnChangeSliderResize.bind( this ) )
+      .on( 'mousewheel', this._handlerOnMousewheelSliderResize.bind( this ) );
+
+    this.DOMsliderWidthValue = this.DOMnavbar.selectAll( '.tb-lg-subnavbar-resize .tb-lg-content [data-name="w-value"]' )
+      .text( this.g.itemWidth );
+
+    this.DOMsliderWidth = this.DOMnavbar.selectAll( '.tb-lg-subnavbar-resize .tb-lg-content input[name="w-slider"]' )
+      .property( 'min', this.s.grid.minItemWidth )
+      .property( 'max', this.s.grid.maxItemWidth )
+      .property( 'value', this.g.itemWidth )
+      .on( 'input', this._handlerOnInputSliderResize.bind( this ) )
+      .on( 'change', this._handlerOnChangeSliderResize.bind( this ) )
+      .on( 'mousewheel', this._handlerOnMousewheelSliderResize.bind( this ) );
+
+
+    if ( this.g.isEnabled ) {
+      this.DOMbtnEdit
+        .on( 'click', function() {
+          self.toggleEditMode();
+        } )
+        .style( 'display', 'none' );
+
+      this.DOMbtnSave
+        .classed( 'tb-lg-btn', true )
+        .attr( 'disabled', true )
+        .style( 'display', 'none' )
+        .text( 'Save' )
+        .on( 'click', this.save.bind( this ) );
+    }
+
+    var menuItemsMap = {
+      edit: this.DOMbtnEdit,
+      save: this.DOMbtnSave,
+      zoom: subnavbarZoom,
+      // resizeBoth: subnavbarResizeBoth, /** @todo implement */
+      resizeH: subnavbarResizeH,
+      resizeW: subnavbarResizeW,
+    };
+
+    for ( var i = 0, l = this.s.menuItems.length; i &lt; l; i++ ) {
+      var menuItem = this.s.menuItems[ i ];
+      var DOMmenuItemElement = menuItemsMap[ menuItem ];
+
+      if ( DOMmenuItemElement ) {
+        DOMmenuItemElement.style( 'display', 'inline-block' );
+
+        this.DOMnavbar[0][0]
+          .appendChild( DOMmenuItemElement[0][0] );
+      }
+    }
+  },
+  /**
+   * Update content of item's resize values shown in the upper navbar
+   * @private
+   */
+  _d3UpdateResizeValues: function() {
+    this.DOMsliderWidthValue.text( this.g.itemWidth );
+    this.DOMsliderHeightValue.text( this.g.itemHeight );
+  },
+  /**
+   * Update content of item's zoom value shown in the upper navbar
+   * @private
+   */
+  _d3UpdateZoomValue: function() {
+    this.DOMsliderZoomValue.text( 'x' + this.g.zoom.scale().toFixed( 2 ) );
+  },
+  /**
+   * Redraw background grid
+   * @private
+   */
+  _d3UpdateBackgroundGrid: function() {
+    var zoomedWrapperWidth = this.g.wrapperActiveWidth;
+    var zoomedWrapperHeight = this.g.wrapperActiveHeight;
+    var xaxiscoorddata = d3.range( 0, zoomedWrapperWidth, this.g.itemWidth );
+    var yaxiscoorddata = d3.range( 0, zoomedWrapperHeight, this.g.itemHeight );
+    var verticalLines = this.g.svgGrid.selectAll( 'line.vertical' )
+      .data( xaxiscoorddata );
+    var horizontalLines = this.g.svgGrid.selectAll( 'line.horizontal' )
+      .data( yaxiscoorddata );
+
+    verticalLines.exit().remove();
+    verticalLines.enter().append( 'svg:line' )
+      .classed( 'vertical', true )
+      .attr( 'y1', 0 );
+    verticalLines
+      .attr( 'x1', this._returnDatum() )
+      .attr( 'x2', this._returnDatum() )
+      .attr( 'y2', zoomedWrapperHeight );
+
+
+    horizontalLines.exit().remove();
+    horizontalLines.enter().append( 'svg:line' )
+      .classed( 'horizontal', true )
+      .attr( 'x1', 0 );
+    horizontalLines
+      .attr( 'y1', this._returnDatum() )
+      .attr( 'y2', this._returnDatum() )
+      .attr( 'x2', zoomedWrapperWidth );
+
+  },
+  /**
+   * Make grid zoomable using d3 zoom behaviour
+   * @private
+   */
+  _d3GridZoomable: function() {
+    var self = this;
+
+    this.g.zoom = d3.behavior.zoom()
+      .scaleExtent( [this.s.grid.minZoom, this.s.grid.maxZoom] )
+      .on( 'zoom', this._gZoomCallback.bind( this ) );
+
+    this.g.zoomDrag = d3.behavior.drag()
+      .on( 'dragstart', function() {
+        if ( self.s.grid.disablePanningInNormalMode &amp;&amp; !self.g.editMode ) {
+          return;
+        }
+
+        d3.event.sourceEvent.stopPropagation();
+        self.DOMel.classed( 'tb-lg-panning', true );
+      } )
+      .on( 'drag', function() {
+        if ( self.s.grid.disablePanningInNormalMode &amp;&amp; !self.g.editMode ) {
+          return;
+        }
+
+        var scale = self.g.zoom.scale();
+        var values = '';
+
+        self.g.translateX = TB.limitToRange( self.g.translateX + d3.event.dx, -Math.max( 0, self.g.wrapperActiveWidth * scale - self.elWidth ), 0 );
+        self.g.translateY = TB.limitToRange( self.g.translateY + d3.event.dy, -Math.max( 0, self.g.wrapperActiveHeight * scale - self.elHeight ), 0 );
+
+        values = [self.g.translateX, self.g.translateY].map( function( x ) { return TB.toPx( x ); } ).join( ',' );
+
+        self.DOMwrapper.style( 'transform', 'translate( ' + values + ') scale( ' + scale + ')' );
+      } )
+      .on( 'dragend', function() {
+        if ( self.s.grid.disablePanningInNormalMode &amp;&amp; !self.g.editMode ) {
+          return;
+        }
+
+        self.DOMel.classed( 'tb-lg-panning', false );
+      } );
+
+
+    this.DOMwrapper
+      .on( 'mousedown.zoom', null );
+
+    this.DOMwrapper
+      .call( this.g.zoom )
+      .on( 'mousedown.zoom', null )
+      .on( 'touchstart.zoom', null )
+      .on( 'touchmove.zoom', null )
+      .on( 'touchmove.zoom', null )
+      .call( this.g.zoomDrag );
+
+    if ( this.s.grid.disableWheelZoom ) {
+      this.DOMwrapper
+        .on( 'wheel.zoom', null );
+    }
+  },
+  /**
+   * Maked grid's items draggable (changing their position)
+   * @private
+   * @todo support swapping two objects
+   * @todo support draging items out of current visible grid
+   */
+  _d3GridItemsDraggable: function() {
+    var self = this;
+
+    this.g.D3dragItems = d3.behavior.drag()
+      .on( 'dragstart', function() {
+        d3.event.sourceEvent.stopPropagation();
+        self.DOMel.classed( 'tb-lg-dragging', true );
+        d3.select( this ).classed( 'tb-lg-active', true );
+      } )
+      .on( 'drag', function() {
+        var scale = self.g.zoom.scale();
+        console.log('drag', self.g.maxPositionedY, self.g.colsCount)
+        var newX = TB.limitToRange( Math.floor( d3.event.x / self.g.itemWidth / scale ), 0, self.g.colsCount );
+        var newY = TB.limitToRange( Math.floor( d3.event.y / self.g.itemHeight / scale ), 0, self.g.rowsCount );
+        var obj = self.objHash[ d3.select( this ).data()[0].id ];
+        var swapObj = self._gGetItemAtIndex( newX, newY, self.g.indexTableTemp );
+
+        if ( !obj ) {
+          return;
+        }
+
+        if ( !TB.isBetween( d3.event.x, 0 + self.g.itemWidth, parseInt( self.DOMwrapper.style( 'width' ), 10 ) - self.g.itemWidth ) ) {
+          // console.log( 'hor' )
+        }
+        if ( !TB.isBetween( d3.event.y, 0 + self.g.itemHeight, parseInt( self.DOMwrapper.style( 'height' ), 10 ) - self.g.itemHeight ) ) {
+          // console.log( 'ver' )
+        }
+
+        if ( newX === obj.xCalcTemp &amp;&amp; newY === obj.yCalcTemp ) {
+          return;
+        }
+
+        if ( TB.isDefined( swapObj ) &amp;&amp; swapObj !== obj ) {
+          // console.log(1)
+          // self._gRemoveItemAtIndex( swapObj.xCalcTemp, swapObj.yCalcTemp, self.g.indexTableTemp );
+          // self._gSetItemAtIndex( obj.xCalcTemp, obj.yCalcTemp, swapObj, self.g.indexTableTemp );
+
+
+          // swapObj.xCalcTemp = obj.xCalcTemp;
+          // swapObj.yCalcTemp = obj.yCalcTemp;
+
+          // d3.select( this )
+          //   .style( 'left', TB.toPx( obj.xCalcTemp * self.g.itemWidth ) )
+          //   .style( 'top', TB.toPx( obj.yCalcTemp * self.g.itemHeight ) );
+
+          return;
+        }
+
+        self._gRemoveItemAtIndex( obj.xCalcTemp, obj.yCalcTemp, self.g.indexTableTemp );
+        self._gSetItemAtIndex( newX, newY, obj, self.g.indexTableTemp );
+
+        obj.xCalcTemp = newX;
+        obj.yCalcTemp = newY;
+
+        d3.select( this )
+          .style( 'left', TB.toPx( newX * self.g.itemWidth ) )
+          .style( 'top', TB.toPx( newY * self.g.itemHeight ) );
+      } )
+      .on( 'dragend', function() {
+        self.DOMel.classed( 'tb-lg-dragging', false );
+        d3.select( this ).classed( 'tb-lg-active', false );
+      } );
+  },
+  /**
+   * Updates wrapper size (width and height) by given values or set it to best
+   * size to show all content
+   * @private
+   * @param {?Number} width width in pixels
+   * @param {?Number} height height in pixels
+   */
+  _d3UpdateWrapper: function( width, height ) {
+    if ( TB.isEmpty( width ) ) {
+      var itemsPerRowZoom = Math.ceil( ( this.elWidth / this.g.itemWidth ) / this.s.grid.minZoom );
+
+      this.g.wrapperActiveWidth = Math.max( itemsPerRowZoom, this.g.rowsCount ) * this.g.itemWidth;
+    } else {
+      this.g.wrapperActiveWidth = width;
+    }
+
+    if ( TB.isEmpty( height ) ) {
+      var itemsPerColZoom = Math.ceil( ( this.elHeight / this.g.itemHeight ) / this.s.grid.minZoom );
+
+      this.g.wrapperActiveHeight = Math.max( itemsPerColZoom, this.g.colsCount ) * this.g.itemHeight;
+    } else {
+      this.g.wrapperActiveHeight = height;
+    }
+
+
+    this.DOMwrapper
+      // .style( 'width', TB.toPx( this.g.wrapperActiveWidth ) )
+      .style( 'width', '100%' )
+      .style( 'height', TB.toPx( this.g.wrapperActiveHeight ) );
+
+    if ( this.elHeight === 0 &amp;&amp; this.s.grid.autoheight ) {
+      var newHeight = 2 * this.g.itemHeight;
+
+      this.elHeight = newHeight;
+      this.DOMel.style( 'height', TB.toPx( newHeight ) );
+    }
+  },
+  /**
+   * Executes when grid is enabled.
+   * @private
+   */
+  _d3SetupGrid: function() {
+    this.DOMel
+      .classed( 'tb-lg-griddable', true );
+
+    this.g.svgGrid = this.DOMwrapper.insert( 'svg', ':first-child' )
+        .classed( 'tb-lg-grid', true );
+
+    this._d3UpdateWrapper();
+    this._d3UpdateBackgroundGrid();
+    this._d3GridZoomable();
+
+
+    if ( this.s.grid.isEditable ) {
+      this._d3GridItemsDraggable();
+    }
+  },
+  /**
+   * After zoom apply new X and Y translation to wrapper
+   * @private
+   */
+  _gZoomCallback: function() {
+    var scale = this.g.zoom.scale();
+    // if ( d3.event.translate ) {
+    //     this.g.translateX = TB.limitToRange( -d3.event.translate[0] + this.elWidth / 2 * scale, -Math.max(0, this.g.wrapperActiveWidth * scale - this.elWidth ), 0);
+    //     this.g.translateY = TB.limitToRange( -d3.event.translate[1] + this.elHeight / 2 * scale, -Math.max(0, this.g.wrapperActiveHeight * scale - this.elHeight ), 0);
+    // } else {
+    // }
+
+    this.g.translateX = TB.limitToRange( this.g.translateX + this.elWidth / 2 * scale, -Math.max( 0, this.g.wrapperActiveWidth * scale - this.elWidth ), 0 );
+    this.g.translateY = TB.limitToRange( this.g.translateY + this.elHeight / 2 * scale, -Math.max( 0, this.g.wrapperActiveHeight * scale - this.elHeight ), 0 );
+
+    var translateValues = [this.g.translateX, this.g.translateY];
+    var values = translateValues.map( function( x ) { return TB.toPx( -Math.abs( x ) ); } ).join( ',' );
+    var transform = 'scale( ' + scale + ' ) translate( ' + values + ' )';
+
+    this._d3UpdateZoomValue();
+    this.DOMsliderZoom.property( 'value', scale );
+    this.DOMwrapper
+      .style( 'transform', transform );
+
+  },
+  /**
+   * Prepare global css for use
+   * @return {String} generated css
+   */
+  _prepareGlobalCSS: function () {
+    var css = '';
+
+    for ( var selector in this.templates.CSSJSON ) {
+      var attributes = this.templates.CSSJSON[ selector ];
+
+      css += TB.JSON2CSS( selector, attributes );
+    }
+
+    return css;
+  },
+  /** Convert css array to string
+   * @private
+   * @return {String}
+   */
+  _stringifyCssRules: function() {
+    var cssText = '';
+
+    this.css.forEach( function( priorityLevel ) {
+      priorityLevel.forEach( function( cssRule ) {
+        var resultCss = TB.JSON2CSS( cssRule.selector, cssRule.cssjson );
+
+        cssText += resultCss;
+      } );
+    } );
+
+    return cssText;
+  },
+
+  /**
+   * D3 helper - return datum value by path
+   * @private
+   * @param  {?(String|Array)} path property path
+   * @return {*}      value
+   */
+  _returnDatum: function( path ) {
+    if ( path ) {
+      return function( d ) {
+        return TB.get( d, path );
+      };
+    } else {
+      return function( d ) {
+        return d;
+      };
+    }
+  },
+  /**
+   * @deprecated
+   */
+  updateElements: function() {
+    alert( '"instance.updateElements" is now deprecated, please use "instance.updateItems"' );
+    this.updateItems.apply( this, arguments );
+  },
+  /**
+   * Refresh plugin data
+   * @param  {Array} data list of objects to update
+   */
+  updateItems: function( data ) {
+    ASSERT.ofTbType( data, 'array' );
+
+    var currentObjHash = {};
+    var lastUpdate = new Date();
+
+    this.objList = this.objList;
+
+    this._gResetMinMaxPositionedXY();
+
+    for ( var i = 0, l = data.length; i &lt; l; i++ ) {
+      ASSERT.ofTbType( data[i], 'object' );
+      ASSERT.hasPropertyOfTbTypes( data[ i ], 'id', 'string|number' );
+      ASSERT.hasPropertyOfTbType( data[ i ], 'type', 'string' );
+      ASSERT.hasPropertyOfTbType( data[ i ], 'attributes', 'object' );
+      ASSERT( currentObjHash[ data[ i ].id ] === undefined, 'Expected different id\'s for each object when updating data' );
+      ASSERT( TB.contains( Object.keys( this.types ), data[i].type ), 'Expected different id\'s for each object when updating data' );
+
+
+      var obj;
+      var attributeName;
+      var rawObj = data[i];
+
+      if ( this.objHash[rawObj.id] ) {
+        obj = this.objHash[rawObj.id];
+      } else {
+        obj = {
+          id: rawObj.id,
+          type: null,
+          statusClassNames: null,
+          typeObj: this.types[rawObj.type],
+          attributes: {},
+          contents: {},
+          x: null,
+          y: null,
+          xCalc: null,
+          yCalc: null,
+          xCalcTemp: null,
+          yCalcTemp: null,
+          lastUpdate: null,
+          firstUpdate: lastUpdate,
+          expiresIn: null,
+          timeouts: {},
+        };
+
+        this.objHash[rawObj.id] = obj;
+        this.objList.push( obj );
+      }
+
+      obj.statusClassNames = 'tb-lg-item-content ' + obj.typeObj.className + ' ';
+      obj.type = rawObj.type;
+      obj.lastUpdate = lastUpdate;
+
+
+      if ( !TB.isEmpty( rawObj.expiresIn ) ) {
+        ASSERT.ofTbType( rawObj.expiresIn, 'number' );
+
+        obj.expiresIn = rawObj.expiresIn;
+
+        this._timeoutExpireObject( obj );
+      } else {
+        obj.expiresIn = null;
+      }
+
+
+      for ( attributeName in rawObj.attributes ) {
+        ASSERT.hasPropertyOfTbType( rawObj.attributes, attributeName, 'string' );
+        ASSERT( TB.contains( this.types[obj.type].attributesNameList, attributeName ), 'Expected known "attribute" for type "' + obj.type + '" for each object while updating data' );
+        ASSERT( TB.contains( this.types[obj.type].attributes[ attributeName ].stateList, rawObj.attributes[ attributeName ] ), 'Expected known "state" for attribute "' + attributeName + '", type "' + obj.type + '" for each object when updating data' );
+
+        var statusName = rawObj.attributes[attributeName];
+
+        obj.attributes[attributeName] = statusName || obj.attributes[attributeName];
+      }
+
+
+      for ( attributeName in obj.attributes ) {
+        obj.statusClassNames += ' ' + obj.typeObj.attributes[attributeName].stateClassNames[obj.attributes[attributeName]];
+      }
+
+
+      for ( var contentName in rawObj.contents ) {
+        ASSERT.ofTbType( contentName, 'string' );
+        ASSERT.hasPropertyOfTbTypes( rawObj.contents, contentName, 'string|number' );
+        ASSERT( TB.contains( this.types[obj.type].contentsNameList, contentName ), 'Expected known "content" for type "' + obj.type + '" for each object while updating data' );
+
+        obj.contents[ contentName ] = rawObj.contents[ contentName ];
+      }
+
+      if ( this.g.isEnabled &amp;&amp; ( obj.lastUpdate === obj.firstUpdate || !this.g.editMode ) ) {
+        this._gUpdateItemCoordinates( rawObj, obj );
+      }
+
+      this._gUpdateMinMaxPositionedXY( obj.x, obj.y );
+
+      currentObjHash[rawObj.id] = obj;
+    }
+
+    if ( this.g.isEnabled ) {
+      this._gUpdateUnpositionedItemsCoordinates();
+      this._d3UpdateWrapper();
+      this._d3UpdateBackgroundGrid();
+    }
+
+    this._d3UpdateItems();
+
+    if ( this.g.isEnabled &amp;&amp; this.s.grid.autoscale &amp;&amp; !this.g.editMode ) {
+      this._gAutoscale();
+    }
+  },
+  /**
+   * Emit event for listeners
+   * @param  {String} eventName name of the dispatched event
+   * @param  {*} data      event data
+   */
+  emit: function( eventName, data ) {
+    var event = new CustomEvent( eventName, {
+      detail: data,
+      bubbles: false,
+      cancable: false,
+    } );
+
+    this.dispatch( eventName, data );
+    this.DOMwrapper.node()
+      .dispatchEvent( event );
+  },
+  /**
+   * Get item at given posion in given index table
+   * @private
+   * @param  {Number} x          x
+   * @param  {Number} y          y
+   * @param  {indexTable} indexTable index table to search in
+   * @return {?Object}            found element at given position
+   */
+  _gGetItemAtIndex: function( x, y, indexTable ) {
+    indexTable[y] = indexTable[y] || [];
+    return indexTable[y][x] || null;
+  },
+  /**
+   * Remove item at given position in given index table
+   * @private
+   * @param  {Number} x          x
+   * @param  {Number} y          y
+   * @param  {indexTable} indexTable index table to search in
+   * @return {Boolean}            result of delete operator
+   */
+  _gRemoveItemAtIndex: function( x, y, indexTable ) {
+    indexTable[y] = indexTable[y] || [];
+    return delete indexTable[y][x];
+  },
+  /**
+   * Set item at given position in given index table
+   * @private
+   * @param  {Number} x          x
+   * @param  {Number} y          x
+   * @param  {Object} value      item at this position
+   * @param  {indexTable} indexTable indexTable to set in
+   * @return {Object}            positioned item
+   */
+  _gSetItemAtIndex: function( x, y, value, indexTable ) {
+    indexTable[y] = indexTable[y] || [];
+    indexTable[y][x] = value;
+    return value;
+  },
+  /**
+   * Toggle edit mode of the grid
+   * @private
+   */
+  toggleEditMode: function() {
+    if ( this.g.editMode ) {
+      this.disableEditMode();
+    } else {
+      this.enableEditMode();
+    }
+  },
+  /**
+   * Enable edit mode of the grid
+   * @private
+   */
+  enableEditMode: function() {
+    TRACE( 'Add drag behavior' );
+    this.g.editMode = true;
+
+    this.emit( 'tb.lg.toggleEdit', {
+      instance: this,
+      isEditMode: true,
+    } );
+
+    this.emit( 'tb.lg.enableEdit', {
+      instance: this,
+    } );
+
+    this.DOMitemsContainer
+      .selectAll( 'div.tb-lg-item' )
+      .call( this.g.D3dragItems );
+
+    this.DOMel.classed( 'tb-lg-editing', true );
+
+    if ( !this.disableMenu ) {
+      this.DOMnavbar.style( 'display', 'initial' );
+      this.DOMnavbar.classed( 'tb-lg-active', true );
+
+      this.DOMbtnSave.attr( 'disabled', null );
+      this.DOMbtnEdit.text( 'Cancel' );
+    }
+
+    this.g.indexTableTemp = TB.merge( [], this.g.indexTableAll );
+
+    for ( var i = 0, l = this.objList.length; i &lt; l; i++ ) {
+      this.objList[ i ].xCalcTemp = this.objList[ i ].xCalc;
+      this.objList[ i ].yCalcTemp = this.objList[ i ].yCalc;
+    }
+  },
+  /**
+   * Disable edit mode of the grid
+   * @private
+   */
+  disableEditMode: function() {
+    TRACE( 'Remove the drag behavior' );
+    this.g.editMode = false;
+
+    this.emit( 'tb.lg.toggleEdit', {
+      instance: this,
+      isEditMode: false,
+    } );
+
+    this.emit( 'tb.lg.disableEdit', {
+      instance: this,
+    } );
+
+    this.DOMitemsContainer
+      .selectAll( 'div.tb-lg-item' )
+      .on( '.drag', null );
+
+    if ( !this.disableMenu ) {
+      this.DOMbtnSave.attr( 'disabled', 'disabled' );
+      this.DOMbtnEdit.text( 'Edit' );
+
+      this.DOMnavbar.style( 'display', ( this.s.hideInactiveMenu ) ? 'none' : 'initial' );
+      this.DOMnavbar.classed( 'tb-lg-active', false );
+    }
+
+    this.DOMel.classed( 'tb-lg-editing', false );
+
+    this.g.indexTableTemp = null;
+
+    for ( var i = 0, l = this.objList.length; i &lt; l; i++ ) {
+      delete this.objList[ i ].xCalcTemp;
+      delete this.objList[ i ].yCalcTemp;
+    }
+
+    this._d3UpdateItems();
+  },
+  /**
+   * Programatically set size of items
+   * @public
+   */
+  setItemsSize: function( height, width ) {
+    if ( TB.isNumber( height ) ) {
+      this.DOMsliderHeight[0][0].value = TB.limitToRange( height, this.s.grid.minItemHeight, this.s.grid.maxItemHeight );
+    }
+
+    if ( TB.isNumber( width ) ) {
+      this.DOMsliderWidth[0][0].value = TB.limitToRange( width, this.s.grid.minItemWidth, this.s.grid.maxItemWidth );
+    }
+
+    this._gApplyResizeItems();
+  },
+  /**
+   * Programatically set grid zoom
+   * @public
+   */
+  setGridZoom: function( scale ) {
+    this.g.zoom.scale( TB.limitToRange( scale, this.s.grid.minZoom, this.s.grid.maxZoom ) );
+    this._gZoomCallback();
+  },
+  /**
+   * Save grid coordinates
+   * @private
+   */
+  save: function() {
+    ASSERT.ofTbType( this.g.indexTableTemp, 'array' );
+
+    var result = [];
+
+    for ( var i = 0, l = this.objList.length; i &lt; l; i++ ) {
+      var obj = this.objList[ i ];
+      var objCoords = {};
+
+
+      objCoords.id = obj.id;
+      if ( obj.xCalcTemp === obj.xCalc &amp;&amp; obj.yCalcTemp === obj.yCalc ) {
+        // if ( TB.isDefined( obj.x ) &amp;&amp; TB.isDefined( obj.x ) ) {
+        objCoords.x = obj.x || obj.xCalc || obj.xCalcTemp;
+        objCoords.y = obj.y || obj.yCalc || obj.yCalcTemp;
+        // } else {
+        //   objCoords.x = null;
+        //   objCoords.y = null;
+        // }
+      } else {
+        var swapObj = this._gGetItemAtIndex( obj.x, obj.y, this.g.indexTable );
+
+        if ( swapObj === obj ) {
+          this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTable );
+          this._gRemoveItemAtIndex( obj.x, obj.y, this.g.indexTableAll );
+        }
+
+        obj.x = obj.xCalcTemp;
+        obj.y = obj.yCalcTemp;
+        obj.xCalc = obj.xCalcTemp;
+        obj.yCalc = obj.yCalcTemp;
+
+        objCoords.x = obj.x;
+        objCoords.y = obj.y;
+
+        this._gSetItemAtIndex( obj.x, obj.y, obj, this.g.indexTable );
+        this._gSetItemAtIndex( obj.x, obj.y, obj, this.g.indexTableAll );
+      }
+
+      result.push( objCoords );
+    }
+
+    this.emit( 'tb.lg.saveData', {
+      instance: this,
+      coordinates: result,
+      settings: {
+        itemHeight: +this.g.itemHeight,
+        itemWidth: +this.g.itemWidth,
+        elHeight: parseInt( this.DOMel.style( 'height' ), 10 ),
+        zoom: this.g.zoom.scale(),
+      },
+    } );
+
+    this._d3UpdateItems();
+  },
+  /**
+   * Update items contents
+   * @private
+   * @param  {Array} objectsD3 array of d3 data
+   */
+  _d3UpdateItemContents: function( objectsD3 ) {
+    return function( d, i ) {
+      var objDOM = objectsD3[0][i];
+
+      for ( var contentName in d.contents ) {
+        var contentSettings = d.typeObj.contents[contentName];
+        var contentDOM = objDOM.querySelector( contentSettings.selector );
+
+        if ( contentSettings.attribute ) {
+          contentDOM.setAttribute( contentSettings.attribute, d.contents[ contentName ] );
+        } else {
+          if ( contentSettings.propertyArr.length === 1 ) {
+            contentDOM[ contentSettings.property ] = d.contents[ contentName ];
+          } else {
+            TB.set( contentDOM, contentSettings.propertyArr, d.contents[contentName] );
+          }
+        }
+      }
+    };
+  },
+  /**
+   * Update items DOM
+   * @private
+   */
+  _d3UpdateItems: function() {
+    var self = this;
+    var objectsD3 = this.DOMitemsContainer
+      .selectAll( 'div.tb-lg-item' )
+      .data( self.objList, this._returnDatum( 'id' ) );
+    var exited = objectsD3.exit().remove();
+    var entered = objectsD3.enter()
+      .append( 'div' )
+      .classed( 'tb-lg-item', true )
+      .attr( 'data-tb-lg-id', function( d ) { return d.id; } )
+      .append( 'div' )
+      .classed( 'tb-lg-item-content', true )
+      .html( this._returnDatum( 'typeObj.template' ) );
+    var itemNavbar = entered
+      .append( 'div' )
+      .classed( 'tb-lg-navbar', true );
+
+
+    objectsD3
+      .select( '.tb-lg-item-content' )
+      .attr( 'class', this._returnDatum( 'statusClassNames' ) )
+      .each( this._d3UpdateItemContents( objectsD3 ) );
+
+    if ( this.g.isEnabled ) {
+      itemNavbar
+        .append( 'button' )
+        .classed( 'tb-lg-btn', true )
+        .classed( 'tb-lg-btn-clear', true )
+        .text( 'Clear' )
+        .on( 'click', this._handlerOnClickBtnClear.bind( this ) );
+
+      objectsD3
+        .select( '.tb-lg-btn-clear' )
+        .property( 'disabled', function( d ) { return TB.isEmpty( d.x ); } );
+
+
+      objectsD3
+        .style( 'width', TB.toPx( this.g.itemWidth ) )
+        .style( 'height', TB.toPx( this.g.itemHeight ) );
+
+
+      objectsD3
+        .style( 'left', function( d ) {
+          var x = ( TB.isEmpty( d.xCalcTemp ) ? d.xCalc : d.xCalcTemp );
+
+          // console.log('x', x, d.xCalc, d.xCalcTemp)
+          return TB.toPx( x * self.g.itemWidth );
+        } )
+        .style( 'top', function( d ) {
+          var y = ( TB.isEmpty( d.yCalcTemp ) ? d.yCalc : d.yCalcTemp );
+
+          // console.log('y', y, d.yCalc, d.yCalcTemp)
+          return TB.toPx( y * self.g.itemHeight );
+        } );
+
+      // if ( this.g.editMode ) {
+      //   this._gEnableEditMode();
+      // }
+
+      if ( this.s.grid.itemAutoscale ) {
+        objectsD3
+          .each( function( d ) {
+            if ( !d.typeObj.contentScaleSelector ) {
+              return;
+            }
+
+            setTimeout( function() {
+              var scaleFactor;
+              var scaleFactorX = this.clientWidth / this.offsetWidth;
+              var scaleFactorY = this.clientHeight / this.offsetHeight;
+              var skip = true;
+
+              if ( this.clientWidth &lt; this.scrollWidth ) {
+                skip = false;
+                scaleFactorX = this.clientWidth / this.scrollWidth;
+              }
+
+              if ( this.clientHeight &lt; this.scrollHeight ) {
+                skip = false;
+                scaleFactorY = this.clientHeight / this.scrollHeight;
+              }
+
+              scaleFactor = Math.min( scaleFactorX, scaleFactorY ) - 0.05;
+
+              if ( skip ) {
+                return;
+              }
+
+              var elements = this.querySelectorAll( d.typeObj.contentScaleSelector );
+
+              d3.selectAll( elements )
+                .style( 'transform', 'scale(' + scaleFactor + ')' )
+                .style( 'transform-origin', 'top left' );
+            }.bind( this ) );
+
+          } );
+      }
+    }
+  },
+};
+
+
+
+TB.Livegrid = Livegrid;
+TB.classExtend( TB.Livegrid, TB.Dispatcher );
+
+/**
+ * D3 selection
+ * @typedef {Array} D3selection
+ */
+/**
+ * String that is valid CSS selector
+ * @typedef {String} DOMSelector
+ */
+/**
+ * Object that is instance of DOMElement
+ * @typedef {Object} DOMElement
+ */
+/**
+ * @typedef {Object} InitTypeObject
+ * @property {String} template HTML template of the item
+ * @property {Object.&lt;String,InitContentObject>} contents contents replacement definitions
+ * @property {Object.&lt;String,InitAttributeSetting>} attributes attributes definitions
+ */
+/**
+ * @typedef {Object} InitContentObject
+ * @property {DOMSelector} selector selector used to find proper DOM element in item's template
+ * @property {PropertyPath} property which property of DOM element to be applied with new content
+ */
+/**
+ * @typedef {Object} InitAttributeSetting
+ * @property {Integer} priority defines which attribute styles are stronger. If two attribute's states set different colors, the attribute with higher priority wins.
+ * @property {Object.&lt;String,InitStateSetting>} states states definitions
+ */
+/**
+ * @typedef {Object} InitStateSetting
+ * @property {Object.&lt;DOMSelector,String>} cssjson
+ */
+/**
+ * @typedef {String} CSSColor
+ * @example
+ *    rgb( 6,120,155 ); rgba( 6,120,155, 1 ); #131314; #333; royalblue
+ */
+/**
+ * Two dimensional array containing the indexed items on the grid
+ * @typedef {Array} indexTable
+ * @example
+ * var item = {x: 10, y: 20};
+ * var indexTable = [ [] ];
+ * indexTable[ y ] = indexTable[ y ] || [];
+ * indexTable[ y ][ x ] = item; // Now indexTable[20][10] contains item positioned on this coordinates
+ */
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> on Tue Dec 15 2015 17:37:16 GMT+0200 (EET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

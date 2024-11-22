@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron table-responsive ls-dashboard-panel">
+            <h3>Status</h3>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+
+                        <% for(var i = 0, l = locales.length; i < l; i++) { %>
+
+                        <th>
+                            <%= locales[i].language_name %>
+                        </th>
+
+                        <% } %>
+
+                        <th>
+                            <span>Total</span>
+                        </th>
+                    </tr>
+                </thead>
+
+                <% for(var i = 0, l = modules.length; i < l; i++) { %>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#/modules/<%= modules[i].name %>/edit"><%= modules[i].name %></a>
+                        </td>
+
+                        <% for(var j = 0, ll = locales.length; j < ll; j++) { %>
+
+                            <td>
+                                <% if(modules[i].notTranslatedByLocale[ locales[j].locale ] > 0) { %>
+
+                                <span class="label label-warning">
+                                  Not translated:
+                                  <%= modules[i].notTranslatedByLocale[ locales[j].locale ] %>
+                                </span>
+
+                                <% } else { %>
+
+                                <span class="label label-success">
+                                  Everything is translated
+                                </span>
+
+                                <% } %>
+
+                                <% if(modulesMeta[i].locale_attributes[ locales[j].locale ].is_approved) { %>
+
+                                    <span class="label label-success">
+                                      Approved
+                                    </span>
+
+                                <% } else { %>
+
+                                    <span class="label label-danger">
+                                      Not approved
+                                    </span>
+
+                                <% } %>
+                            </td>
+
+                        <% } %>
+
+                        <td>
+                            <% if(modules[i].notTranslated > 0) { %>
+
+                                <span class="label label-warning">
+                                  Not translated:
+                                  <%= modules[i].notTranslated %>
+                                </span>
+
+                            <% } else { %>
+
+                                <span class="label label-success">
+                                  Everything is translated
+                                </span>
+
+                            <% } %>
+
+                             <span class="label label-default">
+                                Total:
+                                 <%= modules[i].totalStrings %>
+                             </span>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+

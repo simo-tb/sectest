@@ -1,0 +1,188 @@
+<html>
+      <head>
+
+      <style>
+      .hidd { color: #ffffff; }
+      .dbreports-nowrap { white-space:pre;font-family:monospace; }
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+   border: 1px solid black;
+    padding: 5px;
+} 
+      </style> 
+      
+      <!-- <script src="./pub/jslibs/sorttable/sorttable.js"></script> -->
+      <script type="text/javascript" src="./pub/jslibs/mootools-release-1.11/mootools-release-1.11.js"></script>
+
+      <script type="text/javascript" src="./pub/jslibs/jquery-1.7.1/jquery-1.7.1.min.js">   </script>
+
+      <script type="text/javascript" src="./pub/jslibs/jquery-ui-1.10.3/jquery-ui.js"></script>
+      <link rel="stylesheet"        href="./pub/jslibs/jquery-ui-1.10.3/jquery-ui.css" />
+      <script type="text/javascript" src="./pub/jslibs/jquery-ui-timepicker-addon-1.3.1/jquery-ui-timepicker-addon.js"></script>
+       <link rel="stylesheet"       href="./pub/jslibs/jquery-ui-timepicker-addon-1.3.1/jquery-ui-timepicker-addon.css" />
+
+
+<script type="text/javascript">
+<!--&graph_resize($id, $min_width, $min_height)-->
+window.addEvent('domready', function(){ $('$id').makeResizable({grid: 20,limit: {x: [$min_width, 5000], y: [$min_height, 5000]} });} );
+<!--/&graph_resize-->
+function showGraphForm()
+{
+document.getElementById('graph_form').style.display = '';
+}
+</script>
+</head>
+
+<body bgcolor=white>
+
+
+<!--&menu()-->
+<h3>Reports</h3>
+   <!--&item($script_url='', $k, $name, $sess='')-->
+   <a href="$script_url?repid=$k;$sess">$name</a><br>
+   <!--/&item-->
+<!--/&menu-->
+
+<!--&header($head)-->
+<h3>$head</h3>
+<!--/&header-->
+
+ 
+<!--&filt($hiddens='')-->
+<table>
+    <form method=get>
+	<!--&f($filter_descr, $required_symb='', $inp_name, $value='')-->
+	<tr>
+	<td><b><i>$filter_descr</i></b>$required_symb: </td>
+	<td>
+	   <!--&selectbox()-->
+	      <select name="$inp_name">
+	      <!--&opt($val escape 'html', $descr, $selected='')-->
+	      <option value="$val" $selected>$descr</option>
+	      <!--/&opt-->
+	      </select>
+	   <!--/&selectbox-->
+	   <!--&textinput()-->
+	   <input type=text name="$inp_name" value="$value" <!--&id($idname)-->id=$idname<!--/&id-->>
+           <!--&datepicker($idname, $defaultDate='')-->
+           <script>
+               $(function() {
+                   $( "#$idname" ).datepicker({
+                       defaultDate: "$defaultDate",
+                       changeMonth: true,
+                       dateFormat: 'dd-mm-yy'
+                   });
+               });
+            </script>
+            <!--/&datepicker-->
+            <!--&datetimepicker($idname, $defaultDate='')-->
+            <script>
+                $(function() {
+                    $( "#$idname" ).datetimepicker({
+                        defaultDate: "$defaultDate",
+                        changeMonth: true,
+                        dateFormat: 'dd-mm-yy',
+                        timeFormat: 'HH:mm:ss',
+                        showSecond: true
+                    });
+                });
+            </script>
+            <!--/&datetimepicker-->
+	   <!--/&textinput-->
+	   <!--&selected($text)-->
+	     $text
+	   <!--/&selected-->
+	</td>
+	</tr>
+	<!--/&f-->
+	<!--&butt($stat_id, $button_label='Make report')-->
+                   <tr><td colspan=2><br> <input type=submit value="$button_label">
+              <!--&export()-->
+               <input type="checkbox" value="1" name="csv" id="csv_$stat_id"><label for="csv_$stat_id">Excel(CSV)</label>
+               <input type="checkbox" value="1" name="pdf" id="pdf_$stat_id"><label for="pdf_$stat_id">PDF</label>
+              <!--/&export-->
+               <input type="hidden" name="repid" value="$stat_id"></td></tr>
+    <!--/&butt-->
+        $hiddens
+    </form>
+</table>
+<br>
+<!--/&filt-->
+
+<!--&graph_form($stat_id, $hiddens='')-->
+<br>
+<a href="javascript:showGraphForm()">Chart</a>
+<div id="graph_form" style="display:none;">
+<form>
+Type: <select name=graphtype>
+<option value="line">Line
+<option value="linedot">Line Dot
+<option value="linehollow">Line Hollow
+<option value="bar">Bar
+<option value="baroutline">Bar Outline
+<option value="bar3d">Bar 3d
+<option value="barglass" selected="selected">Bar Glass
+<option value="barfade">Bar Fade
+<option value="barsketch">Bar Sketch
+<option value="area">Area
+<option value="pie">Pie
+</select>
+
+<table border=1>
+<tr><th>Field</th><th>X</th><th>Y</th></tr>
+<!--&col($name, $n, $x_checked)-->
+<tr><td>$name</td><td><input type=checkbox name=graphx value=$n $x_checked></td><td>
+<!--&y($checked)-->
+<input type=checkbox name=graphy value=$n $checked>
+<!--/&y-->
+</td></tr>
+<!--/&col-->
+</table>
+<input type=submit value="Make chart">
+<input type=hidden name=repid value=$stat_id>
+<input type=hidden name=graph value=1>
+<!--&hidden($name, $value escape 'html')-->
+<input type=hidden name="$name" value="$value">
+<!--/&hidden-->
+$hiddens
+</form>
+</div>
+<!--/&graph_form-->
+
+<!--&res($count)-->
+<table class="dbreports sortable" id="unique_id">
+<thead>
+<tr>
+<!--&hcol($text)-->
+<th valign=top><b>$text</b></th>
+<!--/&hcol-->
+</tr>
+</thead>
+<!--&row()-->
+<tr>
+  <!--&col($text escape 'html', $align='left', $class='', $title='')-->
+  <td align="$align" class="$class" title="$title"> 
+  <!--&img($src, $width='', $height='')--><img src="$src" width="$width" height="$height"> <!--/&img-->
+  <!--&link($href, $target='', $text escape 'html')--> <a href="$href" target="$target">$text</a> <!--/&link--> 
+  $text</td>
+  <!--/&col-->
+<!--&sumcol($text='&nbsp;', $align='left')-->
+<td align=$align class="alt"><b>$text</b></td>
+<!--/&sumcol-->
+</tr>
+<!--/&row-->
+</table>
+<!--/&res-->
+
+<!--&graph($data)-->
+$data
+<!--/&graph-->
+
+
+</body>
+</html>
+

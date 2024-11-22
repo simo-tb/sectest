@@ -1,0 +1,27 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/7-color",
+    "type": "object",
+    "properties": {
+      "maincolor": {
+        "type": "string",
+        "title": "Main color"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/7-color",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "maincolor",
+        "type": "color"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

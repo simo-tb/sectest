@@ -1,0 +1,93 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset-advanced",
+    "type": "object",
+    "properties": {
+      "connection": {
+        "anyOf": [
+          {
+            "title": "Outbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": ["outbound"]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": ["string", "null"]
+              },
+							"mood": {
+                "title": "Mood",
+								"type": "string"
+							},
+              "remote_ip": {
+                "title": "Remote IP",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "title": "Inbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": ["inbound"]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": "string"
+              },
+							"mood": {
+                "title": "Mood",
+								"type": "string"
+							},
+              "whitelist": {
+                "title": "Whitelist",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "title": "ip"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset-advanced",
+    "jsonformVersion": "2.0",
+		"fieldProperties": {
+			"connection/name": {
+				"anyOfId": "inbound",
+				"type": "textarea"
+			},
+			"connection/port": {
+				"type": "datepicker"
+			},
+			"connection/mood": {
+				"anyOfs": {
+					"inbound": {
+						"type": "textarea"
+					},
+					"outbound": {
+						"type": "jsoneditor"
+					}
+				}
+			}
+		},
+    "fields": [ "*" ]
+  }
+}

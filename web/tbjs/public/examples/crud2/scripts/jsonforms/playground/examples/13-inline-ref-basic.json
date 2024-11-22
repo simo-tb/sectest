@@ -1,0 +1,41 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/13-refs",
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "jsonform"
+      },
+      "nameRefShorthand": {
+        "$ref": "#/properties/name"
+      },
+      "nameRef": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-refs#/properties/name"
+      }
+    }
+  },
+
+ "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/13-refs",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "nameRef",
+        "title": "Name reference"
+      },
+      {
+        "key": "nameRefShorthand",
+        "title": "Name reference shorthand"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

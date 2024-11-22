@@ -1,0 +1,274 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-advanced",
+    "type": "object",
+    "title": "Event Based Promotion",
+    "properties": {
+      "conditions": {
+        "title": "Conditions",
+        "items": {
+          "title": "Condition - items",
+          "properties": {
+            "is_enabled": {
+              "default": true,
+              "title": "Is enabled",
+              "type": "boolean"
+            },
+            "filters": {
+              "title": "Filters",
+              "type": "object",
+              "properties": {
+                "days_of_week": {
+                  "title": "Days of week",
+                  "type": "array"
+                },
+                "event_until_oclock": {
+                  "type": "string",
+                  "title": "Event until, oclock"
+                },
+                "event_count": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "title": "Event Count",
+                  "default": 1,
+                  "maximum": 10000000
+                },
+                "event_expires_days": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "title": "Event expires, days",
+                  "maximum": 1000,
+                  "default": 1
+                },
+                "days_of_month": {
+                  "type": "array",
+                  "title": "Days of month"
+                },
+                "min_earned_points": {
+                  "properties": {
+                    "draw_points": {
+                      "default": 0,
+                      "maximum": 10000000,
+                      "title": "Lottery Points",
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "promo_points": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "Shopping Points",
+                      "default": 0,
+                      "maximum": 10000000
+                    },
+                    "bonus_points": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "Bonus Points",
+                      "default": 0,
+                      "maximum": 10000000
+                    },
+                    "tier_points": {
+                      "title": "Status Points",
+                      "default": 0,
+                      "maximum": 10000000,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "type": "object",
+                  "title": "Earned points"
+                },
+                "event_since_oclock": {
+                  "title": "Event since, oclock",
+                  "type": "string"
+                },
+                "machines": {
+                  "title": "Machines #",
+                  "type": "array"
+                }
+              }
+            },
+            "event": {
+              "enum": [
+                "register",
+                "earned_points",
+                "check_in"
+              ],
+              "title": "Event",
+              "type": "string",
+              "default": "check_in"
+            }
+          },
+          "title": "I MUST BE A TITLE",
+          "type": "object"
+        },
+        "type": "array",
+        "title": "Event Based Promotion2"
+      },
+      "limits": {
+        "type": "object",
+        "title": "Limits",
+        "properties": {
+          "period": {
+            "enum": [
+              "day",
+              "week0",
+              "week1",
+              "month"
+            ],
+            "title": "Period Type",
+            "type": "string",
+            "default": "day"
+          },
+          "budget": {
+            "title": "Budget",
+            "type": "object",
+            "properties": {
+              "promo_points": {
+                "title": "Shopping Points",
+                "default": 0,
+                "maximum": 10000000,
+                "type": "integer",
+                "minimum": 0
+              },
+              "credit": {
+                "default": 0,
+                "maximum": 10000000,
+                "title": "Cashable Credit",
+                "minimum": 0,
+                "type": "integer"
+              },
+              "bonus_points": {
+                "minimum": 0,
+                "type": "integer",
+                "default": 0,
+                "maximum": 10000000,
+                "title": "Bonus Points"
+              },
+              "bonus_credit": {
+                "title": "Extended Play",
+                "default": 0,
+                "maximum": 10000000,
+                "type": "integer",
+                "minimum": 0
+              },
+              "noncashable_credit": {
+                "default": 0,
+                "maximum": 10000000,
+                "title": "Bonus Play(Noncashable Credit)",
+                "minimum": 0,
+                "type": "integer"
+              },
+              "draw_points": {
+                "type": "integer",
+                "minimum": 0,
+                "title": "Lottery Points",
+                "default": 0,
+                "maximum": 10000000
+              },
+              "tier_points": {
+                "title": "Status Points",
+                "default": 0,
+                "maximum": 10000000,
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "promo_count": {
+            "maximum": 10000000,
+            "default": 1,
+            "title": "Promotion per period",
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "title": "Campaigns",
+            "items": [
+                { 
+                  "type": "tabarray",
+                  "key": "conditions",
+                  "title": "Event Based Promotion4",
+                  "type": "section",
+                  "items": [
+                    {
+                      "type": "tabobject",
+                      "title": "Events",
+                      "items": [
+                        {
+                          "type": "section",
+                          "items": [
+                            {
+                              "key": "conditions[]/is_enabled",
+                              "type": "radiobuttonset"
+                            },
+                            {
+                              "key": "conditions[]/event",
+                              "type": "radiobuttonset"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "section",
+                          "items": [
+                            "conditions[]/filters/event_count",
+                            "conditions[]/filters/event_expires_days"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              "limits/promo_count",
+              "limits/period"
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              "limits/promo_count",
+              "limits/period"
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              "limits/promo_count",
+              "limits/period"
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              "limits/promo_count",
+              "limits/period"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

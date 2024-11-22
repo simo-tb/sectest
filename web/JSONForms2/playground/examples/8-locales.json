@@ -1,0 +1,139 @@
+{
+  "locales": ["bg_BG", "en_GB", "es_AR"],
+
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-locales",
+    "type": "object",
+    "properties": {
+      "age": {
+        "title": "Gud title",
+        "type": "object",
+        "isMultilanguage": true,
+        "additionalProperties": {
+          "type": "number",
+          "title": "възраст"
+        }
+      },
+      "fname": {
+        "type": "object",
+        "title": "Gud title on firstName",
+        "properties": {
+          "address": {
+            "title": "address",
+            "type": "string"
+          },
+          "information": {
+            "type": "object",
+            "title": "My title is on information",
+            "properties": {
+              "mname": {
+                "type": "object",
+                "title": "преведено поле за презиме",
+                "isMultilanguage": true,
+                "additionalProperties": {
+                  "type": "object",
+                  "title": "презиме",
+                  "properties": {
+                    "age": {
+                        "type": "number",
+                        "title": "Age of the student"
+                    },
+                    "supername": {
+                        "type": "string",
+                        "title": "Super name 202"
+                    }
+                  }
+                }
+              },
+
+              "bday": {
+                "type": "object",
+                "title": "преведено поле за рождена дата",
+                "isMultilanguage": true,
+                "additionalProperties": {
+                  "type": "string",
+                  "title": "рожден ден"
+                }
+              }
+            }
+          }
+        }
+      },
+      "name": {
+        "type": "string",
+        "title": "Name",
+      }
+    }
+  },
+
+  "form": {
+    "$$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-locales",
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-locales",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "таб 1",
+            "type": "section",
+            "items": [
+              {
+                "title": "малко име",
+                "key": "name"
+              },
+              {
+                "title": "друга информация",
+                "type": "tabobject",
+                "items": [
+                  {
+                    "type": "section",
+                    "items": [
+                      {
+                        "title": "информация",
+                        "key": "fname/information"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "items": [
+                      {
+                        "title": "адрес",
+                        "key": "fname/address"
+                      }
+                    ]
+                  }
+                ]
+
+              }
+            ]
+          },
+          {
+            "title": "таб 2",
+            "type": "section",
+            "items": [
+              {
+                "title": "преведено поле за възраст",
+                "key": "age"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-locales",
+    "age": {
+      "bg_BG": 10,
+      "en_GB": 11,
+      "multilanguage_default": 0
+    }
+  }
+}

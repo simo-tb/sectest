@@ -1,0 +1,39 @@
+{
+  "files": {
+  },
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/14-fileRequest",
+    "type": "object",
+    "properties": {
+      "key_to_upload": {
+        "type": "string",
+        "title": "File to upload",
+		"imageFormat": "jpeg",
+		"imageQuality": 1,
+		"fileMimeTypes": ["image/png", "image/jpeg", "image/jpg"]
+      },
+      "key_to_upload2": {
+        "type": "string",
+        "title": "File to upload",
+		"imageFormat": "jpeg",
+		"imageQuality": 1,
+		"fileMimeTypes": ["image/png", "image/jpeg", "image/jpg"]
+      }
+
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/14-fileRequest",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "key_to_upload",
+        "isDrawer": true,
+        "type": "file",
+		"drawerMaxElementWidth": 1000,
+		"drawerMaxElementHeight": 1000
+      }
+    ]
+  }
+}
+

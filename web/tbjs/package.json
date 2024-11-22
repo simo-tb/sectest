@@ -1,0 +1,33 @@
+{
+  "name": "tbjs",
+  "version": "0.0.0",
+  "description": "Javascript libraries to be used in TelebidPro projects",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "grunt-jsdoc": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-grunt": "^0.5.5",
+    "gulp-insert": "^0.5.0",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-live-server": "0.0.30",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "author": {
+    "name": "Ivan Ivanov",
+    "email": "ivan.ivanov@suricactus.com",
+    "url": "http://suricactus.com/"
+  },
+  "scripts": {
+    "start": "live-server --port=7200 --cors --mount=/cdn:/usr/share/tbcdn"
+  },
+  "main": "./index.js",
+  "license": "ISC",
+  "private": true
+}

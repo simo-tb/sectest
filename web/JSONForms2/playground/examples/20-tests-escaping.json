@@ -1,0 +1,138 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/20-test-escaping",
+    "type": "object",
+    "properties": {
+      "mo~od": {
+        "type": "number",
+        "title": "Key name: mo~od"
+      },
+      "mo/od": {
+        "type": "number",
+        "title": "Key name: mo/od"
+      },
+      "mo.od": {
+        "type": "number",
+        "title": "Key name: mo.od"
+      },
+      "mo'od": {
+        "type": "number",
+        "title": "Key name: mo'od"
+      },
+      "mo-=od": {
+        "type": "number",
+        "title": "Key name: mo-=od"
+      },
+      "mo=-=od": {
+        "type": "number",
+        "title": "Key name: mo=-=od"
+      },
+      "mo[od": {
+        "type": "number",
+        "title": "Key name: mo[od"
+      },
+      "mo[o]d": {
+        "type": "number",
+        "title": "Key name: mo[o]d"
+      },
+      "mo{o}d": {
+        "type": "number",
+        "title": "Key name: mo{o}d"
+      },
+      "mo['o']d": {
+        "type": "number",
+        "title": "Key name: mo['o']d"
+      }
+    }
+  },
+
+  "form": {
+    "strictNumberTypes": false,
+    "isStrict": true,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/20-test-escaping",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mo~0od"
+      },
+      {
+        "key": "mo~1od"
+      },
+      {
+        "key": "mo.od"
+      },
+      {
+        "key": "mo'od"
+      },
+      {
+        "key": "mo-=od"
+      },
+      {
+        "key": "mo=-=od"
+      },
+      {
+        "key": "mo~6od"
+      },
+      {
+        "key": "mo~6o~7d"
+      },
+      {
+        "key": "mo~3o~4d"
+      },
+      {
+        "key": "mo~6'o'~7d"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/20-test-escaping",
+    "mo~od": 2,
+    "mo~0od": 202,
+
+    "mo/od": 2,
+    "mo~1od": 202,
+
+
+    "mo.od": 2,
+    "mo~9od": 202,
+    "test.": {
+      "mo.od": 21,
+      "mo~9od": 22
+    },
+
+    "mo!od": 2,
+    "mo!!od": 202,
+
+    "mo-=od": 2,
+    "mo-==od": 202,
+
+    "mo=-=od": 2,
+    "mo=--=od": 202,
+    "test=-=": {
+      "mo=-=od": 21,
+      "mo=--=od": 22
+    },
+    "test-=": {
+      "mo-=od": 21,
+      "mo-==od": 22
+    },
+    "test!": {
+      "mo!od": 21,
+      "mo!!od": 22
+    },
+    "test/": {
+      "mo/od": 21,
+      "mo~1od": 22
+    },
+    "test~": {
+      "mo~od": 21,
+      "mo~0od": 22
+    }
+  }
+}

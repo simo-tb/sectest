@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title><!--&title($value)-->$value<!--/&title--></title>
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="skins/vector/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="skins/mediawiki_common.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="skins/custom.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="ui/DBForms/dbf.css" rel="stylesheet" type="text/css" media="screen" />
+<script language="JavaScript" src="all.js"></script>
+
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/ui-mediawiki/skins/vector/csshover.min.htc")}</style><![endif]-->
+
+<style>
+      .macstat1  {  color: #ff0000;  }
+      .macstat2  { color: #ff0000; }
+      .macstat3  { color: #ff0000; }
+      .macstat4  { color: #ff0000; }
+      .macstat5  { color: #ff0000; }
+      .macstat6  { color: #ff0000; }
+      .macstat7  { color: #ff0000; }
+      .macstat8  { color: #ff0000; }
+      .macstat9  { color: #ff0000; }
+      .macstat10 { color: #ff0000; }
+      .macstat11 { color: #ff0000; }
+      .macstat12 { color: #ff0000; }
+      .macstat13 { color: #ff0000; }
+
+</style>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Main_Page skin-vector" onLoad="initapp();initDynSelectObjs();callOnLoad();">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint">
+<div style="padding: 5px;"><!--&top_header($header)-->$header  <!--/&top_header--></div>
+</div>
+<!--&auto_refresh($timeout)-->
+<script type="text/JavaScript">
+addOnLoad(function() {
+       
+       var scrolls = location.toString().match(/[\?&]scroll=(\d+)/);
+       if (scrolls && scrolls[1]) {
+           window.scrollTo(0,scrolls[1]);         
+       }
+       
+     });
+var timers = new Array;
+addOnLoad(function() {timers.push(setTimeout( function () {
+                      var url = location.toString();
+                      url = url.replace(/[\?&]scroll=(\d+)/,'');
+                      var sepa = '?'; 
+                      if (url.indexOf('?') > 0) {
+                         sepa = '&'
+                      } 
+                      location.assign(url + sepa + 'scroll='+window.pageYOffset);
+                    }, $timeout));  } );
+
+</script>
+<!--/&auto_refresh-->
+
+<!-- content -->
+<div id="content"> <a id="top"></a>
+  <div id="mw-js-message" style="display:none;"></div>
+  <!--&firstHeading() -->
+  <h1 id="firstHeading" class="firstHeading">Main Page</h1>
+  <!--/&firstHeading -->
+  <!-- bodyContent -->
+  <div id="bodyContent">
+
+<!--&top_ambox($type='ambox-notice', $text)-->
+<table class="ambox $type">
+<tr>
+<td class="mbox-image"> 
+<td class="mbox-text"><div>$text
+</div>
+<td class="mbox-imageright"> 
+</table>
+<br>
+<!--/&top_ambox-->
+
+<!--&exit_form()-->
+You Have Successfully Logged Out!
+<!--/&exit_form-->
+
+
+<!--&login_form()-->
+<form name="userlogin" class="mw-ui-vform" method="post" action="">
+<table><tr><td>
+                Username</td><td> 
+            <input class="loginText" id="wpName1" tabindex="1" size="20" placeholder="Enter your username" autofocus="" name="login" />        
+        </td></tr>
+<tr><td>
+            Password </td><td>
+            <input class="loginPassword" id="wpPassword1" tabindex="2" size="20" placeholder="Enter your password" type="password" name="password" />     
+        </td></tr>
+    
+        <tr><td>
+            <input id="wpLoginAttempt" tabindex="6" class="mw-ui-button mw-ui-big mw-ui-block mw-ui-primary" type="submit" value="Log in" name="wpLoginAttempt" />      
+        </td></tr>
+</table>
+</form>
+<!--/&login_form-->
+
+
+
+
+<!--&alert_msg($text) -->
+<table class="ambox ambox-notice">
+<tr>
+<td class="mbox-image">
+<td class="mbox-text"><div>
+$text
+</div>
+<td class="mbox-imageright">
+</table>
+<br>
+<!--/&alert_msg-->
+
+<!--&unconf_msg() -->
+<table class="ambox ambox-notice">
+<tr>
+<td class="mbox-image"> 
+<td class="mbox-text"><div>
+There are suspended machine profiles! Please <a href="./?view=stat_unconf">Configure</a> !
+</div>
+<td class="mbox-imageright"> 
+</table>
+<br>
+<!--/&unconf_msg-->
+
+	<!--&body_panel()-->
+	<!--/&body_panel-->
+
+<!--&dispatch_message($text)-->
+  <br>  <img src="images/warn.gif">$text<br>
+<!--/&dispatch_message-->
+
+<!--&action_message($text)-->
+    $text<br>
+<!--/&action_message-->
+
+<!--&action_error($msg)-->
+<br> <img src="images/warn.gif">$msg
+<!-- <script language="JavaScript">alert('Грешка !');</script> -->
+<br><br>
+<!--/&action_error-->
+
+<!--&action_complete($msg) -->
+<br> <img src="images/complete.gif">$msg <br>
+<!--/&action_complete -->
+
+<!--&app_error($msg)-->
+<br><br> <img src="images/warn.gif">$msg <br><br>
+<!--/&app_error-->
+
+<!--&body_dbreports()-->
+<!--/&body_dbreports-->
+
+<!--&view_panel()-->
+<!--/&view_panel-->
+
+
+<!--&server_status($text escape 'html')-->
+Server status:
+<pre>
+$text
+</pre>
+<!--/&server_status-->
+
+    <div class="visualClear"></div>
+  </div>
+  <!-- /bodyContent -->
+</div>
+<!-- /content -->
+<!-- header -->
+<div id="mw-head" class="noprint">
+  <!-- 0 -->
+  <div id="p-personal" class="">
+    <h5>Personal tools</h5>
+    <ul>
+      <!--&username_handler($value='Demo')-->
+      <li id="pt-userpage">$value</li>
+      <!--/&username_handler-->
+       <li id="pt-logout"><a href="./?view=exit_form" title="Exit">Exit</a></li>
+      <!--&version($value='-1')-->
+      <li id="pt-version">Version: $value</li>
+      <!--/&version-->
+    </ul>
+  </div>
+  <!-- /0 -->
+  <div id="left-navigation">
+    <!-- 0 -->
+    <div id="p-namespaces" class="vectorTabs">
+      <h5>Namespaces</h5>
+      <ul>
+		<!--&left_tab($name, $state values 'selected|new', $href='#' )-->
+        <li id="ca-nstab-main" class="$state"><span><a href="$href" title="$name">$name</a></span></li>
+		<!--/&left_tab-->
+      </ul>
+    </div>
+    <!-- /0 -->
+    <!-- 1 -->
+    <div id="p-variants" class="vectorMenu emptyPortlet">
+      <h5><span>Variants</span><a href="#"></a></h5>
+      <div class="menu">
+        <ul>
+        </ul>
+      </div>
+    </div>
+    <!-- /1 -->
+  </div>
+  <div id="right-navigation">
+    <!-- 0 -->
+    <div id="p-views" class="vectorTabs">
+      <h5>Views</h5>
+      <ul>
+		<!--&right_tab($name, $state values 'selected|new|collapsible' )-->
+        <li id="ca-view" class="$state"><span><a href="Main_Page" >$name</a></span></li>
+		<!--/&right_tab-->
+
+<!--&right_tab_examples()-->
+        <li id="ca-view" class="selected"><span><a href="/ui-mediawiki/index.php/Main_Page" >Read</a></span></li>
+        <li id="ca-edit"><span><a href="/ui-mediawiki/index.php?title=Main_Page&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+        <li id="ca-history" class="collapsible "><span><a href="/ui-mediawiki/index.php?title=Main_Page&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+<!--/&right_tab_examples-->
+      </ul>
+    </div>
+    <!-- /0 -->
+    <!-- 1 -->
+    <div id="p-cactions" class="vectorMenu">
+      <h5><span>Actions</span><a href="#"></a></h5>
+      <div class="menu">
+        <ul>
+<!--&right_menu_examples()-->
+          <li id="ca-delete"><a href="/ui-mediawiki/index.php?title=Main_Page&amp;action=delete"  title="Delete this page [d]" accesskey="d">Delete</a></li>
+          <li id="ca-move"><a href="/ui-mediawiki/index.php/Special:MovePage/Main_Page"  title="Move this page [m]" accesskey="m">Move</a></li>
+          <li id="ca-protect"><a href="/ui-mediawiki/index.php?title=Main_Page&amp;action=protect"  title="Protect this page [=]" accesskey="=">Protect</a></li>
+          <li id="ca-watch"><a href="/ui-mediawiki/index.php?title=Main_Page&amp;action=watch"  title="Add this page to your watchlist [w]" accesskey="w">Watch</a></li>
+<!--/&right_menu_examples-->
+        </ul>
+      </div>
+    </div>
+    <!-- /1 -->
+    <!-- 
+    <div id="p-search">
+      <h5>
+        <label for="searchInput">Search</label>
+      </h5>
+      <form action="/ui-mediawiki/index.php" id="searchform">
+        <input type='hidden' name="title" value="Special:Search"/>
+        <input id="searchInput" name="search" type="text"  title="Search ui tests [f]" accesskey="f"  value="" />
+        <input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+        <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+      </form>
+    </div>
+    -->
+  </div>
+</div>
+<!-- /header -->
+<!-- panel -->
+<div id="mw-panel" class="noprint">
+  <!-- logo -->
+  <div id="p-logo"><a style="background-image: url(images/logo.png);" href="#"  title="Visit the main page"></a></div>
+  <!-- /logo -->
+  <!-- navigation -->
+  <!--&left_nav_block($name)-->
+  <div class="portal" id='p-navigation'>
+    <!--&name()--> <h5>$name</h5> <!--/&name-->
+    <!--&name_link($href='#')--> <h5><a href="$href" title="$name">$name</a></h5> <!--/&name_link-->
+    <div class="body">
+      <ul>
+		<!--&item($name, $href='#')-->
+        <li><a href="$href" title="$name">$name</a></li>
+		<!--/&item-->
+      </ul>
+    </div>
+  </div>
+  <!--/&left_nav_block-->
+
+  <!--&left_nav_block_examples()-->
+  <div class="portal" id='p-navigation'>
+    <h5>Одит</h5>
+    <div class="body">
+      <ul>
+        <li><a href="#" title="Справки">Справки</a></li>
+        <li><a href="#" title="Монитор">Монитор</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--/&left_nav_block_examples-->
+
+  <!-- /navigation -->
+</div>
+<!-- /panel -->
+<!-- footer -->
+<div id="footer">
+  <ul id="footer-info">
+    <li id="footer-info-lastmod"> Copyright &copy; 2011,2012,2013. Casino Technology. All Rights Reserved.</li>
+  </ul>
+  <div style="clear:both"></div>
+</div>
+<!-- /footer -->
+
+<script language="JavaScript">
+<!--
+InitDynBuffers();
+//-->
+</script>
+
+
+
+</body>
+</html>

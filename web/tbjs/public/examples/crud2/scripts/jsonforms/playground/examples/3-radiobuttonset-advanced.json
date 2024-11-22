@@ -1,0 +1,141 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/3-radiobuttonset-advanced",
+    "type": "object",
+    "properties": {
+      "language": {
+        "type": "string",
+        "title": "Best language",
+        "enum": [
+          "JavaScript",
+          "Python",
+          "PHP",
+          "Perl",
+          "Ruby",
+          "Java",
+          "C++",
+          "Go",
+          "other"
+        ]
+      },
+      "cool": {
+        "type": "boolean",
+        "title": "Is it cool?"
+      },
+      "cool2": {
+        "type": "boolean",
+        "title": "Is it cool again?"
+      },
+      "address": {
+        "type": "object",
+        "title": "Location survey",
+        "description": "please answer the following questions about your location",
+        "properties": {
+          "country": {
+            "type": "boolean",
+            "title": "Country population",
+            "description": "Does your country have more than 10 million citizens"
+          },
+          "city": {
+            "type": "boolean",
+            "title": "City population",
+            "description": "Does the city you live in have more than 1 million people"
+          }
+        },
+        "required": ["country", "city"]
+      },
+      "contacts": {
+        "type": "array",
+        "title": "Contact list",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Contact name",
+              "type": "string",
+              "default": "Mike"
+            },
+            "operator": {
+              "title": "Contact mobile provider",
+              "type": "string",
+              "enum": [ "Mtel", "Vivacom", "Telenor", "Bob", "other"],
+              "default": "Vivacom"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/3-radiobuttonset-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "cool2",
+        "title": "Radiobuttons that look like actual buttons",
+        "type": "radiobuttonset",
+        "options": {
+          "false": "Not at all",
+          "true": "Very cool"
+        }
+      },
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "address/city",
+                "type": "radiobuttonset"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "address/country",
+                "type": "radiobuttonset"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contacts",
+        "type": "tabarray",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "key": "contacts[]/name"
+            },
+            {
+              "key": "contacts[]/operator",
+              "type": "radiobuttonset",
+              "inline": true
+            }
+          ]
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/3-radiobuttonset-advanced",
+    "address": {
+      "city": true
+    },
+    "contacts": [
+      {
+        "operator": "Telenor"
+      }
+    ]
+  }
+}

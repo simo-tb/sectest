@@ -1,0 +1,99 @@
+{
+  "content": {
+    "ips_ra": [
+      "94.155.194.200/29",
+      "31.13.223.160/27",
+      "84.40.89.0/24",
+      "# Kukush office",
+      "46.249.82.104/29",
+      "# VPN kukush office",
+      "84.242.152.5",
+      "84.242.152.6",
+      "# Ely home",
+      "90.154.239.80",
+      "# Silvia home",
+      "85.9.28.130",
+      "# Everymatrix",
+      "10.0.0.0/8",
+      "# Telebid-Pro VPN",
+
+      "192.168.1.1",
+      "10.10.2.0/28",
+      "192.168.",
+      "123.",
+      "2001:db8::8a2e:370:7334",
+      "2001:db8::/112",
+      "::1",
+      "#test"
+    ],
+    "ips_shorewall": [
+     "example.com",
+     "10.10.10.10/16",
+      "::1"
+    ]
+  },
+    "form": {
+        "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-ipv4-basic",
+        "fields": [
+            {
+                "identitySeparator": ",",
+                "identityTarget": "",
+                "key": "ips_ra",
+                "displayCompact": true,
+                "enableSorting": true,
+                "showParseboxOnly": true,
+                "commentPattern": "#",
+                "items": { "key": "ips_ra[]" }
+            },
+            {
+                "key": "ips_shorewall",
+                "identitySeparator": ",",
+                "identityTarget": "",
+                "displayCompact": true,
+                "enableSorting": true,
+                "showParseboxOnly": true,
+                "commentPattern": "#",
+                "items": { "key": "ips_shorewall[]" }
+            },
+            {
+                "ordering": 999,
+                "title": "Submit",
+                "type": "submit"
+            }
+        ],
+        "jsonformVersion": "2.0"
+    },
+    "schema": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-ipv4-basic",
+        "properties": {
+            "ips_ra": {
+                "items": {
+                    "formatWithSchema": "ip",
+                    "allowIPv4": true,
+                    "allowPartialIPv4": true,
+                    "allowIPv6": true,
+                    "allowMask": true,
+                    "allowComment": true,
+										"title": "ips ra (allow ipv4, partial ipv4, ipv6, mask, comment)",
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "ips_shorewall": {
+                "items": {
+                    "formatWithSchema": "ip",
+	                  "allowIPv4": true,
+                    "allowPartialIPv4": true,
+                    "allowIPv6": true,
+                    "allowMask": true,
+                    "allowHostname": true,
+                    "allowComment": true,
+										"title": "ips shorewall (allow ipv4, ipv6, mask, hostname, comment)",
+                    "type": "string"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
+}

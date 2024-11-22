@@ -1,0 +1,81 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/999-range-date",
+    "type": "object",
+    "properties": {
+      "contractperiod": {
+        "type": "string"
+      },
+      "fromDateKey": {
+        "title": "Начало",
+        "type": "string",
+        "format": "iso8601date",
+        "formatMaximum": { "$data": "1/toDateKey" }
+      },
+      "toDateKey": {
+        "title": "Край",
+        "type": "string",
+        "format": "iso8601date",
+        "formatMinimum": { "$data": "1/fromDateKey" }
+      },
+      "fromDateKey2": {
+        "title": "Начало",
+        "type": "string",
+        "format": "iso8601date",
+        "formatMaximum": { "$data": "/toDateKey2" },
+	"formatExclusiveMaximum":true
+      },
+      "toDateKey2": {
+        "title": "Край",
+        "type": "string",
+        "format": "iso8601date",
+        "formatMinimum": { "$data": "/fromDateKey2" },
+	"formatExclusiveMinimum":true
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/999-range-date",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "section",
+        "title": "Please select start and end date",
+        "items": [
+          {
+            "key": "fromDateKey",
+            "type": "datepicker"
+          },
+          {
+            "key": "toDateKey",
+            "type": "datepicker"
+          }
+        ]
+      },
+      {
+        "type": "section",
+	"gridLayout": true,
+        "title": "Please select start and end date & time",
+        "items": [
+          {
+            "key": "fromDateKey2",
+            "type": "datepicker"
+          },
+          {
+            "key": "toDateKey2",
+            "type": "datepicker"
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/999-range-date",
+    "fromDateKey": "2010-10-01",
+    "toDateKey": "2012-10-01"
+  }
+}

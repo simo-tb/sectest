@@ -1,0 +1,80 @@
+{
+    "content": {
+        "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+        "friends": [
+            {
+                "nick": "Rick"
+            },
+            {
+                "nick": "Traynesha"
+            },
+            {
+                "nick": "TheDIsSilent"
+            }
+        ],
+        "test": [
+            "tb",
+            "tbl",
+            "tbli",
+            "tblib"
+        ]
+    },
+    "form": {
+        "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+        "fields": [
+            {
+                "identitySeparator": ",",
+                "identityTarget": "",
+                "key": "test"
+            },
+            {
+                "identitySeparator": ",",
+                "identityTarget": "/pet/name",
+                "key": "friends"
+            },
+            {
+                "title": "Submit",
+                "type": "submit"
+            }
+        ],
+        "jsonformVersion": "2.0"
+    },
+    "schema": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+        "properties": {
+            "friends": {
+                "items": {
+                    "properties": {
+                        "nick": {
+                            "type": "string"
+                        },
+                        "pet": {
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "species": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "title": "Friend",
+                    "type": "object"
+                },
+                "title": "Friends (parsing to /pet/name)",
+                "type": "array"
+            },
+            "test": {
+                "items": {
+                    "title": "Test",
+                    "type": "string"
+                },
+                "title": "Parsing to strings",
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
+}

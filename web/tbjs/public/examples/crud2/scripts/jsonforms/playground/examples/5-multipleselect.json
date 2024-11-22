@@ -1,0 +1,32 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-multipleselect-basic",
+    "type": "object",
+    "properties": {
+      "multi": {
+        "type": "array",
+        "default": ["1","3","7"],
+        "items": {
+          "enum": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
+          "type": "string"
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-multipleselect-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "multi",
+        "title": "Multiple select",
+        "type": "multipleselect"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

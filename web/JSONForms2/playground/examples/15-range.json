@@ -1,0 +1,34 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/15-range",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": ["string", "null"],
+        "title": "is dis laf",
+        "format": "pgtimeinterval",
+        "default": "second"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/15-range",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mood",
+        "type": "pgtimeinterval"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/15-range",
+    "mood": "hour"
+  }
+
+}

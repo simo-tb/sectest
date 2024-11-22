@@ -1,0 +1,10 @@
+<% for(var i = 0, l = languages.length; i < l; i++) { %>
+<li role="presentation">
+  <a role="menuitem" tabindex="-1">
+    <label>
+      <input type="checkbox" value="<%= languages[i].language %>" <%= (languages[i].isChecked) ? 'checked="checked"' : '' %> />
+      <%= languages[i].language_name %>
+    </label>
+  </a>
+</li>
+<% } %>

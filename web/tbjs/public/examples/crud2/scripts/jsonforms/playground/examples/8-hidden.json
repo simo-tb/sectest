@@ -1,0 +1,33 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-hidden",
+    "type": "object",
+    "properties": {
+      "apikey": {
+        "type": "string",
+        "title": "API key",
+        "default": "supercalifragilisticexpialidocious"
+      },
+      "text": {
+        "type": "string",
+        "title": "Search string"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-hidden",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "apikey",
+        "type": "hidden"
+      },
+      "text",
+      {
+        "type": "submit",
+        "title": "Search"
+      }
+    ]
+  }
+}

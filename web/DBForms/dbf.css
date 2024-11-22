@@ -1,0 +1,113 @@
+/*
+input.fltext {background:#DCDCDC;color:black;font:16px Nevera, Arial, Hebar, Helvetica, Times New Roman, sans-serif;}
+input.fltextarea {background:#DCDCDC;color:black;font:16px Nevera, Arial, Hebar, Helvetica, Times New Roman, sans-serif;}
+
+tr.flins-top-butt-bgcol { background: #FFFFFF;}
+tr.flins-head-bgcol { background: #e5fffc;}
+tr.flins-row-bgcol-2 { background: #f9f9f9;}
+tr.flins-row-bgcol-1 { background: #f1f1f1;}
+tr.flshow-filt-bgcol { background: #fffcd6;}
+tr.flshow-heads-bgcol { background: #e5fffc;}
+tr.flshow-row-bgcol-2 { background: #f9f9f9;}
+tr.flshow-row-bgcol-1 { background: #f1f1f1;}
+tr.flshow-row-bgcol-high { background: #F3F3FF;}
+tr.flshow-printrow-bgcol { background: #efffff;}
+
+*/
+
+
+.autowidth {
+    width: auto !important;
+}
+
+.nopadding {
+    padding: 0px !important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.minwidth {
+    width: 0.001%;
+}
+
+.fa-required:before {
+    content: '\2217';
+}
+
+.dbf-btn-add {
+    color: initial;
+} 
+.dbf-btn-add:visited {
+    color: white;
+}
+
+.dbf-input-label {
+    padding-top: 1.1rem !important;
+} 
+
+.dbf-search-column {
+    width: initial !important;
+    float: left;
+}
+
+.dbf-search-btn {
+    padding-top: 4px !important;
+}
+
+.dbf-th {
+    font-size: 1em;
+    font-weight: bold;
+    background: #eee;
+}
+
+tr.dbf-tr-filter > th {
+    font-weight: normal;
+}
+
+.jf-container {
+    margin: 0px !important;
+}
+
+.jf-container>.setting-group {
+    margin: 0px !important;
+    border: none;
+}
+
+.jf-container>.ui-widget-content>.ui-widget-header {
+    padding: 1.1rem !important;
+}
+
+.jf-container .setting-item {
+    margin: 0px !important;
+    padding: 0px 0.5rem !important;
+}
+
+.jf-container .setting-description {
+    font-size: 0.95em;
+}
+
+.jf-container .setting-label {
+    text-align: left !important;
+}
+
+.jf-container .ui-widget-content {
+    color: initial;
+}
+
+.jf-container .ui-widget {
+    font-size: 1em;
+}
+
+.jf-container .ui-widget .ui-widget {
+    font-size: 1em;
+}
+
+.jf-container .ui-widget-content {
+    font-size: 1em;
+}
+
+.jf-container label {
+    font-weight: normal;
+}

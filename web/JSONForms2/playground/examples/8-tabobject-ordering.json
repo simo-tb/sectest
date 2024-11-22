@@ -1,0 +1,140 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "type": "object",
+    "properties": {
+      "item1": {
+        "properties": {
+          "age": {
+            "type": "integer",
+            "title": "My age!"
+          },
+          "order_by_key": {
+            "type": "integer",
+            "title": "Order By Value"
+          }
+        }, 
+        "type": "object"
+      },
+      "item2": {
+        "properties": {
+          "fname": {
+            "title": "My first name!",
+            "type": "object",
+            "properties": {
+              "mname": {
+                "type": ["string", "null"],
+                "title": "презиме"
+              },
+              "bday": {
+                "type": "string",
+                "title": "дата на раждане"
+              }
+            }
+          },
+          "order_by_key": {
+            "type": "integer",
+            "title": "Order By Value"
+          }
+        },
+        "type": "object"
+      },
+      "item3": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "my Na"
+          },
+          "order_by_key": {
+            "type": "integer",
+            "title": "Order By Value"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "orderObjectKey": "order_by_key",
+        "items": [
+          {
+            "title": "име",
+            "type": "section",
+            "items": [
+              {
+                "title": "малко име",
+                "key": "item1",
+                "type": "tabobject",
+                "items": [
+                  {
+                    "title": "Inner shit 1",
+                    "type": "section",
+                    "items": [
+                      {
+                        "title": "INner child 1",
+                        "key": "item1/age"
+                      },
+                      {
+                        "title": "INner child 1 readonly",
+                        "key": "item1/order_by_key",
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "възраст",
+            "type": "section",
+            "items": [
+              {
+                "title": "възраст",
+                "key": "item2"
+              }
+            ]
+          },
+          {
+            "title": "допълнителна информация",
+            "type": "section",
+            "items": [
+              {
+                "title": "друга информация",
+                "key": "item3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+  "content": {
+      "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+      "item1": {
+        "age": 123,
+        "order_by_key": 50
+      },
+      "item2": {
+        "fname": {
+          "bday": "312",
+          "mname": null
+        },
+        "order_by_key": 1
+      },
+      "item3": {
+        "name": "321",
+        "order_by_key": 300
+      }
+  }
+}

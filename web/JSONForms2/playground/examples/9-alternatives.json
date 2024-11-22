@@ -1,0 +1,65 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-alternative",
+    "type": "object",
+    "properties": {
+      "alternativeSelect": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "category": {
+            "title": "test",
+            "type": "string",
+            "oneOf": [
+              {
+                "type": "string",
+                "title": "Category",
+                "enum": [
+                  "Geography",
+                  "Entertainment",
+                  "History",
+                  "Arts",
+                  "Science",
+                  "Sports"
+                ]
+              },
+              {
+                "type": "boolean",
+                "title": "check it"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-alternative",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "alternativeSelect",
+        "type": "alternative",
+        "title": "Make a choice",
+        "items": [
+          {
+            "key": "alternativeSelect/category",
+            "legend": "Search by category"
+          },
+          {
+            "key": "alternativeSelect/text",
+            "legend": "Search by text"
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}

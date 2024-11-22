@@ -1,0 +1,200 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Name"
+      },
+      "currency": {
+        "type": "string",
+        "title": "Currency",
+        "description": "Currency",
+        "enum": [
+          "BGN",
+          "USD",
+          "GEL"
+        ]
+      },
+      "promo_period": {
+        "type": "string"
+      },
+      "days_of_week": {
+        "type": "array",
+        "default": [],
+        "items": {
+          "enum": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "type": "string"
+        }
+      },
+      "time_intervals": {
+        "type": "array",
+        "title": "Time intervals",
+        "enableDeletingItems": false,
+        "gridLayout": true,
+        "items": {
+          "title": "Time intervals",
+          "type": "object",
+          "properties": {
+            "start_time": {
+              "type": "string",
+              "default": "2001-01-01 00:00:00"
+            },
+            "end_time": {
+              "type": "string",
+              "default": "2001-01-01 00:00:00"
+            }
+          }
+        }
+      },
+      "promo_math_lucky_hour": {
+        "type": "object",
+        "title": " ",
+        "properties": {
+          "saturation": {
+            "type": "string",
+            "title": "Saturation",
+            "enum": [
+              "Low",
+              "Medium",
+              "High",
+              "Very High"
+            ]
+          }
+        }
+      },
+      "reward_type": {
+        "type": "object",
+        "title": "Reward Type",
+        "properties": {
+          "money_to_machine": {
+            "type": "object",
+            "title": "Money to machine",
+            "properties": {
+              "reward_prize": {
+                "type": "number",
+                "title": "Reward money"
+              }
+            }
+          },
+          "material_prize": {
+            "type": "object",
+            "title": "Material prize",
+            "properties": {
+              "reward_prize": {
+                "type": "string",
+                "title": "Description"
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "name",
+      "currency"
+    ]
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "currency"
+      },
+      {
+        "title": "Period",
+        "key": "promo_period",
+        "type": "datetimerangepicker",
+        "default": "now",
+        "pluginoptions": {
+          "startlabel": "Start date",
+          "endlabel": "End date",
+          "minDate": "2000-01-01",
+          "maxDate": "2100-01-01"
+        }
+      },
+      {
+        "key": "days_of_week",
+        "title": "Days of week",
+        "type": "multipleselect"
+      },
+      {
+        "type": "selectfieldset",
+        "title": "Math type",
+        "items": [
+          {
+            "key": "promo_math_lucky_hour",
+            "legend": "Lucky Hour"
+          }
+        ]
+      },
+      {
+        "key": "reward_type",
+        "type": "selectfieldset",
+        "items": [
+          {
+            "key": "reward_type/money_to_machine"
+          },
+          {
+            "key": "reward_type/material_prize"
+          }
+        ]
+      },
+      {
+        "type": "array",
+        "key": "time_intervals",
+        "gridLayout": true,
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "title": "Start time",
+              "key": "time_intervals[]/start_time",
+              "type": "timepicker"
+            },
+            {
+              "title": "End time",
+              "key": "time_intervals[]/end_time",
+              "type": "timepicker"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+  "tpldata": {
+    "currency": [
+      {
+        "code": "BGN"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "currency": "BGN",
+    "time_intervals": [
+      {
+        "start_time": "",
+        "end_time": ""
+      }
+    ]
+  }
+}

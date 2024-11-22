@@ -1,0 +1,85 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-advanced",
+    "type": "object",
+    "properties": {
+      "range_values": {
+        "type": "object",
+        "title": "meta af",
+        "additionalProperties": {
+          "type": "object",
+          "title": "meta af2",
+          "properties": {
+            "fee_name": {
+              "type": "string",
+              "title": "fixed"
+            },
+            "range10": {
+              "type": "object",
+              "title": "meta af3",
+              "properties": {
+                "fixed": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "fixed"
+                },
+                "perc": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "fixed"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "required": false,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "title": "EUR fees",
+        "type": "tableobject",
+        "key": "range_values",
+        "items": {
+          "type": "tablerow",
+          "items": [
+            {
+              "title": "Id of row",
+              "type": "helptext",
+              "key": "range_values{}",
+              "content": "<p>alert('hi);</p>My good tool {{objKey}}"  
+            },
+            {
+              "title": "Fee Name",
+              "key": "range_values{}/fee_name"
+            },
+            {
+              "title": "Range 400.01 - 500 (Amount)",
+              "key": "range_values{}/range10/fixed"
+            },
+            {
+              "title": "Range 400.01 - 500 (%)",
+              "key": "range_values{}/range10/perc"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-advanced",
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+  }
+}

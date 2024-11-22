@@ -1,0 +1,73 @@
+<div id="modules-tabs" class="navbar">
+  <ul class="nav nav-tabs">
+    <% for(var i = 0, l = modules.length; i < l; i++) { %>
+    <li role="presentation">
+        <a href="#modules/<%= modules[i].name %>/edit">
+            <%= modules[i].name %> <span id="module-badge-<%= modules[i].name %>" class="badge"> <%= modules[i].notTranslated %> </span>
+        </a>
+    </li>
+    <% } %>
+  </ul>
+</div>
+
+<% if(showApprove) { %>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron tb-ls-modules-meta">
+            <h3>Approved languages for <%= currentModule.name %></h3>
+            <p>
+                I approve translation in following languages:
+            </p>
+
+            <ul>
+                <% for(var i = 0, l = locales.length; i < l; i++) { %>
+                <% if(locales[i].isChecked) { %>
+
+                <li>
+                    <label>
+                        <input type="checkbox" class="locale-approve" name="approve-language-<%= locales[i].language %>" value="<%= locales[i].language %>"
+                        <%= currentModuleMeta.locale_attributes[ locales[i].locale ].is_approved ? 'checked="checked"' : '' %>
+                        <%= !canApprove ? 'disabled="disabled"' : '' %>  />
+                        <%= locales[i].language_name %>
+                        <!-- (<%= currentModule.notTranslatedByLocale[ locales[i].locale ] %> not translated) -->
+                        <span class="<%= (currentModuleMeta.locale_attributes[ locales[i].locale ].is_approved && currentModuleMeta.locale_attributes[ locales[i].locale ].approved_at) ? '' : 'hidden' %>">
+                            (by
+                             <span class="tb-ls-<%= locales[i].locale %>-approved-by"><%= currentModuleMeta.locale_attributes[ locales[i].locale ].approved_by  %></span>
+                             at
+                             <span class="tb-ls-<%= locales[i].locale %>-approved-at"><%= currentModuleMeta.locale_attributes[ locales[i].locale ].approved_at  %></span>
+                             )
+                        </span>
+                        <% if(canImport) { %>
+                        <button type="button" class="btn btn-default btn-sm tb-ls-btn-export-file" data-locale="<%= locales[i].locale %>" data-module="<%= currentModule.name %>">
+                            Export *.po file
+                        </button>
+                        <% } %>
+                    </label>
+                </li>
+
+                <% } %>
+                <% } %>
+            </ul>
+
+            <% if(canApprove) { %>
+            <button type="button" class="btn btn-lg btn-primary tb-ls-approve" data-module="<%= currentModule.name %>">Approve!</button>
+            <!-- <button type="button" class="btn btn-lg btn-default tb-ls-export-pot" data-module="<%= currentModule.name %>">Export *.pot file</button> -->
+            <% } %>
+
+        </div>
+    </div>
+</div>
+
+<% } %>
+
+<h1>
+    Strings of <%= currentModule.name %>
+
+    <div class="tb-ls-save-state">
+        <em class="tb-ls-save-state-saving">Saving...</em>
+        <em class="tb-ls-save-state-saved">All changes are saved</em>
+        <em class="tb-ls-save-state-retrying">Error while saving changes, retrying...</em>
+    </div>
+</h1>
+
+<div id="spreadsheet"></div>

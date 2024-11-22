@@ -1,0 +1,58 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/14-file",
+    "type": "object",
+    "properties": {
+      "files": {
+        "title": "Files",
+        "maxItems": 3,
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "fileMimeTypes": [
+            "image/png",
+            "image/jpeg",
+            "image/gif",
+            "application/pdf",
+            "text/url", 
+          ],
+          "fileMaxSize": 1000,
+          "maxLength": 10000000,
+          "format": "base64file",
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "File",
+          "constraintMsgs": {
+            "fileMaxSize": "test123",
+            "default": "test"
+          },
+        },
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/14-file",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "files",
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+
+    "files": [
+      "data:text/url;base64,http://www.lacronicadesalamanca.com/wp-content/uploads/2016/09/balon-atrapado-red-deportes-futbol_2560x1600-730x412.jpg",
+      "data:text/url;base64,http://sadness%20is%20real2.com",
+      "data:text/url;base64,http://sadness%20is%20real3.com",
+
+    ]
+  } 
+}
+

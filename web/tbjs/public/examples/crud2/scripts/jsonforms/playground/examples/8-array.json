@@ -1,0 +1,61 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+    "type": "object",
+    "properties": {
+      "friends": {
+        "type": "array",
+        "title": "Friend",
+        "items": {
+          "title": "Friend",
+          "type": "object",
+          "properties": {
+            "nick": {
+              "title": "Nickname",
+              "type": "string"
+            },
+            "gender": {
+              "type": "string",
+              "title": "Gender",
+              "enum": [ "male", "female", "alien" ]
+            },
+            "age": {
+              "type": "integer",
+              "title": "Age"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "friends"
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+    "friends": [
+      {
+        "nick": "Rick",
+        "gender": "male",
+        "age": 44
+      },
+      {
+        "nick": "Traynesha",
+        "gender": "female",
+        "age": 24
+      }
+    ]
+  }
+}

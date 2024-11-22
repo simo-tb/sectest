@@ -1,0 +1,38 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-basic",
+    "type": "object",
+    "properties": {
+      "contractdate": {
+        "type": ["string", "null"]
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-basic",
+    "jsonformVersion": "2.0",
+    "minDate": "2010-01-01",
+    "maxDate": "2016-01-01",
+    "fields": [
+      {
+        "title": "Началнa дата на договора",
+        "key": "contractdate",
+        "type": "datepicker",
+        "useNowAsDefault": true,
+        "pluginoptions": {
+          "minDate": "2010-10-10",
+          "maxDate": "2019-01-01"
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-basic"
+  }
+}

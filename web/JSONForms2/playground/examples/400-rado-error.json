@@ -1,0 +1,2105 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+    "required": [
+      "name",
+      "currency"
+    ],
+    "properties": {
+      "min_bet": {
+        "type": "number",
+        "minimum": 1,
+        "Title": "Min bet allowed, cents"
+      },
+      "days_of_week": {
+        "default": [],
+        "items": {
+          "enum": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "name": {
+        "description": "Name",
+        "title": "Name",
+        "type": "string"
+      },
+      "machines": {
+        "type": "array",
+        "items": {
+          "enum": ["test"],
+          "type": "string"
+        }
+      },
+      "min_machines_count": {
+        "default": 1,
+        "type": "number",
+        "title": "Min. Machines Count"
+      },
+      "reward_type": {
+        "type": "object",
+        "properties": {
+          "material_prize": {
+            "properties": {
+              "reward_prize": {
+                "type": "string",
+                "title": "Description"
+              }
+            },
+            "type": "object",
+            "title": "Material prize"
+          },
+          "money_to_machine": {
+            "title": "Money to machine",
+            "type": "object",
+            "properties": {
+              "reward_prize": {
+                "type": "number",
+                "title": "Reward, cents"
+              }
+            }
+          }
+        },
+        "title": "Reward Type"
+      },
+      "promo_math_lucky_hour": {
+        "title": " ",
+        "type": "object",
+        "properties": {}
+      },
+      "period": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "default": "2017-04-13 00:00:00",
+            "type": "string"
+          },
+          "end_date": {
+            "default": "2017-04-14 00:00:00",
+            "type": "string"
+          }
+        },
+        "title": "Period"
+      },
+      "time_intervals": {
+        "title": "Time intervals",
+        "gridLayout": true,
+        "enableDeletingItems": true,
+        "items": {
+          "title": "Time intervals",
+          "properties": {
+            "start_time": {
+              "default": "2001-01-01 00:00:00",
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string",
+              "default": "2001-01-01 00:00:00"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "currency": {
+        "refCol": "code",
+        "refType": "reference",
+        "description": "Currency",
+        "title": "Currency",
+        "refTable": "currencies",
+        "type": "string"
+      }
+    },
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom": {
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom",
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "translated": {
+                "type": "boolean",
+                "default": false
+              },
+              "refType": {
+                "type": "string",
+                "default": "reference",
+                "enum": [
+                  "fkey",
+                  "reference"
+                ]
+              },
+              "refCol": {
+                "type": "string"
+              },
+              "refTable": {
+                "type": "string"
+              }
+            },
+            "dependencies": {
+              "refCol": [
+                "refTable"
+              ],
+              "refType": [
+                "refTable",
+                "refCol"
+              ],
+              "refTable": [
+                "refCol"
+              ]
+            }
+          },
+          {
+            "$ref": "http://json-schema.org/draft-04/schema#"
+          }
+        ],
+        "description": "Telebid extensions to JSON Schema",
+        "$schema": "http://json-schema.org/draft-04/schema#"
+      }
+    },
+    "type": "object"
+  },
+  "form": {
+    "jsonformVersion": "2.0",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+    "fields": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "currency"
+      },
+      {
+        "items": [
+          {
+            "type": "datepicker",
+            "title": "Promotion Start date",
+            "key": "period/start_date"
+          },
+          {
+            "title": "Promotion End date",
+            "key": "period/end_date",
+            "type": "datepicker"
+          }
+        ],
+        "type": "fieldset",
+        "title": "Period",
+        "gridLayout": true
+      },
+      {
+        "gridLayout": true,
+        "key": "time_intervals",
+        "type": "array",
+        "items": {
+          "type": "fieldset",
+          "items": [
+            {
+              "key": "time_intervals[]/start_time",
+              "title": "Start time",
+              "type": "datetimepicker"
+            },
+            {
+              "key": "time_intervals[]/end_time",
+              "title": "End time",
+              "type": "datetimepicker"
+            }
+          ]
+        }
+      },
+      {
+        "type": "multipleselect",
+        "title": "Days of week",
+        "key": "days_of_week"
+      },
+      {
+        "key": "machines",
+        "title": "Machines",
+        "type": "multipleselect"
+      },
+      {
+        "key": "min_bet",
+        "title": "Min bet, cents"
+      },
+      {
+        "key": "min_machines_count",
+        "title": "Min. Machines count"
+      },
+      {
+        "title": "Math type",
+        "type": "selectfieldset",
+        "items": [
+          {
+            "key": "promo_math_lucky_hour",
+            "legend": "Lucky Hour"
+          }
+        ]
+      },
+      {
+        "type": "selectfieldset",
+        "items": [
+          {
+            "key": "reward_type/money_to_machine"
+          },
+          {
+            "key": "reward_type/material_prize"
+          }
+        ],
+        "key": "reward_type"
+      }
+    ]
+  },
+  "status": {
+    "status": "ok"
+  },
+  "locales": [
+    {
+      "locale": "aa_DJ",
+      "iso639_2": "aar",
+      "lang_name": "Afar DJ",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Afar ER",
+      "locale": "aa_ER",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Afar ET",
+      "locale": "aa_ET",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "af_ZA",
+      "lang_name": "Afrikaans ZA",
+      "iso639_2": "afa"
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "ak_GH",
+      "iso639_2": "aka",
+      "lang_name": "Akan GH"
+    },
+    {
+      "iso639_2": "amh",
+      "lang_name": "Amharic ET",
+      "locale": "am_ET",
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "anp",
+      "lang_name": "Angika IN",
+      "locale": "anp_IN"
+    },
+    {
+      "lang_name": "Aragonese ES",
+      "iso639_2": "ang",
+      "locale": "an_ES",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Arabic AE",
+      "locale": "ar_AE",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "locale": "ar_BH",
+      "iso639_2": "aar",
+      "lang_name": "Arabic BH",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "locale": "ar_DZ",
+      "iso639_2": "aar",
+      "lang_name": "Arabic DZ",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "locale": "ar_EG",
+      "iso639_2": "aar",
+      "lang_name": "Arabic EG",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "locale": "ar_IN",
+      "iso639_2": "aar",
+      "lang_name": "Arabic IN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ar_IQ",
+      "lang_name": "Arabic IQ",
+      "iso639_2": "aar"
+    },
+    {
+      "locale": "ar_JO",
+      "iso639_2": "aar",
+      "lang_name": "Arabic JO",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ar_KW",
+      "iso639_2": "aar",
+      "lang_name": "Arabic KW"
+    },
+    {
+      "lang_name": "Arabic LB",
+      "iso639_2": "aar",
+      "locale": "ar_LB",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ar_LY",
+      "lang_name": "Arabic LY",
+      "iso639_2": "aar"
+    },
+    {
+      "lang_name": "Arabic MA",
+      "iso639_2": "aar",
+      "locale": "ar_MA",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Arabic OM",
+      "locale": "ar_OM",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ar_QA",
+      "iso639_2": "aar",
+      "lang_name": "Arabic QA"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Arabic SA",
+      "iso639_2": "aar",
+      "locale": "ar_SA"
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Arabic SD",
+      "locale": "ar_SD",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ar_SS",
+      "lang_name": "Arabic SS",
+      "iso639_2": "aar"
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Arabic SY",
+      "locale": "ar_SY",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "iso639_2": "aar",
+      "lang_name": "Arabic TN",
+      "locale": "ar_TN",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "aar",
+      "lang_name": "Arabic YE",
+      "locale": "ar_YE"
+    },
+    {
+      "locale": "ast_ES",
+      "lang_name": "Asturian ES",
+      "iso639_2": "ast",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "as_IN",
+      "lang_name": "Assamese IN",
+      "iso639_2": "asm"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ayc_PE",
+      "iso639_2": "aym",
+      "lang_name": "Aymara PE"
+    },
+    {
+      "iso639_2": "azc",
+      "lang_name": "Azerbaijani AZ",
+      "locale": "az_AZ",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Bemba ZM",
+      "iso639_2": "bem",
+      "locale": "bem_ZM",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ber_DZ",
+      "lang_name": "Berber DZ",
+      "iso639_2": "ber"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ber_MA",
+      "iso639_2": "ber",
+      "lang_name": "Berber MA"
+    },
+    {
+      "iso639_2": "bej",
+      "lang_name": "Belarusian BY",
+      "locale": "be_BY",
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "plural_form": 7
+    },
+    {
+      "iso639_2": "bul",
+      "lang_name": "Bulgarian BG",
+      "locale": "bg_BG",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "bn_BD",
+      "lang_name": "Bengali BD",
+      "iso639_2": "ben"
+    },
+    {
+      "locale": "bn_IN",
+      "lang_name": "Bengali IN",
+      "iso639_2": "ben",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "notes": "0",
+      "nplurals": 1,
+      "plural_form": 0,
+      "iso639_2": "bod",
+      "lang_name": "Tibetan CN",
+      "locale": "bo_CN"
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Tibetan IN",
+      "iso639_2": "bod",
+      "locale": "bo_IN"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n > 1)",
+      "plural_form": 2,
+      "lang_name": "Breton FR",
+      "iso639_2": "bra",
+      "locale": "br_FR"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "plural_form": 7,
+      "iso639_2": "bos",
+      "lang_name": "Bosnian BA",
+      "locale": "bs_BA"
+    },
+    {
+      "lang_name": "Catalan AD",
+      "iso639_2": "cad",
+      "locale": "ca_AD",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ca_ES",
+      "iso639_2": "cad",
+      "lang_name": "Catalan ES"
+    },
+    {
+      "lang_name": "Catalan FR",
+      "iso639_2": "cad",
+      "locale": "ca_FR",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ca_IT",
+      "lang_name": "Catalan IT",
+      "iso639_2": "cad"
+    },
+    {
+      "locale": "cmn_TW",
+      "lang_name": "Chinese TW",
+      "iso639_2": "zho",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "plural_form": 0,
+      "nplurals": 1,
+      "notes": "0",
+      "locale": "crh_UA",
+      "lang_name": "Tatar UA",
+      "iso639_2": "crh"
+    },
+    {
+      "iso639_2": "ccs",
+      "lang_name": "Czech CZ",
+      "locale": "cs_CZ",
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "plural_form": 8
+    },
+    {
+      "plural_form": 0,
+      "notes": "0",
+      "nplurals": 1,
+      "locale": "cv_RU",
+      "iso639_2": "chv",
+      "lang_name": "Chuvash RU"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "da_DK",
+      "iso639_2": "ada",
+      "lang_name": "Danish DK"
+    },
+    {
+      "locale": "de_AT",
+      "lang_name": "German AT",
+      "iso639_2": "del",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "de_BE",
+      "lang_name": "German BE",
+      "iso639_2": "del"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "German CH",
+      "iso639_2": "del",
+      "locale": "de_CH"
+    },
+    {
+      "locale": "de_DE",
+      "iso639_2": "del",
+      "lang_name": "German DE",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "del",
+      "lang_name": "German LU",
+      "locale": "de_LU"
+    },
+    {
+      "locale": "doi_IN",
+      "iso639_2": "dgr",
+      "lang_name": "Dogri IN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "lang_name": "Dzongkha BT",
+      "iso639_2": "dzo",
+      "locale": "dz_BT",
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0
+    },
+    {
+      "locale": "el_CY",
+      "iso639_2": "bel",
+      "lang_name": "Greek CY",
+      "plural_form": 7,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "plural_form": 7,
+      "lang_name": "Greek GR",
+      "iso639_2": "bel",
+      "locale": "el_GR"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "ang",
+      "lang_name": "English AG",
+      "locale": "en_AG"
+    },
+    {
+      "locale": "en_AU",
+      "lang_name": "English AU",
+      "iso639_2": "ang",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "English BW",
+      "iso639_2": "ang",
+      "locale": "en_BW"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "ang",
+      "lang_name": "English CA",
+      "locale": "en_CA"
+    },
+    {
+      "iso639_2": "ang",
+      "lang_name": "English DK",
+      "locale": "en_DK",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "ang",
+      "lang_name": "English GB",
+      "locale": "en_GB"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "ang",
+      "lang_name": "English HK",
+      "locale": "en_HK"
+    },
+    {
+      "lang_name": "English IE",
+      "iso639_2": "ang",
+      "locale": "en_IE",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "locale": "en_IN",
+      "iso639_2": "ang",
+      "lang_name": "English IN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "iso639_2": "ang",
+      "lang_name": "English NG",
+      "locale": "en_NG",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "locale": "en_NZ",
+      "lang_name": "English NZ",
+      "iso639_2": "ang",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "locale": "en_PH",
+      "iso639_2": "ang",
+      "lang_name": "English PH",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "en_SG",
+      "lang_name": "English SG",
+      "iso639_2": "ang"
+    },
+    {
+      "locale": "en_US",
+      "iso639_2": "ang",
+      "lang_name": "English US",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "lang_name": "English ZA",
+      "iso639_2": "ang",
+      "locale": "en_ZA",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "en_ZM",
+      "iso639_2": "ang",
+      "lang_name": "English ZM"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "en_ZW",
+      "iso639_2": "ang",
+      "lang_name": "English ZW"
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish AR",
+      "iso639_2": "ces",
+      "locale": "es_AR"
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish BO",
+      "iso639_2": "ces",
+      "locale": "es_BO"
+    },
+    {
+      "locale": "es_CL",
+      "iso639_2": "ces",
+      "lang_name": "Spanish CL",
+      "plural_form": 8,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3
+    },
+    {
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "plural_form": 8,
+      "iso639_2": "ces",
+      "lang_name": "Spanish CO",
+      "locale": "es_CO"
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish CR",
+      "iso639_2": "ces",
+      "locale": "es_CR"
+    },
+    {
+      "iso639_2": "ces",
+      "lang_name": "Spanish CU",
+      "locale": "es_CU",
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "plural_form": 8
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish DO",
+      "iso639_2": "ces",
+      "locale": "es_DO"
+    },
+    {
+      "locale": "es_EC",
+      "lang_name": "Spanish EC",
+      "iso639_2": "ces",
+      "plural_form": 8,
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2"
+    },
+    {
+      "locale": "es_ES",
+      "iso639_2": "ces",
+      "lang_name": "Spanish ES",
+      "plural_form": 8,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3
+    },
+    {
+      "locale": "es_GT",
+      "iso639_2": "ces",
+      "lang_name": "Spanish GT",
+      "plural_form": 8,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3
+    },
+    {
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "plural_form": 8,
+      "iso639_2": "ces",
+      "lang_name": "Spanish HN",
+      "locale": "es_HN"
+    },
+    {
+      "lang_name": "Spanish MX",
+      "iso639_2": "ces",
+      "locale": "es_MX",
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8
+    },
+    {
+      "plural_form": 8,
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "locale": "es_NI",
+      "lang_name": "Spanish NI",
+      "iso639_2": "ces"
+    },
+    {
+      "locale": "es_PA",
+      "iso639_2": "ces",
+      "lang_name": "Spanish PA",
+      "plural_form": 8,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish PE",
+      "iso639_2": "ces",
+      "locale": "es_PE"
+    },
+    {
+      "plural_form": 8,
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "locale": "es_PR",
+      "lang_name": "Spanish PR",
+      "iso639_2": "ces"
+    },
+    {
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "plural_form": 8,
+      "iso639_2": "ces",
+      "lang_name": "Spanish PY",
+      "locale": "es_PY"
+    },
+    {
+      "lang_name": "Spanish SV",
+      "iso639_2": "ces",
+      "locale": "es_SV",
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "plural_form": 8,
+      "lang_name": "Spanish US",
+      "iso639_2": "ces",
+      "locale": "es_US"
+    },
+    {
+      "locale": "es_UY",
+      "lang_name": "Spanish UY",
+      "iso639_2": "ces",
+      "plural_form": 8,
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2"
+    },
+    {
+      "plural_form": 8,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "nplurals": 3,
+      "locale": "es_VE",
+      "iso639_2": "ces",
+      "lang_name": "Spanish VE"
+    },
+    {
+      "locale": "et_EE",
+      "lang_name": "Estonian EE",
+      "iso639_2": "est",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "iso639_2": "eus",
+      "lang_name": "Basque ES",
+      "locale": "eu_ES",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 0,
+      "notes": "0",
+      "nplurals": 1,
+      "locale": "fa_IR",
+      "iso639_2": "afa",
+      "lang_name": "Persian IR"
+    },
+    {
+      "locale": "ff_SN",
+      "iso639_2": "ful",
+      "lang_name": "Fulah SN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "locale": "fil_PH",
+      "lang_name": "Filipino PH",
+      "iso639_2": "fil",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "fi_FI",
+      "lang_name": "Finnish FI",
+      "iso639_2": "efi"
+    },
+    {
+      "locale": "fo_FO",
+      "lang_name": "Faroese FO",
+      "iso639_2": "fao",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "lang_name": "French BE",
+      "iso639_2": "afr",
+      "locale": "fr_BE",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "fr_CA",
+      "iso639_2": "afr",
+      "lang_name": "French CA"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "French CH",
+      "iso639_2": "afr",
+      "locale": "fr_CH"
+    },
+    {
+      "lang_name": "French FR",
+      "iso639_2": "afr",
+      "locale": "fr_FR",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "French LU",
+      "iso639_2": "afr",
+      "locale": "fr_LU"
+    },
+    {
+      "locale": "fur_IT",
+      "iso639_2": "fur",
+      "lang_name": "Friulian IT",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Frisian DE",
+      "iso639_2": "frr",
+      "locale": "fy_DE"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "frr",
+      "lang_name": "Frisian NL",
+      "locale": "fy_NL"
+    },
+    {
+      "nplurals": 5,
+      "notes": "n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :(n>6 && n<11) ? 3 : 4",
+      "plural_form": 11,
+      "lang_name": "Irish IE",
+      "iso639_2": "gaa",
+      "locale": "ga_IE"
+    },
+    {
+      "nplurals": 4,
+      "notes": "(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3",
+      "plural_form": 4,
+      "lang_name": "Gaelic GB",
+      "iso639_2": "gla",
+      "locale": "gd_GB"
+    },
+    {
+      "plural_form": 4,
+      "notes": "(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3",
+      "nplurals": 4,
+      "locale": "gl_ES",
+      "iso639_2": "gla",
+      "lang_name": "Galician ES"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "guj",
+      "lang_name": "Gujarati IN",
+      "locale": "gu_IN"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ha_NG",
+      "iso639_2": "cha",
+      "lang_name": "Hausa NG"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "che",
+      "lang_name": "Hebrew IL",
+      "locale": "he_IL"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Hindi IN",
+      "iso639_2": "hil",
+      "locale": "hi_IN"
+    },
+    {
+      "iso639_2": "chr",
+      "lang_name": "Croatian HR",
+      "locale": "hr_HR",
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "plural_form": 7
+    },
+    {
+      "locale": "ht_HT",
+      "lang_name": "Haitian HT",
+      "iso639_2": "hat",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Hungarian HU",
+      "iso639_2": "chu",
+      "locale": "hu_HU"
+    },
+    {
+      "lang_name": "Armenian AM",
+      "iso639_2": "hye",
+      "locale": "hy_AM",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Interlingua FR",
+      "iso639_2": "ina",
+      "locale": "ia_FR"
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Indonesian ID",
+      "iso639_2": "ido",
+      "locale": "id_ID"
+    },
+    {
+      "notes": "(n%10!=1 || n%100==11)",
+      "nplurals": 2,
+      "plural_form": 15,
+      "iso639_2": "bis",
+      "lang_name": "Icelandic IS",
+      "locale": "is_IS"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "hit",
+      "lang_name": "Italian CH",
+      "locale": "it_CH"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "it_IT",
+      "iso639_2": "hit",
+      "lang_name": "Italian IT"
+    },
+    {
+      "locale": "ja_JP",
+      "iso639_2": "jav",
+      "lang_name": "Japanese JP",
+      "plural_form": 0,
+      "notes": "0",
+      "nplurals": 1
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "ka_GE",
+      "iso639_2": "aka",
+      "lang_name": "Georgian GE"
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Kazakh KZ",
+      "iso639_2": "akk",
+      "locale": "kk_KZ"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "kal",
+      "lang_name": "Kalaallisut GL",
+      "locale": "kl_GL"
+    },
+    {
+      "notes": "0",
+      "nplurals": 1,
+      "plural_form": 0,
+      "iso639_2": "khm",
+      "lang_name": "Khmer KH",
+      "locale": "km_KH"
+    },
+    {
+      "lang_name": "Kannada IN",
+      "iso639_2": "kan",
+      "locale": "kn_IN",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Korean KR",
+      "iso639_2": "kok",
+      "locale": "ko_KR"
+    },
+    {
+      "locale": "ku_TR",
+      "lang_name": "Kurdish TR",
+      "iso639_2": "iku",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Kirghiz KG",
+      "iso639_2": "kir",
+      "locale": "ky_KG"
+    },
+    {
+      "iso639_2": "ltz",
+      "lang_name": "Luxembourgish LU",
+      "locale": "lb_LU",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "locale": "lo_LA",
+      "iso639_2": "ilo",
+      "lang_name": "Lao LA",
+      "plural_form": 0,
+      "notes": "0",
+      "nplurals": 1
+    },
+    {
+      "iso639_2": "alt",
+      "lang_name": "Lithuanian LT",
+      "locale": "lt_LT",
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "plural_form": 6
+    },
+    {
+      "lang_name": "Latvian LV",
+      "iso639_2": "alv",
+      "locale": "lv_LV",
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)",
+      "plural_form": 3
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "mai_IN",
+      "iso639_2": "mai",
+      "lang_name": "Maithili IN"
+    },
+    {
+      "plural_form": 14,
+      "nplurals": 2,
+      "notes": " n==1 || n%10==1 ? 0 : 1",
+      "locale": "mk_MK",
+      "lang_name": "Macedonian MK",
+      "iso639_2": "mkd"
+    },
+    {
+      "locale": "mg_MG",
+      "lang_name": "Malagasy MG",
+      "iso639_2": "mga",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "iso639_2": "chm",
+      "lang_name": "Mari RU",
+      "locale": "mhr_RU",
+      "notes": "0",
+      "nplurals": 1,
+      "plural_form": 0
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "mi_NZ",
+      "iso639_2": "mri",
+      "lang_name": "Maori NZ"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "ml_IN",
+      "lang_name": "Malayalam IN",
+      "iso639_2": "mal"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "mni",
+      "lang_name": "Manipuri IN",
+      "locale": "mni_IN"
+    },
+    {
+      "locale": "mn_MN",
+      "iso639_2": "dmn",
+      "lang_name": "Mongolian MN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "mr_IN",
+      "iso639_2": "mri",
+      "lang_name": "Marathi IN"
+    },
+    {
+      "iso639_2": "mal",
+      "lang_name": "Malay MY",
+      "locale": "ms_MY",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Maltese MT",
+      "iso639_2": "mlt",
+      "locale": "mt_MT",
+      "nplurals": 4,
+      "notes": "(n==1 ? 0 : n==0 || ( n%100>1 && n%100<11) ? 1 : (n%100>10 && n%100<20 ) ? 2 : 3)",
+      "plural_form": 13
+    },
+    {
+      "iso639_2": "mya",
+      "lang_name": "Burmese MM",
+      "locale": "my_MM",
+      "notes": "0",
+      "nplurals": 1,
+      "plural_form": 0
+    },
+    {
+      "lang_name": "Nahuatl MX",
+      "iso639_2": "nah",
+      "locale": "nah_MX",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Norwegian Bokmal NO",
+      "iso639_2": "nbl",
+      "locale": "nb_NO",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "locale": "nds_DE",
+      "lang_name": "German DE",
+      "iso639_2": "deu",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "locale": "nds_NL",
+      "iso639_2": "deu",
+      "lang_name": "German NL",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "ine",
+      "lang_name": "Nepali NP",
+      "locale": "ne_NP"
+    },
+    {
+      "locale": "nhn_MX",
+      "lang_name": "Nahuatl MX",
+      "iso639_2": "nah",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "nl_AW",
+      "lang_name": "Dutch AW",
+      "iso639_2": "dum"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Dutch BE",
+      "iso639_2": "dum",
+      "locale": "nl_BE"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "nl_NL",
+      "iso639_2": "dum",
+      "lang_name": "Dutch NL"
+    },
+    {
+      "locale": "nn_NO",
+      "lang_name": "Norwegian Nynorsk NO",
+      "iso639_2": "nno",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "locale": "nso_ZA",
+      "iso639_2": "nso",
+      "lang_name": "Pedi ZA",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2,
+      "iso639_2": "oci",
+      "lang_name": "Occitan FR",
+      "locale": "oc_FR"
+    },
+    {
+      "lang_name": "Oromo ET",
+      "iso639_2": "kom",
+      "locale": "om_ET",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "kom",
+      "lang_name": "Oromo KE",
+      "locale": "om_KE"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "plural_form": 7,
+      "iso639_2": "bos",
+      "lang_name": "Ossetian RU",
+      "locale": "os_RU"
+    },
+    {
+      "iso639_2": "pap",
+      "lang_name": "Papiamento AN",
+      "locale": "pap_AN",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Papiamento AW",
+      "iso639_2": "pap",
+      "locale": "pap_AW",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Papiamento CW",
+      "iso639_2": "pap",
+      "locale": "pap_CW",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "apa",
+      "lang_name": "Panjabi IN",
+      "locale": "pa_IN"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "pa_PK",
+      "lang_name": "Panjabi PK",
+      "iso639_2": "apa"
+    },
+    {
+      "locale": "pl_PL",
+      "lang_name": "Polish PL",
+      "iso639_2": "plf",
+      "plural_form": 9,
+      "nplurals": 3,
+      "notes": "(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+    },
+    {
+      "locale": "ps_AF",
+      "lang_name": "Pushto AF",
+      "iso639_2": "pus",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Portuguese BR",
+      "iso639_2": "por",
+      "locale": "pt_BR"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Portuguese PT",
+      "iso639_2": "por",
+      "locale": "pt_PT"
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2)",
+      "plural_form": 5,
+      "lang_name": "Romanian RO",
+      "iso639_2": "fro",
+      "locale": "ro_RO"
+    },
+    {
+      "locale": "ru_RU",
+      "lang_name": "Russian RU",
+      "iso639_2": "kru",
+      "plural_form": 7,
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+    },
+    {
+      "lang_name": "Russian UA",
+      "iso639_2": "kru",
+      "locale": "ru_UA",
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "plural_form": 7
+    },
+    {
+      "locale": "rw_RW",
+      "lang_name": "Kinyarwanda RW",
+      "iso639_2": "arw",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "locale": "sat_IN",
+      "iso639_2": "sat",
+      "lang_name": "Santali IN",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "locale": "sa_IN",
+      "lang_name": "Sanskrit IN",
+      "iso639_2": "msa",
+      "plural_form": 0,
+      "nplurals": 1,
+      "notes": "0"
+    },
+    {
+      "locale": "sc_IT",
+      "iso639_2": "scn",
+      "lang_name": "Sardinian IT",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "sd_IN",
+      "iso639_2": "sdv",
+      "lang_name": "Sindhi IN"
+    },
+    {
+      "lang_name": "Sami NO",
+      "iso639_2": "sel",
+      "locale": "se_NO",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Sinhala LK",
+      "iso639_2": "sid",
+      "locale": "si_LK"
+    },
+    {
+      "plural_form": 8,
+      "nplurals": 3,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "locale": "sk_SK",
+      "lang_name": "Slovak SK",
+      "iso639_2": "slk"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n%10!=1 || n%100==11)",
+      "plural_form": 15,
+      "lang_name": "Slovenian SI",
+      "iso639_2": "isl",
+      "locale": "sl_SI"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "so_DJ",
+      "lang_name": "Somali DJ",
+      "iso639_2": "nso"
+    },
+    {
+      "locale": "so_ET",
+      "lang_name": "Somali ET",
+      "iso639_2": "nso",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "so_KE",
+      "iso639_2": "nso",
+      "lang_name": "Somali KE"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Somali SO",
+      "iso639_2": "nso",
+      "locale": "so_SO"
+    },
+    {
+      "locale": "sq_AL",
+      "lang_name": "Albanian AL",
+      "iso639_2": "sqi",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "sq_MK",
+      "iso639_2": "sqi",
+      "lang_name": "Albanian MK"
+    },
+    {
+      "locale": "sr_ME",
+      "iso639_2": "srd",
+      "lang_name": "Serbian ME",
+      "plural_form": 7,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3
+    },
+    {
+      "locale": "sr_RS",
+      "lang_name": "Serbian RS",
+      "iso639_2": "srd",
+      "plural_form": 7,
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+    },
+    {
+      "lang_name": "Swedish FI",
+      "iso639_2": "swe",
+      "locale": "sv_FI",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Swedish SE",
+      "iso639_2": "swe",
+      "locale": "sv_SE"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "Swahili KE",
+      "iso639_2": "gsw",
+      "locale": "sw_KE"
+    },
+    {
+      "locale": "sw_TZ",
+      "iso639_2": "gsw",
+      "lang_name": "Swahili TZ",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "iso639_2": "ita",
+      "lang_name": "Tamil IN",
+      "locale": "ta_IN",
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1
+    },
+    {
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "ta_LK",
+      "iso639_2": "ita",
+      "lang_name": "Tamil LK"
+    },
+    {
+      "locale": "te_IN",
+      "lang_name": "Telugu IN",
+      "iso639_2": "tel",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "tg_TJ",
+      "iso639_2": "tgk",
+      "lang_name": "Tajik TJ"
+    },
+    {
+      "iso639_2": "ath",
+      "lang_name": "Thai TH",
+      "locale": "th_TH",
+      "notes": "0",
+      "nplurals": 1,
+      "plural_form": 0
+    },
+    {
+      "locale": "ti_ER",
+      "lang_name": "Tigrinya ER",
+      "iso639_2": "tig",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2,
+      "iso639_2": "tig",
+      "lang_name": "Tigrinya ET",
+      "locale": "ti_ET"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "btk",
+      "lang_name": "Turkmen TM",
+      "locale": "tk_TM"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n > 1)",
+      "plural_form": 2,
+      "lang_name": "Tagalog PH",
+      "iso639_2": "tgl",
+      "locale": "tl_PH"
+    },
+    {
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2,
+      "iso639_2": "ota",
+      "lang_name": "Turkish CY",
+      "locale": "tr_CY"
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "tr_TR",
+      "iso639_2": "ota",
+      "lang_name": "Turkish TR"
+    },
+    {
+      "lang_name": "Tsonga ZA",
+      "iso639_2": "tsi",
+      "locale": "ts_ZA",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1
+    },
+    {
+      "locale": "tt_RU",
+      "lang_name": "Tatar RU",
+      "iso639_2": "crh",
+      "plural_form": 0,
+      "nplurals": 1,
+      "notes": "0"
+    },
+    {
+      "plural_form": 0,
+      "notes": "0",
+      "nplurals": 1,
+      "locale": "ug_CN",
+      "iso639_2": "bug",
+      "lang_name": "Uighur CN"
+    },
+    {
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "plural_form": 7,
+      "lang_name": "Ukrainian UA",
+      "iso639_2": "suk",
+      "locale": "uk_UA"
+    },
+    {
+      "locale": "ur_IN",
+      "lang_name": "Urdu IN",
+      "iso639_2": "fur",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "fur",
+      "lang_name": "Urdu PK",
+      "locale": "ur_PK"
+    },
+    {
+      "locale": "uz_UZ",
+      "iso639_2": "uzb",
+      "lang_name": "Uzbek UZ",
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Vietnamese VN",
+      "iso639_2": "vie",
+      "locale": "vi_VN"
+    },
+    {
+      "locale": "wa_BE",
+      "lang_name": "Walloon BE",
+      "iso639_2": "awa",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "nplurals": 1,
+      "notes": "0",
+      "plural_form": 0,
+      "lang_name": "Wolof SN",
+      "iso639_2": "ewo",
+      "locale": "wo_SN"
+    },
+    {
+      "locale": "xh_ZA",
+      "iso639_2": "xho",
+      "lang_name": "Xhosa ZA",
+      "plural_form": 1,
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "plural_form": 1,
+      "iso639_2": "nyo",
+      "lang_name": "Yoruba NG",
+      "locale": "yo_NG"
+    },
+    {
+      "iso639_2": "zho",
+      "lang_name": "Chinese CN",
+      "locale": "zh_CN",
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2
+    },
+    {
+      "iso639_2": "zho",
+      "lang_name": "Chinese HK",
+      "locale": "zh_HK",
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "plural_form": 2
+    },
+    {
+      "locale": "zh_SG",
+      "lang_name": "Chinese SG",
+      "iso639_2": "zho",
+      "plural_form": 2,
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    },
+    {
+      "plural_form": 2,
+      "notes": "(n > 1)",
+      "nplurals": 2,
+      "locale": "zh_TW",
+      "iso639_2": "zho",
+      "lang_name": "Chinese TW"
+    },
+    {
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "locale": "zu_ZA",
+      "lang_name": "Zulu ZA",
+      "iso639_2": "zul"
+    }
+  ],
+  "content": null
+}

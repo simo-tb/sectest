@@ -1,0 +1,63 @@
+
+<!--&menubar_line($menu_name='appMenubar', $zindex='10000') -->
+<script language="JavaScript">
+// use dynlayer* app_menu.js
+// body.onload= ...$menu_name.activate()...
+//
+$menu_name = new MenuBar() // x=y=null->relative layer
+//$menu_name.overOpen = true  // set mouse over to open the menulist
+$menu_name.onSelect = appMenuSelect;
+$menu_name.visibility = 'visible'
+$menu_name.width = winW-5
+
+var $menu_name_count = 0
+var $menu_name_pop = new Array()
+
+var $menu_name_popcount = 0
+var $menu_name_poppop = new Array()
+
+    <!--&popup($descr escape 'js') -->
+    
+    $menu_name_pop[$menu_name_count] = new MenuList(0,0)
+    $menu_name_pop[$menu_name_count].list.setImage('images/list-node0.gif','images/list-node0.gif',12,18)
+    $menu_name_pop[$menu_name_count].zIndex = $zindex
+
+    $menu_name_pop[$menu_name_count].overOpen = true
+    $menu_name_pop[$menu_name_count].visibility = 'hidden'
+
+    $menu_name.addItem('$descr',$menu_name_pop[$menu_name_count])
+
+        <!--&popup_row() -->
+        <!--&node($js_act escape 'js', $descr escape 'js') -->
+	$menu_name_pop[$menu_name_count].list.add('$js_act', '$descr')
+	<!--/&node -->
+
+	<!--&popup_node($pdescr escape 'js') -->
+	i = $menu_name_pop[$menu_name_count].list.items.length
+	$menu_name_pop[$menu_name_count].list.add('', '$pdescr')
+
+	$menu_name_poppop[$menu_name_popcount] = new MenuList($menu_name_pop[$menu_name_count], i)
+
+	    <!--&node($js_act escape 'js', $descr escape 'js') -->
+	    $menu_name_poppop[$menu_name_popcount].list.add('$js_act', '$descr')
+	    <!--/&node -->
+
+	$menu_name_popcount++
+	<!--/&popup_node -->
+	<!--/&popup_row -->
+
+    $menu_name_pop[$menu_name_count].build()
+    writeCSS ($menu_name_pop[$menu_name_count].css)
+    document.write($menu_name_pop[$menu_name_count].div)
+
+    $menu_name_count++
+    <!--/&popup -->
+$menu_name.build()
+writeCSS ($menu_name.css)
+document.write($menu_name.div)
+</script>
+
+
+<!--/&menubar_line -->
+
+

@@ -1,0 +1,233 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "type": "object",
+    "properties": {
+      "custom_questionary": {
+        "type": "object"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "title": "Answer the questions",
+        "type": "questionary",
+        "key": "custom_questionary"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+  "questionaryDescriptors":
+    {
+    "custom_questionary": {
+        "tabs": [
+            {
+                "questions": [
+                    {
+                        "title": "Favourite car",
+                        "code": "FAV_CAR",
+                        "type": "select",
+                        "values": [
+                            {
+                                "label": "Mercedes",
+                                "code": "MERCEDES"
+                            },
+                            {
+                                "code": "FERRARI",
+                                "label": "Ferrari"
+                            },
+                            {
+                                "code": "BMW",
+                                "label": "BMW"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Favourite drink",
+                        "code": "FAV_DRINK",
+                        "type": "select",
+                        "values": [
+                            {
+                                "label": "Cola",
+                                "code": "COLA"
+                            },
+                            {
+                                "label": "Watera",
+                                "code": "WATER"
+                            }
+                        ]
+                    }
+                ],
+                "title": "Favourites"
+            },
+            {
+                "questions": [
+                    {
+                        "type": "number",
+                        "title": "Age",
+                        "code": "AGE",
+                        "values": []
+                    },
+                    {
+                        "title": "What is your mood?",
+                        "code": "MOOD",
+                        "type": "text",
+                        "values": []
+                    },
+                    {
+                        "values": [],
+                        "type": "checkbox",
+                        "title": "Do you like pizza?",
+                        "code": "LIKE_PIZZA"
+                    },
+                    {
+                        "type": "checkbox",
+                        "code": "LIKE_PASTA",
+                        "title": "Do you like pasta?",
+                        "values": []
+                    }
+                ],
+                "title": "Personal info"
+            },
+            {
+                "questions": [
+                    {
+                        "title": "Cras cursus pharetra elit",
+                        "code": "o4",
+                        "type": "select",
+                        "values": [
+                            {
+                                "label": "test2",
+                                "code": "test2"
+                            },
+                            {
+                                "code": "test1",
+                                "label": "test1"
+                            }
+                        ]
+                    },
+                    {
+                        "values": [],
+                        "type": "text",
+                        "code": "o2",
+                        "title": "Consectetur adipiscing elit"
+                    },
+                    {
+                        "values": [],
+                        "type": "text",
+                        "code": "o1",
+                        "title": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "code": "o3",
+                        "title": "Ut ac condimentum nibh, sit amet ullamcorper ex",
+                        "type": "text",
+                        "values": []
+                    },
+                    {
+                        "values": [],
+                        "code": "o5",
+                        "title": "Vel rhoncus turpis elementum sit amet",
+                        "type": "checkbox"
+                    },
+                    {
+                        "values": [],
+                        "title": "Phasellus dui mauris, pellentesque rhoncus leo fringilla,",
+                        "code": "o6",
+                        "type": "number"
+                    },
+                    {
+                        "type": "checkbox",
+                        "title": "Venenatis ultricies leo.",
+                        "code": "o7",
+                        "values": []
+                    },
+                    {
+                        "values": [],
+                        "type": "text",
+                        "code": "o8",
+                        "title": "In elementum arcu ac purus cursus cursus eget nec dui"
+                    },
+                    {
+                        "type": "text",
+                        "title": "Quisque hendrerit nulla nec finibus convallis.",
+                        "code": "o9",
+                        "values": []
+                    },
+                    {
+                        "values": [],
+                        "type": "checkbox",
+                        "title": "Cras tincidunt laoreet mauris sit amet pharetra.",
+                        "code": "o10"
+                    },
+                    {
+                        "values": [],
+                        "type": "number",
+                        "code": "o11",
+                        "title": "Aliquam erat volutpat"
+                    },
+                    {
+                        "values": [],
+                        "code": "o12",
+                        "title": "Proin tincidunt a eros sit amet molestie.",
+                        "type": "text"
+                    }
+                ],
+                "title": "Other info"
+            },
+            {
+                "title": "Order test",
+                "questions": [
+                    {
+                        "title": "Question 1",
+                        "code": "q1",
+                        "type": "text",
+                        "values": []
+                    },
+                    {
+                        "values": [],
+                        "type": "text",
+                        "code": "q2",
+                        "title": "Question 2"
+                    },
+                    {
+                        "values": [],
+                        "type": "number",
+                        "code": "q3",
+                        "title": "Question 3"
+                    },
+                    {
+                        "type": "checkbox",
+                        "code": "q4",
+                        "title": "Question 4",
+                        "values": []
+                    },
+                    {
+                        "type": "select",
+                        "title": "Question 5",
+                        "code": "q5",
+                        "values": [
+                            {
+                                "code": "Option 1",
+                                "label": "O1"
+                            },
+                            {
+                                "label": "O2",
+                                "code": "Option 2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+  }
+}
+

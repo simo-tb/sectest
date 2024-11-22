@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tb.request.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="TB.Dispatcher.html">Dispatcher</a><ul class='methods'><li data-type='method'><a href="TB.Dispatcher.html#dispatch">dispatch</a></li><li data-type='method'><a href="TB.Dispatcher.html#off">off</a></li><li data-type='method'><a href="TB.Dispatcher.html#on">on</a></li></ul></li><li><a href="TB.File.html">File</a><ul class='methods'><li data-type='method'><a href="TB.File.html#_prepareData">_prepareData</a></li><li data-type='method'><a href="TB.File.html#download">download</a></li></ul></li><li><a href="TB.Livegrid.html">Livegrid</a><ul class='methods'><li data-type='method'><a href="TB.Livegrid.html#_d3GridItemsDraggable">_d3GridItemsDraggable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3GridZoomable">_d3GridZoomable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3SetupGrid">_d3SetupGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateBackgroundGrid">_d3UpdateBackgroundGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItemContents">_d3UpdateItemContents</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItems">_d3UpdateItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateResizeValues">_d3UpdateResizeValues</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateWrapper">_d3UpdateWrapper</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateZoomValue">_d3UpdateZoomValue</a></li><li data-type='method'><a href="TB.Livegrid.html#_gApplyResizeItems">_gApplyResizeItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutoscale">_gAutoscale</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutosize">_gAutosize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gGetItemAtIndex">_gGetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gRemoveItemAtIndex">_gRemoveItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gResetMinMaxPositionedXY">_gResetMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gSetItemAtIndex">_gSetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateElementSize">_gUpdateElementSize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateItemCoordinates">_gUpdateItemCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateMinMaxPositionedXY">_gUpdateMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateUnpositionedItemsCoordinates">_gUpdateUnpositionedItemsCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gZoomCallback">_gZoomCallback</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderResize">_handlerOnChangeSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderZoom">_handlerOnChangeSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnClear">_handlerOnClickBtnClear</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnResize">_handlerOnClickBtnResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnZoom">_handlerOnClickBtnZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderResize">_handlerOnInputSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderZoom">_handlerOnInputSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnMousewheelSliderResize">_handlerOnMousewheelSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_prepareGlobalCSS">_prepareGlobalCSS</a></li><li data-type='method'><a href="TB.Livegrid.html#_returnDatum">_returnDatum</a></li><li data-type='method'><a href="TB.Livegrid.html#_stringifyCssRules">_stringifyCssRules</a></li><li data-type='method'><a href="TB.Livegrid.html#_timeoutExpireObject">_timeoutExpireObject</a></li><li data-type='method'><a href="TB.Livegrid.html#disableEditMode">disableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#emit">emit</a></li><li data-type='method'><a href="TB.Livegrid.html#enableEditMode">enableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#prefixClassName">prefixClassName</a></li><li data-type='method'><a href="TB.Livegrid.html#save">save</a></li><li data-type='method'><a href="TB.Livegrid.html#setGridZoom">setGridZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#setItemsSize">setItemsSize</a></li><li data-type='method'><a href="TB.Livegrid.html#toggleEditMode">toggleEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#updateElements">updateElements</a></li><li data-type='method'><a href="TB.Livegrid.html#updateItems">updateItems</a></li></ul></li><li><a href="TB.Request.html">Request</a><ul class='methods'><li data-type='method'><a href="TB.Request.html#_buildParams">_buildParams</a></li><li data-type='method'><a href="TB.Request.html#_checkResponseStatus">_checkResponseStatus</a></li><li data-type='method'><a href="TB.Request.html#_completeCallback">_completeCallback</a></li><li data-type='method'><a href="TB.Request.html#_errorCallback">_errorCallback</a></li><li data-type='method'><a href="TB.Request.html#_getTypeFromResponseHeader">_getTypeFromResponseHeader</a></li><li data-type='method'><a href="TB.Request.html#_getXHR">_getXHR</a></li><li data-type='method'><a href="TB.Request.html#_handlerReadystatechangeXHR">_handlerReadystatechangeXHR</a></li><li data-type='method'><a href="TB.Request.html#_makeRequest">_makeRequest</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestJSONP">_makeRequestJSONP</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestXHR">_makeRequestXHR</a></li><li data-type='method'><a href="TB.Request.html#_setCredentials">_setCredentials</a></li><li data-type='method'><a href="TB.Request.html#_setHeaders">_setHeaders</a></li><li data-type='method'><a href="TB.Request.html#_successCallback">_successCallback</a></li><li data-type='method'><a href="TB.Request.html#_toQueryString">_toQueryString</a></li><li data-type='method'><a href="TB.Request.html#abort">abort</a></li></ul></li><li><a href="TB.Service.html">Service</a><ul class='methods'><li data-type='method'><a href="TB.Service.html#getNextRequestId">getNextRequestId</a></li></ul></li><li><a href="TB.Translate.html">Translate</a><ul class='methods'><li data-type='method'><a href="TB.Translate.html#.getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#.getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#.getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#.getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#.gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#_getRawTranslation">_getRawTranslation</a></li><li data-type='method'><a href="TB.Translate.html#_init">_init</a></li><li data-type='method'><a href="TB.Translate.html#getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#gethash">gethash</a></li><li data-type='method'><a href="TB.Translate.html#getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#gettext">gettext</a></li><li data-type='method'><a href="TB.Translate.html#gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#reinit">reinit</a></li><li data-type='method'><a href="TB.Translate.html#setCurrency">setCurrency</a></li><li data-type='method'><a href="TB.Translate.html#setLocale">setLocale</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-xerrors.html">xerrors</a><ul class='methods'><li data-type='method'><a href="module-xerrors.html#.ASSERT">ASSERT</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.eq">ASSERT.eq</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ge">ASSERT.ge</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.gt">ASSERT.gt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasProperty">ASSERT.hasProperty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbType">ASSERT.hasPropertyOfTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbTypes">ASSERT.hasPropertyOfTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isDefined">ASSERT.isDefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isEmpty">ASSERT.isEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isNotEmpty">ASSERT.isNotEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isUndefined">ASSERT.isUndefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.le">ASSERT.le</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.lt">ASSERT.lt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbType">ASSERT.ofTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbTypes">ASSERT.ofTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_END">BENCHMARK_END</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_START">BENCHMARK_START</a></li><li data-type='method'><a href="module-xerrors.html#.FLUSH">FLUSH</a></li><li data-type='method'><a href="module-xerrors.html#.TRACE">TRACE</a></li><li data-type='method'><a href="module-xerrors.html#~makeMsg">makeMsg</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="TB.html">TB</a><ul class='methods'><li data-type='method'><a href="TB.html#.applyCssRules">applyCssRules</a></li><li data-type='method'><a href="TB.html#.assign">assign</a></li><li data-type='method'><a href="TB.html#.camelCaseToDashes">camelCaseToDashes</a></li><li data-type='method'><a href="TB.html#.classExtend">classExtend</a></li><li data-type='method'><a href="TB.html#.cloneFunction">cloneFunction</a></li><li data-type='method'><a href="TB.html#.contains">contains</a></li><li data-type='method'><a href="TB.html#.get">get</a></li><li data-type='method'><a href="TB.html#.isArray">isArray</a></li><li data-type='method'><a href="TB.html#.isArrayLike">isArrayLike</a></li><li data-type='method'><a href="TB.html#.isBetween">isBetween</a></li><li data-type='method'><a href="TB.html#.isBoolean">isBoolean</a></li><li data-type='method'><a href="TB.html#.isDate">isDate</a></li><li data-type='method'><a href="TB.html#.isDefined">isDefined</a></li><li data-type='method'><a href="TB.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="TB.html#.isFunction">isFunction</a></li><li data-type='method'><a href="TB.html#.isNumber">isNumber</a></li><li data-type='method'><a href="TB.html#.isObject">isObject</a></li><li data-type='method'><a href="TB.html#.isString">isString</a></li><li data-type='method'><a href="TB.html#.isUndefined">isUndefined</a></li><li data-type='method'><a href="TB.html#.JSON2CSS">JSON2CSS</a></li><li data-type='method'><a href="TB.html#.limitToRange">limitToRange</a></li><li data-type='method'><a href="TB.html#.map">map</a></li><li data-type='method'><a href="TB.html#.merge">merge</a></li><li data-type='method'><a href="TB.html#.noop">noop</a></li><li data-type='method'><a href="TB.html#.normalizeDate">normalizeDate</a></li><li data-type='method'><a href="TB.html#.parseQueryParams">parseQueryParams</a></li><li data-type='method'><a href="TB.html#.set">set</a></li><li data-type='method'><a href="TB.html#.toArray">toArray</a></li><li data-type='method'><a href="TB.html#.toPx">toPx</a></li><li data-type='method'><a href="TB.html#.typeof">typeof</a></li><li data-type='method'><a href="TB.html#.underscoreToDash">underscoreToDash</a></li><li data-type='method'><a href="TB.html#.urlAppend">urlAppend</a></li><li data-type='method'><a href="TB.html#.values">values</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">tb.request.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var DOMhead = document.getElementsByTagName( 'head' )[0];
+
+/**
+ * Request class
+ * @constructor
+ * @memberOf TB
+ * @param {Object} settings instance settings
+ * @param {Object} settings.url remote url
+ * @param {?Function} settings.before complete callback
+ * @param {?Function} settings.complete complete callback
+ * @param {?Function} settings.progress progress callback
+ */
+function Request( settings ) {
+  if ( !( this instanceof Request ) ) {
+    return new Request( settings );
+  }
+
+  var self = this;
+
+
+  /**
+   * Settings holder
+   * @name Request#s
+   * @type {Object}
+   */
+  this.s = settings;
+
+  /**
+   * Timeout id
+   * @name Request#timeout
+   * @type {?Number}
+   */
+  this.timeout = null;
+
+  /**
+   * HTTP method
+   * @name Request#method
+   * @type {String}
+   */
+  this.method = ( this.s.method || 'GET' ).toUpperCase( );
+
+  /**
+   * Service URL
+   * @name Request#url
+   * @type {String}
+   */
+  this.url = this.s.url || '';
+
+  /**
+   * Data to send to the server
+   * @name Request#data
+   * @type {*}
+   */
+  this.data = null;
+
+  /**
+   * Request object
+   * @type {Object}
+   */
+  this.request = null;
+
+
+  if ( !TB.isEmpty( this.s.data ) ) {
+    if ( this.s.processData ) {
+      this.data = this._toQueryString( this.s.data );
+    } else {
+      this.data = this.s.data;
+    }
+
+    if ( this.method === 'GET' ) {
+      this.url = TB.urlAppend( this.url, this.data );
+      this.data = null;
+    }
+  }
+
+
+  // If timeout, set timeout
+  if ( TB.isNumber( this.s.timeout ) &amp;&amp; this.s.timeout > 0 ) {
+    this.timeout = setTimeout( function( ) {
+      self._timedOut = true;
+      self.request.abort( );
+    }, this.s.timeout );
+  }
+
+
+  this.promise = new Promise( function( resolve, reject ) {
+    self._promiseResolve = resolve;
+    self._promiseReject = reject;
+  } );
+
+
+  this.request = this._makeRequest();
+}
+
+/** @lends TB.Request.prototype */
+Request.prototype = {
+  /**
+   * Default request headers
+   * @private
+   * @type {Object}
+   */
+  _defaultHeaders: {
+    contentType: 'application/x-www-form-urlencoded',
+    'X-Requested-With': 'XMLHttpRequest',
+    accept: {
+      '*': 'text/javascript, text/html, application/xml, text/xml, */*',
+      xml: 'application/xml, text/xml',
+      html: 'text/html',
+      text: 'text/plain',
+      json: 'application/json, text/javascript',
+      js: 'application/javascript, text/javascript',
+    },
+  },
+  /**
+   * getRequest
+   * @private
+   * @return {Object} XHR object
+   */
+  _makeRequest: function( ) {
+    if ( this.s.type === 'jsonp' ) {
+      return this._makeRequestJSONP();
+    } else {
+      return this._makeRequestXHR();
+    }
+  },
+  /**
+   * Make request with JSONP
+   * @private
+   * @return {Object} abortable
+   */
+  _makeRequestJSONP: function( ) {
+    var cbQueryParamName = this.s[ 'jsonpCallback' ] || 'callback';
+    var cbQueryParamValue = this.s[ 'jsonpCallbackName' ];
+    var scriptEl = document.createElement( 'script' );
+    var isLoaded = false;
+    var responseData;
+
+    this.url = TB.urlAppend( this.url, this.data );
+    this.url = TB.urlAppend( this.url, cbQueryParamName + '=' + cbQueryParamValue );
+
+    window[ cbQueryParamValue ] = function( data ) {
+      responseData = data;
+    };
+
+    scriptEl.type = 'text/javascript';
+    scriptEl.src = this.url;
+    scriptEl.async = true;
+
+
+    scriptEl.onload = scriptEl.onreadystatechange = function() {
+      if ( ( scriptEl.readyState &amp;&amp; scriptEl.readyState !== 'complete' &amp;&amp; scriptEl.readyState !== 'isLoaded' ) || isLoaded ) {
+        return false;
+      }
+
+      scriptEl.onload = null;
+      scriptEl.onreadystatechange = null;
+
+      if ( scriptEl.onclick ) {
+        scriptEl.onclick();
+      }
+
+      // Call the user callback with the last value stored and clean up values and scripts.
+      this._successCallback( responseData );
+      responseData = undefined;
+      DOMhead.removeChild( scriptEl );
+      isLoaded = true;
+    };
+
+    DOMhead.appendChild( scriptEl );
+
+    return {
+      abort: function() {
+        scriptEl.onload = scriptEl.onreadystatechange = null;
+        this._errorCallback( {}, 'Request is aborted: timeout', {} );
+        responseData = undefined;
+        DOMhead.removeChild( scriptEl );
+        isLoaded = true;
+      },
+    };
+  },
+  /**
+   * Make request with XHR
+   * @private
+   * @return {Object}      XHR object
+   */
+  _makeRequestXHR: function() {
+    var xhr = this._getXHR( this.s );
+
+    xhr.open( this.method, this.url, !( this.s.async ) );
+
+    this._setHeaders( xhr );
+    this._setCredentials( xhr );
+
+    xhr.onreadystatechange = this._handlerReadystatechangeXHR.bind( this );
+
+    if ( this.s.before ) {
+      this.s.before( xhr, this.data );
+    }
+
+    xhr.send( this.data );
+
+    return xhr;
+  },
+
+  /**
+   * Gets XMLHtttpRequest object
+   * @private
+   * @return {Object} XHR object
+   */
+  _getXHR: function( ) {
+    ASSERT.hasProperty( window, 'XMLHttpRequest', 'Browser does not support AJAX' );
+
+    var xhr = new XMLHttpRequest( );
+
+    if ( this.s.crossOrigin === true ) {
+      ASSERT.hasProperty( xhr, 'withCredentials', 'Browser does not support cross-origin requests' );
+    }
+
+    return xhr;
+  },
+
+  /**
+   * Handler onreadystatechange
+   * @private
+   */
+  _handlerReadystatechangeXHR: function( ) {
+    // use _aborted to mitigate against IE err c00c023f
+    // ( can't read props on aborted request objects )
+    if ( this._aborted ) {
+      return this._errorCallback( this.request );
+    }
+
+    if ( this._timedOut ) {
+      return this._errorCallback( this.request, 'Request is aborted: timeout' );
+    }
+
+    if ( this.request &amp;&amp; this.request.readyState === 4 ) {
+      this.request.onreadystatechange = TB.noop;
+
+      if ( this._checkResponseStatus() ) {
+        this._successCallback( this.request.responseText );
+      } else {
+        this._errorCallback( this.request );
+      }
+    }
+  },
+  /**
+   * Check if response status is ok
+   * @private
+   * @return {Boolean} true if http(s) status is 2xx
+   */
+  _checkResponseStatus: function() {
+    var httpRe = /^http/;
+    var protocolRe = /(^\w+):\/\//;
+    var successStatus = /^(2\d\d)$/;
+    var protocolMath = protocolRe.exec( this.url );
+    var protocol = ( protocolMath &amp;&amp; protocolMath[ 1 ] ) || window.location.protocol;
+
+    // If http request
+    if ( httpRe.test( protocol ) ) {
+      return successStatus.test( this.request.status );
+    } else {
+      return !!this.request.response;
+    }
+  },
+  /**
+   * Callback when request is successfull
+   * @private
+   * @param {String} filteredResponse response text
+   */
+  _successCallback: function( filteredResponse ) {
+    var type = this.s.type || this._getTypeFromResponseHeader( this.request.getResponseHeader( 'Content-Type' ) );
+
+    if ( filteredResponse ) {
+      switch ( type ) {
+      case 'json':
+        try {
+          filteredResponse = JSON.parse( filteredResponse );
+        } catch ( err ) {
+          return this.reject( {
+            data: this.request,
+            error: err,
+          } );
+        }
+        break;
+      case 'js':
+        filteredResponse = eval( filteredResponse );
+        break;
+      case 'html':
+        filteredResponse = filteredResponse;
+        break;
+      case 'xml':
+        filteredResponse = this.request.responseXML &amp;&amp; this.request.responseXML.parseError // IE trololo
+        &amp;&amp; this.request.responseXML.parseError.errorCode &amp;&amp; this.request.responseXML.parseError.reason ? null : this.request.responseXML;
+        break;
+      default:
+        THROW( 'Unknown type' );
+      }
+    }
+
+    this._promiseResolve( {
+      data: filteredResponse,
+    } );
+
+
+    this._completeCallback( filteredResponse );
+  },
+  /**
+   * Callback when request has an error
+   * @private
+   * @param  {Object} response failed response
+   * @param  {String} msg      error message string
+   * @param  {*} t        TODO
+   */
+  _errorCallback: function( response, msg, t ) {
+    this._promiseReject( {
+      data: response,
+      message: msg,
+      error: t,
+    } );
+    this._completeCallback( response );
+  },
+  /**
+   * Callback to complete when request either failed or succeed
+   * @private
+   * @param  {Object} resp response
+   */
+  _completeCallback: function( resp ) {
+    if ( this.s.timeout ) {
+      clearTimeout( this.timeout );
+    }
+
+    this.timeout = null;
+
+    if ( TB.isFunction( this.s.complete ) ) {
+      this.s.complete( resp );
+    }
+  },
+  /**
+   * Get type by response headers
+   * @private
+   * @param  {String} header value of "Content-Type" header
+   * @return {String}
+   */
+  _getTypeFromResponseHeader: function( header ) {
+    // json, javascript, text/plain, text/html, xml
+    if ( header === null ) { return undefined; } //In case of no content-type.
+    if ( header.match( 'json' ) ) { return 'json'; }
+    if ( header.match( 'javascript' ) ) { return 'js'; }
+    if ( header.match( 'text' ) ) { return 'html'; }
+    if ( header.match( 'xml' ) ) { return 'xml'; }
+  },
+  /**
+   * Set credentials if needed
+   * @param {Object} xhr XHR object
+   */
+  _setCredentials: function( xhr ) {
+    if ( TB.isDefined( this.s.withCredentials ) &amp;&amp; TB.isDefined( xhr.withCredentials ) ) {
+      xhr.withCredentials = !!this.s.withCredentials;
+    }
+  },
+  /**
+   * Set header to XHR object
+   * @private
+   * @param {Object} xhr XHR object
+   */
+  _setHeaders: function( xhr ) {
+    var headers = this.s.headers || {};
+
+    headers[ 'Accept' ] = headers[ 'Accept' ] || this._defaultHeaders[ 'accept' ][ this.s.type ] || this._defaultHeaders[ 'accept' ][ '*' ];
+
+
+    // if passed data is instance of FormData then make form request
+    var isAFormData = typeof FormData === 'function' &amp;&amp; ( this.s.data instanceof FormData );
+
+    // breaks cross-origin requests with legacy browsers
+    if ( !this.s.crossOrigin &amp;&amp; !headers[ 'X-Requested-With' ] ) {
+      headers[ 'X-Requested-With' ] = this._defaultHeaders[ 'X-Requested-With' ];
+    }
+
+    if ( !headers[ 'Content-Type' ] &amp;&amp; !isAFormData ) {
+      headers[ 'Content-Type' ] = this.s.contentType || this._defaultHeaders[ 'contentType' ];
+    }
+
+    for ( var header in headers ) {
+      xhr.setRequestHeader( header, headers[ header ] );
+    }
+  },
+  /**
+   * Convert data to query string
+   * @todo refactor this
+   * @private
+   * @param  {(Object|Array)} requestData data to convert to
+   * @return {String}
+   */
+  _toQueryString: function( requestData ) {
+    if ( TB.isString( requestData ) || TB.isEmpty( requestData ) ) {
+      return requestData;
+    }
+
+    var queryArr = [];
+    var add = function( key, value ) {
+      // If value is a function, invoke it and return its value
+      value = ( TB.isFunction( value ) )
+        ? value()
+        : ( ( value === null ) ? '' : value );
+      queryArr[ queryArr.length ] = encodeURIComponent( key ) + '=' + encodeURIComponent( value );
+    };
+
+    // If an array was passed in, assume that it is an array of form elements.
+    if ( TB.isArray( requestData ) ) {
+      for ( var i = 0; requestData &amp;&amp; i &lt; requestData.length; i++ ) {
+        add( requestData[ i ][ 'name' ], requestData[ i ][ 'value' ] );
+      }
+    } else {
+      // If traditional, encode the "old" way ( the way 1.3.2 or older
+      // did it ), otherwise encode params recursively.
+      for ( var prefix in requestData ) {
+        if ( requestData.hasOwnProperty( prefix ) ) {
+          this._buildParams( prefix, requestData[ prefix ], add );
+        }
+      }
+    }
+
+    // spaces should be + according to spec
+    return queryArr.join( '&amp;' ).replace( /%20/g, '+' );
+  },
+  /**
+   * Build query params
+   * @todo refactor this
+   * @private
+   * @param  {String} prefix TODO
+   * @param  {Object} obj    TODO
+   * @param  {Function} add    add callback
+   */
+  _buildParams: function( prefix, obj, add ) {
+    var rbracket = /\[ \ ]$/;
+
+    if ( TB.isArray( obj ) ) {
+      // Serialize array item.
+      for ( var i = 0, l = obj.length; obj &amp;&amp; i &lt; l; i++ ) {
+        var value = obj[ i ];
+
+        if ( rbracket.test( prefix ) ) {
+          // Treat each array item as a scalar.
+          add( prefix, value );
+        } else {
+          this._buildParams( prefix + '[ ' + ( typeof value === 'object' ? i : '' ) + ' ]', value, add );
+        }
+      }
+    } else if ( obj &amp;&amp; obj.toString( ) === '[ object Object ]' ) {
+      // Serialize object item.
+      for ( var name in obj ) {
+        this._buildParams( prefix + '[ ' + name + ' ]', obj[ name ], add );
+      }
+
+    } else {
+      // Serialize scalar item.
+      add( prefix, obj );
+    }
+  },
+  /**
+   * Abort request
+   */
+  abort: function( ) {
+    this._aborted = true;
+    this.request.abort( );
+  },
+};
+
+
+TB.Request = Request;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> on Tue Dec 15 2015 17:37:16 GMT+0200 (EET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

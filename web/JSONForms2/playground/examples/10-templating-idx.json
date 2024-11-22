@@ -1,0 +1,33 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-idx",
+    "type": "object",
+    "properties": {
+      "thoughts": {
+        "type": "array",
+        "title": "My name",
+        "items": {
+          "title": "A thought",
+          "type": "string"
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-idx",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "array",
+        "key": "thoughts",
+        "items": [
+          {
+            "key": "thoughts[]",
+            "title": "Thought number {{idx}}"
+          }
+        ]
+      }
+    ]
+  }
+}

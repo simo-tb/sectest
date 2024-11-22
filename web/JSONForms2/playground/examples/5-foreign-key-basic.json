@@ -1,0 +1,140 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-foreign-key-basic",
+    "type": "object",
+    "properties": {
+      "referencing_field": {
+        "type": "string",
+        "refCol": "id",
+        "refColTitle": "name",
+        "refTable": "table_name",
+        "filterSchema": {
+          "$ref": "#/definitions/people"
+        }
+      },
+      "externalFields": {
+        "type": "object",
+        "title": "External schemas",
+        "properties": {
+          "externalName": {
+            "title": "Name",
+            "type": "string",
+            "enum": [
+              "Dragan",
+              "Ivan",
+              "Petkan"
+            ],
+            "refCol": "sadness",
+            "refTable": "dystopian utopia",
+            "filterSchema": {
+              "$ref": "#/definitions/people"
+            }
+          },
+          "externalAge": {
+            "title": "Age",
+            "type": "number",
+            "enum": [
+              18,
+              28,
+              38
+            ],
+            "refCol": "happiness",
+            "refTable": "dystopian utopia",
+            "filterSchema": {
+              "$ref": "#/definitions/people"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "people": {
+        "id": "http://jsonschemas.telebid-pro.com/tblib/db/jf_tables",
+        "type": "object",
+        "title": "CRUD presentations",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom",
+        "project": "tblib",
+        "version": 0,
+        "required": [
+          "schema_id",
+          "name",
+          "db_obj_name"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Program name",
+            "ordering": 30,
+            "translate": true,
+            "searchBy": "*"
+          },
+          "name": {
+            "name": true,
+            "type": "string",
+            "title": "UI name",
+            "ordering": 20,
+            "searchBy": "*"
+          },
+          "descr": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "title": "Description",
+            "ordering": 40,
+            "searchBy": "*"
+          },
+          "schema_id": {
+            "type": "string",
+            "title": "Schema",
+            "refCol": "id",
+            "ordering": 10,
+            "refTable": "tbjson_schemas",
+            "filterSchema": {
+              "$ref": "http://jsonschemas.telebid-pro.com/tblib/db/tbjson_schemas"
+            }
+          },
+          "table_json": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "http://jsonschemas.telebid-pro.com/tblib/db/jf_tables/table_json"
+              }
+            ],
+            "title": "List presentation JSON",
+            "ordering": 60
+          },
+          "db_obj_name": {
+            "type": "string",
+            "title": "Table name",
+            "ordering": 50,
+            "searchBy": "*"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-foreign-key-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "referencing_field",
+        "title": "Foreign key search by internal schema",
+        "type": "select"
+      },
+      {
+        "key": "externalFields",
+        "title": "Foreign key search by external schema through $ref",
+        "type": "fieldset"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-foreign-key-basic"
+  }
+}

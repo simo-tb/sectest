@@ -1,0 +1,453 @@
+
+<!--&table_view_start_form($action, $form_name='filter_form') -->
+<form name="$form_name" method="POST" action="$action" onSubmit="return flShowOnSubmit(this)">
+
+    <!--&hidden($name, $value='' escape 'html') -->
+    <input type="hidden" value="$value" name="$name">
+    <!--/&hidden -->
+    
+<!--/&table_view_start_form -->
+
+<!--&table_view_start_table() -->
+<div class="table-responsive">
+<table border=0 cellspacing=2 cellpadding=0 class="dbfshow table table-striped table-bordered table-condensed table-hover" >
+<!--/&table_view_start_table -->
+
+
+<!--&table_view($table_name, $action='', $get_params='', $js_doc='document', $form_name='filter_form', $num_columns, $num_columns_minus_1) -->
+
+<!--&start_table() -->
+<div class="table-responsive">
+<table border=1 cellspacing=2 cellpadding=0 class="dbfshow table table-striped table-bordered table-condensed table-hover">
+<!--/&start_table -->
+
+<!--&start_form() -->
+<FORM name="$form_name" method="POST" action="$action" onSubmit="return flShowOnSubmit(this)">
+<!--/&start_form -->
+
+<thead class="dbf-th">
+    <tr class="flshow-head">
+        <th colspan="$num_columns_minus_1">
+
+            <!--&table_descr($name) -->
+            $name
+             <!--/&table_descr -->
+
+            <!--&table_descr_link($name, $action, $params) -->
+            <a href="$action?$params">$name</a>
+            <!--/&table_descr_link -->
+        
+            <!--&table_descr1($name) -->
+            <h4>
+                $name
+            </h4> 
+            <!--/&table_descr1 -->
+
+            <!--&prev_link($numb) -->
+            <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Prev" onmouseover="window.status='Prev';return true" class="btn btn-sm btn-default fa fa-arrow-left"></a>
+            <!--/&prev_link -->
+
+            <!--&numb_link($numb,$name) -->
+            <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()">$name</a>
+            <!--/&numb_link -->
+
+            <!--&next_link($numb) -->
+            <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Next" onmouseover="window.status='Next';return true" class="btn btn-sm btn-default fa fa-arrow-right"></a>
+            <!--/&next_link -->
+        
+        </th>
+        <th >
+            
+            <!--&cancel_link() -->
+            <a href="$action" class="btn btn-sm btn-warning fa fa-arrow-up"></a>
+            <!--/&cancel_link -->
+
+        </th>
+    </tr>
+
+    <!--&descr_row() -->
+    <tr class="flshow-heads-bgcol">
+        <th  class="text-center" >
+        
+            <!--&insert_cell($insert_action,$insert_get_params) -->
+            <a href="$insert_action?$insert_get_params" title="Create new"  onmouseover="window.status='Create new';return true" class="btn btn-sm btn-success fa fa-plus"> </a>
+            <!--/&insert_cell -->
+
+        </th>
+      
+        <!--&descr_cell($val,$ord_name,$field_name, $field_ordering='') -->
+        <th  class="text-center">
+            <a href="javascript: $js_doc.$form_name.$ord_name.value='$field_ordering';flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Sort" onmouseover="window.status='Sort';return true">$val </a>
+        
+            <!--&sort_asc() -->
+            <i class="fa fa-caret-down"></i>
+        	<!--/&sort_asc -->
+        
+            <!--&sort_desc() -->
+            <i class="fa fa-caret-up"></i>
+        	<!--/&sort_desc -->
+	    
+        </th>  
+        <!--/&descr_cell -->
+
+        <!--&empty_cell()-->
+        <th>&nbsp;</th>
+        <!--/&empty_cell-->
+
+        <th >
+            
+            <!--&help_cell() -->
+            <a href="javascript: openHelp('help/fl/fl_show.html')" title="Help"  onmouseover="window.status='Help';return true" class="btn btn-sm btn-info fa fa-question"></a>
+            <!--/&help_cell -->
+        </th>
+    </tr>
+    <!--/&descr_row -->
+
+    <!--&filter_row() -->
+    <tr class="flshow-filt-bgcol dbf-tr-filter">
+        <th class="text-center" >
+            <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=0;$js_doc.$form_name._fl_filter_on.value=1;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Filter"  onmouseover="window.status='Filter';return true" class="btn btn-sm btn-info fa fa-filter"></a>
+
+<!--
+    <!--&filter_checked() -->
+        <a href="javascript: $js_doc.$form_name.filter_checked.value=1;$js_doc.$form_name.$table_name_cur_page.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Filter Selected"  onmouseover="window.status='Filter Selected';return true">
+        <img alt="Filter Selected" src="pub/DBForms/images/filter_checked.gif" border=0></a>
+        <!--/&filter_checked -->
+    -->
+
+            <!--&no_filter($name)-->
+            <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=0;$js_doc.$form_name.filter_off.value=1;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Remove Filter" onmouseover="window.status='Remove Filter';return true" class="btn btn-sm btn-danger fa fa-times"></a>
+            <!--/&no_filter-->
+
+            <!--&no_filter_checked() -->
+            <a href="javascript: $js_doc.$form_name.filter_checked_off.value=1;$js_doc.$form_name.$table_name_cur_page.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Filter"  onmouseover="window.status='Filter';return true" class="btn btn-sm btn-default fa fa-square-o"></a>
+            <!--/&no_filter_checked -->
+
+            <!--&select_mult($action='', $get_params='', $pk_param) -->
+            <a href="$action?$get_params" title="Select" onMouseOver="sb('Select')" onClick="if(typeof($js_doc.$form_name._fl_ch) == 'undefined') return false; var t=flShowGetChecked($js_doc.$form_name,'$pk_param'); if(t=='')return false; this.href+=t; return true" class="btn btn-sm btn-default fa fa-hand-o-right"></a>
+            <!--/&select_mult-->
+
+        </th>
+
+        <!--&filter($name) -->
+
+        <!--&bool_filter($cond_true='' , $cond_false='') -->
+        <th class="text-center"  title="Filter">
+            <!-- <select name="$name" onchange="flShowOnSubmit(this.form);this.form.submit()" class="form-control input-sm"> -->
+            <select name="$name" onchange="flShowOnSubmit(this.form)" class="form-control input-sm">
+                <option value=""> &nbsp;</option>
+                <option value="1" $cond_true >yes</option>
+                <option value="0" $cond_false >no</option>
+            </select>
+        </th>
+        <!--/&bool_filter -->
+
+        <!--&ord_filter($value='') -->
+        <th class="text-center"  title="Filter">
+            <select name="$name__op" class="form-control input-sm" >
+            
+                <!--&opt($value escape 'html', $descr escape 'html', $selected='selected') -->
+                <option value="$value" $selected>$descr</option>      
+                <!--/&opt -->
+
+            </select>
+            <input type=text name="$name" value="$value" size="10" class="form-control input-sm autowidth" style="margin: auto;">
+        </th>
+        <!--/&ord_filter -->
+
+        <!--/&filter -->
+
+        <!--&empty_filter()-->
+        <th>&nbsp;</th>
+        <!--/&empty_filter-->
+
+        <th> &nbsp; </th>
+    </tr>
+<!--/&filter_row -->
+
+
+</thead>
+<!--
+<tr class="flshow-printrow-bgcol">
+  <td  class="text-center" >
+
+<!--&print_on() -->
+<a href="javascript: if(confirm('Сигурни ли сте, че искате разпечатване на ВСИЧКИ данни ?')) { $js_doc.$form_name.fl_show_printer_mode.value=1;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();}" title="Отпечатване на всички редове" onmouseover="return stat_print()">
+    <img src="pub/DBForms/images/print.gif" border=0 alt="Отпечатване на всички редове"></a>
+<!--/&print_on -->
+<!--&print_off() -->
+<a href="javascript: $js_doc.$form_name.fl_show_printer_mode.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Изход от разпечатване" onmouseover="return stat_printoff()">
+    <img src="pub/DBForms/images/print_off.gif" border=0 alt="Изход от разпечатване"></a>
+<!--/&print_off -->
+  </td>
+<!--&print_check() -->
+  <td  class="text-center">
+	 <input type=checkbox checked>
+  </td>  
+<!--/&print_check -->
+    <td >&nbsp; </td>
+
+</tr>
+-->
+
+<!--&value_row($color, $checked='checked', $pk_id) -->
+<tr class="flshow-row-bgcol-$color">
+
+    <td  class="text-center minwidth nowrap">
+        
+        <!--
+        <!--&check_row() -->
+            <input type=checkbox name="_fl_ch" value="$pk_id" $checked >
+        <!--/&check_row -->
+        -->
+        
+        <!--&checked_row() -->
+        <input type=hidden name="_fl_ch" value="$pk_id" >
+        <!--/&checked_row -->
+      
+        <!--&select_cell($action, $get_params) -->
+        <a href="$action?$get_params" title="Select" onMouseOver="sb('Select')" class="btn btn-sm btn-default fa fa-hand-o-right"></a>
+        <!--/&select_cell -->
+
+        <!--&edit_cell($edit_action, $edit_get_params) -->
+        <a href="$edit_action?$edit_get_params" title="Edit" onmouseover="return stat_edit()" class="btn btn-sm btn-default fa fa-pencil"></a>
+        <!--/&edit_cell -->   
+
+        <!--&vert_cell($action, $get_params) -->
+        <a href="$action?$get_params" title="Show" onmouseover="return stat_portrait()" class="btn btn-sm btn-default fa fa-eye"></a>
+        <!--/&vert_cell -->
+
+    </td>
+    
+    <!--&cell() -->
+    
+        <!--&value_cell($val='&nbsp;') -->
+        <td  class="text-left">
+            $val     
+        </td>
+        <!--/&value_cell -->
+
+        <!--&href_value_cell($val) -->
+        <td  class="text-left">
+            <a href="$val">$val</a>
+        </td>
+        <!--/&href_value_cell -->
+
+        <!--&email_value_cell($val) -->
+        <td  class="text-left">
+            <a href="mailto:$val">$val</a>
+        </td>
+        <!--/&email_value_cell -->
+   
+        <!--&button_cell($name escape 'html', $action escape 'html', $value escape 'html', $btn_type='primary' escape 'html')-->
+        <td>
+            <input type="button" value="$value" onclick="$action" name="$name" class="btn btn-$btn_type"/> 
+        </td>
+        <!--/&button_cell--> 
+
+    <!--/&cell -->
+    
+    <td class="text-center minwidth" >
+        
+        <!--&delete_cell($action, $params) -->
+        <a data-id="delete-button-dbf" href="$action?$params" title="Remove" onmouseover="return stat_del()" class="btn btn-sm btn-danger fa fa-trash-o"></a>
+        <!--/&delete_cell -->
+        
+    </td>
+</tr>
+<!--/&value_row -->
+
+<tr>
+    <td colspan="$num_columns">
+
+        <!--&bott_cancel_link() -->
+        <a href="$action" class="btn btn-sm btn-warning fa fa-chevron-up"></a>
+        <!--/&bott_cancel_link -->
+
+        <!--&bott_prev_link($numb) -->
+        <a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" class="btn btn-sm btn-default fa fa-arrow-left"></a>
+        <!--/&bott_prev_link -->
+
+        <!--&bott_numb_link($numb,$name) -->
+        <a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">$name</a>
+        <!--/&bott_numb_link -->
+
+        <!--&bott_next_link($numb) -->
+        <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" class="btn btn-sm btn-default fa fa-arrow-right"></a>
+        <!--/&bott_next_link -->
+
+        <!--&hidden($name, $value='' escape 'html') -->
+        <input type="hidden" value="$value" name="$name">
+        <!--/&hidden -->
+
+    </td>
+</tr>
+
+
+<!--&end_form() -->
+<input type="hidden" value="" name="filter_off">
+
+</form>
+<!--/&end_form -->
+
+<!--&end_table() -->
+</table>
+</div>
+<!--/&end_table -->
+
+<!--/&table_view -->
+
+
+
+<!--&table_view_vert($table_name, $action='', $get_params='', $js_doc='document',$form_name='filter_form') -->
+
+<!--&body_panel()-->
+<!--/&body_panel-->
+<!--&body_panel_jsonform()-->
+<!--/&body_panel_jsonform-->
+
+<!--&table_descr($name) -->
+<h4>$name</h4>
+<!--/&table_descr -->
+
+<!--&cancel_link() -->
+<a href="$action" class="btn btn-sm btn-danger fa fa-arrow-up">
+    <!-- <img src="pub/DBForms/images/arrow-up.gif" border=0 alt="Cancel"> -->
+</a>
+<!--/&cancel_link -->
+
+<!--&prev_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Prev" onmouseover="window.status='Prev';return true" class="btn btn-sm btn-default fa fa-arror-left">
+    <!-- <img src="pub/DBForms/images/arrow-left.gif" border=0 alt="Prev"> -->
+</a>
+<!--/&prev_link -->
+
+<!--&numb_link($numb,$name) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()">
+    $name
+</a>
+<!--/&numb_link -->
+
+<!--&next_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Next" onmouseover="window.status='Next';return true" class="btn btn-sm btn-default fa fa-arror-right">
+    <!-- <img src="pub/DBForms/images/arrow-right.gif" border=0 alt="Next"> -->
+</a>
+
+<!--/&next_link -->
+
+<!--&no_filter($name)-->
+<br> 
+<a href="$action?fl_table=$name&$get_params">Remove filter</a>
+<!--/&no_filter-->
+
+<!--&print_off() -->
+<a href="$action" title="Back" onmouseover="return stat_portraitoff()" class="btn btn-sm btn-default fa fa-arrow-left"></a>
+<!--/&print_off -->
+
+<!--&hidden($name, $value='' escape 'html') -->
+<input type="hidden" value="$value" name="$name">
+<!--/&hidden -->
+
+<div class="table-responsive">
+<table border=0 cellspacing=2 cellpadding=2 class="table table-condensed table-striped table-bordered autowidth">
+
+<!--&descr_row() -->
+
+    <!--&insert_cell() -->
+    <!--/&insert_cell -->
+    
+    <!--&help_cell() -->
+    <!--/&help_cell -->
+    
+    <!--&empty_cell() -->
+    <!--/&empty_cell -->
+
+<!--/&descr_row -->
+
+<!--&value_row($color) -->
+
+    <!--&check_row() -->
+    <!--/&check_row -->
+
+    <tr class="flshow-row-bgcol-$color">
+  
+        <!--&descr_cell($val,$ord_name,$field_name) -->
+        <td class="text-left">
+            <b> $val </b>
+        </td>  
+        <!--/&descr_cell -->
+
+        <!--&cell() -->
+        
+        <!--&value_cell($val='&nbsp;') -->
+        <td  class="text-left">$val</td>
+        <!--/&value_cell -->
+
+        <!--&href_value_cell($val) -->
+        <td  class="text-left">
+            <a href="$val">$val</a>
+        </td>
+        <!--/&href_value_cell -->
+
+        <!--&email_value_cell($val) -->
+        <td  class="text-left">
+            <a href="mailto:$val">$val</a>
+        </td>
+        <!--/&email_value_cell -->
+
+        <!--&jsonform_cell($name escape 'html' , $val='null' escape 'html' , $extra_param='{}' escape 'html') -->
+        <td  class="text-left">
+	        <input name="$name" type="hidden" value="$value" id="$name" class="tb-jsonforms-input" data-jsonform-inline="$extra_param" />
+	
+	        <script>
+
+		    $(function() {
+		        $(":input[name=$name]").jsonFormPlugin({
+              form: {
+                preview: true
+              }
+            });
+		    });
+
+	        </script>
+
+        </td  class="text-left">
+        <!--/&jsonform_cell -->
+        
+        <!--/&cell -->
+    </tr>
+
+    <!--/&value_row -->
+
+</table>
+</div>
+
+    <!--&bott_cancel_link() -->
+    <a href="$action" class="btn btn-sm btn-warning fa fa-arrow-up"></a>
+    <!--/&bott_cancel_link -->
+
+    <!--&bott_prev_link($numb) -->
+    <a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" class="btn btn-sm btn-warning fa fa-arrow-left"></a>
+    <!--/&bott_prev_link -->
+
+    <!--&bott_numb_link($numb,$name) -->
+    <a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">$name</a>
+    <!--/&bott_numb_link -->
+
+    <!--&bott_next_link($numb) -->
+    <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" class="btn btn-sm btn-warning fa fa-arrow-left"></a>
+    <!--/&bott_next_link -->
+
+    <!--/&table_view_vert -->
+
+    <!--&table_view_end_table() -->
+    </table>
+    </div>
+    <!--/&table_view_end_table -->
+
+    
+<!--&table_view_end_form() -->
+    <input type="hidden" value="" name="filter_off">
+</form>
+<!--/&table_view_end_form -->
+

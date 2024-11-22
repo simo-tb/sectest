@@ -1,0 +1,72 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/jpserver/db/promo_systems/settings_json?v=1",
+    "type": "object",
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "properties": {
+      "time_intervals": {
+        "type": "object",
+        "title": "Time intervals",
+        "properties": {
+          "reward_type": {
+            "type": "object",
+            "title": "Reward Type",
+            "properties": {
+              "material_prize": {
+                "type": "object",
+                "title": "Material prize (Unavailable)",
+                "readOnly": true,
+                "properties": {
+                  "reward_prize": {
+                    "type": "string",
+                    "title": "Description"
+                  }
+                }
+              },
+              "money_to_machine": {
+                "type": "object",
+                "title": "Money to machine",
+                "properties": {
+                  "reward_prize": {
+                    "type": "number",
+                    "title": "Reward, cents"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "enableDeletingItems": true
+      }
+    }
+  },
+  "form": {
+    "fields": [
+      {
+        "key": "time_intervals",
+        "type": "fieldset",
+        "items": [
+          {
+            "key": "time_intervals/reward_type",
+            "type": "selectfieldset",
+            "items": [
+              {
+                "key": "time_intervals/reward_type/money_to_machine"
+              },
+              {
+                "key": "time_intervals/reward_type/material_prize"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submti"
+      }
+    ],
+    "schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/jpserver/db/promo_systems/settings_json?v=1",
+    "jsonformVersion": "2.0"
+  }
+}

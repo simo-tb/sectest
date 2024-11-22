@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+
+    "type": "object",
+    "properties": {
+      "mood": {
+        "$merge": {
+          "source": {
+            "type": "string",
+            "title": "Mood of the day",
+          },
+          "with": {
+            "title": "OVERRIDEN!",
+            "type": ["string", "null"]
+          }
+        }
+        // "readOnly": true
+      }
+    }
+  },
+  "form": {
+    "strictNumberTypes": false,
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      "mood",
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "form": {
+   "isStrict": false,
+	 "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/12-auto-form-object",
+   "jsonformVersion": "2.0",
+   "fields": [
+    {
+      "key": "tabobject",
+      "type": "tabobject",
+      "title": "tabobject",
+      "items": [
+        {
+          "title": "name",
+          "type": "section",
+          "items": [
+            {
+              "title": "first name",
+              "key": "tabobject/name",
+              "type": "tabobject",
+				      "items": [
+				        {
+				          "title": "f name",
+				          "type": "section",
+				          "items": [
+				            {
+				              "title": "малко име",
+				              "key": "tabobject/name/fname",
+				              "type": "text"
+				            }
+				          ]
+				        },
+				        {
+				          "title": "l name",
+				          "type": "section",
+				          "items": [
+				            {
+				              "title": "фамилия",
+				              "key": "tabobject/name/lname",
+				              "type": "text"
+				            }
+				          ]
+				        }
+				      ]
+            }
+          ]
+        },
+        {
+          "title": "възраст",
+          "type": "section",
+          "items": [
+            {
+              "title": "възраст",
+              "key": "tabobject/age",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "title": "допълнителна информация",
+          "type": "section",
+          "items": [
+            {
+              "title": "друга информация",
+              "key": "tabobject/fname",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "submit",
+      "title": "submit"
+    }
+  ]
+  }
+}

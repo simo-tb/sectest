@@ -1,0 +1,619 @@
+{
+  "locales": [
+    null
+  ],
+  "schema": {
+    "properties": {
+      "liabilities_electricity": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "income_bonusses": {
+        "type": "number",
+        "minimum": 0
+      },
+      "employment_status_id": {
+        "minimum": 0,
+        "refField": "id",
+        "enum": [
+          7,
+          8,
+          3,
+          14,
+          2,
+          1,
+          15,
+          10,
+          11,
+          12,
+          13,
+          16,
+          17,
+          5,
+          4
+        ],
+        "type": "integer",
+        "refTable": "employment_statuses"
+      },
+      "education_id": {
+        "enum": [
+          1,
+          2
+        ],
+        "refTable": "educations",
+        "type": "integer",
+        "refField": "id",
+        "minimum": 0
+      },
+      "liabilities_heating": {
+        "type": "number",
+        "minimum": 0
+      },
+      "liabilities_phone": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "liabilities_food_and_dress": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_rent": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_other_contracts": {
+        "type": "number",
+        "minimum": 0
+      },
+      "liabilities_total": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "liabilities_rent": {
+        "type": "number",
+        "minimum": 0
+      },
+      "liabilities_other": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "car_model": {
+        "$ref": "http://schemas.telebid-pro.com/tbjson/constraints/name_lat_t"
+      },
+      "job_type_id": {
+        "minimum": 0,
+        "refField": "id",
+        "refTable": "job_types",
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer"
+      },
+      "work_expirience_current_employer_months": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "car_ownership_id": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "work_expirience_total_months": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "liabilities_net_and_tv": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "income_pension": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_salary": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "age": {
+        "maximum": 200,
+        "type": "integer",
+        "minimum": 0
+      },
+      "free_cash": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "liabilities_transport": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "family_members_count": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "residency_region": {
+        "$ref": "http://schemas.telebid-pro.com/tbjson/constraints/name_lat_t"
+      },
+      "liabilities_dependants": {
+        "type": "number",
+        "minimum": 0
+      },
+      "residency_city": {
+        "$ref": "http://schemas.telebid-pro.com/tbjson/constraints/name_lat_t"
+      },
+      "salary_period_id": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "refTable": "salary_periods",
+        "refField": "id",
+        "minimum": 0
+      },
+      "income_total": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "car_year": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_partner_salary": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_other": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "home_ownership_type_id": {
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer",
+        "refTable": "home_ownership_types",
+        "refField": "id",
+        "minimum": 0
+      },
+      "property_ownership_id": {
+        "properties": {},
+        "type": "array",
+        "items": {
+          "properties": {
+            "val": {
+              "refField": "id",
+              "refTable": "property_ownerships",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "residency_country": {
+        "$ref": "http://schemas.telebid-pro.com/tbjson/constraints/name_lat_t",
+        "refType": "ref",
+        "refTable": "countries",
+        "refField": "code"
+      },
+      "liabilities_drinks_fun": {
+        "type": "number",
+        "minimum": 0
+      },
+      "income_social": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "marital_status_id": {
+        "refField": "id",
+        "enum": [
+          1,
+          2
+        ],
+        "refTable": "marital_statuses",
+        "type": "integer",
+        "minimum": 0
+      },
+      "income_partner_pension": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "occupation_area_id": {
+        "refField": "id",
+        "refTable": "occupation_areas",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "type": "integer",
+        "minimum": 0
+      },
+      "gender_id": {
+        "minimum": 0,
+        "refField": "id",
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "refTable": "genders"
+      }
+    },
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+    "type": "object",
+    "required": [
+      "age",
+      "car_year",
+      "car_model",
+      "free_cash",
+      "gender_id",
+      "income_rent",
+      "job_type_id",
+      "education_id",
+      "income_other",
+      "income_total",
+      "income_salary",
+      "income_social",
+      "income_pension",
+      "residency_city",
+      "salary_period_id",
+      "liabilities_other",
+      "liabilities_phone",
+      "liabilities_total",
+      "marital_status_id",
+      "residency_country",
+      "occupation_area_id",
+      "liabilities_heating",
+      "employment_status_id",
+      "family_members_count",
+      "income_partner_salary",
+      "liabilities_transport",
+      "home_ownership_type_id",
+      "income_other_contracts",
+      "income_partner_pension",
+      "liabilities_dependants",
+      "liabilities_drinks_fun",
+      "liabilities_net_and_tv",
+      "liabilities_electricity",
+      "liabilities_food_and_dress",
+      "work_expirience_total_months",
+      "work_expirience_current_employer_months",
+      "property_ownership_id",
+      "car_ownership_id"
+    ],
+    "_JSONFORMS_VERSION": "2.0",
+    "id": "http://schemas.telebid-pro.com/p2p/loans/borrower-data"
+  },
+  "form": {
+    "preview": false,
+    "required": false,
+    "readOnly": false,
+    "isSearchable": false,
+    "isStrict": false,
+    "isDebug": true,
+    "maxLength": 1000,
+    "minLength": 0,
+    "minItems": 0,
+    "maxItems": 1000000,
+    "searchableLimit": 100,
+    "minimum": 5e-324,
+    "maximum": 1.7976931348623157e+308,
+    "exclusiveMinimum": false,
+    "exclusiveMaximum": false,
+    "deprecatedValue": "! ",
+    "maxDate": "2017-01-01",
+    "minDate": "1900-01-01",
+    "localeTabs": true,
+    "enableSorting": true,
+    "noMoreItems": false,
+    "uniqueItems": true,
+    "jsonformVersion": "2.0",
+    "schemaId": "http://schemas.telebid-pro.com/p2p/loans/borrower-data",
+    "templateData": {
+      "marital_status_id": [
+        {
+          "name": "Other",
+          "id": 1
+        },
+        {
+          "id": 2,
+          "name": "Семейни начала"
+        }
+      ],
+      "gender_id": [
+        {
+          "id": 0,
+          "name": "Male"
+        },
+        {
+          "name": "Female",
+          "id": 1
+        },
+        {
+          "id": 2,
+          "name": "Other"
+        }
+      ],
+      "occupation_area_id": [
+        {
+          "id": 1,
+          "name": "Other"
+        },
+        {
+          "name": "Mining",
+          "id": 2
+        },
+        {
+          "name": "Processing",
+          "id": 3
+        },
+        {
+          "id": 4,
+          "name": "Energy"
+        },
+        {
+          "id": 5,
+          "name": "Utilities"
+        },
+        {
+          "id": 6,
+          "name": "Construction"
+        },
+        {
+          "id": 7,
+          "name": "Retail and wholesale"
+        },
+        {
+          "name": "Transport and warehousing",
+          "id": 8
+        },
+        {
+          "id": 9,
+          "name": "Hospitality and catering"
+        },
+        {
+          "name": "Info and telecom",
+          "id": 10
+        },
+        {
+          "name": "Finance and insurance",
+          "id": 11
+        },
+        {
+          "id": 12,
+          "name": "Real-estate"
+        },
+        {
+          "id": 13,
+          "name": "Research"
+        },
+        {
+          "id": 14,
+          "name": "Administrative"
+        },
+        {
+          "id": 15,
+          "name": "Civil service & military"
+        },
+        {
+          "id": 16,
+          "name": "Education"
+        },
+        {
+          "id": 17,
+          "name": "Healthcare and social help"
+        },
+        {
+          "name": "Art and entertainment",
+          "id": 18
+        },
+        {
+          "name": "Agriculture, forestry and fishing",
+          "id": 19
+        }
+      ],
+      "salary_period_id": [
+        {
+          "id": 1,
+          "name": "Daily"
+        },
+        {
+          "name": "Weekly",
+          "id": 2
+        },
+        {
+          "id": 3,
+          "name": "Monthly"
+        }
+      ],
+      "property_ownership_id.[].val": [
+        {
+          "id": 1,
+          "name": "Other"
+        },
+        {
+          "id": 2,
+          "name": "House"
+        },
+        {
+          "name": "Apartment",
+          "id": 3
+        },
+        {
+          "name": "Parcel",
+          "id": 4
+        },
+        {
+          "name": "UAA",
+          "id": 5
+        },
+        {
+          "name": "Property",
+          "id": 6
+        }
+      ],
+      "job_type_id": [
+        {
+          "id": 1,
+          "name": "Other"
+        },
+        {
+          "name": "Административен и помощен персонал",
+          "id": 2
+        }
+      ],
+      "employment_status_id": [
+        {
+          "name": "Unemployed without social benefits",
+          "id": 7
+        },
+        {
+          "id": 8,
+          "name": "Unemployed with social benefits"
+        },
+        {
+          "name": "Indefinite contract",
+          "id": 3
+        },
+        {
+          "id": 14,
+          "name": "Civil employment contract"
+        },
+        {
+          "name": "Management contract",
+          "id": 2
+        },
+        {
+          "id": 1,
+          "name": "Other"
+        },
+        {
+          "id": 15,
+          "name": "Maternity"
+        },
+        {
+          "name": "Пенсионер по болест - неработещ",
+          "id": 10
+        },
+        {
+          "name": "Пенсионер по болест - работещ",
+          "id": 11
+        },
+        {
+          "id": 12,
+          "name": "Пенсионер по стаж и възраст - неработещ"
+        },
+        {
+          "id": 13,
+          "name": "Пенсионер по стаж и възраст - работещ"
+        },
+        {
+          "id": 16,
+          "name": "Работещ без договор"
+        },
+        {
+          "id": 17,
+          "name": "Самоосигуряващ се"
+        },
+        {
+          "name": "Свободна професия (самонает)",
+          "id": 5
+        },
+        {
+          "id": 4,
+          "name": "Срочен трудов договор"
+        }
+      ],
+      "home_ownership_type_id": [
+        {
+          "name": "Other",
+          "id": 1
+        },
+        {
+          "name": "При Родители",
+          "id": 2
+        }
+      ],
+      "education_id": [
+        {
+          "id": 1,
+          "name": "Other"
+        },
+        {
+          "name": "Начално",
+          "id": 2
+        }
+      ]
+    },
+    "prefix": "tb-jf-1",
+    "fields": [],
+    "originalLocale": "untranslated"
+  },
+  "content": {
+    "residency_country": "Bulgaria",
+    "home_ownership_type_id": 1,
+    "income_other": 100,
+    "income_partner_salary": 200,
+    "car_year": 2000,
+    "income_oncome_total": 1000,
+    "bers_count": 1,
+    "income_partner_pension": 1000,
+    "occupation_area_id": 1,
+    "gender_id": 1,
+    "income_social": 0,
+    "liabilities_drinks_fun": 10,
+    "marital_status_id": 1,
+    "residency_region": "Sofia",
+    "family_members_count": 1,
+    "free_cash": 500,
+    "age": 150,
+    "liabilities_transport": 10,
+    "residency_city": "Sofia",
+    "income_total": 10,
+    "salary_period_id": 3,
+    "liabilities_dependants": 10,
+    "liabilities_other": 10,
+    "work_expirience_current_employer_months": 1,
+    "job_type_id": 1,
+    "car_model": "Mazda",
+    "income_pension": 100,
+    "income_salary": 100,
+    "work_expirience_total_months": 1,
+    "liabilities_net_and_tv": 10,
+    "education_id": 1,
+    "liabilities_heating": 10,
+    "liabilities_phone": 10,
+    "income_bonusses": 1000,
+    "liabilities_electricity": 10,
+    "employment_status_id": 1,
+    "liabilities_rent": 10,
+    "salary_period_idlities_other": 10,
+    "income_other_contracts": 10,
+    "liabilities_total": 100,
+    "liabilities_food_and_dress": 10,
+    "income_rent": 0,
+    "liabilit_fun": 10
+  }
+}

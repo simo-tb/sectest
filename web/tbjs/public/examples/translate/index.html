@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translate</title>
+</head>
+<body>
+
+    <!--    <script src="./bower_components/requirejs/require.js" data-main="./scripts/config"></script> -->
+    <script src="./bower_components/lodash/lodash.js"></script>
+    <script src="./scripts/tbjs/js/tb.core.js"></script>
+    <script src="./scripts/tbjs/js/tb.xerrors.js"></script>
+    <script src="./scripts/tbjs/js/tb.translate.js"></script>
+
+
+    <script type="text/javascript">
+        var data = {
+            translations: {
+                MODULE_NAME: {
+                    'random string': {
+                        'bg_BG': ['Случаен стринг'],
+                        'en_GB': ['Random String'],
+                    },
+                },
+            },
+            locales: ['bg_BG', 'en_GB'],
+            module: 'MODULE_NAME',
+        };
+
+        window.Intl = undefined;
+
+
+        var intl = new TB.Translate(data.translations, data.locales, data.module);
+        
+        var locale = 'bg_BG';
+        var number = 13.456;
+        var currencyCode = 'BGN';
+        var hideFraction = !false;
+        var params = {};
+
+        var a = TB.Translate.getcurrency( locale, number, currencyCode, hideFraction, params )
+
+        console.log(a);
+
+    </script>
+
+</body>
+</html>

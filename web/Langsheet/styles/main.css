@@ -1,0 +1,84 @@
+.ls-styles {
+    position: relative;
+    z-index: 0;
+}
+
+.ls-styles body {
+    background: #fafafa;
+}
+
+.ls-styles li {
+    margin: 0px;
+}
+
+.ls-styles nav label {
+  font-weight: normal;
+}
+.ls-styles nav label {
+  margin-top: 7px;
+}
+.ls-styles nav label input {
+  margin-top: -0.2em !important;
+  margin-right: 0.5em !important;
+  height: auto !important;
+}
+
+html:not(.ls-styles) div.ls-styles .head-navbar {
+    margin-top: -1rem;
+    margin-left: -0.95rem;
+    margin-right: -0.95rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+html:not(.ls-styles) div.ls-styles .head-navbar ul.nav.navbar-nav {
+    margin-bottom: 0px !important;
+}
+
+html.ls-styles #container {
+  margin-top: 60px;
+}
+
+
+.ls-styles .handsontable td.htSearchResult {
+  background-color: rgba(255, 255, 0, 0.5) !important;
+}
+
+.ls-styles .handsontable .htDimmed {
+    color: #333;
+    font-weight: bold;
+}
+
+#ls-ajax-loader {
+  opacity: 0;
+  transition: 1s all;
+}
+
+#ls-ajax-loader.visible {
+  opacity: 1;
+  transition: 0s all;
+}
+
+
+.tb-ls-save-state {
+  display: inline-block;
+  color: #666;
+  font-style: italic;
+  font-size: 0.5em;
+}
+.tb-ls-save-state * {
+  display: none;
+}
+.tb-ls-save-state .tb-ls-save-state-saved {
+  display: initial;
+}
+
+.ls-dashboard-panel {
+  font-size: 1rem;
+}
+
+.ls-dashboard-panel .label {
+  display: inline-block;
+  white-space: initial;
+}

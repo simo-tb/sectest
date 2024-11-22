@@ -1,0 +1,165 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "number",
+        "title": "Mood of the day"
+      },
+      "included_schema_wrapper": {
+        "type": "object",
+        "title": "The included schema wrapper object",
+        "properties": {
+          "included_schema": {
+            "type": "object",
+            "title": "The included schema wrapper object2",
+            "properties": {
+              "id_code": {
+                "title": "Code of currency",
+                "type": "number",
+                "default": 42
+              },
+              "id_name": {
+                "title": "Name of currency",
+                "type": "string",
+                "default": "MegaCur"
+              },
+              "meta_information": {
+                "title": "Some meta info",
+                "type": "object",
+                "properties": {
+                  "date_created": {
+                    "title": "The date this item was created",
+                    "type": "string"
+                  },
+                  "update_frequency": {
+                    "title": "Rate of change of item",
+                    "type": "boolean"
+                  }
+                }
+              }
+            } 
+          }
+        }
+      },
+      "included_schema_wrapper2": {
+        "type": "object",
+        "title": "The included schema wrapper object",
+        "properties": {
+          "included_schema": {
+            "type": "object",
+            "title": "The included schema wrapper object2",
+            "properties": {
+              "id_code": {
+                "title": "Code of currency",
+                "type": "number",
+                "default": 42
+              },
+              "id_name": {
+                "title": "Name of currency",
+                "type": "string",
+                "default": "MegaCur"
+              },
+              "meta_information": {
+                "title": "Some meta info",
+                "type": "object",
+                "properties": {
+                  "date_created": {
+                    "title": "The date this item was created",
+                    "type": "string"
+                  },
+                  "update_frequency": {
+                    "title": "Rate of change of item",
+                    "type": "boolean"
+                  }
+                }
+              }
+            } 
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "jsonformVersion": "2.0",
+    "includedForms": {
+      "some_visualization_one": {
+        "fields": [
+            {
+                "key": "id_code"
+            }
+        ]
+      },
+      "some_visualization_two": {
+        "fields": [
+            {
+                "key": "id_code"
+            }, 
+            {
+                "key": "id_name",
+                "type": "tinymce"
+            }
+        ]
+      },
+      "some_visualization_three": {
+        "fields": [
+            {
+                "key": "id_code"
+            }, 
+            {
+                "key": "id_name"
+            }, 
+            {
+                "key": "meta_information"
+            }
+        ]
+      },
+      "some_visualization_four": {
+        "fields": [
+            {
+                "key": "meta_information/update_frequency"
+            }
+        ]
+      }
+ 
+    },
+
+    "fields": [
+      {
+        "key": "mood"
+      }, 
+      {
+        "key": "included_schema_wrapper/included_schema",
+        "keyContext": "included_schema_wrapper/included_schema",
+        "includeForm": "some_visualization_four",
+        "title": "Hello",
+        "type": "fieldset"
+      },
+      {
+        "key": "included_schema_wrapper2/included_schema",
+        "keyContext": "included_schema_wrapper2/included_schema",
+        "includeForm": "some_visualization_four",
+        "title": "Hello2",
+        "type": "fieldset"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "mood": 22,
+    "included_schema_wrapper": {
+      "included_schema": {
+        "id_code": 200,
+        "id_name": "Test123",
+        "meta_information": {
+          "date_created": "2018-05-06",
+          "update_frequency": true        
+        }
+      }
+    }
+  }
+}

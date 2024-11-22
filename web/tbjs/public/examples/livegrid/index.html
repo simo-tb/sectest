@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live grid</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Data generation</th>
+            <th>Total update</th>
+            <th>Data update</th>
+            <th>D3 update</th>
+            <th>DOM update</th>
+            <th>|</th>
+            <th>Types</th>
+            <th>Attributes</th>
+        </tr>
+        <tr>
+            <td id="dataGeneration">0</td>
+            <td id="totalUpdate">0</td>
+            <td id="dataUpdate">0</td>
+            <td id="D3Update">0</td>
+            <td id="DOMUpdate">0</td>
+            <td>|</td>
+            <td id="types">1</td>
+            <td id="attributes">3</td>
+        </tr>
+    </table>
+    <div id="container" style="height: 630px; width: 1040px; box-shadow: 0px 0px 10px 10px black;">
+
+    <div id="container" style="box-shadow: 0px 0px 10px 10px black; background: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Bulgaria_Aministrative_Provinces_numbered.png');">
+
+    </div>
+    </div>
+
+
+    <script src="./bower_components/d3/d3.js"></script>
+    <script src="./bower_components/CSSJSON/cssjson.js"></script>
+    <script src="./bower_components/lodash/lodash.js"></script>
+    <script src="./scripts/lib/tb.core.js"></script>
+    <script src="./scripts/lib/tb.dispatcher.js"></script>
+    <script src="./scripts/lib/tb.xerrors.js"></script>
+    <script src="./scripts/lib/tb.livegrid.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

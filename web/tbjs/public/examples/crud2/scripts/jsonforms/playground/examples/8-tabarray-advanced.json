@@ -1,0 +1,360 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-advanced",
+    "type": "object",
+    "title": "Event Based Promotion",
+    "properties": {
+      "conditions": {
+        "_JSONFORMS_VERSION": "2.0",
+        "items": {
+          "_JSONFORMS_VERSION": "2.0",
+          "properties": {
+            "is_enabled": {
+              "default": true,
+              "_JSONFORMS_CONTENT_VERSION": "2.0",
+              "title": "Is enabled",
+              "type": "boolean",
+              "description": "Is enabled",
+              "_JSONFORMS_VERSION": "2.0"
+            },
+            "filters": {
+              "_JSONFORMS_CONTENT_VERSION": "2.0",
+              "required": [
+                "event_count",
+                "event_expires_days"
+              ],
+              "title": "Filters",
+              "type": "object",
+              "description": "Filters",
+              "properties": {
+                "days_of_week": {
+                  "_JSONFORMS_CONTENT_VERSION": "2.0",
+                  "title": "Days of week",
+                  "type": "array",
+                  "description": "Days of week",
+                  "_JSONFORMS_VERSION": "2.0"
+                },
+                "event_until_oclock": {
+                  "_JSONFORMS_CONTENT_VERSION": "2.0",
+                  "_JSONFORMS_VERSION": "2.0",
+                  "description": "Event until, oclock",
+                  "type": "string",
+                  "title": "Event until, oclock"
+                },
+                "event_count": {
+                  "description": "Event Count",
+                  "type": "integer",
+                  "_JSONFORMS_CONTENT_VERSION": "2.0",
+                  "minimum": 1,
+                  "_JSONFORMS_VERSION": "2.0",
+                  "title": "Event Count",
+                  "default": 1,
+                  "maximum": 10000000
+                },
+                "event_expires_days": {
+                  "description": "Event expires, days",
+                  "type": "integer",
+                  "_JSONFORMS_CONTENT_VERSION": "2.0",
+                  "minimum": 0,
+                  "_JSONFORMS_VERSION": "2.0",
+                  "title": "Event expires, days",
+                  "maximum": 1000,
+                  "default": 1
+                },
+                "days_of_month": {
+                  "type": "array",
+                  "title": "Days of month",
+                  "description": "Days of month",
+                  "_JSONFORMS_VERSION": "2.0",
+                  "_JSONFORMS_CONTENT_VERSION": "2.0"
+                },
+                "min_earned_points": {
+                  "_JSONFORMS_CONTENT_VERSION": "2.0",
+                  "description": "Earned points",
+                  "properties": {
+                    "draw_points": {
+                      "default": 0,
+                      "maximum": 10000000,
+                      "_JSONFORMS_VERSION": "2.0",
+                      "title": "Lottery Points",
+                      "_JSONFORMS_CONTENT_VERSION": "2.0",
+                      "minimum": 0,
+                      "description": "Lottery Points",
+                      "type": "integer"
+                    },
+                    "promo_points": {
+                      "description": "Shopping Points",
+                      "type": "integer",
+                      "_JSONFORMS_CONTENT_VERSION": "2.0",
+                      "minimum": 0,
+                      "_JSONFORMS_VERSION": "2.0",
+                      "title": "Shopping Points",
+                      "default": 0,
+                      "maximum": 10000000
+                    },
+                    "bonus_points": {
+                      "description": "Bonus Points",
+                      "type": "integer",
+                      "_JSONFORMS_CONTENT_VERSION": "2.0",
+                      "minimum": 0,
+                      "_JSONFORMS_VERSION": "2.0",
+                      "title": "Bonus Points",
+                      "default": 0,
+                      "maximum": 10000000
+                    },
+                    "tier_points": {
+                      "title": "Status Points",
+                      "_JSONFORMS_VERSION": "2.0",
+                      "default": 0,
+                      "maximum": 10000000,
+                      "type": "integer",
+                      "description": "Status Points",
+                      "minimum": 0,
+                      "_JSONFORMS_CONTENT_VERSION": "2.0"
+                    }
+                  },
+                  "_JSONFORMS_VERSION": "2.0",
+                  "type": "object",
+                  "title": "Earned points"
+                },
+                "event_since_oclock": {
+                  "title": "Event since, oclock",
+                  "type": "string",
+                  "_JSONFORMS_VERSION": "2.0",
+                  "description": "Event since, oclock",
+                  "_JSONFORMS_CONTENT_VERSION": "2.0"
+                },
+                "machines": {
+                  "title": "Machines #",
+                  "type": "array",
+                  "_JSONFORMS_VERSION": "2.0",
+                  "description": "Machine Zone Numbers",
+                  "_JSONFORMS_CONTENT_VERSION": "2.0"
+                }
+              },
+              "_JSONFORMS_VERSION": "2.0"
+            },
+            "event": {
+              "enum": [
+                "register",
+                "earned_points",
+                "check_in"
+              ],
+              "title": "Event",
+              "type": "string",
+              "description": "Event",
+              "_JSONFORMS_VERSION": "2.0",
+              "default": "check_in",
+              "_JSONFORMS_CONTENT_VERSION": "2.0"
+            }
+          },
+          "title": "",
+          "type": "object",
+          "required": [
+            "is_enabled",
+            "event"
+          ],
+          "_JSONFORMS_CONTENT_VERSION": "2.0"
+        },
+        "type": "array",
+        "title": "Event Based Promotion",
+        "_JSONFORMS_CONTENT_VERSION": "2.0"
+      },
+      "limits": {
+        "required": [
+          "promo_count",
+          "period"
+        ],
+        "_JSONFORMS_CONTENT_VERSION": "2.0",
+        "type": "object",
+        "title": "Limits",
+        "properties": {
+          "period": {
+            "enum": [
+              "day",
+              "week0",
+              "week1",
+              "month"
+            ],
+            "title": "Period Type",
+            "type": "string",
+            "_JSONFORMS_VERSION": "2.0",
+            "description": "Period type",
+            "default": "day",
+            "_JSONFORMS_CONTENT_VERSION": "2.0"
+          },
+          "budget": {
+            "title": "Budget",
+            "type": "object",
+            "properties": {
+              "promo_points": {
+                "_JSONFORMS_VERSION": "2.0",
+                "title": "Shopping Points",
+                "default": 0,
+                "maximum": 10000000,
+                "description": "Shopping Points",
+                "type": "integer",
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "minimum": 0
+              },
+              "credit": {
+                "default": 0,
+                "maximum": 10000000,
+                "title": "Cashable Credit",
+                "_JSONFORMS_VERSION": "2.0",
+                "minimum": 0,
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "type": "integer",
+                "description": "Cashable Credit"
+              },
+              "bonus_points": {
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "minimum": 0,
+                "description": "Bonus Points",
+                "type": "integer",
+                "default": 0,
+                "maximum": 10000000,
+                "_JSONFORMS_VERSION": "2.0",
+                "title": "Bonus Points"
+              },
+              "bonus_credit": {
+                "title": "Extended Play",
+                "_JSONFORMS_VERSION": "2.0",
+                "default": 0,
+                "maximum": 10000000,
+                "type": "integer",
+                "description": "Extended Play",
+                "minimum": 0,
+                "_JSONFORMS_CONTENT_VERSION": "2.0"
+              },
+              "noncashable_credit": {
+                "default": 0,
+                "maximum": 10000000,
+                "_JSONFORMS_VERSION": "2.0",
+                "title": "Bonus Play(Noncashable Credit)",
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "minimum": 0,
+                "description": "Bonus Play(Noncashable Credit)",
+                "type": "integer"
+              },
+              "draw_points": {
+                "type": "integer",
+                "description": "Lottery Points",
+                "minimum": 0,
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "title": "Lottery Points",
+                "_JSONFORMS_VERSION": "2.0",
+                "default": 0,
+                "maximum": 10000000
+              },
+              "tier_points": {
+                "_JSONFORMS_VERSION": "2.0",
+                "title": "Status Points",
+                "default": 0,
+                "maximum": 10000000,
+                "description": "Status Points",
+                "type": "integer",
+                "_JSONFORMS_CONTENT_VERSION": "2.0",
+                "minimum": 0
+              }
+            },
+            "description": "Money and points",
+            "_JSONFORMS_VERSION": "2.0",
+            "_JSONFORMS_CONTENT_VERSION": "2.0",
+            "required": [
+              "credit",
+              "noncashable_credit",
+              "bonus_credit",
+              "bonus_points",
+              "promo_points",
+              "tier_points",
+              "draw_points"
+            ]
+          },
+          "promo_count": {
+            "maximum": 10000000,
+            "default": 1,
+            "_JSONFORMS_VERSION": "2.0",
+            "title": "Promotion per period",
+            "_JSONFORMS_CONTENT_VERSION": "2.0",
+            "minimum": 1,
+            "description": "Promotion per period",
+            "type": "integer"
+          }
+        },
+        "_JSONFORMS_VERSION": "2.0",
+        "description": "Limits"
+      }
+    },
+    "type": "object",
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "legend": "Event Based Promotion",
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "title": "Campaigns",
+            "items": [
+              {
+                "type": "tabarray",
+                "key": "conditions",
+                "title": "Event Based Promotion",
+                "items": {
+                  "legend": null,
+                  "type": "section",
+                  "items": [
+                    {
+                      "type": "tabobject",
+                      "title": "Events",
+                      "items": [
+                        {
+                          "type": "section",
+                          "items": [
+                            {
+                              "key": "conditions[]/is_enabled",
+                              "type": "radiobuttonset"
+                            },
+                            {
+                              "key": "conditions[]/event",
+                              "type": "radiobuttonset"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "section",
+                          "items": [
+                            "conditions[]/filters/event_count",
+                            "conditions[]/filters/event_expires_days"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "legend": "Restrictions",
+            "description": "Restrictions",
+            "type": "section",
+            "items": [
+              "limits/promo_count",
+              "limits/period"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

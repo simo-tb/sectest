@@ -1,0 +1,98 @@
+{
+  "isDebug": true,
+  "schema": {
+    "isDebug": true,
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example-4",
+    "type": "object",
+    "properties": {
+      "age": {
+        "type": ["integer", "null"],
+      },
+      "fname": {
+        "type": "object",
+        "properties": {
+          "mname": {
+            "type": "string",
+            "title": "презиме"
+          },
+          "bday": {
+            "type": "string",
+            "title": "дата на раждане",
+          },
+          "cday": {
+            "type": "string",
+            "title": "дата на раждане",
+          },
+          "dday": {
+            "type": "string",
+            "title": "дата на раждане",
+          },
+          "eday": {
+            "type": "string",
+            "title": "дата на раждане",
+          }
+        },
+        "allOf": [
+          { "minProperties": 3, },
+          { "maxProperties": 5, },
+        ]
+         /*"required": ["bday", "mname"]*/
+      },
+      "name": {
+        "type": ["string", "null"]
+      }
+    },
+    /*"required": ["name"]*/
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example-4",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "име",
+            "type": "section",
+            "items": [
+              {
+                "title": "малко име",
+                "key": "name"
+              }
+            ]
+          },
+          {
+            "title": "възраст",
+            "type": "section",
+            "items": [
+              {
+                "title": "възраст",
+                "key": "age"
+              }
+            ]
+          },
+          {
+            "title": "допълнителна информация",
+            "type": "section",
+            "items": [
+              {
+                "title": "друга информация",
+                "key": "fname"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example-4",
+    "age": 10
+  }
+}

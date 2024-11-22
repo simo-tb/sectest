@@ -1,0 +1,81 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+    "type": "object",
+    "minItems": 3,
+    "properties": {
+      "mod": {
+        "type": "array",
+        "title": "Mood of the day",
+        "items": {
+          "title": "Friend",
+          "type": "object",
+          "properties": {
+            "nick": {
+              "title": "Nickname",
+              "type": "array",
+              "enableSorting": true,
+              "allOf": [
+                {
+                  "minItems": 2,
+                },
+                {
+                  "maxItems": 4,
+                }
+              ],
+              "items": {
+                "title": "Items too deep to count",
+                "type": "object",
+                "properties": {
+                  "nicky": {
+                    "title": "hi",
+                    "type": "object",
+                    "LiveValidation": true,
+                    "properties": {
+                      "swag123": {
+                        "type": "string",
+                        "title": "hu123"
+                      },
+                      "swag": {
+                        "title": "hu",
+                        "type": "string",
+                        "allOf": [
+                          {"maxLength": 15},
+                          {"minLength": 5},
+                          {"minLength": 3},
+                          {"minLength": 2},
+
+                        ]
+                      },
+                    }
+                  }
+                }
+              },
+            },
+          }
+        },
+        "allOf": [
+          {
+            "maxItems": 10
+          }
+        ]
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+    "jsonformVersion": "2.0",
+    "fields": [
+      "mod",
+      {
+        "type": "submit",
+        "title": "submit",
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+  }
+}

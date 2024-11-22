@@ -1,0 +1,54 @@
+{
+    "schema": {
+        "id": "test_123",
+        "$schemaId": "test_123",
+        "type": "object",
+        "properties": {
+            "notification": {
+                "type": "object",
+                "requred": { "$data": "/notification_meta" },
+                "properties": {
+                    "sms": {
+                        "type": "object",
+                        "properties": {
+                            "msg": { "type": "string" }
+                        }
+                    },
+                    "email": {
+                        "type": "object",
+                        "title": "email",
+                        "properties": {
+                            "subject": { "type": "string", "title": "subject" },
+                            "body": { "type": "string", "title": "body" }
+                        }
+                    }
+                }
+            },
+            "notification_meta": {
+                "type": "array",
+                "items": {
+                    "title": "Please select meta",
+                    "type": "string",
+                    "enum": ["sms", "email"]
+                }
+            }
+        }
+    },
+    "form": {
+        "$schemaId": "test_123",
+        "jsonformVersion": "2.0",
+        "fields": [
+            {
+                "type": "alternative",
+                "items": [
+                    "notification_meta",
+                    "notification"
+                ]
+            },
+            {
+                "type": "submit",
+                "title": "submit"
+            }
+        ]
+    }
+}

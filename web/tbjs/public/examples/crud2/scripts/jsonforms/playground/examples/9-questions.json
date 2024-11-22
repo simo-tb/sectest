@@ -1,0 +1,66 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "type": "object",
+    "properties": {
+      "response": {
+        "type": "string",
+        "title": "Search"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "questions",
+        "key": "response",
+        "title": "Let's check your mood",
+        "items": [
+          {
+            "type": "question",
+            "title": "Are you happy?",
+            "activeClass": "btn-success",
+            "optionsType": "radiobuttons",
+            "options": [
+              {
+                "title": "Yes",
+                "value": "happy",
+                "next": "q2",
+                "htmlClass": "btn-primary"
+              },
+              {
+                "title": "No",
+                "value": "sad",
+                "submit": true
+              }
+            ]
+          },
+          {
+            "type": "question",
+            "qid": "q2",
+            "title": "Really happy?",
+            "options": [
+              {
+                "title": "Yes",
+                "value": "reallyhappy",
+                "submit": true
+              },
+              {
+                "title": "No",
+                "value": "happy",
+                "submit": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

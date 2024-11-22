@@ -1,0 +1,142 @@
+{
+    "content": {
+        "mood": {
+            "a": "1",
+            "b": "12",
+            "c": "123",
+            "d": "1234",
+            "e": "12345",
+            "f": "123456",
+            "g": "1234567",
+	    "h": "12345678"
+        }
+    },
+    "form": {
+        "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+        "fields": {
+            "field_0": {
+                "key": "mood/a",
+                "ordering": 10,
+                "type": "timeinterval"
+            },
+            "field_1": {
+                "key": "mood/b",
+                "ordering": 20,
+                "type": "timeinterval",
+                "extraUnits": ["days"]
+            },
+            "field_2": {
+                "key": "mood/c",
+                "ordering": 30,
+                "type": "timeinterval",
+		"extraUnits": ["days", "hours"]
+            },
+            "field_3": {
+                "key": "mood/d",
+                "ordering": 40,
+                "type": "timeinterval",
+  		"extraUnits": []
+            },
+//            "field_4": {
+//                "key": "mood/e",
+//                "ordering": 50,
+//                "type": "timeinterval",
+//		"extraUnits": true
+//            },
+//            "field_5": {
+//                "key": "mood/f",
+//                "ordering": 60,
+//                "type": "timeinterval"
+//            },
+            "field_6": {
+                "key": "mood/g",
+                "ordering": 70,
+                "type": "timeinterval",
+      		"extraUnits": true
+            },
+            "field_7": {
+                "key": "mood/h",
+                "ordering": 80,
+                "type": "timeinterval"
+            },
+            "field_8": {
+                "key": "mood/i",
+                "ordering": 85,
+                "type": "timeinterval"
+            },
+            "field_9": {
+                "ordering": 90,
+                "title": "Submit",
+                "type": "submit"
+            }
+        },
+        "jsonformVersion": "2.0"
+    },
+    "schema": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+        "properties": {
+            "mood": {
+                "properties": {
+                    "a": {
+                        "baseUnit": "seconds",
+                        "format": "timeinterval",
+                        "title": "a",
+                        "type": "string"
+                    },
+                    "b": {
+                        "baseUnit": "minutes",
+                        "format": "timeinterval",
+                        "title": "b",
+                        "type": "string"
+                    },
+                    "c": {
+                        "baseUnit": "hours",
+                        "format": "timeinterval",
+                        "title": "c",
+                        "type": "string"
+                    },
+                    "d": {
+                        "baseUnit": "days",
+                        "format": "timeinterval",
+                        "title": "d",
+                        "type": "string"
+                    },
+//                    "e": {
+//                        "baseUnit": "months",
+//                        "format": "timeinterval",
+//                        "title": "e",
+//                        "type": "string"
+//                    },
+//                    "f": {
+//                        "baseUnit": "years",
+//                        "format": "timeinterval",
+//                        "title": "f",
+//                        "type": "string"
+//                    },
+                    "g": {
+                        "baseUnit": "milliseconds",
+                        "format": "timeinterval",
+                        "title": "g",
+                        "type": "string"
+                    },
+                    "h": {
+                        "baseUnit": "microseconds",
+                        "format": "timeinterval",
+                        "title": "h",
+                        "type": "string"
+                    },
+                    "i": {
+                        "format": "timeinterval",
+			"baseUnit": "seconds",
+                        "title": "empty",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object"
+    }
+}
+
+

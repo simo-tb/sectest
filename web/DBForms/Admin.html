@@ -1,0 +1,146 @@
+<code><b>Администриране на DBForms</b></code><br>
+<!--&choose_table_form($action='', $name='fl_choose_table_form') -->
+<table>
+<form action="$action" name="$name" method="post">
+<tr><td colspan=2>
+<b>Въведени таблици</b></td></tr>
+<tr><td valign=top>
+        <select name="fl_table" size=8  ppponchange="if(this.selectedIndex>=0)this.form.submit()">
+	   <!--&option($value,$descr,$selected='', $table_name, $subsys='*')-->
+	      <option value="$value" $selected>$subsys: $table_name: $descr</option>
+	   <!--/&option-->
+	</select>
+<!--&hidden($name,$value='' escape 'html')-->
+<input type="hidden" name="$name" value="$value">
+<!--/&hidden-->
+
+</td><td valign=top>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_insert'" name="new" value="Нов запис">
+<br>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_show'" name="new" value="Показване">
+</td></tr>
+</form>
+</table><br><hr>
+
+
+
+<!--&insert_fl_table_fields()-->
+<b>Въвеждане на служебна информация</b>
+<table>
+<form method=post action="app.pl">
+<tr><td>Независим изглед:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=view>
+</form>
+
+<form method=post action="app.pl">
+<tr><td>Пълен/кратък изглед на таблица:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=fullview>
+</form>
+<!--
+<form method=post action="app.pl">
+<tr><td>Въвеждане на таблица:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=table>
+</form>
+-->
+</table>
+
+<a href="app.pl?set_caller_view=1&view_key=vw_fl_table_fields_insert">Въвеждане на поле</a><br>
+<br><hr>
+
+<!--/&insert_fl_table_fields-->
+
+
+<!--&fl_tables() -->
+<table>
+<form action="$action" name="$name" method="post">
+<tr><td colspan=2>
+<b>Служебни таблици</b></td></tr>
+<tr><td valign=top>
+        <select name="fl_table" size=8  ppponchange="if(this.selectedIndex>=0)this.form.submit()">
+	   <!--&option($value,$descr,$selected='', $table_name)-->
+	      <option value="$value" $selected>$descr  ($table_name)</option>
+	   <!--/&option-->
+	</select>
+
+<!--&hidden($name,$value='' escape 'html')-->
+<input type="hidden" name="$name" value="$value">
+<!--/&hidden-->
+</td><td valign=top>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_insert'" name="new" value="Нов запис">
+<br>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_show'" name="new" value="Показване">
+</td></tr>
+</form>
+</table>
+<!--/&fl_tables -->
+
+<!--/&choose_table_form -->
+
+
+
+
+
+
+
+<!--&fl_fields_form($view_name, $view_descr='',$view_pkey='') -->
+<!--&view_header() -->
+<h2>Въвеждане на изглед/справка в DBForms</h2>
+<!--/&view_header -->
+<!--&table_header() -->
+<h2>Въвеждане на таблица в DBForms</h2>
+<!--/&table_header -->
+<!--&fullview_header() -->
+<h2>Въвеждане на изглед на таблица в DBForms</h2>
+<!--/&fullview_header -->
+
+<form method=post action="app.pl" onSubmit="this.autofill_params.value='__a=1'+cacheFormParams();return true">
+<table>
+<tr><td>
+Име на изгледа/таблицата в базата данни:</td><td> <code>$view_name</code></td></tr>
+<tr><td>Наименование</td><td><input type=text name=view_descr value="$view_descr"></td></tr>
+<tr><td>Описание</td><td><input type=text name=view_comment></td></tr>
+<tr><td>Уникално поле</td><td><input type=text name=view_pkey value="$view_pkey"></td></tr>
+<!--&recreate() -->
+<tr><td>Изтриване на предишната версия</td><td><input type=checkbox name=recreate value=1 checked ></td></tr>
+<!--/&recreate -->
+</table>
+<table border="1">
+<tr><td>&nbsp;</td><td>Поле</td><td>SQL Тип</td><td>Описание</td><td>Езиково</td><td>Тип</td><td>Подреждане</td></tr>
+
+<!--&field($check='checked',$field_descr='',$column_name, $numb,$langf='checked', $ordering,$column_type) -->
+<tr><td><input type=checkbox name=ch$numb $check value=1></td>
+<td>$column_name</td>
+<td>$column_type</td>
+<td><input type=text name=descr$numb value="$field_descr"></td>
+<td><input type=checkbox name=lang$numb $langf value=1 ></td>
+<td>
+<select name=fltype$numb>
+<!--&select_type($type_id,$type_descr) -->
+<option value="$type_id">$type_descr</option>
+<!--/&select_type -->
+</select>
+</td>
+<td><input type=text name=ord$numb value="$ordering" size=5></td></tr>
+<!--/&field -->
+
+</table>
+
+
+<input type=submit value="Запис">
+
+<!--&hidden($name, $value='' escape 'html') -->
+<input type="hidden" value="$value" name="$name">
+<!--/&hidden -->
+<input type="hidden" value="ac_fl_view_fields_insert" name="action_key">
+<input type="hidden" value="" name="autofill_params">
+</form>
+
+<!--/&fl_fields_form -->
+
+

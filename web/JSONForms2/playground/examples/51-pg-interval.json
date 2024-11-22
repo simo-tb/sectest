@@ -1,0 +1,114 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "title": "1 day",
+            "format": "pgtimeinterval"
+          },
+          "b": {
+            "type": "string",
+            "title": "1 year 3 mons",
+            "format": "pgtimeinterval"
+          },
+          "c": {
+            "type": "string",
+            "title": "01:30:00",
+            "format": "pgtimeinterval"
+          },
+          "d": {
+            "type": "string",
+            "title": "00:00:00.001",
+            "format": "pgtimeinterval"
+          },
+          "e": {
+            "type": "string",
+            "title": "3 years 3 mons 3 days",
+            "format": "pgtimeinterval"
+          },
+          "f": {
+            "type": "string",
+            "title": "1111 years 1 mon 8 days 01:01:01.001001",
+            "format": "pgtimeinterval"
+          },
+          "g": {
+            "type": "string",
+            "title": "1 day -01:00:00",
+            "format": "pgtimeinterval"
+          },
+          "h": {
+            "type": "string",
+            "title": "-1 years -1 mons -1 days",
+            "format": "pgtimeinterval"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "fields": {
+      "field_0": {
+        "key": "mood/a",
+        "ordering": 10,
+        "type": "pgtimeinterval"
+      },
+      "field_1": {
+        "key": "mood/b",
+        "ordering": 20,
+        "type": "pgtimeinterval"
+      },
+      "field_2": {
+        "key": "mood/c",
+        "ordering": 30,
+        "type": "pgtimeinterval"
+      },
+      "field_3": {
+        "key": "mood/d",
+        "ordering": 40,
+        "type": "pgtimeinterval"
+      },
+      "field_4": {
+        "key": "mood/e",
+        "ordering": 50,
+        "type": "pgtimeinterval"
+      },
+      "field_5": {
+        "key": "mood/f",
+        "ordering": 60,
+        "type": "pgtimeinterval"
+      },
+      "field_6": {
+        "key": "mood/g",
+        "ordering": 70,
+        "type": "pgtimeinterval"
+      },
+      "field_7": {
+        "key": "mood/h",
+        "ordering": 80,
+        "type": "pgtimeinterval"
+      },
+      "field_8": {
+        "type": "submit",
+        "title": "Submit",
+        "ordering": 90
+      }
+    },
+    "jsonformVersion": "2.0"
+  },
+  "content": {"mood":{
+      "a":"1 day",
+      "b":"1 year 3 mons",
+      "c":"01:30:00",
+      "d":"00:00:00.001",
+      "e":"3 years 3 mons 3 days",
+      "f":"1111 years 1 mon 8 days 01:01:01.001001",
+      "g":"1 day -01:00:00",
+      "h":"-1 years -1 mons -1 days"
+  }}
+}

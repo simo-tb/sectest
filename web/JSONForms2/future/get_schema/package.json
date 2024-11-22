@@ -1,0 +1,49 @@
+{
+  "name": "jsonform2",
+  "version": "1.0.0",
+  "main": "./lib/jsonform.js",
+  "description": "Client-side JavaScript library that generates HTML forms from structured data models expressed using a JSON schema, possibly completed by a form layout description.",
+  "keywords": [
+    "JSON",
+    "schema",
+    "HTML5",
+    "form"
+  ],
+  "maintainers": [
+    {
+      "name": "Ivan Ivanov",
+      "email": "ivan.ivanov@telebid-pro.com"
+    }
+  ],
+  "scripts": {
+    "test": "semistandard --verbose ./next/lib/* | snazzy",
+    "start": "live-server --port=7100 --cors --open=playground --mount=/:next --mount=/pub/jsonforms2:next",
+    "start-jf1": "live-server --port=7150 --cors"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "eslint-plugin-html": "^3.0.0",
+    "live-server": "^1.2.0",
+    "semistandard": "^11.0.0",
+    "snazzy": "^7.0.0"
+  },
+  "semistandard": {
+    "fix": true,
+    "env": ["browser", "commonjs", "amd"],
+    "globals": [
+      "TRACE",
+      "ASSERT",
+      "ASSERT_PEER",
+      "ASSERT_USER",
+      "THROW_SYS",
+      "THROW_PEER",
+      "THROW_USER",
+      "THROW"
+    ]
+  }
+}

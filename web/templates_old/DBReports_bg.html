@@ -1,0 +1,144 @@
+<html>
+      <head>
+      <script src="js/sorttable.js"></script>
+      </head>
+      <body bgcolor=white> 
+      <style>
+      .hidd { color: #ffffff; }
+      .s1catg20 { background-color: #ffff55; } 
+      .s1catg21 { background-color: #ffdddd; }
+      .s1catg18 { background-color: #ccffcc; }
+      .s1catg15 { background-color: #ff11ff; }
+      .s1catg14 { /*background-color: #ffff11;*/ }
+      .s1catg16 { /*background-color: #ffff11;*/ }
+      .s1catg17 { /*background-color: #ffff11;*/ }
+      .s1catg19 { /*background-color: #ffff11;*/ }
+      .s1catg22 { background-color: #aaaaff; }
+      /* .s161validt { } */
+      .s161validf { background-color: #ffdddd; }
+      .s181ok0 { background-color: #ffcccc; }
+      </style> 
+      
+<!--&menu()-->
+<h3>Справки:</h3>
+   <!--&item($k, $name)-->
+   <a href="stats.pl?sid=$k">$name</a><br>
+   <!--/&item-->
+<!--/&menu-->
+
+<!--&header($head)-->
+<h3>$head</h3>
+<!--/&header-->
+
+<!--&filt()-->
+<table>
+    <form method=get>
+	<!--&f($filter_descr, $required_symb='', $inp_name, $value='')-->
+	<tr>
+	<td><b><i>$filter_descr</i></b>$required_symb: </td>
+	<td>
+	   <!--&selectbox()-->
+	      <select name="$inp_name">
+	      <!--&opt($val escape 'html', $descr)-->
+	      <option value="$val">$descr</option>
+	      <!--/&opt-->
+	      </select>
+	   <!--/&selectbox-->
+	   <!--&textinput()-->
+	   <input type=text name="$inp_name" value="$value">
+	   <!--/&textinput-->
+	   <!--&selected($text)-->
+	     $text
+	   <!--/&selected-->
+	</td>
+	</tr>
+	<!--/&f-->
+	<!--&butt($stat_id)-->
+                   <tr><td colspan=2><br> <input type=submit value=Справка>
+	           <input type=checkbox value=1 name=csv>Excel
+	           <input type=hidden name=sid value=$stat_id></td></tr>
+	<!--/&butt-->
+    </form>
+</table>
+<!--/&filt-->
+
+<!--&graph_form($stat_id, $hiddens='')-->
+<br>
+<a href="javascript:showGraphForm()">Графика</a>
+<div id="graph_form" style="display:none;">
+<form>
+Вид: <select name=graphtype>
+<option value="line">Line
+<option value="linedot">Line Dot
+<option value="linehollow">Line Hollow
+<option value="bar">Bar
+<option value="baroutline">Bar Outline
+<option value="bar3d">Bar 3d
+<option value="barglass" selected>Bar Glass
+<option value="barfade">Bar Fade
+<option value="barsketch">Bar Sketch
+<option value="area">Area
+<option value="pie">Pie
+</select>
+
+<table border=1>
+<tr><th>Поле</th><th>X</th><th>Y</th></tr>
+<!--&col($name, $n, $x_checked)-->
+<tr><td>$name</td><td><input type=checkbox name=graphx value=$n $x_checked></td><td>
+<!--&y($checked)-->
+<input type=checkbox name=graphy value=$n $checked>
+<!--/&y-->
+</td></tr>
+<!--/&col-->
+</table>
+<input type=submit value="Графика">
+<input type=hidden name=sid value=$stat_id>
+<input type=hidden name=graph value=1>
+<!--&hidden($name, $value escape 'html')-->
+<input type=hidden name="$name" value="$value">
+<!--/&hidden-->
+$hiddens
+</form>
+</div>
+<!--/&graph_form-->
+
+<!--&res($count)-->
+<table border=1 class=sortable id=unique_id>
+<tr>
+<!--&hcol($text)-->
+<th valign=top><b>$text</b></th>
+<!--/&hcol-->
+</tr>
+<!--&row()-->
+<tr>
+  <!--&col($text, $align='left')-->
+  <td align=$align>$text</td>
+  <!--/&col-->
+</tr>
+<!--/&row-->
+<tr>
+<!--&sumcol($text='&nbsp;', $align='left')-->
+<td align=$align><b>$text</b></td>
+<!--/&sumcol-->
+</tr>
+</table>
+Rows: $count
+<!--/&res-->
+
+<!--&graph($data)-->
+$data
+<!--/&graph-->
+
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>
+

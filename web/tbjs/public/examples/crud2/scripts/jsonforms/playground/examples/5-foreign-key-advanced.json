@@ -1,0 +1,90 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-foreign-key-basic",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "enum": ["Petkan", "Ivan", "Dragan"],
+        "isForeignKey": true,
+        "filterSchema": {
+          "id": {
+            "type": "integer"
+          },
+          "age": {
+            "type": "integer",
+            "isSearchable": true
+          },
+          "address": {
+            "type": "string",
+            "isSearchable": true
+          }
+        }
+      },
+      "externalFields": {
+        "type": "object",
+        "title": "External schemas",
+        "properties": {
+          "externalName": {
+            "title": "Name",
+            "type": "string",
+            "enum": ["Dragan", "Ivan", "Petkan"],
+            "isForeignKey": true,
+            "filterSchema": {
+              "$ref": "http://jschemas.tbpro.com/tblib/jf/people#/properties"
+            }
+          },
+          "externalAge": {
+            "title": "Age",
+            "type": "number",
+            "enum": [18, 28, 38],
+            "isForeignKey": true,
+            "filterSchema": {
+              "$ref": "http://jschemas.tbpro.com/tblib/jf/people#/properties"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "http://jschemas.tbpro.com/tblib/jf/people": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/people",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+          },
+          "age": {
+            "type": "integer",
+            "isSearchable": true
+          },
+          "address": {
+            "type": "string",
+            "isSearchable": true
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-foreign-key-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "name",
+        "title": "Foreign key search by internal schema",
+        "type": "select"
+      },
+      {
+        "key": "externalFields",
+        "title": "Foreign key search by external schema through $ref",
+        "type": "fieldset"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-section",
+    "type": "object",
+    "properties": {
+      "comment": {
+        "type": "string",
+        "title": "Comment"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "age": {
+        "type": "number",
+        "title": "Age"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-section",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "comment",
+        "type": "textarea"
+      },
+      {
+        "type": "section",
+        "title": "Author",
+        "description": "fill in your personal information",
+        "items": [
+          "name",
+          "age"
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}

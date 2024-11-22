@@ -1,0 +1,659 @@
+
+<!--&edit_form_start($action='', $name) -->
+<form action="$action" name="$name" method="post" onSubmit="this.autofill_params.value='__a=1'+cacheFormParams();return true">
+
+    <table border=0 cellpadding=0>
+
+<!--/&edit_form_start -->
+
+
+<!--&edit_form() -->
+
+ <!--&top_button($name, $value='', $action='')-->
+ <tr class="flins-top-butt-bgcol">
+     <td colspan="4">	
+   <input type="button" name="$name" value="$value" onclick="$action">
+     </td>
+   </tr>
+ <!--/&top_button--> 
+
+ <!--&sep_header()-->
+   <tr>
+     <td colspan="4">	        
+        &nbsp;
+     </td>
+   </tr>
+   <!--/&sep_header -->
+
+   <!--&ins_header($table_descr)-->
+   <tr class="flins-head-bgcol">
+     <td colspan="4">	        
+        <!-- <a href="javascript: openHelp('help/fl/fl_insert.html')" title="Помощ">
+	   <img align=right src="images/help.gif" alt="Помощ" border=0 ></a> -->
+        <b>$table_descr</b>
+     </td>
+   </tr>
+   <!--/&ins_header-->
+   <!--&edit_header($table_descr)-->
+   <tr class="flins-head-bgcol">
+     <td colspan="4"> <!-- <a href="javascript: openHelp('help/fl/fl_edit.html')" title="Помощ">
+	   <img align=right src="images/help.gif" alt="Помощ" border=0 ></a> -->
+        <b>$table_descr</b>
+     </td>
+   </tr>
+   <!--/&edit_header-->
+
+   <!--&field($descr, $color='1',$name)-->
+   <tr class="flins-row-bgcol-$color">
+    <td valign="top">
+
+      <!--&add_new_record_link($table_name)--> 
+      <a href="app.pl?view_key=vw_fl_insert&fl_table=$table_name&set_caller_view=1&step_key=none&_fl_insert_return=$name&_fl_insert_return_table=$table_name" 
+       onClick="if(!fl_insert_clicked)
+                 {
+                    this.href+='&caller_view_params='+escape(cacheFormParams());
+                    fl_insert_clicked = true;
+                 }
+                return true;" 
+        title="Нов запис" onMouseOver="sb('Нов запис')" >
+      <img src="images/insert.gif" border=0 alt="Нов запис"></a>
+      <!--/&add_new_record_link-->
+      &nbsp;
+    </td>
+    <td valign=top>
+       <font size="-1">$descr</font> 
+       <!--&required() -->
+       <img src="images/req.gif">
+       <!--/&required -->
+      
+    </td>
+    <td valign=top>
+      <!--&search_panel()-->
+	        Search_panel
+      <!--/&search_panel-->
+
+      <!--&no_search() -->
+      &nbsp;
+      <!--/&no_search -->
+      
+    </td>
+    <td valign="top">
+      <table border="0" cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+      <!--&textbox($value='' escape 'html')-->
+        <font size="-1"><input class="fltext" type="text" name="$name" value="$value" size=40></font>
+      <!--/&textbox-->
+
+      <!--&textarea($value='' escape 'html')-->
+        <font size="-1">
+	<textarea class="fltextarea" name="$name" cols=25 rows=2>$value</textarea>
+	</font>
+      <!--/&textarea-->
+
+      <!--&selectbox($size='')-->
+      <font size="-1">
+        <select class="result-set" name="$name" $size>
+	   <!--&option($value,$descr,$selected='')-->
+	      <option value="$value" $selected>$descr</option>
+	   <!--/&option-->
+
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp; </option>
+	   <option value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+	</select>
+      </font>
+      <!--/&selectbox-->
+
+      <!--&boolselect($is_null='selected', $is_true='selected', $is_false='selected')-->
+        <font size="-1">
+	  <select  class="result-set" name="$name">
+	  <option value="" $is_null >&nbsp; </option>
+	  <option value="1" $is_true >да </option>
+	  <option value="0" $is_false >не </option>
+	  </select>
+	</font>
+      <!--/&boolselect -->
+
+      <!--&checkbox($type, $checked='')-->
+        <input type="checkbox" name="$name" value="1" $checked > $type
+      <!--/&checkbox-->
+      <!--&readonly($text='&nbsp;')-->
+        $text
+      <!--/&readonly-->
+        </td>
+	<td>
+	<!--&additional_field_panel()-->
+	  Additional Panel
+      <!--/&additional_field_panel-->
+        </td>
+       </tr>
+      </table>
+    </td>
+    
+   </tr>
+   <!--/&field-->
+
+  <!--&hidden($name,$value='' escape 'html')-->
+  <input type="hidden" name="$name" value="$value">
+  <!--/&hidden-->
+
+
+<!--/&edit_form -->
+
+<!--&edit_form_end($submit='Запис', $reset='Изчисти') -->
+   <input type="hidden" name="autofill_params" value="">
+      </table>
+
+  </table>
+<table border="0" cellpadding="0" cellspacing="0" >
+ <tr> 
+   <td>
+     <input type="submit" value="$submit">
+   </td>
+   <td>
+     <input type="reset"  value="$reset">
+   </td>
+     <input type="hidden" name="noaction" value="0" >
+   <td>
+     <input type="button" value="Отказ" onclick="this.form.noaction.value=1;this.form.submit()">
+   </td>
+ <!--&bottom_button($name, $value='', $action='')-->
+   <td>
+     <input type="button" name="$name" value="$value" onclick="$action">
+   </td>
+ <!--/&bottom_button--> 
+ </tr>
+</table>
+
+
+</form>
+<!--/&edit_form_end -->
+
+
+<!--&choose_table_form($action='', $name='fl_choose_table_form') -->
+<form action="$action" name="$name" method="post">
+Изберете таблица<br>
+
+        <select name="fl_table" size=8  ppponchange="if(this.selectedIndex>=0)this.form.submit()">
+	   <!--&option($value,$descr,$selected='', $table_name)-->
+	      <option value="$value" $selected>$descr  ($table_name)</option>
+	   <!--/&option-->
+	</select>
+
+<!--&hidden($name,$value='' escape 'html')-->
+<input type="hidden" name="$name" value="$value">
+<!--/&hidden-->
+<br>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_insert'" name="new" value="Нов запис">
+<input type="submit" onclick="this.form.view_key.value='vw_fl_show'" name="new" value="Показване">
+
+</form>
+
+<!--&fl_tables() -->
+<form action="$action" name="$name" method="post">
+Изберете таблица от FormLayer<br>
+        <select name="fl_table" size=8  ppponchange="if(this.selectedIndex>=0)this.form.submit()">
+	   <!--&option($value,$descr,$selected='', $table_name)-->
+	      <option value="$value" $selected>$descr  ($table_name)</option>
+	   <!--/&option-->
+	</select>
+
+<!--&hidden($name,$value='' escape 'html')-->
+<input type="hidden" name="$name" value="$value">
+<!--/&hidden-->
+<br>
+<input type="submit" onclick="this.form.view_key.value='vw_fl_insert'" name="new" value="Нов запис">
+<input type="submit" onclick="this.form.view_key.value='vw_fl_show'" name="new" value="Показване">
+
+</form>
+<!--/&fl_tables -->
+<!--&insert_fl_table_fields()-->
+  <br><a href="app.pl?set_caller_view=1&view_key=vw_fl_table_fields_insert">Въвеждане на нови полета на таблици</a><br>
+<table>
+<form method=post action="app.pl">
+<tr><td>Въвеждане на изглед/справка:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=view>
+</form>
+
+<form method=post action="app.pl">
+<tr><td>Въвеждане на изглед на таблица:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=fullview>
+</form>
+<!--
+<form method=post action="app.pl">
+<tr><td>Въвеждане на таблица:</td><td> <input type=text name="view_name"> <input type=submit value="Въвеждане"></td></tr>
+<input type=hidden name=view_key value=vw_fl_view_fields_insert>
+<input type=hidden name=set_caller_view value=1>
+<input type=hidden name=mode value=table>
+</form>
+-->
+</table>
+<!--/&insert_fl_table_fields-->
+
+<!--/&choose_table_form -->
+
+
+<!--&table_view_start_form($action, $form_name='filter_form') -->
+<FORM name="$form_name" method="POST" action="$action" 
+      onSubmit="return flShowOnSubmit(this)">
+<input type="hidden" value="" name="filter_off">
+
+   <!--&hidden($name, $value='' escape 'html') -->
+     <input type="hidden" value="$value" name="$name">
+   <!--/&hidden -->
+
+<!--/&table_view_start_form -->
+
+<!--&table_view($table_name, $action='', $get_params='', $js_doc='document', $form_name='filter_form') -->
+
+<!--&table_descr($name) -->
+<font size="+3">$name</font><br>
+<!--/&table_descr -->
+<!--&table_descr1($name) -->
+<font size="+2">$name</font><br>
+<!--/&table_descr1 -->
+
+<!--&cancel_link() -->
+<a href="$action">
+<img src="images/arrow-up.gif" border=0 alt="Отказ"></a>
+&nbsp;&nbsp;&nbsp;<br>
+<!--/&cancel_link -->
+
+<!--&prev_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Предишни" onmouseover="window.status='Предишни';return true" >
+<img src="images/arrow-left.gif" border=0 alt="Предишни"></a>
+<!--/&prev_link -->
+
+<!--&numb_link($numb,$name) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()">$name</a>
+<!--/&numb_link -->
+
+<!--&next_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" 
+title="Следващи" onmouseover="window.status='Следващи';return true">
+<img src="images/arrow-right.gif" border=0 alt="Следващи"></a>
+
+<!--/&next_link -->
+
+<table border=0 cellspacing=2 cellpadding=0 >
+<!--&filter_row() -->
+<tr class="flshow-filt-bgcol">
+  <td align=center valign="top">
+
+<!--&filter_checked() -->
+<a href="javascript: $js_doc.$form_name.filter_checked.value=1;$js_doc.$form_name.$table_name_cur_page.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Филтриране на избраните редове"  onmouseover="window.status='Филтриране на избраните редове';return true">
+    <img alt="Филтриране на избраните редове" src="images/filter_checked.gif" border=0></a>
+<!--/&filter_checked -->
+
+<!--&no_filter_checked() -->
+<a href="javascript: $js_doc.$form_name.filter_checked.value=0;$js_doc.$form_name.$table_name_cur_page.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Филтриране"  onmouseover="window.status='Филтриране';return true">
+    <img alt="Филтриране" src="images/filter_checked_off.gif" border=0></a>
+<!--/&no_filter_checked -->
+
+<!--&no_filter($name)-->
+ <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=0;$js_doc.$form_name.filter_off.value=1;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Без филтър" onmouseover="window.status='Без филтър';return true">
+		 <img alt="Без филтър" src="images/filter_off.gif" border=0></a>
+<!--/&no_filter-->
+
+   <a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Филтриране"  onmouseover="window.status='Филтриране';return true">
+    <img alt="Филтриране" src="images/filter.gif" border=0></a>
+
+
+  </td>
+
+  <!--&filter($name) -->
+    <!--&bool_filter($cond_true='' , $cond_false='') -->
+    <td align=center valign="bottom" title="Филтър">
+    <font size="-2">
+      <select name="$name" onchange="flShowOnSubmit(this.form);this.form.submit()">
+      <option value=""> &nbsp;</option>
+      <option value="1" $cond_true >да</option>
+      <option value="0" $cond_false >не</option>
+      </select>
+      </font>
+    </td>
+    <!--/&bool_filter -->
+
+    <!--&text_filter($value='') -->
+    <td align=center valign="bottom" title="Филтър">
+      <font size="-1">
+      <input type=text name="$name" value="$value" size=10>
+      </font>
+    </td>
+    <!--/&text_filter -->
+
+    <!--&ord_filter($value='') -->
+    <td align=center valign="bottom" title="Филтър">
+      <font size="-2">
+      <select name="$name__op" >
+      <!--&opt($value escape 'html', $descr escape 'html', $selected='selected') -->
+        <option value="$value" $selected>$descr</option>      
+      <!--/&opt -->
+	</select>
+      </font><font size="-1">
+      <input type=text name="$name" value="$value" size=10>
+      </font>
+    </td>
+    <!--/&ord_filter -->
+
+
+  <!--/&filter -->
+  
+  <td> &nbsp; </td>
+</tr>
+<!--/&filter_row -->
+
+<tr class="flshow-heads-bgcol">
+  <td valign=top align=center >
+  <!--&insert_cell($insert_action,$insert_get_params) -->
+  <a href="$insert_action?$insert_get_params" title="Нов запис"  onmouseover="window.status='Нов запис';return true"> 
+  <img src="images/insert.gif" border=0 alt="Нов запис"></a>
+  <!--/&insert_cell -->
+  </td>
+  <!--&descr_cell($val,$ord_name,$field_name, $field_ordering='') -->
+  <td valign=top align=center>
+        <a href="javascript: $js_doc.$form_name.$ord_name.value='$field_ordering';flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Подреди" onmouseover="window.status='Подреди';return true">
+	<font size="-1"><b> $val </b></font></a>
+	<!--&sort_asc() -->
+	<img src="images/arrow-order-down.gif">
+	<!--/&sort_asc -->
+	<!--&sort_desc() -->
+	<img src="images/arrow-order-up.gif">
+	<!--/&sort_desc -->
+	
+  </td>  
+  <!--/&descr_cell -->
+    <td valign=top><!-- <a href="javascript: openHelp('help/fl/fl_show.html')" title="Помощ"  onmouseover="window.status='Помощ';return true">
+	   <img  src="images/help.gif" alt="Помощ" border=0 ></a> --> </td>
+
+</tr>
+
+<!--
+<tr class="flshow-printrow-bgcol">
+  <td valign=top align=center >
+
+<!--&print_on() -->
+<a href="javascript: if(confirm('Сигурни ли сте, че искате разпечатване на ВСИЧКИ данни ?')) { $js_doc.$form_name.fl_show_printer_mode.value=1;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();}" title="Отпечатване на всички редове" onmouseover="return stat_print()">
+    <img src="images/print.gif" border=0 alt="Отпечатване на всички редове"></a>
+<!--/&print_on -->
+<!--&print_off() -->
+<a href="javascript: $js_doc.$form_name.fl_show_printer_mode.value=0;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" title="Изход от разпечатване" onmouseover="return stat_printoff()">
+    <img src="images/print_off.gif" border=0 alt="Изход от разпечатване"></a>
+<!--/&print_off -->
+  </td>
+<!--&print_check() -->
+  <td  align=center>
+	 <input type=checkbox checked>
+  </td>  
+<!--/&print_check -->
+    <td valign=top>&nbsp; </td>
+
+</tr>
+-->
+
+<!--&value_row($color, $checked='checked', $pk_id) -->
+<tr class="flshow-row-bgcol-$color">
+
+  <td valign="top" align=center>
+<!--&check_row() -->
+  <input type=checkbox name="_fl_ch_$pk_id" value="1" $checked >
+<!--/&check_row -->
+<!--&checked_row() -->
+  <input type=hidden name="_fl_ch_$pk_id" value="1" >
+<!--/&checked_row -->
+  <!--&select_cell($action, $get_params) -->
+  <a href="$action?$get_params" title="Избери" onMouseOver="sb('Избери')">
+    <img src="images/rfinger.gif" alt="Избери" border="0" ></a>
+  <!--/&select_cell -->
+
+  <!--&edit_cell($edit_action, $edit_get_params) -->
+    <a href="$edit_action?$edit_get_params" title="Редакция" onmouseover="return stat_edit()">
+    <img border=0 src="images/edit.gif" alt="Редакция"></a>
+  <!--/&edit_cell -->
+
+  <!--&vert_cell($action, $get_params) -->
+  <a href="$action?$get_params" title="Отпечатване на реда" onmouseover="return stat_print()">
+    <img src="images/print.gif" border=0 alt="Отпечатване на реда"></a>
+  <!--/&vert_cell -->
+
+  </td>
+<!--&cell() -->
+  <!--&value_cell($val='&nbsp;') -->
+  <td valign="top" align="left"><font size="-1">$val</font></td>
+  <!--/&value_cell -->
+
+  <!--&href_value_cell($val) -->
+  <td valign="top" align="left"><font size="-1"><a href="$val">$val</a></font></td>
+  <!--/&href_value_cell -->
+
+  <!--&email_value_cell($val) -->
+  <td valign="top" align="left"><font size="-1"><a href="mailto:$val">$val</a></font></td>
+  <!--/&email_value_cell -->
+<!--/&cell -->
+  <td align=center valign=top>
+
+  <!--&delete_cell($action, $params) -->
+    <a href="$action?$params" title="Изтриване" onclick="return confirm('Сигурни ли сте, че искате да изтриете?')"  onmouseover="return stat_del()">
+    <img src="images/del.gif" border=0 alt="Изтриване"></a>
+  <!--/&delete_cell -->
+  &nbsp;
+  </td>
+</tr>
+<!--/&value_row -->
+
+</table>
+
+<br>
+
+<!--&bott_cancel_link() -->
+<a href="$action">
+<img src="images/arrow-up.gif" border=0 alt="Отказ"></a>
+&nbsp;&nbsp;&nbsp;
+<!--/&bott_cancel_link -->
+
+<!--&bott_prev_link($numb) -->
+<a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">
+<img src="images/arrow-left.gif" border=0 alt="Предишни"></a>
+<!--/&bott_prev_link -->
+
+<!--&bott_numb_link($numb,$name) -->
+<a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">$name</a>
+<!--/&bott_numb_link -->
+
+<!--&bott_next_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">
+<img src="images/arrow-right.gif" border=0 alt="Следващи"></a>
+<!--/&bott_next_link -->
+
+
+<!--&hidden($name, $value='' escape 'html') -->
+<input type="hidden" value="$value" name="$name">
+<!--/&hidden -->
+
+
+<br>
+
+<!--/&table_view -->
+
+
+
+<!--&table_view_vert($table_name, $action='', $get_params='', $js_doc='document',$form_name='filter_form') -->
+
+<!--&table_descr($name) -->
+<font size="+3">$name</font><br>
+<!--/&table_descr -->
+
+<!--&cancel_link() -->
+<a href="$action">
+<img src="images/arrow-up.gif" border=0 alt="Отказ"></a>
+&nbsp;&nbsp;&nbsp;
+<!--/&cancel_link -->
+
+<!--&prev_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()" title="Предишни" onmouseover="window.status='Предишни';return true" >
+<img src="images/arrow-left.gif" border=0 alt="Предишни"></a>
+<!--/&prev_link -->
+
+<!--&numb_link($numb,$name) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit()">$name</a>
+<!--/&numb_link -->
+
+<!--&next_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();" 
+title="Следващи" onmouseover="window.status='Следващи';return true">
+<img src="images/arrow-right.gif" border=0 alt="Следващи"></a>
+
+<!--/&next_link -->
+
+<!--&no_filter($name)-->
+<br> <a href="$action?fl_table=$name&$get_params">Без филтър</a>
+<!--/&no_filter-->
+
+<!--&print_off() -->
+<a href="$action" title="Изход от разпечатване" onmouseover="return stat_printoff()">
+    <img src="images/print_off.gif" border=0 alt="Изход от разпечатване"></a>
+<!--/&print_off -->
+
+<!--&hidden($name, $value='' escape 'html') -->
+<input type="hidden" value="$value" name="$name">
+<!--/&hidden -->
+
+<table border=0 cellspacing=2 cellpadding=2 >
+
+
+<!--&insert_cell() -->
+<!--/&insert_cell -->
+
+<!--&value_row($color) -->
+<!--&check_row() -->
+<!--/&check_row -->
+
+<tr class="flshow-row-bgcol-$color">
+  
+  <!--&descr_cell($val,$ord_name,$field_name) -->
+  <td valign=top align=left>
+         <b> $val </b>
+  </td>  
+  <!--/&descr_cell -->
+<!--&cell() -->
+
+  <!--&value_cell($val='&nbsp;') -->
+  <td valign="top" align="left">$val</td>
+  <!--/&value_cell -->
+
+  <!--&href_value_cell($val) -->
+  <td valign="top" align="left"><font size="-1"><a href="$val">$val</a></font></td>
+  <!--/&href_value_cell -->
+
+  <!--&email_value_cell($val) -->
+  <td valign="top" align="left"><font size="-1"><a href="mailto:$val">$val</a></font></td>
+  <!--/&email_value_cell -->
+<!--/&cell -->
+
+</tr>
+
+<!--/&value_row -->
+
+
+
+</table>
+
+<br>
+
+<!--&bott_cancel_link() -->
+<a href="$action">
+<img src="images/arrow-up.gif" border=0 alt="Отказ"></a>
+&nbsp;&nbsp;&nbsp;
+<!--/&bott_cancel_link -->
+
+<!--&bott_prev_link($numb) -->
+<a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">
+<img src="images/arrow-left.gif" border=0 alt="Предишни"></a>
+<!--/&bott_prev_link -->
+
+<!--&bott_numb_link($numb,$name) -->
+<a href="javascript:$js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">$name</a>
+<!--/&bott_numb_link -->
+
+<!--&bott_next_link($numb) -->
+<a href="javascript: $js_doc.$form_name.$table_name_cur_page.value=$numb;flShowOnSubmit($js_doc.$form_name);$js_doc.$form_name.submit();">
+<img src="images/arrow-right.gif" border=0 alt="Следващи"></a>
+<!--/&bott_next_link -->
+
+<br>
+
+<!--/&table_view_vert -->
+
+<!--&table_view_end_form() -->
+</FORM>
+
+<!--/&table_view_end_form -->
+
+
+<!--&fl_fields_form($view_name, $view_descr='',$view_pkey='') -->
+<!--&view_header() -->
+<h2>Въвеждане на изглед/справка в FormLayer</h2>
+<!--/&view_header -->
+<!--&table_header() -->
+<h2>Въвеждане на таблица в FormLayer</h2>
+<!--/&table_header -->
+<!--&fullview_header() -->
+<h2>Въвеждане на изглед на таблица в FormLayer</h2>
+<!--/&fullview_header -->
+
+<form method=post action="app.pl" onSubmit="this.autofill_params.value='__a=1'+cacheFormParams();return true">
+<table>
+<tr><td>
+Име на изгледа/таблицата в базата данни:</td><td> <code>$view_name</code></td></tr>
+<tr><td>Наименование</td><td><input type=text name=view_descr value="$view_descr"></td></tr>
+<tr><td>Описание</td><td><input type=text name=view_comment></td></tr>
+<tr><td>Уникално поле</td><td><input type=text name=view_pkey value="$view_pkey"></td></tr>
+<!--&recreate() -->
+<tr><td>Изтриване на предишната версия</td><td><input type=checkbox name=recreate value=1 checked ></td></tr>
+<!--/&recreate -->
+</table>
+<table border="1">
+<tr><td>&nbsp;</td><td>Поле</td><td>SQL Тип</td><td>Описание</td><td>Езиково</td><td>Тип</td><td>Подреждане</td></tr>
+
+<!--&field($check='checked',$field_descr='',$column_name, $numb,$langf='checked', $ordering,$column_type) -->
+<tr><td><input type=checkbox name=ch$numb $check value=1></td>
+<td>$column_name</td>
+<td>$column_type</td>
+<td><input type=text name=descr$numb value="$field_descr"></td>
+<td><input type=checkbox name=lang$numb $langf value=1 ></td>
+<td>
+<select name=fltype$numb>
+<!--&select_type($type_id,$type_descr) -->
+<option value="$type_id">$type_descr</option>
+<!--/&select_type -->
+</select>
+</td>
+<td><input type=text name=ord$numb value="$ordering" size=5></td></tr>
+<!--/&field -->
+
+</table>
+
+
+<input type=submit value="Запис">
+
+<!--&hidden($name, $value='' escape 'html') -->
+<input type="hidden" value="$value" name="$name">
+<!--/&hidden -->
+<input type="hidden" value="ac_fl_view_fields_insert" name="action_key">
+<input type="hidden" value="" name="autofill_params">
+</form>
+
+<!--/&fl_fields_form -->
+
+
+
+

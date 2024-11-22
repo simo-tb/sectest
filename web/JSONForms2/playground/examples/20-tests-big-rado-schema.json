@@ -1,0 +1,2581 @@
+{
+  "formName": "JF::tbcasino::kiosks",
+  "sp": "U2FsdGVkX19jOkJKuBOOgaHQP1Qr2vXaHNxNa0M04tm-G1hKtDd9jxFXY7NXkTNYZ06CwErmN2vWy3LvI8I6o5sAIYETIC-b_kHE23OdYWwEAEHCk22bSIE1abQOmMlEkPeskCQ-koiwUUEKSNWwYqgYJYPQ-ppAFAr4z3lSGqNlVZPofT9gW2dVysdmxOiLMYNKZjNrALSeZECtycL6wbFILPF2D62b1BVOcc_wLUZzCGRfmCfg0OsVwQgp2jxzIySmE8FQ94s",
+  "locales": [
+    {
+      "iso639_2": "ang",
+      "lang_name": "English GB",
+      "nplurals": 2,
+      "plural_form": 1,
+      "locale": "en_GB",
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "locale": "bg_BG",
+      "lang_name": "Bulgarian BG",
+      "iso639_2": "bul"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "plural_form": 7,
+      "locale": "ru_RU",
+      "nplurals": 3,
+      "lang_name": "Russian RU",
+      "iso639_2": "kru"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "plural_form": 7,
+      "locale": "sr_RS",
+      "nplurals": 3,
+      "lang_name": "Serbian RS",
+      "iso639_2": "srd"
+    },
+    {
+      "lang_name": "Latvian LV",
+      "iso639_2": "alv",
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)",
+      "locale": "lv_LV",
+      "plural_form": 3
+    },
+    {
+      "nplurals": 2,
+      "plural_form": 2,
+      "locale": "ka_GE",
+      "notes": "(n > 1)",
+      "lang_name": "Georgian GE",
+      "iso639_2": "aka"
+    }
+  ],
+  "status": {
+    "status": "ok"
+  },
+  "schema": {
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "title": "Kiosks",
+    "type": "object",
+    "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks?v=1.0",
+    "properties": {
+      "is_enabled": {
+        "title": "Enabled",
+        "type": "boolean",
+        "ordering": 90
+      },
+      "casino_zone_id": {
+        "title": "Zone",
+        "refCol": "id",
+        "refIsStatic": false,
+        "refTable": "casino_zones",
+        "refType": "fkey",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "ordering": 50,
+        "filterSchema": {
+          "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/casino_zones?v=1.0"
+        }
+      },
+      "name": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+          },
+          "with": {
+            "ordering": 30,
+            "title": "Name"
+          }
+        }
+      },
+      "status_updated_at": {
+        "ordering": 80,
+        "format": "iso8601time",
+        "title": "Last status update",
+        "type": "string",
+        "dateHasTz": false
+      },
+      "permitted_remote_addrs": {
+        "ordering": 100,
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Permitted remote address"
+      },
+      "id_hash": {
+        "ordering": 20,
+        "type": "string",
+        "title": "Kiosk ID"
+      },
+      "settings_json": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks/settings_json?v=1.0"
+          },
+          "with": {
+            "title": "Settings",
+            "ordering": 40
+          }
+        }
+      },
+      "status": {
+        "ordering": 70,
+        "title": "Status",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "remote_api_system_id": {
+        "ordering": 60,
+        "type": "integer",
+        "filterSchema": {
+          "$ref": "http://jsonschemas.telebid-pro.com/tblib/db/remote_api_systems"
+        },
+        "refIsStatic": false,
+        "refCol": "id",
+        "title": "Remote system",
+        "refType": "fkey",
+        "refTable": "remote_api_systems"
+      }
+    },
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks/settings_json?v=1.0": {
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks/settings_json?v=1.0",
+        "properties": {
+          "kiosk": {
+            "title": "Kiosk",
+            "type": "object",
+            "properties": {
+              "promotions": {
+                "required": [
+                  "is_enabled",
+                  "printing_receipt_enabled",
+                  "max_promotions_to_show"
+                ],
+                "properties": {
+                  "voucher_tmpl_html": {
+                    "isMultilanguage": true,
+                    "type": "object",
+                    "title": "Default voucher template, html",
+                    "description": "Voucher template. Possible variables: $CASINO_NAME$, $CURRENT_DATE$, $CURRENT_TIME$, $CURRENT_DATETIME$, $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$, $VOUCHER_NUMBER$",
+                    "additionalProperties": {
+                      "ordering": 1000,
+                      "type": "string"
+                    }
+                  },
+                  "receipt_tmpl_html": {
+                    "description": "Receipt template when player buys promotion. Possible variables: $CASINO_NAME$, $CURRENT_DATE$, $CURRENT_TIME$, $CURRENT_DATETIME$, $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$",
+                    "additionalProperties": {
+                      "type": "string",
+                      "ordering": 1100
+                    },
+                    "type": "object",
+                    "title": "Default receipt template, html",
+                    "isMultilanguage": true
+                  },
+                  "max_promotions_to_show": {
+                    "default": 4,
+                    "title": "Max promotions to show",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "ordering": 500,
+                    "description": "Max promotions to show to the player",
+                    "minimum": 1
+                  },
+                  "is_enabled": {
+                    "ordering": 100,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Enabled"
+                  },
+                  "voucher_body": {
+                    "type": "object",
+                    "title": "Default voucher body text",
+                    "isMultilanguage": true,
+                    "additionalProperties": {
+                      "ordering": 800,
+                      "type": "string"
+                    },
+                    "description": "Text to be shown in the body of the voucher. Possible variables: $CASINO_NAME$, $CURRENT_DATE$, $CURRENT_TIME$, $CURRENT_DATETIME$, $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$, $VOUCHER_NUMBER$"
+                  },
+                  "buy_success_msg": {
+                    "type": "object",
+                    "title": "Default player success message",
+                    "isMultilanguage": true,
+                    "additionalProperties": {
+                      "type": "string",
+                      "ordering": 700
+                    },
+                    "description": "Message when successfully got promotion. Possible variables: $CASINO_NAME$, $CURRENT_DATE$, $CURRENT_TIME$, $CURRENT_DATETIME$, $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$"
+                  },
+                  "promo_descr": {
+                    "additionalProperties": {
+                      "ordering": 600,
+                      "type": "string"
+                    },
+                    "description": "Promotion description to be shown to the customers. Possible variables: $CASINO_NAME$, $CURRENT_DATE$, $CURRENT_TIME$, $CURRENT_DATETIME$, $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$",
+                    "type": "object",
+                    "title": "Default promotion description",
+                    "isMultilanguage": true
+                  },
+                  "printing_receipt_enabled": {
+                    "ordering": 400,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Printing receipt enabled"
+                  }
+                },
+                "title": "Promotions",
+                "type": "object"
+              },
+              "ui": {
+                "required": [
+                  "show_cashable_credit",
+                  "show_block_cashable_credit",
+                  "show_noncashable_credit",
+                  "show_extended_play",
+                  "show_shopping_points",
+                  "show_bonus_points",
+                  "show_tier_points",
+                  "show_draw_points",
+                  "show_account_level",
+                  "show_factor_bonus_points_to_noncashable_credit",
+                  "show_factor_promo_points_to_cashable_credit",
+                  "show_factor_vouchers",
+                  "show_price_draw_campaigns"
+                ],
+                "properties": {
+                  "show_factor_vouchers": {
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Factor - Vouchers",
+                    "ordering": 1000
+                  },
+                  "show_tier_points": {
+                    "ordering": 600,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Status Points",
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  },
+                  "show_shopping_points": {
+                    "ordering": 400,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Shopping Points",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1
+                  },
+                  "show_factor_promo_points_to_cashable_credit": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Factor - Promo Points to Cashable Credit",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "ordering": 900
+                  },
+                  "show_factor_bonus_points_to_noncashable_credit": {
+                    "ordering": 900,
+                    "title": "Show Factor - Bonus Points to Bonus Play",
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1
+                  },
+                  "show_noncashable_credit": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Bonus Play",
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 200
+                  },
+                  "show_draw_points": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Lottery Points",
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 700
+                  },
+                  "show_price_draw_campaigns": {
+                    "ordering": 1100,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Show Price - Loterries",
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  },
+                  "show_bonus_points": {
+                    "title": "Show Bonus Points",
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "ordering": 500
+                  },
+                  "show_block_cashable_credit": {
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Show Blocked Cashable",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "ordering": 110
+                  },
+                  "show_extended_play": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Extended Play",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "ordering": 300
+                  },
+                  "show_account_level": {
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Player Level",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 800
+                  },
+                  "show_cashable_credit": {
+                    "ordering": 100,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Show Cashable",
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "title": "UI Settings",
+                "type": "object"
+              },
+              "shopify": {
+                "type": "object",
+                "title": "Bar",
+                "properties": {
+                  "is_enabled": {
+                    "ordering": 100,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Enabled",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0
+                  },
+                  "receipt_tmpl_html": {
+                    "additionalProperties": {
+                      "type": "string",
+                      "ordering": 1100
+                    },
+                    "description": "Receipt template when player buys bar item. Possible variables: $ITEMS_COUNT$, $ITEM_NAME$, $DOCUMENT_NUMBER$, $PRICE_POINTS$, $POINTS_NAME$, $CATEGORY_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $CREATED_DATE$, $CREATED_TIME$",
+                    "isMultilanguage": true,
+                    "title": "Default receipt template, html",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "is_enabled"
+                ]
+              },
+              "voucher_bonus_points_to_noncashable_credit": {
+                "type": "object",
+                "title": "Vouchers",
+                "properties": {
+                  "commands": {
+                    "type": "object",
+                    "title": "Operations",
+                    "properties": {
+                      "redeem": {
+                        "title": "Redeem",
+                        "type": "object",
+                        "properties": {
+                          "attendant_confirm_required": {
+                            "enum": [
+                              0,
+                              1
+                            ],
+                            "default": 0,
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "type": [
+                              "null",
+                              "integer"
+                            ],
+                            "title": "Confirmation by attendant",
+                            "ordering": 300
+                          },
+                          "is_enabled": {
+                            "ordering": 100,
+                            "default": 0,
+                            "enum": [
+                              0,
+                              1
+                            ],
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "title": "Enabled",
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "is_anonymously_allowed": {
+                            "ordering": 200,
+                            "type": [
+                              "null",
+                              "integer"
+                            ],
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "title": "Allowed for anonymous player",
+                            "enum": [
+                              0,
+                              1
+                            ],
+                            "default": 0
+                          },
+                          "print": {
+                            "required": [
+                              "is_enabled",
+                              "printer_name"
+                            ],
+                            "type": "object",
+                            "title": "Print",
+                            "properties": {
+                              "printer_name": {
+                                "default": "",
+                                "title": "Printer name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "ordering": 200,
+                                "maxLength": 100,
+                                "minLength": 0
+                              },
+                              "is_enabled": {
+                                "ordering": 100,
+                                "enum": [
+                                  0,
+                                  1
+                                ],
+                                "default": 0,
+                                "enumNames": [
+                                  "NO",
+                                  "YES"
+                                ],
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ],
+                                "title": "Enabled"
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "is_enabled",
+                          "is_anonymously_allowed",
+                          "attendant_confirm_required"
+                        ]
+                      },
+                      "buy": {
+                        "required": [
+                          "is_enabled",
+                          "is_anonymously_allowed",
+                          "attendant_confirm_required"
+                        ],
+                        "properties": {
+                          "attendant_confirm_required": {
+                            "ordering": 300,
+                            "type": [
+                              "null",
+                              "integer"
+                            ],
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "title": "Confirmation by attendant",
+                            "enum": [
+                              0,
+                              1
+                            ],
+                            "default": 0
+                          },
+                          "print": {
+                            "properties": {
+                              "printer_name": {
+                                "maxLength": 100,
+                                "minLength": 0,
+                                "title": "Printer name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": "",
+                                "ordering": 200
+                              },
+                              "is_enabled": {
+                                "title": "Enabled",
+                                "enumNames": [
+                                  "NO",
+                                  "YES"
+                                ],
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ],
+                                "default": 0,
+                                "enum": [
+                                  0,
+                                  1
+                                ],
+                                "ordering": 100
+                              }
+                            },
+                            "type": "object",
+                            "title": "Print",
+                            "required": [
+                              "is_enabled",
+                              "printer_name"
+                            ]
+                          },
+                          "is_anonymously_allowed": {
+                            "ordering": 200,
+                            "default": 0,
+                            "enum": [
+                              0,
+                              1
+                            ],
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "title": "Allowed for anonymous player",
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "is_enabled": {
+                            "ordering": 100,
+                            "enumNames": [
+                              "NO",
+                              "YES"
+                            ],
+                            "title": "Enabled",
+                            "type": [
+                              "null",
+                              "integer"
+                            ],
+                            "default": 0,
+                            "enum": [
+                              0,
+                              1
+                            ]
+                          }
+                        },
+                        "type": "object",
+                        "title": "Buy"
+                      }
+                    }
+                  }
+                }
+              },
+              "main": {
+                "required": [
+                  "history_points_enabled",
+                  "disable_logout",
+                  "is_printing_enabled",
+                  "use_external_login",
+                  "logout_after_each_operation",
+                  "has_attendant",
+                  "auth_by_login",
+                  "auth_by_simple_cardreader",
+                  "auth_by_advanced_cardreader",
+                  "update_config_timeout",
+                  "logout_timeout",
+                  "error_msg_timeout",
+                  "attendant_confirm_timeout",
+                  "back_to_landingpage_timeout_s",
+                  "card_read_timeout",
+                  "card_pin_timeout",
+                  "receipt_printer_name"
+                ],
+                "properties": {
+                  "receipt_printer_name": {
+                    "minLength": 0,
+                    "maxLength": 100,
+                    "ordering": 2000,
+                    "default": "DEFAULT",
+                    "title": "Receipt printer name",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "back_to_landingpage_timeout_s": {
+                    "minimum": 0,
+                    "default": 10000,
+                    "title": "Return to landing page timeout, s",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "ordering": 590
+                  },
+                  "disable_logout": {
+                    "title": "Disable logout button and timer",
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "ordering": 120
+                  },
+                  "logout_after_each_operation": {
+                    "description": "Player logouts everytime he finishes a operation, e.g. buys tickets, redeems voucher etc",
+                    "ordering": 122,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Logout after each user operation",
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  },
+                  "auth_by_simple_cardreader": {
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Simple cardreader login",
+                    "ordering": 160
+                  },
+                  "auth_by_advanced_cardreader": {
+                    "ordering": 180,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Advanced cardreader login",
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  },
+                  "use_external_login": {
+                    "description": "Use external login on initializing kiosk",
+                    "ordering": 121,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Use external login",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0
+                  },
+                  "has_attendant": {
+                    "ordering": 130,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Does casino have attendants",
+                    "default": 1,
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  },
+                  "auth_by_login": {
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Username and password login",
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 140
+                  },
+                  "update_config_timeout": {
+                    "maximum": 1000,
+                    "minimum": 0,
+                    "ordering": 200,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Settings update timeout, s",
+                    "default": 0
+                  },
+                  "card_pin_timeout": {
+                    "maximum": 1000,
+                    "minimum": 0,
+                    "ordering": 700,
+                    "default": 0,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Card pin timeout, s"
+                  },
+                  "is_printing_enabled": {
+                    "ordering": 120,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Printing enabled",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1
+                  },
+                  "history_points_enabled": {
+                    "description": "Button to show history of recent earned points",
+                    "ordering": 100,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Show earned points history",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0
+                  },
+                  "error_msg_timeout": {
+                    "maximum": 1000,
+                    "minimum": 0,
+                    "title": "Error msg timeout, s",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "default": 0,
+                    "ordering": 400
+                  },
+                  "logout_timeout": {
+                    "title": "Logout timeout, s",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "default": 0,
+                    "ordering": 300,
+                    "description": "Set to 0 to disab",
+                    "minimum": 0,
+                    "maximum": 1000
+                  },
+                  "attendant_confirm_timeout": {
+                    "ordering": 500,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Confirmation by attendant timeout, s",
+                    "default": 600,
+                    "maximum": 100000000,
+                    "minimum": 1,
+                    "description": "Confirmation by attendant timeout, s"
+                  },
+                  "card_read_timeout": {
+                    "maximum": 1000,
+                    "minimum": 0,
+                    "default": 0,
+                    "title": "Card read timeout, s",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "ordering": 600
+                  }
+                },
+                "type": "object",
+                "title": "Main Settings"
+              },
+              "tipping": {
+                "required": [
+                  "is_enabled",
+                  "is_anonymously_allowed",
+                  "printing_receipt_enabled",
+                  "max_credit",
+                  "min_credit",
+                  "step_credit"
+                ],
+                "properties": {
+                  "step_credit": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Step tip, credits",
+                    "default": 100,
+                    "ordering": 400,
+                    "description": "Step tip, credits",
+                    "minimum": 1
+                  },
+                  "is_anonymously_allowed": {
+                    "title": "Allowed for anonymous player",
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "ordering": 200
+                  },
+                  "is_enabled": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Enabled",
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 100
+                  },
+                  "printing_receipt_enabled": {
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Printing receipt enabled",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "ordering": 250
+                  },
+                  "max_credit": {
+                    "minimum": 1,
+                    "description": "Maximum tip, credits",
+                    "ordering": 400,
+                    "default": 100000,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Maximum tip, credits"
+                  },
+                  "min_credit": {
+                    "minimum": 1,
+                    "description": "Minimum tip, credits",
+                    "ordering": 400,
+                    "default": 100,
+                    "title": "Minimum tip, credits",
+                    "type": [
+                      "null",
+                      "integer"
+                    ]
+                  }
+                },
+                "type": "object",
+                "title": "Tipping Staff"
+              },
+              "transfers": {
+                "title": "Loyalty",
+                "type": "object",
+                "properties": {
+                  "promo_points_to_cashable_credit": {
+                    "required": [
+                      "is_enabled",
+                      "is_anonymously_allowed",
+                      "attendant_confirm_required",
+                      "max_credit",
+                      "min_credit",
+                      "step_credit"
+                    ],
+                    "title": "Promo Points To Cashable Credit",
+                    "type": "object",
+                    "properties": {
+                      "attendant_confirm_required": {
+                        "default": 0,
+                        "enum": [
+                          0,
+                          1
+                        ],
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Confirmation by attendant",
+                        "ordering": 300
+                      },
+                      "step_credit": {
+                        "ordering": 400,
+                        "default": 100,
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Step cashable credit",
+                        "minimum": 1,
+                        "description": "Step cashable credit"
+                      },
+                      "is_anonymously_allowed": {
+                        "ordering": 200,
+                        "default": 0,
+                        "enum": [
+                          0,
+                          1
+                        ],
+                        "title": "Allowed for anonymous player",
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "is_enabled": {
+                        "ordering": 100,
+                        "enum": [
+                          0,
+                          1
+                        ],
+                        "default": 0,
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Enabled"
+                      },
+                      "min_credit": {
+                        "ordering": 400,
+                        "title": "Minimum cashable credit",
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "default": 100,
+                        "minimum": 1,
+                        "description": "Minimum cashable credit"
+                      },
+                      "max_credit": {
+                        "description": "Maximum cashable credit",
+                        "minimum": 1,
+                        "default": 100000,
+                        "title": "Maximum cashable credit",
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "ordering": 400
+                      }
+                    }
+                  },
+                  "bonus_points_to_noncashable_credit": {
+                    "properties": {
+                      "is_enabled": {
+                        "ordering": 100,
+                        "default": 0,
+                        "enum": [
+                          0,
+                          1
+                        ],
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Enabled"
+                      },
+                      "step_credit": {
+                        "ordering": 400,
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Step noncashable credit",
+                        "default": 100,
+                        "minimum": 1,
+                        "description": "Step noncashable credit"
+                      },
+                      "min_credit": {
+                        "default": 100,
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Minimum noncashable credit",
+                        "ordering": 400,
+                        "description": "Minimum noncashable credit",
+                        "minimum": 1
+                      },
+                      "attendant_confirm_required": {
+                        "title": "Confirmation by attendant",
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "enum": [
+                          0,
+                          1
+                        ],
+                        "default": 0,
+                        "ordering": 300
+                      },
+                      "voucher_printer_name": {
+                        "ordering": 600,
+                        "default": "DEFAULT",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "title": "Voucher printer name",
+                        "minLength": 0
+                      },
+                      "is_anonymously_allowed": {
+                        "ordering": 200,
+                        "enumNames": [
+                          "NO",
+                          "YES"
+                        ],
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Allowed for anonymous player",
+                        "default": 0,
+                        "enum": [
+                          0,
+                          1
+                        ]
+                      },
+                      "entry_vouchers_count": {
+                        "title": "Entry vouchers count, pcs",
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "default": 1000,
+                        "ordering": 500,
+                        "description": "Number of vouchers to buy, before switchting to direct convert",
+                        "minimum": 1
+                      },
+                      "max_credit": {
+                        "ordering": 400,
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "title": "Maximum noncashable credit",
+                        "default": 100000,
+                        "minimum": 1,
+                        "description": "Maximum noncashable credit"
+                      },
+                      "voucher_value": {
+                        "minimum": 1,
+                        "title": "Voucher value, credit",
+                        "type": [
+                          "null",
+                          "integer"
+                        ],
+                        "default": 1000,
+                        "ordering": 500
+                      }
+                    },
+                    "title": "Bonus Points To Bonus Play",
+                    "type": "object",
+                    "required": [
+                      "is_enabled",
+                      "is_anonymously_allowed",
+                      "attendant_confirm_required",
+                      "max_credit",
+                      "min_credit",
+                      "step_credit"
+                    ]
+                  },
+                  "printing_receipt_enabled": {
+                    "description": " ",
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Printing receipt enabled",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1,
+                    "ordering": 100
+                  }
+                },
+                "required": [
+                  "printing_receipt_enabled"
+                ]
+              },
+              "draw_tickets": {
+                "required": [
+                  "is_enabled",
+                  "is_anonymously_allowed",
+                  "attendant_confirm_required",
+                  "printing_receipt_enabled",
+                  "max_tickets_to_buy"
+                ],
+                "properties": {
+                  "printing_receipt_enabled": {
+                    "ordering": 400,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Printing receipt enabled",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 1
+                  },
+                  "is_anonymously_allowed": {
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Allowed for anonymous player",
+                    "ordering": 200
+                  },
+                  "is_enabled": {
+                    "ordering": 100,
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Enabled",
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  },
+                  "max_tickets_to_buy": {
+                    "ordering": 500,
+                    "default": 100,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Max tickets to buy at once, pcs",
+                    "minimum": 1,
+                    "description": "Max tickets to buy at single operation in pcs. This limitation is due to printer unreliability"
+                  },
+                  "attendant_confirm_required": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "enumNames": [
+                      "NO",
+                      "YES"
+                    ],
+                    "title": "Confirmation by attendant",
+                    "default": 0,
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "ordering": 300
+                  }
+                },
+                "title": "Lottery",
+                "type": "object"
+              }
+            }
+          }
+        },
+        "type": "object",
+        "title": "Kiosk settings"
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/db/remote_api_systems": {
+        "type": "object",
+        "title": "Remote API Systems & Credentials",
+        "id": "http://jsonschemas.telebid-pro.com/tblib/db/remote_api_systems",
+        "properties": {
+          "audit_subsystem_id": {
+            "ordering": 330,
+            "type": "integer",
+            "title": "Audit system"
+          },
+          "remote_call_timeout_sec": {
+            "title": "Remote call timeout",
+            "type": "integer",
+            "ordering": 180
+          },
+          "access_http": {
+            "type": "boolean",
+            "title": "Use HTTP",
+            "ordering": 70
+          },
+          "access_https": {
+            "ordering": 80,
+            "title": "Use HTTPS",
+            "type": "boolean"
+          },
+          "session_expires": {
+            "title": "Session expires",
+            "type": "string",
+            "ordering": 310
+          },
+          "api_key": {
+            "title": "API Key (required for remote access)",
+            "type": "string",
+            "ordering": 30
+          },
+          "is_debug": {
+            "type": "boolean",
+            "title": "Debug enabled",
+            "ordering": 270
+          },
+          "remote_call_method": {
+            "title": "Remote call method",
+            "type": "string",
+            "ordering": 200
+          },
+          "use_remote_cert": {
+            "type": "boolean",
+            "title": "Use remote certificate",
+            "ordering": 150
+          },
+          "remote_cert_cn": {
+            "ordering": 160,
+            "type": "string",
+            "title": "Remote certificate cn"
+          },
+          "debug_system_err_calls": {
+            "title": "Debug system errors",
+            "type": [
+              "null",
+              "string"
+            ],
+            "ordering": 300
+          },
+          "remote_cert_selfsigned": {
+            "type": "boolean",
+            "title": "Is remote certificate self-signed",
+            "ordering": 170
+          },
+          "trusted_level": {
+            "type": "integer",
+            "title": "Trusted Level",
+            "ordering": 50
+          },
+          "permitted_remote_addrs": {
+            "title": "Remote addresses permitted",
+            "type": "string",
+            "ordering": 60
+          },
+          "use_local_cert": {
+            "title": "Use local certificate",
+            "type": "boolean",
+            "ordering": 120
+          },
+          "local_cert_file": {
+            "title": "Local certificate file path",
+            "type": "string",
+            "ordering": 130
+          },
+          "debug_user_err_calls": {
+            "title": "Debug user errors",
+            "type": [
+              "null",
+              "string"
+            ],
+            "ordering": 280
+          },
+          "remote_call_resp_format": {
+            "title": "Remote call response format",
+            "type": "string",
+            "ordering": 220
+          },
+          "remote_call_url": {
+            "ordering": 190,
+            "title": "Remote call URL",
+            "type": "string"
+          },
+          "api_user_id": {
+            "title": "Default username",
+            "refCol": "login",
+            "refIsStatic": false,
+            "refTable": "sec_users",
+            "refType": "fkey",
+            "type": "string",
+            "ordering": 240,
+            "filterSchema": null
+          },
+          "name": {
+            "$merge": {
+              "with": {
+                "title": "Name",
+                "searchBy": "*",
+                "ordering": 20
+              },
+              "source": {
+                "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+              }
+            }
+          },
+          "auth_required": {
+            "ordering": 260,
+            "searchBy": "*",
+            "title": "Authentication required",
+            "type": "boolean"
+          },
+          "http_auth_login": {
+            "title": "Authentication login",
+            "type": [
+              "null",
+              "string"
+            ],
+            "ordering": 100
+          },
+          "debug_peer_err_calls": {
+            "title": "Debug peer errors",
+            "type": [
+              "null",
+              "string"
+            ],
+            "ordering": 290
+          },
+          "use_http_auth": {
+            "type": "boolean",
+            "title": "Use authentication",
+            "ordering": 90
+          },
+          "api_psk": {
+            "ordering": 40,
+            "type": "string",
+            "title": "Secret pre-shared key"
+          },
+          "http_auth_pass": {
+            "title": "Authentication password",
+            "type": [
+              "null",
+              "string"
+            ],
+            "ordering": 110
+          },
+          "protocol_id": {
+            "refCol": "id",
+            "refIsStatic": false,
+            "title": "Protocol",
+            "refTable": "remote_api_protocols",
+            "refType": "fkey",
+            "ordering": 340,
+            "type": "integer",
+            "filterSchema": null
+          },
+          "is_checksum_required": {
+            "title": "Checksum required",
+            "type": "boolean",
+            "ordering": 250
+          },
+          "is_enabled": {
+            "ordering": 350,
+            "title": "API enabled",
+            "type": "boolean"
+          },
+          "local_cert_cn": {
+            "type": "string",
+            "title": "Local certificate cn",
+            "ordering": 140
+          },
+          "remote_call_protocol": {
+            "ordering": 210,
+            "type": "string",
+            "title": "Remote call protocol"
+          },
+          "session_expires_max": {
+            "title": "Session max life",
+            "type": "string",
+            "ordering": 320
+          },
+          "remote_call_headers_json": {
+            "ordering": 230,
+            "title": "Remote call headers",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "api_key",
+          "api_psk",
+          "trusted_level",
+          "permitted_remote_addrs",
+          "access_http",
+          "access_https",
+          "use_http_auth",
+          "use_local_cert",
+          "local_cert_file",
+          "local_cert_cn",
+          "use_remote_cert",
+          "remote_cert_cn",
+          "remote_cert_selfsigned",
+          "remote_call_timeout_sec",
+          "remote_call_url",
+          "remote_call_method",
+          "remote_call_protocol",
+          "remote_call_resp_format",
+          "remote_call_headers_json",
+          "api_user_id",
+          "is_checksum_required",
+          "auth_required",
+          "is_debug",
+          "session_expires",
+          "session_expires_max",
+          "audit_subsystem_id",
+          "protocol_id",
+          "is_enabled"
+        ],
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04"
+      },
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/casino_zones?v=1.0": {
+        "required": [
+          "id",
+          "casino_id",
+          "name",
+          "cashdesk_id",
+          "tb_sync_updated_at",
+          "group_number"
+        ],
+        "title": "Casino Zones",
+        "type": "object",
+        "properties": {
+          "group_number": {
+            "minimum": 0,
+            "ordering": 60,
+            "title": "Group number",
+            "type": "integer"
+          },
+          "casino_id": {
+            "refCol": "id",
+            "refIsStatic": false,
+            "title": "Casino",
+            "refTable": "casinos",
+            "refType": "fkey",
+            "ordering": 20,
+            "type": "integer",
+            "filterSchema": null
+          },
+          "tb_sync_updated_at": {
+            "type": "string",
+            "title": "TB sync updated at",
+            "format": "iso8601time",
+            "ordering": 50,
+            "dateHasTz": false
+          },
+          "name": {
+            "$merge": {
+              "with": {
+                "title": "Zone Name",
+                "ordering": 30
+              },
+              "source": {
+                "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+              }
+            }
+          },
+          "cashdesk_id": {
+            "filterSchema": null,
+            "type": "integer",
+            "ordering": 40,
+            "refType": "fkey",
+            "refTable": "cashdesks",
+            "title": "Cashdesk",
+            "refIsStatic": false,
+            "refCol": "id"
+          }
+        },
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/casino_zones?v=1.0",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04"
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t": {
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "type": "string",
+        "id": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+      }
+    },
+    "required": [
+      "id",
+      "id_hash",
+      "name",
+      "remote_api_system_id",
+      "status_updated_at",
+      "is_enabled"
+    ]
+  },
+  "form": {
+    "fields": [
+      {
+        "type": "submit",
+        "title": "submit",
+      },
+      "name",
+      {
+        "type": "fieldset",
+        "items": [
+          {
+            "type": "tabobject",
+            "legend": "Kiosk",
+            "items": [
+              {
+                "items": [
+                  "settings_json/kiosk/main/history_points_enabled",
+                  "settings_json/kiosk/main/disable_logout",
+                  "settings_json/kiosk/main/is_printing_enabled",
+                  "settings_json/kiosk/main/use_external_login",
+                  "settings_json/kiosk/main/logout_after_each_operation",
+                  "settings_json/kiosk/main/has_attendant",
+                  "settings_json/kiosk/main/auth_by_login",
+                  "settings_json/kiosk/main/auth_by_simple_cardreader",
+                  "settings_json/kiosk/main/auth_by_advanced_cardreader",
+                  "settings_json/kiosk/main/update_config_timeout",
+                  "settings_json/kiosk/main/logout_timeout",
+                  "settings_json/kiosk/main/error_msg_timeout",
+                  "settings_json/kiosk/main/attendant_confirm_timeout",
+                  "settings_json/kiosk/main/back_to_landingpage_timeout_s",
+                  "settings_json/kiosk/main/card_read_timeout",
+                  "settings_json/kiosk/main/card_pin_timeout",
+                  "settings_json/kiosk/main/receipt_printer_name"
+                ],
+                "legend": "Main Settings",
+                "type": "section"
+              },
+              {
+                "legend": "UI Settings",
+                "items": [
+                  "settings_json/kiosk/ui/show_cashable_credit",
+                  "settings_json/kiosk/ui/show_block_cashable_credit",
+                  "settings_json/kiosk/ui/show_noncashable_credit",
+                  "settings_json/kiosk/ui/show_extended_play",
+                  "settings_json/kiosk/ui/show_shopping_points",
+                  "settings_json/kiosk/ui/show_bonus_points",
+                  "settings_json/kiosk/ui/show_tier_points",
+                  "settings_json/kiosk/ui/show_draw_points",
+                  "settings_json/kiosk/ui/show_account_level",
+                  "settings_json/kiosk/ui/show_factor_bonus_points_to_noncashable_credit",
+                  "settings_json/kiosk/ui/show_factor_promo_points_to_cashable_credit",
+                  "settings_json/kiosk/ui/show_factor_vouchers",
+                  "settings_json/kiosk/ui/show_price_draw_campaigns"
+                ],
+                "type": "section"
+              },
+              {
+                "type": "section",
+                "items": [
+                  "settings_json/kiosk/draw_tickets/is_enabled",
+                  "settings_json/kiosk/draw_tickets/is_anonymously_allowed",
+                  "settings_json/kiosk/draw_tickets/attendant_confirm_required",
+                  "settings_json/kiosk/draw_tickets/printing_receipt_enabled",
+                  "settings_json/kiosk/draw_tickets/max_tickets_to_buy"
+                ],
+                "legend": "Lottery"
+              },
+              {
+                "legend": "Vouchers",
+                "items": [
+                  {
+                    "legend": "Operations",
+                    "items": [
+                      {
+                        "type": "tabobject",
+                        "items": [
+                          {
+                            "items": [
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/buy/is_enabled",
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/buy/is_anonymously_allowed",
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/buy/attendant_confirm_required"
+                            ],
+                            "type": "section",
+                            "title": "GENERAL"
+                          },
+                          {
+                            "items": [
+                              {
+                                "type": "section",
+                                "title": "GENERAL",
+                                "items": [
+                                  "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/buy/print/is_enabled",
+                                  "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/buy/print/printer_name"
+                                ]
+                              }
+                            ],
+                            "legend": "Print",
+                            "type": "tabobject"
+                          }
+                        ],
+                        "legend": "Buy"
+                      },
+                      {
+                        "legend": "Redeem",
+                        "items": [
+                          {
+                            "items": [
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/redeem/is_enabled",
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/redeem/is_anonymously_allowed",
+                              "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/redeem/attendant_confirm_required"
+                            ],
+                            "title": "GENERAL",
+                            "type": "section"
+                          },
+                          {
+                            "type": "tabobject",
+                            "legend": "Print",
+                            "items": [
+                              {
+                                "items": [
+                                  "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/redeem/print/is_enabled",
+                                  "settings_json/kiosk/voucher_bonus_points_to_noncashable_credit/commands/redeem/print/printer_name"
+                                ],
+                                "type": "section",
+                                "title": "GENERAL"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "tabobject"
+                      }
+                    ],
+                    "type": "tabobject"
+                  }
+                ],
+                "type": "section"
+              },
+              {
+                "legend": "Loyalty",
+                "items": [
+                  "settings_json/kiosk/transfers/printing_receipt_enabled",
+                  {
+                    "type": "fieldset",
+                    "items": [
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/is_enabled",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/is_anonymously_allowed",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/attendant_confirm_required",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/max_credit",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/min_credit",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/step_credit",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/entry_vouchers_count",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/voucher_value",
+                      "settings_json/kiosk/transfers/bonus_points_to_noncashable_credit/voucher_printer_name"
+                    ],
+                    "legend": "Bonus Points To Bonus Play"
+                  },
+                  {
+                    "type": "fieldset",
+                    "items": [
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/is_enabled",
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/is_anonymously_allowed",
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/attendant_confirm_required",
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/max_credit",
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/min_credit",
+                      "settings_json/kiosk/transfers/promo_points_to_cashable_credit/step_credit"
+                    ],
+                    "legend": "Promo Points To Cashable Credit"
+                  }
+                ],
+                "type": "section"
+              },
+              {
+                "type": "section",
+                "legend": "Bar",
+                "items": [
+                  "settings_json/kiosk/shopify/is_enabled",
+                  {
+                    "key": "settings_json/kiosk/shopify/receipt_tmpl_html",
+                    "type": "tinymce"
+                  }
+                ]
+              },
+              {
+                "legend": "Tipping Staff",
+                "items": [
+                  "settings_json/kiosk/tipping/is_enabled",
+                  "settings_json/kiosk/tipping/is_anonymously_allowed",
+                  "settings_json/kiosk/tipping/printing_receipt_enabled",
+                  "settings_json/kiosk/tipping/max_credit",
+                  "settings_json/kiosk/tipping/min_credit",
+                  "settings_json/kiosk/tipping/step_credit"
+                ],
+                "type": "section"
+              },
+              {
+                "legend": "Promotions",
+                "items": [
+                  "settings_json/kiosk/promotions/is_enabled",
+                  "settings_json/kiosk/promotions/printing_receipt_enabled",
+                  "settings_json/kiosk/promotions/max_promotions_to_show",
+                  {
+                    "type": "textarea",
+                    "key": "settings_json/kiosk/promotions/promo_descr"
+                  },
+                  {
+                    "type": "textarea",
+                    "key": "settings_json/kiosk/promotions/buy_success_msg"
+                  },
+                  {
+                    "key": "settings_json/kiosk/promotions/voucher_body",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "settings_json/kiosk/promotions/voucher_tmpl_html",
+                    "type": "tinymce"
+                  },
+                  {
+                    "key": "settings_json/kiosk/promotions/receipt_tmpl_html",
+                    "type": "tinymce"
+                  }
+                ],
+                "type": "section"
+              }
+            ]
+          }
+        ],
+        "legend": "Kiosk settings"
+      },
+      "casino_zone_id",
+      {
+        "pluginOptions": {
+          "maxItems": 1,
+          "searchField": "name",
+          "valueField": "id",
+          "optionTemplate": "<div><div>Name column in the db: {{name}}<b>remote call Url column: {{remote_call_url}}</b></div><div>remote call Protocol column: {{remote_call_protocol}}</div> </div>"
+        },
+        "type": "selecttemplate",
+        "title": "Remote API System Foreign Key With Fancy Select",
+        "key": "remote_api_system_id"
+      },
+      "status",
+      "status_updated_at",
+      "is_enabled",
+      "permitted_remote_addrs"
+    ],
+    "strictNumberTypes": false,
+    "jsonformVersion": "2.0",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks?v=1.0"
+  },
+  "content": {
+    "id": 1,
+    "permitted_remote_addrs": "10.21.2.24",
+    "name": "Kiosk1",
+    "status_updated_at": "2017-08-10T19:15:43.73431",
+    "casino_zone_id": null,
+    "full_descr": "Kiosk1",
+    "is_enabled": true,
+    "status": "up",
+    "settings_json": {
+      "kiosk": {
+        "draw_tickets": {
+          "is_enabled": 1,
+          "is_anonymously_allowed": 1,
+          "max_tickets_to_buy": 100,
+          "attendant_confirm_required": 1,
+          "printing_receipt_enabled": 1
+        },
+        "ui": {
+          "show_price_draw_campaigns": 1,
+          "show_bonus_points": 1,
+          "show_icasino_buttons": 0,
+          "show_draw_points": 1,
+          "show_noncashable_credit": 1,
+          "show_cashable_credit": 1,
+          "show_account_level": 1,
+          "show_extended_play": 1,
+          "show_block_cashable_credit": 1,
+          "show_shopping_points": 1,
+          "show_tier_points": 1,
+          "show_factor_vouchers": 1,
+          "show_factor_bonus_points_to_noncashable_credit": 1,
+          "show_factor_promo_points_to_cashable_credit": 1
+        },
+        "shopify": {
+          "is_enabled": 1,
+          "receipt_tmpl_html_translation": {
+            "bg_BG": "<div id=\"bg-img\" style=\"background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAFJCAIAAADPPqWJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABx0RVh0Q29weXJpZ2h0AFdhcmFrb3JuIC0gRm90b2xpYcC9aAYAAAAgaVRYdENvcHlyaWdodAAAAAAAV2FyYWtvcm4gLSBGb3RvbGlhyiTZ1gAADt9JREFUeNrsndtyJKkORasz/Nf97O+uMzETx+Gwq0guumzB2o8d7spM0EJCgPjzfD4fCKE1XTQBQoCEECAhBEgIIUBCCJAQAiSEAAkhBEgIARJCgIQQICGEAAkhQEIIkBACJIQQICEESAgBEkKAhBACJIQACSFAQgiQEEKAhBAgIQRICCFAQgiQEAIkhAAJIQRICAESQoCEECAhhAAJIUBCCJAQAiSEECAhBEgIARJCgIQQAiSEAAkhQEIIkBBCgIQQICEESAgdrQ+awER///7t/MvPz0/Bt0p/1er683w+aYUUM3Wy1PW3gihAKoOQuaV68ANRgFSDn3VLjeEHnACpEkVDlpqCEDgBUg2EOs00nSJYAiR3in6b15zdvzNTk1dy/V5AQjNW5Tex+fHL8Ul2pxYAJCgytp7+p/TYtJNBJz4akEDI7In/PO72D7ZsFkDaliJXW7GdSoETIJ1I0RxLWVar4CEBCYp2mN/D0nex+1tu4O95loKZlljpAiSh8TXeattP1BnsYYnQTpei9ltphkyaDYhHwgheP13WKBsvdohfuqCoylAqPrQfztIFRcpWWysuOpmlc+dIhPU0LB6JzsYvAVJNI0CwBEhdfQlFDEnMkdQp+nruURZ2zph1QdHDf0/3aftlbht2vwZhjhSH7ue/gqUtWbrOtOkYd/SDoqKN5mfxO7F0QZGThW1AEYkHQHKnaANf1D8W+BVn3sYpMUdaouilHbjGQuax1rtf+/HvsNTW/ulvW3f0+9faFbP8Kg3Z/nJn3S+/GuXVw79DPZJhtzUclInZdXqMmHn/sXn800GKjILMnzU0E1sfUL6e2J9EIcA7IrTzDur8nN7Qsxb9XkoNsP0CvONCuxiKIi07ZSznLsBTQDI0r7C68ntsJlr5hLqff9Ydsj0BumbJxa8X87gscK5g8j//+O7ejZ6ky+1zmSOJDor9Nzv8mIIHuKOhYovm2fCepuiZ1UyUtixUKQmPNIzE11jbth6ube1pq53it7PmSCb9ND1dsXVHOvXA2odeUxa1AGnPiVbYg8xf4N0cJpHqciztBpJ3B7TnDIbuaP0WQI8cIKfx8Ug7+KLIkWWRcL9deSQbFN1Rf9LJI9c0bSu3uWNXK+y8QdDqUmpAOt2xvLSh26ff/kFjy19YOrHBUuP9p++WBqRK8MwZR4z/9E4uTyyPvvwvQw21E1cfm9GyWPWqxzgW47qXGwIav+PEm6CrL53JqAHShH1M7/r5wZLTybw9zv+sj1zbSHSLkJMBDfkNQ3c0dy2sYSP0fPg2u3VO90gBo6/hjN/7uziLCkgFzOW/50oNt4z9gFR1uB3FKTH4Oaf2LyC5I+R0uNXVO6XPjtBWIIUdMm38zu1WgIrBleHxuM1O2m0IUn/3uJryLVFtlibiujl35NEsRYcJQBqwpPgObuyjOcHgBBMtgFQMoZ5IZoWlCRvNOuQDTra64in6/L8UJhgvX6NzI8K7DEGjzGLiVweXKQckR4o0b9ryKCzceXpcoTVgSRGkxu5p5ShiZavoRCpl1CcP1RiyZQnMEkAqXYe2wVIjSNvGzgBGJdkQPCXwHqRzLS9lSQeW8kHypmixHHZ/mYHfUx3zdWEESNEzeFsOjzLl29O++B85kBbPG4eFFj04vXRK6+YrwvCPhCEsCSUb1inyuBc1HtevLJys38st+IhHUjfoiX3Tt1UTIu8U62+ulae0i7bimuRAsjp0PW2v8ecRXo7061UfhnheLOhDmJcMkvfdcusj/bsR1yQdd1sMqNAWWFgS8kgxZwqscHIKlupOQmBJfY7UeRddFZMSxIOzfYVBsr2bXnzEPSfB9cN7k9lT8UhUS6uLE+rX5dr0UCQYv6Gqc6Qh3sCMGctBIJncr9o+swlR6MTQbhS2nnJzuXVYmdKgaJBGF1UOv0oeEdoljPfUZEPTJhRmOddmDefxI2AsZQmjN6/FBDX5tb+PurIXpQymASc7kz3Sy297WWHHnC78zK5eKGW+/XFOZ6z/ZXrFFZNvnzh5mfiNttbv55p0QXJdjhw6q/PoPi+oRlRjpW7uMszg6hcrI1d7QDT/hCM80np4Pfpf/G5bsioreYvErWf2xmmxTGLndT6bzJF2Qi4sHDd8gXcuSzPfM1evt38XaD5Iynk2qyJHWVPkipNJtV4LYOlj+s1elq0y9Keyg+LQ24qsJndeCbXxWrn3DuAP74GkkDtamdoql+P5Xry/zfzth2d9oAmurpV0r5hvc600otOR70KI30r86qGTYz/+mNVzlzlS1m1zwe7IY8hYSQbE9FGhBev+Qcrvoy7vfmpnWvzGM6vZqlWaSDkMHi3LrPMhL8lJSfMYZO3eXZu1eLmYuLvbjKWJCaG+m4p83Eew9cQcn050RxOvKliNzOorBIsIOFnghguyVvVfFzv+9zRd/P7P9bRKO74Kvi0h2CkdsbPB3HxHDaJ9AbNOMUqTx902jqF96wxMu4E0GtRNuKPvd8v22MRR5zX6s5Gj5/PE3dRVpekfffVS4t+27U/eHbja0m+nuBqRxpT2SENtNFGM0mo2tcF+KD+KGjNDK6fUv77i185XxT7zpmgubcUcsvHL73CKCSIC8hw7zJFiCiPbdkNiQBJTPOTd0uJKE5lnZQx74TqTIo/BqahTWjnbN/GbAd4vZSy7SmMTRhFbM1MMdHQ7UmKK4hLEo+eD34Uc6xRZrUhu7I4im8WDpbOKn8QkCaS+S7xqis7gMtpWAS+W45HCjtnc2sfJ1e1sv1158hMQmV979PccRdPDs9WBTU07FpwQrgd43h9VI9nQzgJNU3TyTV4mi6S5jl2q7666Hd+/mbo/LbFZpGc1MAdv2X65hCoe4H2UNgtbihTivRLuaLEG8lBPfa9O5Vq9ZBOP5DRaeFDk13MV48ywkxcTjRPplK7SHZDii0q7I6stpOtsTDz3pf8RGX32PNg3vVyrNpqI+6gJJj3qIiksLR501Nxv5t3eH5B1gs0bGFcb9XOb2x7sy6Io8mX0b90cPTnvVGLte2WLxlMEndK1E0IeFFntzUtHpWjewmNStHkVoZWdByYDkq1NT5/NjI/unCoiWG2HCwOsKkgmizkTJRNKhPKFMiL6jwj4hDILsqOmWaj7nXYqxVd7Dd5eJLXDa8OsnWwdxoALoRNHBz+KPKJi0Rv7dIL1MIRs01ZZ5AeP6OZnkykQWdsRhW3LqLKFwskdGa6qe7fblW79i385XVM7JbyWSkJYURq2LVhZhT2SrQuyypIbrr2efJ5XamG9JEjK6y2P7JpP57ijWo1ZzCOlt6P3HlPb673qrmW9hFzcG1/g0fl6VhQpnOV2dUfmX2GSIKVmQ/6g2zMcNiIctcJRVg+laKY6SOUq14mcfXLaypAOTP8lIKdXWlVwSobFuh5rmT3XWxuygrqhx71MYP4WHqlwPBPji6ZZ+vEf53ag3ybiC50+DHvheh5Jp/bISpWvsLJY7SG8vzGHXMF63iXl+O2GIOlfMJq1eTTmesn1BEnwtslcd1R1jmR4fmGu3SfW3Q0PojUm3/2/eduGQ7dyOO0Z78mXiiwx/Xk+n5peaHS+btuXEyOc+RbM/lPufus5Q3mRnh5c77ihopBh26z2LMdlQvXLC8xX9oANOcBOxziRv3I9AW47UzIfBfx8l65HSndKTqZ5i6JVTO90i+6QC227rIC3DQMJj7TavlbbWNvuZXQm4HQD1cpuwNuixHUp0gIp97qBiTnr9DR3+ks7A0jB/R+GSXNBirRCu9zobrQ7cx8ke1RpKG1obvGJp5hqg/Rwu2IkZmDzrj4py9J/32U4ZUrfn6kFkohTSv/q6rdK97vZldomE3umAOkUK9xDK6tPibPurUBad0qAJMtS2EaeeBuoAdJjZO8ZIAl2qOu18woGoAjSozv9UuI2MWXbLTrF0uFHHaRHqXvqs0yn+rzCpFlEXlgXpIdk4fy6hOzEmKCkQXoMLvBBDoAB0pJ1JvYlxXRAqwZIQ+mHzcjx3qgBV8eBtFPMpmxYAbxtyRUg+drTTkbjxNgeTQRIloZy4NwgphgLIO1sB2Sr/NAq17aHgnTOam91rqq0+VkgFbrdlS6o1RFHgKS2Q4JMxn7j2uYgpWyM0F+iLVrUQfn99wRJre5CCVWs+gBIxfhhEx1EHQGS7X48ts9JmWyJ8xTlQbJCCHj0uVIuulQYpMVmDbt/VnnWXvFjNXGqClJ6nZrTDnKrtY8aTiVB6qkGyFqNDlpZlyyeXo5rrvlui3fCTDpdTi2sgNMOIL2rIg05soB5tHzu0c/dQjvIqUVXTC3144roe/Qc8JRAy6qbskod7pn+Bp6ToeJ+pNWGgx+gAiQEVDZQARKCqFWusvINgIRq4xQw6erRB12IFPTd1ituIMYjoc09FQuyCK1yde4dsgiZQMXub4Tq6aIJEAIkhCRE+hu5z2FO2LoFSCg6DQBI2IGZdAqzeD/rkJ3EzJEOHbNjKDpHgET8gwCpeDTS2Kq8R0R0zgkxQDrXL+ESAQnAcBSAhBAg4Q0Qfg+QEIMFIGHlOApVsbOBcAtWAUnJG6TvFZi7ktCkWAJejtAOB4X/wSPVt8jf/7H0hUV4JERMSx4PkDSMKbHGDU6G0A4C3V/ADzMAxiMpTquIr/BIqPAoDsB4pHrGFGy1RF+ABLS4VkBCxFeAhAAYARLGRPQFSKgCRSD6XaS/DezJxJst/ghmjUcqP+TnGvFi7S4mSIDEBAlHBEiI2RcgIVuHRnwFSIzKxLQIkHafIP39V/QyIOHN5MYIJki/xTrSkjHlriDhagCJgBAR2qFSodG7xzEWABKO5ZRRAJAQJAMS2j2uQ4AERXhCQCKsYiAAJHS4FbJPApBOpAgHEiYWZLFmZKA/z+eTVkCI0A4hQEIIkBBCgIQQICEESAgBEkIIkBACJIQACSFAQggBEkKAhBAgIQRICCFAQgiQEAIkhAAJIQRICAESQoCEECAhhAAJIUBCCJAQAiSaACFAQgiQEAIkhBAgIQRICAESQoCEEAIkhAAJIUBCCJAQQoCEECAhBEgIARJCCJAQAiSEAAkhQEIIARJCgIQQICF0rv4nwACwy2b0m/1FRwAAAABJRU5ErkJggg=='); background-repeat: no-repeat; background-position: top center;\">\n<p style=\"text-align: center;\">Стоки: $ITEMS_PRICES_LIST$</p>\n<p style=\"text-align: center;\">Общо точки:&nbsp;&nbsp;$TOTAL_SHOPPING_POINTS$</p>\n<p style=\"text-align: center;\">Закупени стоки:&nbsp;$ITEMS_COUNT$</p>\n<p style=\"text-align: center;\">още</p>\n<p style=\"text-align: center;\">и още</p>\n<p style=\"text-align: center;\">и още</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\"><span style=\"color: #666666; font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12.8px; text-align: right; background-color: #fcfdfd;\">$ITEMS_LIST$, $ITEMS_PRICES_LIST$, $TOTAL_SHOPPING_POINTS$, $PRICES_LIST$, $ITEMS_COUNT$</span></p>\n</div>",
+            "ru_RU": null,
+            "ka_GE": null,
+            "sr_RS": null,
+            "lv_LV": null,
+            "en_GB": "<p>Receipt template when player buys bar item. Possible variables:</p>\n<p>$ITEMS_COUNT$,</p>\n<p>$ITEM_NAME$,</p>\n<p>$DOCUMENT_NUMBER$,</p>\n<p>$PRICE_POINTS$,</p>\n<p>$POINTS_NAME$,</p>\n<p>$CATEGORY_NAME$,</p>\n<p>$PLAYER_LEVEL$</p>\n<p>$PLAYER_FIRST_NAME$</p>\n<p>$PLAYER_LAST_NAME$</p>\n<p>$PLAYER_NICK_NAME$</p>\n<p>$PLAYER_REG_NUMBER$</p>\n<p>$CREATED_DATE$</p>\n<p>$CREATED_TIME$&nbsp;</p>\n<p><img src=\"data:image/png;base64,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\" alt=\"\" /></p>"
+          }
+        },
+        "transfers": {
+          "promo_points_to_cashable_credit": {
+            "max_credit": 100000,
+            "test zlatin2": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "is_anonymously_allowed": 0,
+            "test zlatin1": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "attendant_confirm_required": 0,
+            "SILVER": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "attendant_confirm_required": 0,
+              "step_credit": 100,
+              "is_enabled": 0
+            },
+            "min_credit": 100,
+            "PLATINUM": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "step_credit": 100,
+            "test zlatin3": {
+              "attendant_confirm_required": 0,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "test zlatin": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "attendant_confirm_required": 0,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "is_enabled": 1,
+            "VIP": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0
+            },
+            "GOLD": {
+              "attendant_confirm_required": 0,
+              "is_enabled": 1,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "a": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "attendant_confirm_required": 0,
+              "is_enabled": 0,
+              "step_credit": 100
+            }
+          },
+          "bonus_points_to_noncashable_credit": {
+            "PLATINUM": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "min_credit": 100,
+            "a": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "GOLD": {
+              "step_credit": 100,
+              "is_enabled": 1,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "step_credit": 100,
+            "test zlatin3": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "test zlatin": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "VIP": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "is_enabled": 1,
+            "test zlatin2": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "max_credit": 100000,
+            "test zlatin1": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "step_credit": 100,
+              "is_enabled": 0
+            },
+            "SILVER": {
+              "step_credit": 100,
+              "is_enabled": 1,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "attendant_confirm_required": 1,
+            "is_anonymously_allowed": 0
+          },
+          "printing_receipt_enabled": 1
+        },
+        "promotions": {
+          "is_enabled": 1,
+          "promo_descr_translation": {
+            "ru_RU": null,
+            "bg_BG": null,
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "en_GB": "DESCRIPTION 123"
+          },
+          "printing_receipt_enabled": 1,
+          "is_anonymously_allowed": 0,
+          "buy_success_msg_translation": {
+            "bg_BG": null,
+            "ru_RU": null,
+            "ka_GE": null,
+            "sr_RS": null,
+            "lv_LV": null,
+            "en_GB": null
+          },
+          "voucher_tmpl_html_translation": {
+            "bg_BG": null,
+            "ru_RU": null,
+            "ka_GE": null,
+            "lv_LV": null,
+            "sr_RS": null,
+            "en_GB": null
+          },
+          "voucher_body_translation": {
+            "en_GB": "VOUCHER BODY TEXT HERE!!!",
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "ru_RU": null,
+            "bg_BG": null
+          },
+          "max_promotions_per_day": 4,
+          "receipt_tmpl_html_translation": {
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "en_GB": null,
+            "ru_RU": null,
+            "bg_BG": null
+          },
+          "max_promotions_to_show": 20
+        },
+        "voucher_bonus_points_to_noncashable_credit": {
+          "commands": {
+            "redeem": {
+              "is_anonymously_allowed": 1,
+              "print": {
+                "printer_name": "Printer1",
+                "is_enabled": 1
+              },
+              "is_enabled": 1,
+              "attendant_confirm_required": 1
+            },
+            "buy": {
+              "is_anonymously_allowed": 1,
+              "print": {
+                "is_enabled": 1,
+                "printer_name": "Printer1"
+              },
+              "is_enabled": 1,
+              "attendant_confirm_required": 1
+            }
+          }
+        },
+        "main": {
+          "auth_by_login": 0,
+          "is_printing_enabled": 1,
+          "card_pin_timeout": 10,
+          "update_config_timeout": 1000,
+          "card_read_type": "keyboard",
+          "history_points_enabled": 0,
+          "error_msg_timeout": 3,
+          "logout_timeout": 10,
+          "attendant_confirm_timeout": 600,
+          "card_read_timeout": 2,
+          "logout_after_each_operation": 0,
+          "disable_logout": 0,
+          "back_to_landingpage_timeout_s": 10000,
+          "receipt_printer_name": "DEFAULT",
+          "auth_by_simple_cardreader": 1,
+          "auth_by_advanced_cardreader": 0,
+          "use_external_login": 0,
+          "has_attendant": 0,
+          "require_outside_login": 1,
+          "remote_ips": "127.0.0.1"
+        }
+      },
+      "_JSONFORMS_CONTENT_VERSION": "0.01"
+    },
+    "id_hash": "1",
+    "settings": {
+      "kiosk": {
+        "draw_tickets": {
+          "is_enabled": 1,
+          "is_anonymously_allowed": 1,
+          "max_tickets_to_buy": 100,
+          "attendant_confirm_required": 1,
+          "printing_receipt_enabled": 1
+        },
+        "ui": {
+          "show_price_draw_campaigns": 1,
+          "show_bonus_points": 1,
+          "show_icasino_buttons": 0,
+          "show_draw_points": 1,
+          "show_noncashable_credit": 1,
+          "show_cashable_credit": 1,
+          "show_account_level": 1,
+          "show_extended_play": 1,
+          "show_block_cashable_credit": 1,
+          "show_shopping_points": 1,
+          "show_tier_points": 1,
+          "show_factor_vouchers": 1,
+          "show_factor_bonus_points_to_noncashable_credit": 1,
+          "show_factor_promo_points_to_cashable_credit": 1
+        },
+        "shopify": {
+          "is_enabled": 1,
+          "receipt_tmpl_html_translation": {
+            "bg_BG": "<div id=\"bg-img\" style=\"background-image: url('data:image/png;base64,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'); background-repeat: no-repeat; background-position: top center;\">\n<p style=\"text-align: center;\">Стоки: $ITEMS_PRICES_LIST$</p>\n<p style=\"text-align: center;\">Общо точки:&nbsp;&nbsp;$TOTAL_SHOPPING_POINTS$</p>\n<p style=\"text-align: center;\">Закупени стоки:&nbsp;$ITEMS_COUNT$</p>\n<p style=\"text-align: center;\">още</p>\n<p style=\"text-align: center;\">и още</p>\n<p style=\"text-align: center;\">и още</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\"><span style=\"color: #666666; font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12.8px; text-align: right; background-color: #fcfdfd;\">$ITEMS_LIST$, $ITEMS_PRICES_LIST$, $TOTAL_SHOPPING_POINTS$, $PRICES_LIST$, $ITEMS_COUNT$</span></p>\n</div>",
+            "ru_RU": null,
+            "ka_GE": null,
+            "sr_RS": null,
+            "lv_LV": null,
+            "en_GB": "<p>Receipt template when player buys bar item. Possible variables:</p>\n<p>$ITEMS_COUNT$,</p>\n<p>$ITEM_NAME$,</p>\n<p>$DOCUMENT_NUMBER$,</p>\n<p>$PRICE_POINTS$,</p>\n<p>$POINTS_NAME$,</p>\n<p>$CATEGORY_NAME$,</p>\n<p>$PLAYER_LEVEL$</p>\n<p>$PLAYER_FIRST_NAME$</p>\n<p>$PLAYER_LAST_NAME$</p>\n<p>$PLAYER_NICK_NAME$</p>\n<p>$PLAYER_REG_NUMBER$</p>\n<p>$CREATED_DATE$</p>\n<p>$CREATED_TIME$&nbsp;</p>\n<p><img src=\"data:image/png;base64,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\" alt=\"\" /></p>"
+          }
+        },
+        "transfers": {
+          "promo_points_to_cashable_credit": {
+            "max_credit": 100000,
+            "test zlatin2": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "is_anonymously_allowed": 0,
+            "test zlatin1": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "attendant_confirm_required": 0,
+            "SILVER": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "attendant_confirm_required": 0,
+              "step_credit": 100,
+              "is_enabled": 0
+            },
+            "min_credit": 100,
+            "PLATINUM": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "step_credit": 100,
+            "test zlatin3": {
+              "attendant_confirm_required": 0,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "test zlatin": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "attendant_confirm_required": 0,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "is_enabled": 1,
+            "VIP": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "is_enabled": 0,
+              "step_credit": 100,
+              "attendant_confirm_required": 0
+            },
+            "GOLD": {
+              "attendant_confirm_required": 0,
+              "is_enabled": 1,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "a": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "attendant_confirm_required": 0,
+              "is_enabled": 0,
+              "step_credit": 100
+            }
+          },
+          "bonus_points_to_noncashable_credit": {
+            "PLATINUM": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "min_credit": 100,
+            "a": {
+              "step_credit": 100,
+              "is_enabled": 0,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "GOLD": {
+              "step_credit": 100,
+              "is_enabled": 1,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "step_credit": 100,
+            "test zlatin3": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "min_credit": 100,
+              "max_credit": 100000
+            },
+            "test zlatin": {
+              "is_enabled": 0,
+              "step_credit": 100,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "VIP": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "is_enabled": 1,
+            "test zlatin2": {
+              "max_credit": 100000,
+              "min_credit": 100,
+              "is_enabled": 0,
+              "step_credit": 100
+            },
+            "max_credit": 100000,
+            "test zlatin1": {
+              "min_credit": 100,
+              "max_credit": 100000,
+              "step_credit": 100,
+              "is_enabled": 0
+            },
+            "SILVER": {
+              "step_credit": 100,
+              "is_enabled": 1,
+              "max_credit": 100000,
+              "min_credit": 100
+            },
+            "attendant_confirm_required": 1,
+            "is_anonymously_allowed": 0
+          },
+          "printing_receipt_enabled": 1
+        },
+        "promotions": {
+          "is_enabled": 1,
+          "promo_descr_translation": {
+            "ru_RU": null,
+            "bg_BG": null,
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "en_GB": "DESCRIPTION 123"
+          },
+          "printing_receipt_enabled": 1,
+          "is_anonymously_allowed": 0,
+          "buy_success_msg_translation": {
+            "bg_BG": null,
+            "ru_RU": null,
+            "ka_GE": null,
+            "sr_RS": null,
+            "lv_LV": null,
+            "en_GB": null
+          },
+          "voucher_tmpl_html_translation": {
+            "bg_BG": null,
+            "ru_RU": null,
+            "ka_GE": null,
+            "lv_LV": null,
+            "sr_RS": null,
+            "en_GB": null
+          },
+          "voucher_body_translation": {
+            "en_GB": "VOUCHER BODY TEXT HERE!!!",
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "ru_RU": null,
+            "bg_BG": null
+          },
+          "max_promotions_per_day": 4,
+          "receipt_tmpl_html_translation": {
+            "lv_LV": null,
+            "sr_RS": null,
+            "ka_GE": null,
+            "en_GB": null,
+            "ru_RU": null,
+            "bg_BG": null
+          },
+          "max_promotions_to_show": 20
+        },
+        "voucher_bonus_points_to_noncashable_credit": {
+          "commands": {
+            "redeem": {
+              "is_anonymously_allowed": 1,
+              "print": {
+                "printer_name": "Printer1",
+                "is_enabled": 1
+              },
+              "is_enabled": 1,
+              "attendant_confirm_required": 1
+            },
+            "buy": {
+              "is_anonymously_allowed": 1,
+              "print": {
+                "is_enabled": 1,
+                "printer_name": "Printer1"
+              },
+              "is_enabled": 1,
+              "attendant_confirm_required": 1
+            }
+          }
+        },
+        "main": {
+          "auth_by_login": 0,
+          "is_printing_enabled": 1,
+          "card_pin_timeout": 10,
+          "update_config_timeout": 1000,
+          "card_read_type": "keyboard",
+          "history_points_enabled": 0,
+          "error_msg_timeout": 3,
+          "logout_timeout": 10,
+          "attendant_confirm_timeout": 600,
+          "card_read_timeout": 2,
+          "logout_after_each_operation": 0,
+          "disable_logout": 0,
+          "back_to_landingpage_timeout_s": 10000,
+          "receipt_printer_name": "DEFAULT",
+          "auth_by_simple_cardreader": 1,
+          "auth_by_advanced_cardreader": 0,
+          "use_external_login": 0,
+          "has_attendant": 0,
+          "require_outside_login": 1,
+          "remote_ips": "127.0.0.1"
+        }
+      },
+      "_JSONFORMS_CONTENT_VERSION": "0.01"
+    },
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/kiosks?v=1.0"
+  },
+  "translations": null
+}

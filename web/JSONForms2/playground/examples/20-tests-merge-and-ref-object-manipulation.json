@@ -1,0 +1,686 @@
+{
+  "form": {
+    "strictNumberTypes": false,
+    "jsonformVersion": "2.0",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks?v=1.0",
+    "fields": [
+      "name",
+      "smib_card_reader_ip_addr",
+      {
+        "type": "fieldset",
+        "legend": "Cashdesk",
+        "items": [
+          "settings_json/cashdesk/logout_timeout",
+          "settings_json/cashdesk/language",
+          "settings_json/cashdesk/money_currency",
+          "settings_json/cashdesk/max_transfer_limit",
+          "settings_json/cashdesk/cashdesk_reader_type",
+          "settings_json/cashdesk/vlt_machines",
+          "settings_json/cashdesk/cards",
+          "settings_json/cashdesk/smib_machines",
+          "settings_json/cashdesk/cashdesk_reader",
+          "settings_json/cashdesk/refresh_box_timeout",
+          "settings_json/cashdesk/refresh_machine_info_timeout",
+          "settings_json/cashdesk/refresh_manager_monitoring_timeout",
+          "settings_json/cashdesk/handpay_treshold_cents",
+          "settings_json/cashdesk/pop_up_print_header"
+        ]
+      },
+      "denom_id"
+    ]
+  },
+  "translations": null,
+  "sp": "U2FsdGVkX1-inFDup11flWmgyX-aD-kcnvrkYaSTnPbctvxRkEkGHSSBfXK_wbuV_rFDJiQo9lUR3m6tLJqAbmP9F02Pa-VzqAwFEptgcCM5bSFJRjQMnOQFQfr5ZgDvmEPyJ1EsQt6x3ChpON2bVPp_jJaVwTzAZLqStVYd-LTa3jFnYe1aUIF5vLLp25wuSUYg54aUe5K7py1AVMSVRRX_sVgkurCHVJImq6JrZT0n2aLmm9g_E8WuXmm3typXVYWI2rZrzI3lgzanDusfHw",
+  "content": {
+    "settings_json": {
+      "_JSONFORMS_CONTENT_VERSION": "0.1",
+      "cashdesk": {
+        "refresh_manager_monitoring_timeout": 10,
+        "refresh_box_timeout": 600,
+        "smib_machines": 1,
+        "sas_timeout_interval": 60,
+        "cashdesk_reader": 1,
+        "cards": 1,
+        "refresh_machine_info_timeout": 10,
+        "net_timeout_interval": 60,
+        "pop_up_print_header": "ROYALE PALMS-Sofia",
+        "cashdesk_reader_type": "keyboard",
+        "acc_denom": "0.01",
+        "reset_card_pin_value": "1111",
+        "logout_timeout": 4,
+        "_JSONFORMS_CONTENT_VERSION": "0.1",
+        "language": "en",
+        "handpay_treshold_cents": 10000,
+        "money_currency": "BGN",
+        "max_transfer_limit": 1000000,
+        "vlt_machines": 0
+      }
+    },
+    "full_descr": "Cashdesk1",
+    "id": 1,
+    "denom_id": 1,
+    "settings": {
+      "_JSONFORMS_CONTENT_VERSION": "0.1",
+      "cashdesk": {
+        "refresh_manager_monitoring_timeout": 10,
+        "refresh_box_timeout": 600,
+        "smib_machines": 1,
+        "sas_timeout_interval": 60,
+        "cashdesk_reader": 1,
+        "cards": 1,
+        "refresh_machine_info_timeout": 10,
+        "net_timeout_interval": 60,
+        "pop_up_print_header": "ROYALE PALMS-Sofia",
+        "cashdesk_reader_type": "keyboard",
+        "acc_denom": "0.01",
+        "reset_card_pin_value": "1111",
+        "logout_timeout": 4,
+        "_JSONFORMS_CONTENT_VERSION": "0.1",
+        "language": "en",
+        "handpay_treshold_cents": 10000,
+        "money_currency": "BGN",
+        "max_transfer_limit": 1000000,
+        "vlt_machines": 0
+      }
+    },
+    "smib_card_reader_ip_addr": "10.10.10.10",
+    "name": "Cashdesk1",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks?v=1.0"
+  },
+  "schema": {
+    "title": "Cashdesks",
+    "properties": {
+      "denom_id": {
+        "type": "integer",
+        "refCol": "id",
+        "filterSchema": {
+          "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/denominations?v=1.0"
+        },
+        "refTable": "denominations",
+        "refIsStatic": false,
+        "ordering": 50,
+        "title": "Denomination",
+        "refType": "fkey"
+      },
+      "settings_json": {
+        "$merge": {
+          "with": {
+            "ordering": 40,
+            "title": "Settings"
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks/settings_json?v=1.0"
+          }
+        }
+      },
+      "smib_card_reader_ip_addr": {
+        "title": "Smib card reader IP",
+        "ordering": 30,
+        "type": [
+          "null",
+          "string"
+        ],
+        "format": "inet"
+      },
+      "name": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+          },
+          "with": {
+            "ordering": 20,
+            "title": "Name"
+          }
+        }
+      }
+    },
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04": {
+        "definitions": {
+          "schemaArray": {
+            "items": {
+              "$ref": "#"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "positiveInteger": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "simpleTypes": {
+            "enum": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ]
+          },
+          "stringArray": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "type": "array"
+          },
+          "positiveIntegerDefault0": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/positiveInteger"
+              },
+              {
+                "default": 0
+              }
+            ]
+          }
+        },
+        "dependencies": {
+          "refType": [
+            "refTable",
+            "refCol"
+          ],
+          "refTable": [
+            "refCol"
+          ],
+          "refNameCol": [
+            "refTable",
+            "refCol"
+          ],
+          "exclusiveMaximum": [
+            "maximum"
+          ],
+          "refCol": [
+            "refTable"
+          ],
+          "exclusiveMinimum": [
+            "minimum"
+          ]
+        },
+        "description": "Core schema meta-schema",
+        "properties": {
+          "uniqueItems": {
+            "type": "boolean",
+            "default": false
+          },
+          "type": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/simpleTypes"
+              },
+              {
+                "items": {
+                  "$ref": "#/definitions/simpleTypes"
+                },
+                "minItems": 1,
+                "uniqueItems": true,
+                "type": "array"
+              }
+            ]
+          },
+          "refCol": {
+            "type": "string"
+          },
+          "maxLength": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "refNameCol": {
+            "type": "string"
+          },
+          "maxItems": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "exclusiveMinimum": {
+            "type": "boolean",
+            "default": false
+          },
+          "definitions": {
+            "default": {},
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#"
+            }
+          },
+          "not": {
+            "$ref": "#"
+          },
+          "oneOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "maximum": {
+            "type": "number"
+          },
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "fileMimeTypes": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "default": {},
+          "isMultilanguage": {
+            "type": "boolean",
+            "default": false
+          },
+          "minProperties": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "pattern": {
+            "format": "regex",
+            "type": "string"
+          },
+          "maxProperties": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "exclusiveMaximum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "patternProperties": {
+            "default": {},
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#"
+            }
+          },
+          "allOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "title": {
+            "type": "string"
+          },
+          "refType": {
+            "enum": [
+              "fkey",
+              "relation",
+              "reference"
+            ],
+            "type": "string"
+          },
+          "enum": {
+            "uniqueItems": true,
+            "type": "array",
+            "minItems": 1
+          },
+          "fileMaxSize": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "minLength": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "refTable": {
+            "type": "string"
+          },
+          "isUIHidden": {
+            "default": false,
+            "type": "boolean"
+          },
+          "minItems": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "additionalItems": {
+            "default": {},
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ]
+          },
+          "anyOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "$schema": {
+            "format": "uri",
+            "type": "string"
+          },
+          "required": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "items": {
+            "default": {},
+            "anyOf": [
+              {
+                "$ref": "#"
+              },
+              {
+                "$ref": "#/definitions/schemaArray"
+              }
+            ]
+          },
+          "minimum": {
+            "type": "number"
+          },
+          "translated": {
+            "default": false,
+            "type": "boolean"
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ],
+            "default": {}
+          },
+          "dependencies": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$ref": "#"
+                },
+                {
+                  "$ref": "#/definitions/stringArray"
+                }
+              ]
+            },
+            "type": "object"
+          },
+          "multipleOf": {
+            "minimum": 0,
+            "type": "number",
+            "exclusiveMinimum": true
+          },
+          "properties": {
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "type": "object"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "type": "object",
+        "default": {}
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t": {
+        "type": "string",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+      },
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/denominations?v=1.0": {
+        "title": "Denomination",
+        "properties": {
+          "cents": {
+            "ordering": 30,
+            "title": "Cents",
+            "type": "string",
+            "format": "numeric"
+          },
+          "currency_value": {
+            "type": "string",
+            "format": "numeric",
+            "title": "Currency value",
+            "ordering": 40
+          },
+          "denom_code": {
+            "ordering": 20,
+            "title": "Denomination code",
+            "type": "integer"
+          }
+        },
+        "type": "object",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "required": [
+          "id",
+          "denom_code",
+          "cents",
+          "currency_value"
+        ],
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/denominations?v=1.0"
+      },
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks/settings_json?v=1.0": {
+        "title": "",
+        "properties": {
+          "cashdesk": {
+            "type": "object",
+            "required": [
+              "vlt_machines",
+              "cards",
+              "smib_machines",
+              "cashdesk_reader",
+              "refresh_box_timeout",
+              "refresh_machine_info_timeout",
+              "refresh_manager_monitoring_timeout",
+              "handpay_treshold_cents",
+              "pop_up_print_header"
+            ],
+            "properties": {
+              "cashdesk_reader": {
+                "enum": [
+                  0,
+                  1
+                ],
+                "enumNames": [
+                  "NO",
+                  "YES"
+                ],
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "default": 0,
+                "ordering": 90,
+                "title": "Cashdesk reader"
+              },
+              "smib_machines": {
+                "ordering": 80,
+                "title": "Smib machines",
+                "default": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "enum": [
+                  0,
+                  1
+                ],
+                "enumNames": [
+                  "NO",
+                  "YES"
+                ]
+              },
+              "refresh_box_timeout": {
+                "title": "Machine status refresh timeout, sec",
+                "ordering": 100,
+                "default": 10,
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "refresh_manager_monitoring_timeout": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "default": 10,
+                "ordering": 120,
+                "title": "Manager monitoring refresh timeout, sec"
+              },
+              "refresh_machine_info_timeout": {
+                "default": 7,
+                "title": "Floor MAP refresh timeout, sec",
+                "ordering": 110,
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "cards": {
+                "ordering": 70,
+                "title": "Cards",
+                "default": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "enum": [
+                  0,
+                  1
+                ],
+                "enumNames": [
+                  "NO",
+                  "YES"
+                ]
+              },
+              "logout_timeout": {
+                "ordering": 10,
+                "title": "Logout timeout, h",
+                "type": "integer"
+              },
+              "pop_up_print_header": {
+                "default": "Casino",
+                "ordering": 20000,
+                "title": "Print note header",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "handpay_treshold_cents": {
+                "minimum": 0,
+                "default": 0,
+                "ordering": 10000,
+                "title": "Handpay treshold, cents",
+                "description": "All Handpays with paid amount above the limit will require higher permissions",
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "language": {
+                "type": "string",
+                "enum": [
+                  "en"
+                ],
+                "title": "Language",
+                "ordering": 20
+              },
+              "vlt_machines": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "enumNames": [
+                  "NO",
+                  "YES"
+                ],
+                "enum": [
+                  0,
+                  1
+                ],
+                "title": "Vlt machines",
+                "ordering": 60,
+                "default": 0
+              },
+              "money_currency": {
+                "type": "string",
+                "enum": [
+                  "BGN",
+                  "EUR",
+                  "USD"
+                ],
+                "title": "Money currency",
+                "ordering": 30
+              },
+              "max_transfer_limit": {
+                "type": "integer",
+                "title": "Max transfer limit, cents",
+                "ordering": 40
+              },
+              "cashdesk_reader_type": {
+                "title": "Cashdesk card reader type",
+                "ordering": 50,
+                "enum": [
+                  "dispencer",
+                  "card_reader",
+                  "keyboard"
+                ],
+                "type": "string"
+              }
+            },
+            "title": "Cashdesk"
+          }
+        },
+        "type": "object",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks/settings_json?v=1.0"
+      }
+    },
+    "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/cashdesks?v=1.0",
+    "required": [
+      "id",
+      "name",
+      "denom_id"
+    ],
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "type": "object"
+  },
+  "locales": [
+    {
+      "iso639_2": "ang",
+      "lang_name": "English GB",
+      "plural_form": 1,
+      "nplurals": 2,
+      "locale": "en_GB",
+      "notes": "(n != 1)"
+    },
+    {
+      "nplurals": 2,
+      "plural_form": 1,
+      "lang_name": "Bulgarian BG",
+      "iso639_2": "bul",
+      "notes": "(n != 1)",
+      "locale": "bg_BG"
+    },
+    {
+      "iso639_2": "kru",
+      "lang_name": "Russian RU",
+      "plural_form": 7,
+      "nplurals": 3,
+      "locale": "ru_RU",
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+    },
+    {
+      "plural_form": 7,
+      "nplurals": 3,
+      "lang_name": "Serbian RS",
+      "iso639_2": "srd",
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "locale": "sr_RS"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)",
+      "locale": "lv_LV",
+      "lang_name": "Latvian LV",
+      "iso639_2": "alv",
+      "nplurals": 3,
+      "plural_form": 3
+    },
+    {
+      "lang_name": "Georgian GE",
+      "iso639_2": "aka",
+      "plural_form": 2,
+      "nplurals": 2,
+      "locale": "ka_GE",
+      "notes": "(n > 1)"
+    }
+  ],
+  "formName": "JF::tbcasino::cashdesks",
+  "status": {
+    "status": "ok"
+  }
+}

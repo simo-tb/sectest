@@ -1,0 +1,165 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/p2p/db/originators/settings-json",
+    "type": "object",
+    "properties": {
+      "guaranteed": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+              ],
+            },
+            "margin": {
+              "type": "number"
+            },
+            "scoring": {
+              "type": "number"
+            },
+            "late_fees_perc": {
+              "type": "number"
+            },
+            "orig_interest_perc": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "unguaranteed": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+              ],
+            },
+            "margin": {
+              "type": "number"
+            },
+            "scoring": {
+              "type": "number"
+            },
+            "late_fees_perc": {
+              "type": "number"
+            },
+            "orig_interest_perc": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "fields": [
+      {
+        "type": "fieldset",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "guaranteed[]/scoring",
+                      "title": "Scoring"
+                    },
+                    {
+                      "key": "guaranteed[]/class",
+                      "type": "select",
+                      "title": "Class"
+                    },
+                    {
+                      "key": "guaranteed[]/margin",
+                      "title": "Margin",
+                      "append": "%"
+                    },
+                    {
+                      "key": "guaranteed[]/late_fees_perc",
+                      "title": "Late Fees",
+                      "append": "%"
+                    },
+                    {
+                      "key": "guaranteed[]/orig_interest_perc",
+                      "title": "Originator Interest",
+                      "append": "%"
+                    }
+                  ]
+                },
+                "title": "Guaranteed loans settings",
+                "tabeOptions": {
+                  "isExpandable": true
+                }
+              }
+            ],
+            "title": "Guaranteed"
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "unguaranteed[]/scoring",
+                      "title": "Scoring"
+                    },
+                    {
+                      "key": "unguaranteed[]/class",
+                      "type": "select",
+                      "title": "Class"
+                    },
+                    {
+                      "key": "unguaranteed[]/margin",
+                      "title": "Margin",
+                      "append": "%"
+                    },
+                    {
+                      "key": "unguaranteed[]/late_fees_perc",
+                      "title": "Late Fees",
+                      "append": "%"
+                    },
+                    {
+                      "key": "unguaranteed[]/orig_interest_perc",
+                      "title": "Originator Interest",
+                      "append": "%"
+                    }
+                  ]
+                },
+                "title": "Unguaranteed loans settings",
+                "tabeOptions": {
+                  "isExpandable": true
+                }
+              }
+            ],
+            "title": "Unguaranteed"
+          }
+        ]
+      }
+    ],
+    "$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/originators/settings-json",
+    "jsonformVersion": "2.0"
+  }
+}

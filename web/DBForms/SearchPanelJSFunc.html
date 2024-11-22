@@ -1,0 +1,26 @@
+<!--&add_js_function($function_name, $table_name, $search_template, $result_id, $result_desc, $limit='', $offset='', $form_name, $field_name, $blank_option_value='', $blank_option_text='', $search_script, $buffer_frame='buffer', $contents_frame, $distinct='', $search_text_js_exp, $search_column_js_expr='""')-->
+<SCRIPT language="JavaScript">
+
+  function $function_name()
+   {
+
+    this.searchTemplate = '$search_template';
+    this.notRequired = $not_required_field;
+    this.firstBlankOptionValue = '$blank_option_value';
+    this.firstBlankOptionText = '$blank_option_text';
+    this.serverURL = '$search_script';
+    this.distinct = '$distinct';
+    this.limit = '$limit';
+    this.offset = '$offset';
+    <!--&search_column_plain($search_column='')--> 
+    this.searchColumn = '$search_column';
+    <!--/&search_column_plain --> 
+    <!--&search_column_select($select_column_name) -->
+    this.searchColumnExpr =  'formObj.$select_column_name.options[formObj.$select_column_name.selectedIndex].value,
+    <!--/&search_column_select --> 
+    this.searchStringExpr = 'formObj.search_$field_name.value';
+
+    }
+   new TableSearch('$field_name','$form_name', '$table_name', '$result_id', '$result_desc', $function_name);
+</SCRIPT>
+<!--/&add_js_function-->

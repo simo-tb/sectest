@@ -1,0 +1,3370 @@
+{
+  "schema": {
+    "title": "Slot",
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04": {
+        "description": "Core schema meta-schema",
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "default": {},
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "definitions": {
+          "simpleTypes": {
+            "enum": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ]
+          },
+          "stringArray": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "type": "array"
+          },
+          "positiveIntegerDefault0": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/positiveInteger"
+              },
+              {
+                "default": 0
+              }
+            ]
+          },
+          "schemaArray": {
+            "items": {
+              "$ref": "#"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "type": "object",
+        "dependencies": {
+          "refType": [
+            "refTable",
+            "refCol"
+          ],
+          "refCol": [
+            "refTable"
+          ],
+          "exclusiveMinimum": [
+            "minimum"
+          ],
+          "refTable": [
+            "refCol"
+          ],
+          "refNameCol": [
+            "refTable",
+            "refCol"
+          ],
+          "exclusiveMaximum": [
+            "maximum"
+          ]
+        },
+        "properties": {
+          "isMultilanguage": {
+            "default": false,
+            "type": "boolean"
+          },
+          "type": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/simpleTypes"
+              },
+              {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/definitions/simpleTypes"
+                }
+              }
+            ]
+          },
+          "dependencies": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$ref": "#"
+                },
+                {
+                  "$ref": "#/definitions/stringArray"
+                }
+              ]
+            },
+            "type": "object"
+          },
+          "maxItems": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "fileMaxSize": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "minItems": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "default": {},
+          "translated": {
+            "type": "boolean",
+            "default": false
+          },
+          "isUIHidden": {
+            "type": "boolean",
+            "default": false
+          },
+          "refTable": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "not": {
+            "$ref": "#"
+          },
+          "pattern": {
+            "format": "regex",
+            "type": "string"
+          },
+          "exclusiveMinimum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "allOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "maxLength": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "additionalItems": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ],
+            "default": {}
+          },
+          "additionalProperties": {
+            "default": {},
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ]
+          },
+          "definitions": {
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "type": "object"
+          },
+          "title": {
+            "type": "string"
+          },
+          "minProperties": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "maxProperties": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "enum": {
+            "minItems": 1,
+            "uniqueItems": true,
+            "type": "array"
+          },
+          "refCol": {
+            "type": "string"
+          },
+          "properties": {
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "default": {},
+            "type": "object"
+          },
+          "minimum": {
+            "type": "number"
+          },
+          "$schema": {
+            "format": "uri",
+            "type": "string"
+          },
+          "maximum": {
+            "type": "number"
+          },
+          "oneOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "anyOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "items": {
+            "default": {},
+            "anyOf": [
+              {
+                "$ref": "#"
+              },
+              {
+                "$ref": "#/definitions/schemaArray"
+              }
+            ]
+          },
+          "minLength": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "exclusiveMaximum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "multipleOf": {
+            "exclusiveMinimum": true,
+            "type": "number",
+            "minimum": 0
+          },
+          "refType": {
+            "type": "string",
+            "enum": [
+              "fkey",
+              "relation",
+              "reference"
+            ]
+          },
+          "uniqueItems": {
+            "default": false,
+            "type": "boolean"
+          },
+          "fileMimeTypes": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "patternProperties": {
+            "type": "object",
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            }
+          },
+          "refNameCol": {
+            "type": "string"
+          },
+          "required": {
+            "$ref": "#/definitions/stringArray"
+          }
+        }
+      }
+    },
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+    "id": "http://jsonschemas.telebid-pro.com/rgs/db/icasino_game_configs/settings_json/slot",
+    "_JSONFORMS_VERSION": "2.0",
+    "type": "object",
+    "properties": {
+      "gameSetup": {
+        "type": "object",
+        "properties": {
+          "autoplay_steps": {
+            "title": "Autoplay steps",
+            "items": {
+              "enum": [
+                0,
+                5,
+                10,
+                25,
+                50,
+                100,
+                500,
+                1000
+              ],
+              "type": "integer"
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "doubleSetup": {
+            "properties": {
+              "entryLimiter": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "ordering": 100,
+                "minimum": 0,
+                "title": "Entry Limiter (bet factor)"
+              },
+              "limiter": {
+                "minimum": 0,
+                "ordering": 110,
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "title": "Limiter (bet factor)"
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "ordering": 130,
+                "enumNames": [
+                  "Red/Black",
+                  "NONE"
+                ],
+                "title": "Type",
+                "default": "rb",
+                "enum": [
+                  "rb",
+                  null
+                ]
+              },
+              "enable": {
+                "title": "Enable",
+                "enum": [
+                  1,
+                  0,
+                  null
+                ],
+                "ordering": 120,
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "enumNames": [
+                  "YES",
+                  "NO",
+                  "NONE"
+                ]
+              }
+            },
+            "type": "object",
+            "title": "Double Setup"
+          },
+          "skill_stop_enabled": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "ordering": 120,
+            "enumNames": [
+              "ON",
+              "OFF",
+              "NONE"
+            ],
+            "title": "Skill stop enabled",
+            "enum": [
+              1,
+              0,
+              null
+            ]
+          },
+          "reel_rotate_mintime": {
+            "title": "Reel rotate min time(ms)",
+            "ordering": 110,
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "autoplay": {
+            "ordering": 10,
+            "type": "integer",
+            "enumNames": [
+              "ON",
+              "OFF"
+            ],
+            "title": "Enable autoplay",
+            "enum": [
+              1,
+              0
+            ]
+          },
+          "celebration": {
+            "minimum": 0,
+            "type": [
+              "integer",
+              "null"
+            ],
+            "ordering": 200,
+            "title": "Celebration Threshold"
+          }
+        },
+        "title": "Game Setup"
+      },
+      "betsSetup": {
+        "properties": {
+          "maxBet": {
+            "title": "Max Bet Per Line (player credits)",
+            "minimum": 0,
+            "ordering": 30,
+            "type": "integer"
+          },
+          "maxLines": {
+            "ordering": 40,
+            "type": "integer",
+            "title": "Max Lines",
+            "enum": [
+              20
+            ]
+          },
+          "quickBet": {
+            "type": "array",
+            "title": "Quick bet (player credits)",
+            "items": {
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                150,
+                200,
+                250,
+                300,
+                350,
+                400,
+                450,
+                500
+              ],
+              "type": "integer"
+            }
+          },
+          "line_step_bet_numbers_quick_increment": {
+            "type": "string",
+            "ordering": 10,
+            "title": "Line step bet numbers quick increment",
+            "enum": [
+              "steps_only",
+              "increment_by1"
+            ]
+          },
+          "linesStepNumbers": {
+            "title": "Line step numbers",
+            "items": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            },
+            "ordering": 20,
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "lineStepBetNumbers": {
+            "ordering": 0,
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                150,
+                200,
+                250,
+                300,
+                350,
+                400,
+                450,
+                500
+              ]
+            },
+            "title": "Line step bet numbers (player credits)"
+          },
+          "minBet": {
+            "ordering": 30,
+            "type": "integer",
+            "minimum": 0,
+            "title": "Min Bet Per Line (player credits)"
+          },
+          "quickLines": {
+            "items": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            },
+            "title": "Quick lines",
+            "type": "array"
+          },
+          "minLines": {
+            "title": "Min Lines",
+            "type": "integer",
+            "ordering": 40
+          }
+        },
+        "type": "object",
+        "title": "Bets Setup"
+      },
+      "denom": {
+        "title": "Denominations",
+        "properties": {
+          "enabled_denoms_for_currency": {
+            "title": "Enabled denominations",
+            "properties": {
+              "FUN": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "ordering": 0,
+                "title": "Enabled denominations for currency FUN",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "0.01",
+                    "0.02",
+                    "0.03",
+                    "0.05",
+                    "0.10",
+                    "0.15",
+                    "0.20",
+                    "0.25",
+                    "0.40",
+                    "0.50",
+                    "1",
+                    "2",
+                    "2.50",
+                    "5",
+                    "10",
+                    "20",
+                    "25",
+                    "50",
+                    "100",
+                    "200",
+                    "250",
+                    "500",
+                    "1000",
+                    "2000",
+                    "2500",
+                    "5000"
+                  ]
+                }
+              },
+              "fallback_denoms": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "ordering": 0,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "0.01",
+                    "0.02",
+                    "0.03",
+                    "0.05",
+                    "0.10",
+                    "0.15",
+                    "0.20",
+                    "0.25",
+                    "0.40",
+                    "0.50",
+                    "1",
+                    "2",
+                    "2.50",
+                    "5",
+                    "10",
+                    "20",
+                    "25",
+                    "50",
+                    "100",
+                    "200",
+                    "250",
+                    "500",
+                    "1000",
+                    "2000",
+                    "2500",
+                    "5000"
+                  ]
+                },
+                "title": "Default denominations"
+              },
+              "EUR": {
+                "title": "Enabled denominations for currency EUR",
+                "items": {
+                  "enum": [
+                    "0.01",
+                    "0.02",
+                    "0.03",
+                    "0.05",
+                    "0.10",
+                    "0.15",
+                    "0.20",
+                    "0.25",
+                    "0.40",
+                    "0.50",
+                    "1",
+                    "2",
+                    "2.50",
+                    "5",
+                    "10",
+                    "20",
+                    "25",
+                    "50",
+                    "100",
+                    "200",
+                    "250",
+                    "500",
+                    "1000",
+                    "2000",
+                    "2500",
+                    "5000"
+                  ],
+                  "type": "string"
+                },
+                "ordering": 0,
+                "type": [
+                  "array",
+                  "null"
+                ]
+              }
+            },
+            "description": "Reload to take effect!",
+            "type": "object"
+          },
+          "EUR": {
+            "title": "RTP for currency EUR",
+            "type": "object",
+            "ordering": 100,
+            "properties": {
+              "1": {
+                "type": "array",
+                "title": "denomination: 1",
+                "items": {
+                  "title": "denomination: 1",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              },
+              "2": {
+                "type": "array",
+                "title": "denomination: 2",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 2"
+                }
+              },
+              "5": {
+                "title": "denomination: 5",
+                "items": {
+                  "title": "denomination: 5",
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "10": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 10",
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                },
+                "title": "denomination: 10"
+              },
+              "20": {
+                "type": "array",
+                "title": "denomination: 20",
+                "items": {
+                  "title": "denomination: 20",
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                }
+              },
+              "25": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 25",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  }
+                },
+                "title": "denomination: 25"
+              },
+              "50": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "title": "denomination: 50"
+                },
+                "title": "denomination: 50"
+              },
+              "100": {
+                "title": "denomination: 100",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 100"
+                },
+                "type": "array"
+              },
+              "200": {
+                "title": "denomination: 200",
+                "items": {
+                  "title": "denomination: 200",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "type": "array"
+              },
+              "250": {
+                "title": "denomination: 250",
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "title": "denomination: 250"
+                },
+                "type": "array"
+              },
+              "500": {
+                "type": "array",
+                "title": "denomination: 500",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "title": "denomination: 500"
+                }
+              },
+              "1000": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 1000",
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                },
+                "title": "denomination: 1000"
+              },
+              "2000": {
+                "type": "array",
+                "title": "denomination: 2000",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "title": "denomination: 2000"
+                }
+              },
+              "2500": {
+                "items": {
+                  "title": "denomination: 2500",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    }
+                  }
+                },
+                "title": "denomination: 2500",
+                "type": "array"
+              },
+              "5000": {
+                "type": "array",
+                "title": "denomination: 5000",
+                "items": {
+                  "title": "denomination: 5000",
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                }
+              },
+              "0.03": {
+                "title": "denomination: 0.03",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    }
+                  },
+                  "title": "denomination: 0.03"
+                },
+                "type": "array"
+              },
+              "0.25": {
+                "title": "denomination: 0.25",
+                "items": {
+                  "title": "denomination: 0.25",
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "0.10": {
+                "type": "array",
+                "title": "denomination: 0.10",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 0.10"
+                }
+              },
+              "0.05": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "title": "denomination: 0.05"
+                },
+                "title": "denomination: 0.05"
+              },
+              "0.02": {
+                "title": "denomination: 0.02",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "title": "denomination: 0.02"
+                },
+                "type": "array"
+              },
+              "0.40": {
+                "type": "array",
+                "title": "denomination: 0.40",
+                "items": {
+                  "title": "denomination: 0.40",
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                }
+              },
+              "2.50": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    }
+                  },
+                  "title": "denomination: 2.50"
+                },
+                "title": "denomination: 2.50"
+              },
+              "0.50": {
+                "items": {
+                  "title": "denomination: 0.50",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  }
+                },
+                "title": "denomination: 0.50",
+                "type": "array"
+              },
+              "0.20": {
+                "title": "denomination: 0.20",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    }
+                  },
+                  "title": "denomination: 0.20"
+                },
+                "type": "array"
+              },
+              "0.15": {
+                "type": "array",
+                "title": "denomination: 0.15",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    }
+                  },
+                  "title": "denomination: 0.15"
+                }
+              }
+            }
+          },
+          "FUN": {
+            "properties": {
+              "1": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "title": "denomination: 1"
+                },
+                "title": "denomination: 1"
+              },
+              "2": {
+                "title": "denomination: 2",
+                "items": {
+                  "title": "denomination: 2",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    }
+                  }
+                },
+                "type": "array"
+              },
+              "5": {
+                "items": {
+                  "title": "denomination: 5",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  }
+                },
+                "title": "denomination: 5",
+                "type": "array"
+              },
+              "10": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "title": "denomination: 10"
+                },
+                "title": "denomination: 10"
+              },
+              "20": {
+                "type": "array",
+                "title": "denomination: 20",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 20"
+                }
+              },
+              "25": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 25"
+                },
+                "title": "denomination: 25"
+              },
+              "50": {
+                "title": "denomination: 50",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 50"
+                },
+                "type": "array"
+              },
+              "100": {
+                "title": "denomination: 100",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "title": "denomination: 100"
+                },
+                "type": "array"
+              },
+              "200": {
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 200"
+                },
+                "title": "denomination: 200",
+                "type": "array"
+              },
+              "250": {
+                "items": {
+                  "title": "denomination: 250",
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                },
+                "title": "denomination: 250",
+                "type": "array"
+              },
+              "500": {
+                "items": {
+                  "title": "denomination: 500",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  }
+                },
+                "title": "denomination: 500",
+                "type": "array"
+              },
+              "1000": {
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 1000"
+                },
+                "title": "denomination: 1000",
+                "type": "array"
+              },
+              "2000": {
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 2000"
+                },
+                "title": "denomination: 2000",
+                "type": "array"
+              },
+              "2500": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 2500"
+                },
+                "title": "denomination: 2500"
+              },
+              "5000": {
+                "type": "array",
+                "title": "denomination: 5000",
+                "items": {
+                  "title": "denomination: 5000",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              },
+              "0.02": {
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 0.02"
+                },
+                "title": "denomination: 0.02",
+                "type": "array"
+              },
+              "0.25": {
+                "type": "array",
+                "title": "denomination: 0.25",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "title": "denomination: 0.25"
+                }
+              },
+              "0.10": {
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  },
+                  "title": "denomination: 0.10"
+                },
+                "title": "denomination: 0.10",
+                "type": "array"
+              },
+              "0.05": {
+                "type": "array",
+                "title": "denomination: 0.05",
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 0.05"
+                }
+              },
+              "0.03": {
+                "title": "denomination: 0.03",
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    }
+                  },
+                  "title": "denomination: 0.03"
+                },
+                "type": "array"
+              },
+              "0.15": {
+                "items": {
+                  "title": "denomination: 0.15",
+                  "properties": {
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                },
+                "title": "denomination: 0.15",
+                "type": "array"
+              },
+              "0.20": {
+                "type": "array",
+                "title": "denomination: 0.20",
+                "items": {
+                  "title": "denomination: 0.20",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  }
+                }
+              },
+              "0.40": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "title": "denomination: 0.40"
+                },
+                "title": "denomination: 0.40"
+              },
+              "0.50": {
+                "type": "array",
+                "title": "denomination: 0.50",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 0.50"
+                }
+              },
+              "2.50": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 2.50"
+                },
+                "title": "denomination: 2.50"
+              }
+            },
+            "type": "object",
+            "ordering": 200,
+            "title": "RTP for currency FUN"
+          },
+          "fallback": {
+            "properties": {
+              "1": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 1",
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "test": {
+                      "type": "string",
+                      "title": "gud",
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                },
+                "title": "denomination: 1"
+              },
+              "2": {
+                "items": {
+                  "title": "denomination: 2",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "title": "denomination: 2",
+                "type": "array"
+              },
+              "5": {
+                "title": "denomination: 5",
+                "items": {
+                  "title": "denomination: 5",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP"
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  }
+                },
+                "type": "array"
+              },
+              "10": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 10",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "title": "denomination: 10"
+              },
+              "20": {
+                "title": "denomination: 20",
+                "items": {
+                  "title": "denomination: 20",
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                },
+                "type": "array"
+              },
+              "25": {
+                "type": "array",
+                "title": "denomination: 25",
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "title": "denomination: 25"
+                }
+              },
+              "50": {
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "title": "denomination: 50"
+                },
+                "title": "denomination: 50",
+                "type": "array"
+              },
+              "100": {
+                "title": "denomination: 100",
+                "items": {
+                  "title": "denomination: 100",
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ]
+                },
+                "type": "array"
+              },
+              "200": {
+                "items": {
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    }
+                  },
+                  "title": "denomination: 200"
+                },
+                "title": "denomination: 200",
+                "type": "array"
+              },
+              "250": {
+                "items": {
+                  "title": "denomination: 250",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "title": "denomination: 250",
+                "type": "array"
+              },
+              "500": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 500",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  }
+                },
+                "title": "denomination: 500"
+              },
+              "1000": {
+                "type": "array",
+                "title": "denomination: 1000",
+                "items": {
+                  "title": "denomination: 1000",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  }
+                }
+              },
+              "2000": {
+                "title": "denomination: 2000",
+                "items": {
+                  "title": "denomination: 2000",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "type": "array"
+              },
+              "2500": {
+                "title": "denomination: 2500",
+                "items": {
+                  "title": "denomination: 2500",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "type": "array"
+              },
+              "5000": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 5000",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "title": "denomination: 5000"
+              },
+              "0.02": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    },
+                    "bet": {
+                      "type": "integer",
+                      "ordering": 20,
+                      "title": "Line bet (player credit)"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 0.02"
+                },
+                "title": "denomination: 0.02"
+              },
+              "0.10": {
+                "type": "array",
+                "items": {
+                  "title": "denomination: 0.10",
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    }
+                  }
+                },
+                "title": "denomination: 0.10"
+              },
+              "0.05": {
+                "title": "denomination: 0.05",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "title": "RTP",
+                      "default": 0,
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 0.05"
+                },
+                "type": "array"
+              },
+              "0.25": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 0.25"
+                },
+                "title": "denomination: 0.25"
+              },
+              "0.03": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "title": "denomination: 0.03"
+                },
+                "title": "denomination: 0.03"
+              },
+              "0.15": {
+                "type": "array",
+                "title": "denomination: 0.15",
+                "items": {
+                  "properties": {
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "title": "denomination: 0.15"
+                }
+              },
+              "0.20": {
+                "items": {
+                  "title": "denomination: 0.20",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "type": "integer",
+                      "ordering": 10,
+                      "minimum": 0,
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ]
+                    }
+                  }
+                },
+                "title": "denomination: 0.20",
+                "type": "array"
+              },
+              "0.50": {
+                "items": {
+                  "title": "denomination: 0.50",
+                  "properties": {
+                    "bet": {
+                      "ordering": 20,
+                      "type": "integer",
+                      "title": "Line bet (player credit)"
+                    },
+                    "percent": {
+                      "default": 0,
+                      "title": "RTP",
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "minimum": 0,
+                      "ordering": 10,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "type": "object"
+                },
+                "title": "denomination: 0.50",
+                "type": "array"
+              },
+              "2.50": {
+                "title": "denomination: 2.50",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "properties": {
+                    "percent": {
+                      "title": "RTP",
+                      "default": 0,
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "ordering": 10,
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "ordering": 20,
+                      "type": "integer"
+                    }
+                  },
+                  "title": "denomination: 2.50"
+                },
+                "type": "array"
+              },
+              "0.40": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "percent": {
+                      "enum": [
+                        9540,
+                        9350
+                      ],
+                      "default": 0,
+                      "title": "RTP",
+                      "minimum": 0,
+                      "type": "integer",
+                      "ordering": 10
+                    },
+                    "bet": {
+                      "title": "Line bet (player credit)",
+                      "type": "integer",
+                      "ordering": 20
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "percent",
+                    "bet"
+                  ],
+                  "title": "denomination: 0.40"
+                },
+                "title": "denomination: 0.40"
+              }
+            },
+            "type": "object",
+            "ordering": 10,
+            "title": "RTP for currency: default"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jsonschemas.telebid-pro.com/rgs/db/icasino_game_configs/settings_json/slot",
+    "isStrict": false,
+    "fields": [
+      {
+        "type": "submit",
+        "title": "submit",
+      },
+      {
+        "type": "fieldset",
+        "items": [
+          {
+            "type": "fieldset",
+            "items": [
+              "denom"
+            ],
+            "legend": "Denominations"
+          },
+          {
+            "type": "fieldset",
+            "legend": "Bets Setup",
+            "items": [
+              {
+                "key": "betsSetup/lineStepBetNumbers",
+                "type": "orderedselect"
+              },
+              "betsSetup/line_step_bet_numbers_quick_increment",
+              {
+                "type": "orderedselect",
+                "key": "betsSetup/linesStepNumbers"
+              },
+              "betsSetup/maxBet",
+              "betsSetup/minBet",
+              "betsSetup/maxLines",
+              "betsSetup/minLines",
+              {
+                "type": "orderedselect",
+                "key": "betsSetup/quickBet"
+              },
+              {
+                "type": "orderedselect",
+                "key": "betsSetup/quickLines"
+              }
+            ]
+          },
+          {
+            "legend": "Game Setup",
+            "items": [
+              "gameSetup/autoplay",
+              {
+                "type": "orderedselect",
+                "key": "gameSetup/autoplay_steps"
+              },
+              {
+                "legend": "Double Setup",
+                "items": [
+                  "gameSetup/doubleSetup/enable",
+                  "gameSetup/doubleSetup/limiter",
+                  "gameSetup/doubleSetup/entryLimiter",
+                  "gameSetup/doubleSetup/type"
+                ],
+                "type": "fieldset"
+              },
+              "gameSetup/reel_rotate_mintime",
+              "gameSetup/skill_stop_enabled",
+              "gameSetup/celebration"
+            ],
+            "type": "fieldset"
+          }
+        ],
+        "legend": "Slot"
+      }
+    ],
+    "jsonformVersion": "2.0"
+  },
+  "sp": "U2FsdGVkX1-Hp1kI-HjKu9t6Qm40XNBIWDhn50szSuNbD1RfAQ-8IIb44nTw-E8Ebzg_z6pmqnGWVN3i0aKrSkZ62ThaGs47tOP-i-2dF3kbXga73A9C94Oo1YEfUmZQwumAwNuu4zUX01khyygti5eTZE2-8EvthharvRkldBRbIgLz_3M5kpNI-U60DNlGFxkmc4zp6ysYqRtZZ1ggP4oLALUtYAAKwZm38SarfMoAmoxUwyZhcbYHaooUI2EvTudD0C97LLSuzaYDoX6hdm-D6qq9wz-2dYAFQVnPHCuzWUVOrwV1U9aBotroN3vgYFRP8h1UIXLnpnsL20uBkdW7VCNrnsUhQuWI8G_APjr0glzOYKajuFcNDL62YZCf",
+  "status": {
+    "status": "ok"
+  },
+  "content": {
+    "gamePercent": 9540,
+    "mystery_percent": 200,
+    "betsSetup": {
+      "linesStepNumbers": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "line_step_bet_numbers_quick_increment": "steps_only",
+      "maxBet": 700,
+      "quickBet": [
+        50,
+        100
+      ],
+      "maxLines": 20,
+      "quickLines": [
+        1,
+        5,
+        10,
+        15,
+        20
+      ],
+      "minLines": 0,
+      "minBet": 1,
+      "lineStepBetNumbers": [
+        1,
+        50,
+        60,
+        70,
+        80,
+        100
+      ]
+    },
+    "status": 0,
+    "header": {
+      "gameID": "e1aa23e7a9e80e1b1fa5e2a9d4336dfc",
+      "basePercents": [
+        "9540",
+        "9350"
+      ],
+      "_JSONFORMS_CONTENT_VERSION": "0.1"
+    },
+    "_JSONFORMS_CONTENT_VERSION": "0.1",
+    "gameSetup": {
+      "celebration": 10,
+      "autoplay": 1,
+      "reel_rotate_mintime": 1000,
+      "skill_stop_enabled": 1,
+      "doubleSetup": {
+        "limiter": 50,
+        "entryLimiter": 10,
+        "enable": 1,
+        "type": "rb"
+      },
+      "autoplay_steps": [
+        0,
+        5,
+        10,
+        25,
+        50,
+        100
+      ]
+    },
+    "$schemaId": "http://jsonschemas.telebid-pro.com/rgs/db/icasino_game_configs/settings_json/slot",
+    "denom": {
+      "FUN": {
+        "0.02": [
+          {
+            "percent": 9350,
+            "bet": 1
+          }
+        ]
+      },
+      "fallback": {
+        "0.02": [
+          {
+            "percent": 9540,
+            "bet": 1
+          }
+        ]
+      },
+      "enabled_denoms_for_currency": {
+        "fallback_denoms": [
+          "0.02",
+          "0.03",
+          "0.05",
+          "0.10",
+          "0.15",
+          "0.20",
+          "0.25",
+          "0.40",
+          "0.50",
+          "1",
+          "2",
+          "2.50",
+          "5",
+          "10",
+          "20",
+          "25",
+          "50",
+          "100",
+          "200",
+          "250",
+          "500",
+          "1000",
+          "2000",
+          "2500",
+          "5000"
+        ],
+        "EUR": null,
+        "FUN": null
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "string",
+        "title": "Mood for the day",
+        "description": "Describe how you feel"
+      },
+      "weather": {
+        "type": "string",
+        "title": "Weather",
+        "description": "Describe what the weather was like today"
+      },
+      "names": {
+        "type": "string",
+        "title": "Names",
+        "description": "First and last name",
+        "pattern": "^\\w+ \\w+$"
+      },
+      "email": {
+        "type": "string",
+        "title": "Emergency contact",
+        "description": "in case of emergency please write to the following email",
+        "default": "bishop@armenianchurch.org"
+      },
+      "address": {
+        "type": "object",
+        "title": "Permanent address",
+        "description": "enter your country, street number and zip code",
+        "properties": {
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "st~reet": {
+            "type": "string",
+            "title": "Street number"
+          },
+          "zip": {
+            "type": "integer",
+            "title": "ZIP code"
+          }
+        },
+        "required": [
+          "country"
+        ]
+      }
+    },
+    "required": [
+      "mood"
+    ]
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "weather",
+        "placeholder": "cold",
+        "notitle": true
+      },
+      "names",
+      {
+        "key": "email",
+        "readOnly": true,
+        "rowWidth": "half"
+      },
+      {
+        "key": "mood",
+        "prepend": "I feel",
+        "enableReset": true,
+        "enableUndo": true,
+        "enableRedo": true,
+        "append": "today",
+        "htmlClass": "usermood"
+      },
+      {
+        "key": "address",
+        "type": "tabobject"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-advanced",
+    "mood": "happy",
+    "animals": [
+      "milk",
+      "corn flakes",
+      "eggs"
+    ]
+  }
+}

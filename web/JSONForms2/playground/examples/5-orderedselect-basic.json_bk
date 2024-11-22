@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-orderedselect-basic",
+    "type": "object",
+    "properties": {
+      "numbers": {
+        "type": ["array", "null"],
+        "items": {
+          "enum": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
+          "type": ["string"]
+        },
+        "default": ["1", "4"]
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-orderedselect-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+        {
+          "key": "numbers",
+          "title": "Ordered select",
+          "type": "orderedselect",
+          "multipleselectOptions": {
+              "filterable": true
+          },
+          // "readOnly": true,
+          // "noOrder": true
+        },
+        {
+          "type": "submit",
+          "title": "submit"
+        }
+      ]
+  },
+  "content": {
+    "numbers": ["2", "3"]
+  }
+}

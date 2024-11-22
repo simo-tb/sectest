@@ -1,0 +1,60 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/17-imagePreview-example",
+    "type": "object",
+    "properties": {
+      "test": {
+        "type": "integer",
+        "title": "testing",
+        "default": 123,
+        "isUIHidden": true
+      }
+    }
+  },
+
+  "form": {
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/17-imagePreview-example",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "imagepreview",
+        "title": "Field Title",
+        "imageSource": [
+            "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg"
+        ]
+      },
+      {
+        "type": "imagepreview",
+        "title": "Field Title",
+        "imageSource": [
+          {
+						"this_key_can_be_anything-title": "testing", 
+						"this_key_can_be_anything-thumbnail": "https://www.w3schools.com/css/img_lights.jpg", 
+						"this_key_can_be_anything-fullimage": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg"
+					}, 
+          {
+						"this_key_can_be_anything-title": "<script>alert('muitko za6to????');</script>testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting", 
+						"this_key_can_be_anything-thumbnail": "https://www.w3schools.com/css/img_fjords.jpg", 
+						"this_key_can_be_anything-fullimage": "https://pbs.twimg.com/profile_images/843816951944159232/wzK_x5c9.jpg"
+					}
+        ],
+        "imageTitle": "this_key_can_be_anything-title",
+				"thumbName": "this_key_can_be_anything-thumbnail",
+				"fullName": "this_key_can_be_anything-fullimage"
+      },
+      {
+        "key": "test"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/17-imagePreview-example",
+    "test": 123
+  }
+}

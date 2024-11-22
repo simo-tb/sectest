@@ -1,0 +1,374 @@
+{
+  "locales": [
+    "bg_BG",
+    "en_GB",
+    "es_AR"
+  ],
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/notification_settings?v=1.0",
+    "type": "object",
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "properties": {
+      "notification_msg_settings": {
+        "type": "object",
+        "title": "Notification settings",
+        "properties": {
+          "single_template": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "title": "Single template events",
+              "properties": {
+                "event_id": {
+                  "type": "string",
+                  "title": "event_id"
+                },
+                "is_marketing": {
+                  "type": "boolean",
+                  "title": "Is marketing?"
+                },
+                "is_enabled": {
+                  "type": "boolean",
+                  "title": "Is enabled"
+                },
+                "settings": {
+                  "type": "object",
+                  "properties": {
+                    "sms": {
+                      "type": "object",
+                      "title": "Phone",
+                      "properties": {
+                        "msg": {
+                          "type": "object",
+                          "title": "Message",
+                          "isMultilanguage": true,
+                          "additionalProperties": {
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "title": "Message"
+                          }
+                        }
+                      }
+                    },
+                    "email": {
+                      "type": "object",
+                      "title": "Email",
+                      "properties": {
+                        "from": {
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "title": "From",
+                          "description": "Sender of the email. It supports two formats: 1) name <email@email.com> 2) email@email.com"
+                        },
+                        "msg_html": {
+                          "type": "object",
+                          "title": "Message in html",
+                          "isMultilanguage": true,
+                          "additionalProperties": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        },
+                        "msg_plain": {
+                          "type": "object",
+                          "title": "Message in plain text",
+                          "isMultilanguage": true,
+                          "additionalProperties": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multiple_templates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "title": "Multiple template events",
+              "properties": {
+                "event_id": {
+                  "type": "string",
+                  "title": "event_id"
+                },
+                "is_marketing": {
+                  "type": "boolean",
+                  "title": "Is marketing?"
+                },
+                "is_enabled": {
+                  "type": "boolean",
+                  "title": "Is enabled"
+                },
+                "settings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sms": {
+                        "type": "object",
+                        "title": "Phone",
+                        "properties": {
+                          "msg": {
+                            "type": "object",
+                            "title": "Message",
+                            "isMultilanguage": true,
+                            "additionalProperties": {
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "title": "Message"
+                            }
+                          }
+                        }
+                      },
+                      "email": {
+                        "type": "object",
+                        "title": "Email",
+                        "properties": {
+                          "from": {
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "title": "From",
+                            "description": "Sender of the email. It supports two formats: 1) name <email@email.com> 2) email@email.com"
+                          },
+                          "msg_html": {
+                            "type": "object",
+                            "title": "Message in html",
+                            "isMultilanguage": true,
+                            "additionalProperties": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          },
+                          "msg_plain": {
+                            "type": "object",
+                            "title": "Message in plain text",
+                            "isMultilanguage": true,
+                            "additionalProperties": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "strictNumberTypes": false,
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/notification_settings?v=1.0",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "notification_msg_settings",
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "title": "Single template event settings",
+            "items": [
+              {
+                "key": "notification_msg_settings/single_template",
+                "type": "tabarray",
+                "enableAddingItems": false,
+                "enableDeletingItems": false,
+                "items": {
+                  "type": "section",
+                  "legend": "{{value}}",
+                  "items": [
+                    {
+                      "key": "notification_msg_settings/single_template[]/event_id",
+                      "readOnly": true,
+                      "valueInLegend": true
+                    },
+                    {
+                      "key": "notification_msg_settings/single_template[]/is_marketing"
+                    },
+                    {
+                      "key": "notification_msg_settings/single_template[]/is_enabled"
+                    },
+                    {
+                      "key": "notification_msg_settings/single_template[]/settings",
+                      "type": "tabobject",
+                      "items": [
+                        {
+                          "title": "Email",
+                          "type": "section",
+                          "items": [
+                            {
+                              "key": "notification_msg_settings/single_template[]/settings/email/from"
+                            },
+                            {
+                              "key": "notification_msg_settings/single_template[]/settings/email/msg_html",
+                              "type": "tinymce"
+                            },
+                            {
+                              "key": "notification_msg_settings/single_template[]/settings/email/msg_plain",
+                              "type": "textarea"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "SMS",
+                          "type": "section",
+                          "items": [
+                            {
+                              "key": "notification_msg_settings/single_template[]/settings/sms/msg",
+                              "type": "textarea"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "title": "Multiple template event settings",
+            "items": [
+              {
+                "key": "notification_msg_settings/multiple_templates",
+                "type": "tabarray",
+                "enableAddingItems": false,
+                "enableDeletingItems": false,
+                "items": {
+                  "type": "section",
+                  "legend": "{{value}}",
+                  "items": [
+                    {
+                      "key": "notification_msg_settings/multiple_templates[]/event_id",
+                      "readOnly": true,
+                      "valueInLegend": true
+                    },
+                    {
+                      "key": "notification_msg_settings/multiple_templates[]/is_marketing"
+                    },
+                    {
+                      "key": "notification_msg_settings/multiple_templates[]/is_enabled"
+                    },
+                    {
+                      "key": "notification_msg_settings/multiple_templates[]/settings",
+                      "type": "array",
+                      "items": {
+                        "type": "tabobject",
+                        "items": [
+                          {
+                            "title": "Email",
+                            "type": "section",
+                            "items": [
+                              {
+                                "key": "notification_msg_settings/multiple_templates[]/settings[]/email/from"
+                              },
+                              {
+                                "key": "notification_msg_settings/multiple_templates[]/settings[]/email/msg_html",
+                                "type": "tinymce"
+                              },
+                              {
+                                "key": "notification_msg_settings/multiple_templates[]/settings[]/email/msg_plain",
+                                "type": "textarea"
+                              }
+                            ]
+                          },
+                          {
+                            "title": "SMS",
+                            "type": "section",
+                            "items": [
+                              {
+                                "key": "notification_msg_settings/multiple_templates[]/settings[]/sms/msg",
+                                "type": "textarea"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/notification_settings?v=1.0",
+    "mo~od": 2,
+    "mo~0od": 202,
+    "notification_msg_settings": {
+      "single_template": [
+        {
+          "event_id": "event123",
+          "settings": {
+            "sms": {
+              "msg": {}
+            },
+            "email": {
+              "from": "test@test.comz",
+              "msg_html": {},
+              "msg_plain": {}
+            }
+          }
+        }
+      ],
+      "multiple_templates": [
+        {
+          "event_id": "event123",
+          "settings": [
+            {
+              "sms": {
+                "msg": {}
+              },
+              "email": {
+                "from": "test@test.comz",
+                "msg_html": {},
+                "msg_plain": {}
+              }
+            },
+            {
+              "sms": {
+                "msg": {}
+              },
+              "email": {
+                "from": "test@test.comxxxxxz",
+                "msg_html": {},
+                "msg_plain": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

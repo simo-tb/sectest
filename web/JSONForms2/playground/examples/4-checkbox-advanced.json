@@ -1,0 +1,146 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/4-checkbox-advanced",
+    "type": "object",
+    "properties": {
+      "menu": {
+        "type": "array",
+        "title": "Options",
+        "items": {
+          "type": "string",
+          "title": "Option",
+          "enum": [
+            "starter",
+            "maincourse",
+            "cheese",
+            "dessert"
+          ]
+        },
+        "minItems": 1
+      },
+      "number": {
+        "type": "array",
+        "title": "Favourite number",
+        "items": {
+          "type": ["number", "null"],
+          "enum": [
+            3.14,
+            0.00000000000001,
+            12e5
+          ]
+        }
+      },
+      "integer": {
+        "type": "array",
+        "title": "Favourite number",
+        "items": {
+          "type": ["number", "null"],
+          "enum": [
+            -120,
+            0,
+            10e2
+          ]
+        }
+      },
+      "menu2": {
+        "type": "array",
+        "title": "Options Inline",
+        "items": {
+          "type": "string",
+          "title": "Option",
+          "enum": [
+            "starter",
+            "maincourse",
+            "cheese",
+            "dessert"
+          ]
+        }
+      },
+      "contacts": {
+        "type": "array",
+        "title": "Contact list",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Contact name",
+              "type": "string",
+              "default": "Mike"
+            },
+            "operator": {
+              "title": "Contact mobile providers (pick all that apply)",
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [ "Mtel", "Vivacom", "Telenor", "Bob", "other"],
+                "default": "Vivacom"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/4-checkbox-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "menu",
+        "type": "checkboxes",
+        "required": true,
+        "readOnly": true,
+        "default": "starter"
+      },
+      {
+        "key": "menu2",
+        "type": "checkboxes",
+        "inline": true
+      },
+      {
+        "key": "number",
+        "type": "checkboxes"
+      },
+      {
+        "key": "integer",
+        "type": "checkboxes"
+      },
+      {
+        "key": "contacts",
+        "type": "tabarray",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "key": "contacts[]/name"
+            },
+            {
+              "key": "contacts[]/operator",
+              "type": "checkboxes",
+              "inline": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/4-checkbox-advanced",
+    "menu": [
+      "maincourse"
+    ],
+    "contacts": [
+      {
+        "name": "Mike",
+        "operator": []
+      }
+    ],
+    "menu2": []
+  }
+}

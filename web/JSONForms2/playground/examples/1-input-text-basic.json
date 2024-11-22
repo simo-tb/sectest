@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "boolean"
+          },
+          "b": {
+            "type": "number",
+            "title": "B"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "fields": ["*"],
+    "jsonformVersion": "2.0"
+  }
+}

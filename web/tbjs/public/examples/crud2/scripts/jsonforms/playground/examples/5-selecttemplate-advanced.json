@@ -1,0 +1,38 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-selecttemplate-advanced",
+    "type": "object",
+    "properties": {
+      "hello": {
+        "title": "Select animal",
+        "type": "object",
+        "enum": [
+          {"text": "one", "value": 1, "email": "brian@thirdroute.com", "name": "Brian Reavis", "country": "Bulgaria", "city": "Veliko Turnovo"},
+          {"value": 2, "email": "nikola@tesla.com", "name": "Nikola Tesla", "country": "Mother Russia", "city": "Moscow"},
+          {"text": "three", "email": "someone@gmail.com", "name": "Anon", "country": "GDR", "city": "Berlin"}
+        ]
+      }
+    },
+    "required": ["hello"]
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-selecttemplate-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "hello",
+        "type": "selecttemplate",
+        "pluginOptions": {
+          "maxItems": 1,
+          "optionTemplate": "<div><div>name: <b>{{name}}</b></div> <div><i>{{email}}</i></div> <div>location: {{city}}, {{country}}</div> </div>",
+          "valueField": "email"
+        }
+      },
+      {
+        "type": "submit",
+        "value": "Зареди"
+      }
+    ]
+  }
+}

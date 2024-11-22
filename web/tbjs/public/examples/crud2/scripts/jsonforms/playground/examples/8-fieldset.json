@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-fieldset",
+    "type": "object",
+    "properties": {
+      "comment": {
+        "type": "string",
+        "title": "Comment"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "age": {
+        "type": "number",
+        "title": "Age"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-fieldset",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "comment",
+        "type": "textarea"
+      },
+      {
+        "type": "fieldset",
+        "title": "Author",
+        "expandable": true,
+        "items": [
+          "name",
+          "age"
+        ]
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  }
+}

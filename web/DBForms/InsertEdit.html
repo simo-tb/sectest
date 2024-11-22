@@ -1,0 +1,315 @@
+<!--&edit_form_start($action='', $name) -->
+
+<!--    <form action="$action" name="$name" id=$name method="post" onSubmit="this.autofill_params.value='__a=1'+$(this).serialize(); console.log(this.autofill_params.value);var formSubmitRes=submitResult('#$name');if(formSubmitRes) {return true;}else{return false;} ">-->
+
+    <form action="$action" name="$name" id=$name method="post" enctype="multipart/form-data" onSubmit="this.autofill_params.value='__a=1'+cacheFormParams(); console.log(this.autofill_params.value);var formSubmitRes=submitResult('#$name');if(formSubmitRes) {return true;}else{return false;} ">
+
+<!--/&edit_form_start -->
+
+<!--&body_panel()-->
+<!--/&body_panel-->
+
+<!--&body_panel_jsonform()-->
+<!--/&body_panel_jsonform-->
+
+
+<!--&start_table() -->
+    <table border=0 cellpadding=0 class="table autowidth table-striped table-condensed ">
+<!--/&start_table -->
+
+<!--&edit_form() -->
+
+    <!--&top_button($name, $value='', $action='')-->
+    <tr class="flins-top-butt-bgcol">
+        <td colspan="4">	
+            <input type="button" name="$name" value="$value" onclick="$action">
+        </td>
+    </tr>
+    <!--/&top_button--> 
+
+    <!--&sep_header()-->
+    <tr>
+        <td colspan="4">	        
+            &nbsp;
+        </td>
+    </tr>
+    <!--/&sep_header -->
+
+    <!--&ins_header($table_descr)-->
+    <thead class="dbf-th">
+        <tr class="flins-head-bgcol">
+            <td colspan="4">		
+                <!--
+                <a href="javascript: openHelp('help/fl/fl_insert.html')" title="Помощ">
+                    <img align=right src="pub/DBForms/images/help.gif" alt="Помощ" border=0 ></a>
+                -->
+                $table_descr
+            </td>
+        </tr>
+    </thead>
+    <!--/&ins_header-->
+
+    <!--&edit_header($table_descr)-->
+    <thead class="dbf-th">
+        <tr class="flins-head-bgcol">
+            <th colspan="4">
+                <!--
+                <a href="javascript: openHelp('help/fl/fl_edit.html')" title="Помощ">
+                    <img align=right src="pub/DBForms/images/help.gif" alt="Помощ" border=0 ></a>
+                -->
+                $table_descr 
+            </th>
+        </tr>
+    </thead>
+    <!--/&edit_header-->
+
+    <!--&header_panel($content='&nbsp; ')-->
+    <tr class="flins-head-bgcol">
+        <td colspan="4">
+            <strong>$content</strong>
+        </td>
+    </tr>
+    <!--/&header_panel -->
+
+    <!--&field_row($icon_content='',$name_content='',$search_content='',$value_content='') -->
+    <tr class="flins-row-bgcol-$color">
+        <td >$icon_content <!--&icon_cell() --><!--/&icon_cell --></td>
+        <td >$name_content <!--&name_cell() --><!--/&name_cell --></td>
+        <td >$search_content <!--&search_cell() --><!--/&search_cell --></td>
+        <td >$value_content <!--&value_cell() --><!--/&value_cell --></td>
+    </tr>
+    <!--/&field_row -->
+
+    <!--&field($descr, $color='1',$name)-->
+    <tr class="flins-row-bgcol-$color">
+        <td >
+
+            <!--&add_new_record_link($table_name,$hiddens='', $action='app.pl', $step_key='')--> 
+            <a href="$action?view_key=vw_dbf_insert&fl_table=$table_name&set_caller_view=1&step_key=$step_key&_fl_insert_return=$name&_fl_insert_return_table=$table_name&$hiddens" 
+                onClick="if(!fl_insert_clicked)
+                {
+                    this.href+='&caller_view_params='+encodeURIComponent(cacheFormParams());
+                    fl_insert_clicked = true;
+                }
+                return true;" 
+                title="Create new" onMouseOver="sb('Create new')" class="btn btn-sm btn-success fa fa-plus dbf-btn-add">
+            </a>
+            <!--/&add_new_record_link-->
+
+        </td>
+        <td class="dbf-input-label">
+            $descr
+     
+            <!--&required() -->
+            <i class="fa fa-asterisk text-danger"></i>
+            <!--/&required -->
+      
+        </td>
+        <td >
+            
+            <!--&search_panel()-->
+	        Search_panel
+            <!--/&search_panel-->
+
+            <!--&no_search() -->
+            &nbsp;
+            <!--/&no_search -->
+      
+        </td>
+        <td >
+            
+            <!--&textbox($value='' escape 'html')-->
+            <font size="-1"><input class="fltext form-control input-sm autowidth" type="text" name="$name" value="$value" size=40></font>
+            <!--/&textbox-->
+
+            <!--&textarea($value='' escape 'html')-->
+            <font size="-1">
+                <textarea class="fltextarea form-control input-sm autowidth" name="$name" cols=25 rows=2>$value</textarea>
+            </font>
+            <!--/&textarea-->
+            <!--&password($value='' escape 'html')-->
+            <font size="-1"><input class="fltext" type="password" name="$name" value="$value" size=20></font>
+            <!--/&password-->
+
+            <!--&selectbox($size='')-->
+            <font size="-1">
+                <select class="result-set form-control input-sm autowidth" name="$name" $size>
+                    <!--&option($value,$descr,$selected='')-->
+                    <option value="$value" $selected>$descr</option>
+                    <!--/&option-->
+
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp; </option>
+                    <option value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+	            </select>
+            </font>
+            <!--/&selectbox-->
+
+            <!--&boolselect($is_null='selected', $is_true='selected', $is_false='selected')-->
+            <font size="-1">
+                <select  class="result-set form-control input-sm autowidth" name="$name">
+                    <!--&null_opt()-->
+                    <option value="" $is_null >&nbsp; </option>
+                    <!--/&null_opt-->
+                    <option value="1" $is_true >Yes </option>
+                    <option value="0" $is_false >No </option>
+                </select>
+            </font>
+            <!--/&boolselect -->
+
+            <!--&datepicker($name, $value)-->
+            <div style="position: relative;">
+                <input type="text" name="$name" value="$value" id="$name" class="form-control input-sm autowidth">
+            </div>
+            <script>
+                $(function() {
+                    $( "#$name" ).datetimepicker({
+                        defaultDate: "$value",
+//                        format: moment.ISO_8601,
+//                        dateFormat: 'yy-mm-dd',
+                        format: 'YYYY-MM-DD HH:mm:ss',
+                    });
+                });
+            </script>
+            <!--/&datepicker -->
+            
+            <!--&datetimepicker($name, $value)-->
+            <input type="text" name="$name" value="$value" id="$name" class="form-control input-sm autowidth">
+            <script>
+                $(function() {
+                    $( "#$name" ).datetimepicker({
+                        defaultDate: "$value",
+//                        format: moment.ISO_8601,
+                        format: 'YYYY-MM-DD HH:mm:ss',
+//                        dateFormat: 'yy-mm-dd',
+//                        timeFormat: 'HH:mm:ss',
+                    });
+                });
+            </script>
+            <!--/&datetimepicker-->
+            
+            <!--&checkbox($type, $checked='')-->
+            <input type="checkbox" name="$name" value="1" $checked > 
+            <!--/&checkbox-->
+            
+            <!--&readonly($text='&nbsp;')-->
+            $text
+            <!--/&readonly-->
+            
+            <!--&additional_field_panel()-->
+            Additional Panel
+            <!--/&additional_field_panel-->
+
+        </td>
+        <!--&jsonform()-->
+        <!--/&jsonform-->
+
+        <!--&jsonform2()-->
+        <!--/&jsonform2-->
+    </tr>
+    <!--/&field-->
+
+    <!--&jsonform($name, $value='' escape 'html' , $extra_param )-->
+    <tr>
+        <td colspan="5" class="nopadding">
+            <input name="$name" type="hidden" value="$value" id="$name" class="json-forms-input">
+            <div id="$name-container" class="json-forms-container"></div>
+            <script>
+                $(function() {
+                    window.$name = APP.initPlugin('#$name-container', '#$name', {
+                        API_KEY: 1,
+                        CLASS: 1,
+                        SESSION_TOKEN: 1,
+                        SETTINGS_REQUIRE_CONTENT: false,
+                        DATA: $extra_param
+                    });
+                });
+
+            </script>
+        </td>
+    <tr>
+    <!--/&jsonform-->
+	
+    <!--&jsonform2($name, $value='' escape 'html' , $extra_param escape 'html' )-->
+    <tr>
+        <td colspan="5" class="nopadding">
+	    <input name="$name" type="hidden" value="$value" id="$name" class="tb-jsonforms-input" data-jsonform-inline="$extra_param" />
+	
+	    <script>
+
+		$(function() {
+		    var $jf = $(":input[name=$name]");
+            
+            $(document).on('click', '#dbf-submit-btn', function() {
+              $('.tb-jf-root').trigger('jsonformsChange');
+            });
+            
+            $jf.jsonFormPlugin();
+            $jf.closest('form')
+                .on('submit', function(e) {
+                    var jf = $jf.find('.tb-jsonforms-input');
+                    
+                    if($jf.data().tbJfHasError) {
+                        <!-- Trigger a change event so we can see the errors -->
+                        $('.tb-jf-root').trigger('jsonformsChange', {
+                          from_submit: true,
+                        });
+                        e.preventDefault();
+                    }
+                });
+
+        });
+
+	    </script>
+        </td>
+    <tr>
+    <!--/&jsonform2-->
+
+    <!--&hidden($name,$value='' escape 'html')-->
+    <input type="hidden" name="$name" value="$value">
+    <!--/&hidden-->
+
+    <!--/&edit_form -->
+
+<!--&end_table() -->
+</table>
+<!--/&end_table -->
+
+
+<!--&edit_form_end($submit='Save', $reset='Clear') -->
+<input type="hidden" name="autofill_params" value=""><br>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <!--&cancel_btn()--> 
+        <td>
+            <input type="button" value="Cancel" onclick="this.form.noaction.value=1;this.form.submit()" class="btn btn-danger">
+        </td>
+        <!--/&cancel_btn--> 
+        <td>
+            <!--
+            <input type="reset"  value="$reset">
+            -->
+        </td>
+        <input type="hidden" name="noaction" value="0" >
+
+        <!--&submit_btn()-->
+        <td>
+            <input type="submit" disabled value="$submit" class="submit-btn btn btn-primary" id="dbf-submit-btn">
+        </td>
+        <!--/&submit_btn-->
+        
+        <!--&bottom_button($name, $value='', $action='')-->
+        <td>
+            <input type="button" name="$name" value="$value" onclick="$action" class="btn btn-default">
+        </td>
+        <!--/&bottom_button--> 
+
+    </tr>
+</table>
+</form>
+<!--/&edit_form_end -->
+

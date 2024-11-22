@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tb.xerrors.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="TB.Dispatcher.html">Dispatcher</a><ul class='methods'><li data-type='method'><a href="TB.Dispatcher.html#dispatch">dispatch</a></li><li data-type='method'><a href="TB.Dispatcher.html#off">off</a></li><li data-type='method'><a href="TB.Dispatcher.html#on">on</a></li></ul></li><li><a href="TB.File.html">File</a><ul class='methods'><li data-type='method'><a href="TB.File.html#_prepareData">_prepareData</a></li><li data-type='method'><a href="TB.File.html#download">download</a></li></ul></li><li><a href="TB.Livegrid.html">Livegrid</a><ul class='methods'><li data-type='method'><a href="TB.Livegrid.html#_d3GridItemsDraggable">_d3GridItemsDraggable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3GridZoomable">_d3GridZoomable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3SetupGrid">_d3SetupGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateBackgroundGrid">_d3UpdateBackgroundGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItemContents">_d3UpdateItemContents</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItems">_d3UpdateItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateResizeValues">_d3UpdateResizeValues</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateWrapper">_d3UpdateWrapper</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateZoomValue">_d3UpdateZoomValue</a></li><li data-type='method'><a href="TB.Livegrid.html#_gApplyResizeItems">_gApplyResizeItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutoscale">_gAutoscale</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutosize">_gAutosize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gGetItemAtIndex">_gGetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gRemoveItemAtIndex">_gRemoveItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gResetMinMaxPositionedXY">_gResetMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gSetItemAtIndex">_gSetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateElementSize">_gUpdateElementSize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateItemCoordinates">_gUpdateItemCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateMinMaxPositionedXY">_gUpdateMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateUnpositionedItemsCoordinates">_gUpdateUnpositionedItemsCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gZoomCallback">_gZoomCallback</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderResize">_handlerOnChangeSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderZoom">_handlerOnChangeSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnClear">_handlerOnClickBtnClear</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnResize">_handlerOnClickBtnResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnZoom">_handlerOnClickBtnZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderResize">_handlerOnInputSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderZoom">_handlerOnInputSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnMousewheelSliderResize">_handlerOnMousewheelSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_prepareGlobalCSS">_prepareGlobalCSS</a></li><li data-type='method'><a href="TB.Livegrid.html#_returnDatum">_returnDatum</a></li><li data-type='method'><a href="TB.Livegrid.html#_stringifyCssRules">_stringifyCssRules</a></li><li data-type='method'><a href="TB.Livegrid.html#_timeoutExpireObject">_timeoutExpireObject</a></li><li data-type='method'><a href="TB.Livegrid.html#disableEditMode">disableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#emit">emit</a></li><li data-type='method'><a href="TB.Livegrid.html#enableEditMode">enableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#prefixClassName">prefixClassName</a></li><li data-type='method'><a href="TB.Livegrid.html#save">save</a></li><li data-type='method'><a href="TB.Livegrid.html#setGridZoom">setGridZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#setItemsSize">setItemsSize</a></li><li data-type='method'><a href="TB.Livegrid.html#toggleEditMode">toggleEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#updateElements">updateElements</a></li><li data-type='method'><a href="TB.Livegrid.html#updateItems">updateItems</a></li></ul></li><li><a href="TB.Request.html">Request</a><ul class='methods'><li data-type='method'><a href="TB.Request.html#_buildParams">_buildParams</a></li><li data-type='method'><a href="TB.Request.html#_checkResponseStatus">_checkResponseStatus</a></li><li data-type='method'><a href="TB.Request.html#_completeCallback">_completeCallback</a></li><li data-type='method'><a href="TB.Request.html#_errorCallback">_errorCallback</a></li><li data-type='method'><a href="TB.Request.html#_getTypeFromResponseHeader">_getTypeFromResponseHeader</a></li><li data-type='method'><a href="TB.Request.html#_getXHR">_getXHR</a></li><li data-type='method'><a href="TB.Request.html#_handlerReadystatechangeXHR">_handlerReadystatechangeXHR</a></li><li data-type='method'><a href="TB.Request.html#_makeRequest">_makeRequest</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestJSONP">_makeRequestJSONP</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestXHR">_makeRequestXHR</a></li><li data-type='method'><a href="TB.Request.html#_setCredentials">_setCredentials</a></li><li data-type='method'><a href="TB.Request.html#_setHeaders">_setHeaders</a></li><li data-type='method'><a href="TB.Request.html#_successCallback">_successCallback</a></li><li data-type='method'><a href="TB.Request.html#_toQueryString">_toQueryString</a></li><li data-type='method'><a href="TB.Request.html#abort">abort</a></li></ul></li><li><a href="TB.Service.html">Service</a><ul class='methods'><li data-type='method'><a href="TB.Service.html#getNextRequestId">getNextRequestId</a></li></ul></li><li><a href="TB.Translate.html">Translate</a><ul class='methods'><li data-type='method'><a href="TB.Translate.html#.getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#.getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#.getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#.getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#.gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#_getRawTranslation">_getRawTranslation</a></li><li data-type='method'><a href="TB.Translate.html#_init">_init</a></li><li data-type='method'><a href="TB.Translate.html#getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#gethash">gethash</a></li><li data-type='method'><a href="TB.Translate.html#getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#gettext">gettext</a></li><li data-type='method'><a href="TB.Translate.html#gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#reinit">reinit</a></li><li data-type='method'><a href="TB.Translate.html#setCurrency">setCurrency</a></li><li data-type='method'><a href="TB.Translate.html#setLocale">setLocale</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-xerrors.html">xerrors</a><ul class='methods'><li data-type='method'><a href="module-xerrors.html#.ASSERT">ASSERT</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.eq">ASSERT.eq</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ge">ASSERT.ge</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.gt">ASSERT.gt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasProperty">ASSERT.hasProperty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbType">ASSERT.hasPropertyOfTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbTypes">ASSERT.hasPropertyOfTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isDefined">ASSERT.isDefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isEmpty">ASSERT.isEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isNotEmpty">ASSERT.isNotEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isUndefined">ASSERT.isUndefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.le">ASSERT.le</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.lt">ASSERT.lt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbType">ASSERT.ofTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbTypes">ASSERT.ofTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_END">BENCHMARK_END</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_START">BENCHMARK_START</a></li><li data-type='method'><a href="module-xerrors.html#.FLUSH">FLUSH</a></li><li data-type='method'><a href="module-xerrors.html#.TRACE">TRACE</a></li><li data-type='method'><a href="module-xerrors.html#~makeMsg">makeMsg</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="TB.html">TB</a><ul class='methods'><li data-type='method'><a href="TB.html#.applyCssRules">applyCssRules</a></li><li data-type='method'><a href="TB.html#.assign">assign</a></li><li data-type='method'><a href="TB.html#.camelCaseToDashes">camelCaseToDashes</a></li><li data-type='method'><a href="TB.html#.classExtend">classExtend</a></li><li data-type='method'><a href="TB.html#.cloneFunction">cloneFunction</a></li><li data-type='method'><a href="TB.html#.contains">contains</a></li><li data-type='method'><a href="TB.html#.get">get</a></li><li data-type='method'><a href="TB.html#.isArray">isArray</a></li><li data-type='method'><a href="TB.html#.isArrayLike">isArrayLike</a></li><li data-type='method'><a href="TB.html#.isBetween">isBetween</a></li><li data-type='method'><a href="TB.html#.isBoolean">isBoolean</a></li><li data-type='method'><a href="TB.html#.isDate">isDate</a></li><li data-type='method'><a href="TB.html#.isDefined">isDefined</a></li><li data-type='method'><a href="TB.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="TB.html#.isFunction">isFunction</a></li><li data-type='method'><a href="TB.html#.isNumber">isNumber</a></li><li data-type='method'><a href="TB.html#.isObject">isObject</a></li><li data-type='method'><a href="TB.html#.isString">isString</a></li><li data-type='method'><a href="TB.html#.isUndefined">isUndefined</a></li><li data-type='method'><a href="TB.html#.JSON2CSS">JSON2CSS</a></li><li data-type='method'><a href="TB.html#.limitToRange">limitToRange</a></li><li data-type='method'><a href="TB.html#.map">map</a></li><li data-type='method'><a href="TB.html#.merge">merge</a></li><li data-type='method'><a href="TB.html#.noop">noop</a></li><li data-type='method'><a href="TB.html#.normalizeDate">normalizeDate</a></li><li data-type='method'><a href="TB.html#.parseQueryParams">parseQueryParams</a></li><li data-type='method'><a href="TB.html#.set">set</a></li><li data-type='method'><a href="TB.html#.toArray">toArray</a></li><li data-type='method'><a href="TB.html#.toPx">toPx</a></li><li data-type='method'><a href="TB.html#.typeof">typeof</a></li><li data-type='method'><a href="TB.html#.underscoreToDash">underscoreToDash</a></li><li data-type='method'><a href="TB.html#.urlAppend">urlAppend</a></li><li data-type='method'><a href="TB.html#.values">values</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">tb.xerrors.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author Ivan Ivanov &lt;ivan.ivanov@telebid-pro.com>
+ * @file setting up all debug utilities for applications
+ * @module xerrors
+ * @memberOf TB
+ */
+
+var traceData = [];
+var benchmarkData = {};
+
+/**
+ * Very complicated to explain, please see the source
+ * @todo refactor this hell
+ * @param {...*} msgPartials message partials
+ * @return {String} String
+ */
+function makeMsg( ) {
+  // if single parameter, return it
+  if ( arguments.length &lt; 2 ) {
+    return arguments[ 0 ];
+  }
+
+  var argsArr = TB.toArray( arguments );
+  var typeOfScalar = ( TB.isBoolean( argsArr[ 0 ] ) ) ? argsArr.shift( ) : true;
+  var baseStr = argsArr[ 0 ];
+  var placeholdersCount = 0;
+
+  if ( typeof baseStr !== 'string' ) {
+    if ( typeof baseStr === 'number' &amp;&amp; typeof baseStr.toString === 'function' ) {
+      baseStr = baseStr.toString( );
+    } else {
+      var argsArrLength = argsArr.length;
+
+      baseStr = '';
+
+      while ( argsArrLength-- ) {
+        baseStr += '%s ';
+      }
+    }
+  }
+
+  placeholdersCount = ( baseStr.match( /%[ sid ]/g ) || [] ).length;
+  argsArr[ 0 ] = baseStr;
+
+  for ( var i = 1, l = argsArr.length; i &lt; l; i++ ) {
+    var item = argsArr[ i ];
+    var str = '';
+    var type = '';
+
+    if ( item === null ) {
+      type = 'null';
+    } else if ( item === undefined ) {
+      type = 'undefined';
+    } else if ( typeof item === 'number' ) {
+      type = 'number';
+      str += item;
+    } else if ( typeof item === 'string' ) {
+      type = 'string';
+      str += item;
+    } else if ( typeof item === 'function' ) {
+      type = 'function';
+      str += item.toString( );
+    } else if ( TB.isBoolean( item ) ) {
+      type = 'boolean';
+      str += item;
+    } else if ( TB.isDate( item ) ) {
+      type = 'date';
+      str += item.toISOString( );
+    } else {
+      type = typeof item;
+
+      if ( typeof item === 'object' ) {
+        if ( TB.isArray( item ) ) {
+          type = 'array';
+        }
+      }
+
+      try {
+        str += JSON.stringify( item );
+      } catch( e ) {
+        str += 'error while stringifying object: ' + e.message;
+      }
+    }
+
+    if ( i > placeholdersCount ) {
+      argsArr[ 0 ] += TB.CONFIG.TRACE_ARGUMENTS_DELIMITER + '%s';
+    }
+
+    if ( !typeOfScalar &amp;&amp; ( type === 'string' || type === 'number' ) ) {
+      argsArr[ i ] = TB.CONFIG.TRACE_OPEN_PLACEHOLDER_STR + str + TB.CONFIG.TRACE_CLOSE_PLACEHOLDER_STR;
+    } else {
+      argsArr[ i ] = TB.CONFIG.TRACE_OPEN_TYPE_PLACEHOLDER_STR + ' ( ' + type + ' ) ' + str + ' ' + TB.CONFIG.TRACE_CLOSE_TYPE_PLACEHOLDER_STR;
+    }
+
+  }
+
+  var k = 0;
+  var result = argsArr.shift( )
+    .replace( /%s/g, function( ) {
+      return argsArr[ k++ ];
+    } );
+
+  return result;
+}
+
+/**
+ * Traces content
+ * @alias TRACE
+ * @memberOf module:xerrors
+ * @param {...(String|*)} msgPartials message partials for the trace {@link module:xerrors~makeMsg}
+ * @todo optimize appending to localStorage by cashing current messages
+ * @return {String} traced msg
+ */
+function trace() {
+  var msgStr = makeMsg.apply( this, arguments );
+
+  if ( TB.CONFIG.XERRORS_LOG_CONSOLE &amp;&amp; window.console.log ) {
+    console.log( msgStr );
+  }
+
+  if ( TB.CONFIG.XERRORS_LOG_LOCALSTORAGE &amp;&amp; window.localStorage ) {
+    var logSoFar = window.localStorage.getItem( '__TB_XERRORS__' ) || '';
+    var log = logSoFar + msgStr;
+
+    window.localStorage.setItem( '__TB_XERRORS__', log );
+  }
+
+  if ( TB.CONFIG.MAX_TRACE_LINES !== null &amp;&amp; traceData.length >= TB.CONFIG.MAX_TRACE_LINES ) {
+    traceData.shift( );
+  }
+
+  traceData.push( msgStr );
+
+  return msgStr;
+}
+
+function throwError( ) {
+  var argsArr = TB.toArray( arguments );
+  var errMsgStr;
+  var errObj;
+
+  argsArr.unshift( true );
+  errMsgStr = makeMsg.apply( this, argsArr );
+  errObj = new Error( errMsgStr );
+
+  throw errObj;
+
+}
+
+function throwErrorWrapper( type ) {
+  var errMsgStr = 'ERROR( ' + type + ' ) ';
+
+  return function( ) {
+    var argsArr = TB.toArray( arguments );
+
+    if ( TB.typeof( argsArr[ 0 ] ) === 'string' ) {
+      argsArr[ 0 ] = errMsgStr + argsArr[ 0 ];
+    } else {
+      argsArr.unshift( errMsgStr );
+    }
+
+    return throwError.apply( this, argsArr );
+  };
+}
+
+
+function assertWrapper( type ) {
+  var func;
+  /**
+   * @alias ASSERT
+   * @memberOf module:xerrors
+   * @param {(Boolean|*)} condition condition to check of trueable
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  function assert( condition ) {
+    if ( condition ) {
+      return true;
+    }
+
+    var msgStr = 'ASSERT( ' + type + ' ) ';
+    var argsArr = TB.toArray( arguments );
+
+    argsArr[ 0 ] = true;
+
+
+    msgStr += makeMsg.apply( this, argsArr );
+
+    trace.call( this, msgStr );
+
+    throwError( msgStr );
+
+    return false;
+  }
+
+  function assertSugar( condition, parentArgsArr ) {
+    var argsArr = TB.toArray( arguments );
+    var msg = '';
+
+    argsArr.splice( 0, 2, false );
+
+    if ( parentArgsArr.length > 0 ) {
+      parentArgsArr.unshift( false );
+      msg += makeMsg.apply( this, parentArgsArr );
+      msg += TB.CONFIG.ASSERTS_DEFAULT_MSG_DELIMITER;
+    }
+
+    msg += makeMsg.apply( this, argsArr );
+
+    return assert( condition, msg );
+  }
+
+  if ( TB.CONFIG.ASSERTS_DISABLED ) {
+    func = TB.cloneFunction( TB.noop );
+    func.isDefined = TB.noop;
+    func.isUndefined = TB.noop;
+    func.hasProperty = TB.noop;
+    func.hasPropertyOfTbType = TB.noop;
+    func.hasPropertyOfTbTypes = TB.noop;
+    func.ofTbType = TB.noop;
+    func.ofTbTypes = TB.noop;
+  } else {
+    func = assert;
+  }
+
+
+  /**
+   * Assert two values are equal
+   * @alias ASSERT.eq
+   * @memberOf  module:xerrors
+   * @param {*} lOperand first value
+   * @param {*} rOperand second value
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.eq = function( lOperand, rOperand ) {
+    return assertSugar( lOperand === rOperand, TB.toArray( arguments ).slice( 2 ), 'Value %s must be equal to %s', lOperand, rOperand );
+  };
+
+  /**
+   * Assert first value is less than the second
+   * @alias ASSERT.lt
+   * @memberOf  module:xerrors
+   * @param {*} lOperand first value
+   * @param {*} rOperand second value
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.lt = function( lOperand, rOperand ) {
+    return assertSugar( lOperand &lt; rOperand, TB.toArray( arguments ).slice( 2 ), 'Value %s must be less than %s', lOperand, rOperand );
+  };
+
+  /**
+   * Assert first value is less or equal to the second
+   * @alias ASSERT.le
+   * @memberOf  module:xerrors
+   * @param {*} lOperand first value
+   * @param {*} rOperand second value
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.le = function( lOperand, rOperand ) {
+    return assertSugar( lOperand &lt;= rOperand, TB.toArray( arguments ).slice( 2 ), 'Value %s must be less or equal to %s', lOperand, rOperand );
+  };
+
+  /**
+   * Assert first value is greater than the second
+   * @alias ASSERT.gt
+   * @memberOf  module:xerrors
+   * @param {*} lOperand first value
+   * @param {*} rOperand second value
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.gt = function( lOperand, rOperand ) {
+    return assertSugar( lOperand > rOperand, TB.toArray( arguments ).slice( 2 ), 'Value %s must be greater than %s', lOperand, rOperand );
+  };
+
+  /**
+   * Assert first value is greater or equal to the second
+   * @alias ASSERT.ge
+   * @memberOf  module:xerrors
+   * @param {*} lOperand first value
+   * @param {*} rOperand second value
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.ge = function( lOperand, rOperand ) {
+    return assertSugar( lOperand >= rOperand, TB.toArray( arguments ).slice( 2 ), 'Value %s must be greater or equal to %s', lOperand, rOperand );
+  };
+
+  /**
+   * Assert value is defined
+   * @alias ASSERT.isDefined
+   * @memberOf  module:xerrors
+   * @param {*} value value to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.isDefined = function( value ) {
+    return assertSugar( TB.isDefined( value ), TB.toArray( arguments ).slice( 1 ), 'Value must not be undefined for %s', value );
+  };
+
+  /**
+   * Assert value is not defined
+   * @alias ASSERT.isUndefined
+   * @memberOf  module:xerrors
+   * @param {*} value value to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.isUndefined = function( value ) {
+    return assertSugar( !TB.isDefined( value ), TB.toArray( arguments ).slice( 1 ), 'Value must be undefined, given "%s" for %s', typeof value, value );
+  };
+
+  /**
+   * Assert value is empty
+   * @alias ASSERT.isEmpty
+   * @memberOf  module:xerrors
+   * @param {*}  value value to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.isEmpty = function( value ) {
+    var msg = '';
+
+    switch ( TB.typeof( value ) ) {
+    case 'array':
+      msg = makeMsg( 'Value must be array with no elements, given "%s" for %s', value.length, value );
+      break;
+    case 'object':
+      msg = makeMsg( 'Value must be object without keys, given "%s" keys for %s', Object.keys( value ).join( ', ' ), value );
+      break;
+    default :
+      msg = makeMsg( 'Value must be empty (null, undefined etc), given "%s"', value );
+      break;
+    }
+
+    return assertSugar( TB.isEmpty( value ), TB.toArray( arguments ).slice( 1 ), msg );
+  };
+
+  /**
+   * Assert value is empty
+   * @alias ASSERT.isNotEmpty
+   * @memberOf  module:xerrors
+   * @param {*}  value value to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.isNotEmpty = function( value ) {
+    return assertSugar( !TB.isEmpty( value ), TB.toArray( arguments ).slice( 1 ), 'Value must not be empty (null, undefined, empty array, empty object etc), given empty with type "%s" for "%s"', TB.tbType( value ), value );
+  };
+
+  /**
+   * Assert if object has own property
+   * @alias ASSERT.hasProperty
+   * @memberOf  module:xerrors
+   * @param {Object}  value value to check
+   * @param {String}  property property to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @return {Boolean}
+   */
+  assert.hasProperty = function( value, property ) {
+    return assertSugar( TB.isObject( value ) &amp;&amp; value.hasOwnProperty( property ), TB.toArray( arguments ).slice( 2 ), 'Value must have property "%s" for %s', property, value );
+  };
+
+  /**
+   * Assert if value has own property of type
+   * @alias ASSERT.hasPropertyOfTbType
+   * @memberOf  module:xerrors
+   * @param {Object}  value value to check
+   * @param {String}  property property to check
+   * @param {String} type type to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @see type is determined using {@link TB.typeof}
+   * @return {Boolean}
+   */
+  assert.hasPropertyOfTbType = function( value, property, type ) {
+    var isObject = TB.isObject( value );
+    var tbTypeProperty = ( isObject ) ? TB.typeof( value[ property ] ) : 'undefined';
+
+    return assertSugar( isObject &amp;&amp; TB.typeof( value[ property ] ) === type, TB.toArray( arguments ).slice( 3 ), 'Value must have property "%s" of type "%s", but "%s" given for %s', property, type, tbTypeProperty, value );
+  };
+
+  /**
+   * Assert if value has own property of type
+   * @alias ASSERT.hasPropertyOfTbTypes
+   * @memberOf  module:xerrors
+   * @param {Object}  value value to check
+   * @param {String}  property property to check
+   * @param {String} types types to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @see type is determined using {@link TB.typeof}
+   * @return {Boolean}
+   */
+  assert.hasPropertyOfTbTypes = function( value, property, types ) {
+    var typesArr;
+    var tbType;
+    var tbTypeProperty;
+
+    if ( TB.isString( types ) ) {
+      typesArr = types.split( TB.CONFIG.TYPE_DELIMITER );
+    } else if ( TB.isArray( type ) ) {
+      typesArr = types;
+    } else {
+      assert( false, 'Failed in assert: expected types to be string or array, but "%s" given for %s', types, value );
+    }
+
+    tbType = TB.typeof( value );
+    tbTypeProperty = ( tbType === 'object' ) ? TB.typeof( value[ property ] ) : 'undefined';
+
+    return assertSugar( tbType === 'object' &amp;&amp; TB.contains( typesArr, tbTypeProperty ), TB.toArray( arguments ).slice( 3 ), 'Value must have property "%s" of any of types "%s", but "%s" given for %s', property, types, tbTypeProperty, value );
+  };
+
+  /**
+   * Assert if value has own property of type
+   * @alias ASSERT.ofTbType
+   * @memberOf  module:xerrors
+   * @param {Object}  value value to check
+   * @param {String} types type to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @see type is determined using {@link TB.typeof}
+   * @return {Boolean}
+   */
+  assert.ofTbType = function( value, type ) {
+    var tbType = TB.typeof( value );
+
+    return assertSugar( tbType === type, TB.toArray( arguments ).slice( 2 ), 'Value must be of type "%s", given "%s" for %s', type, tbType, value );
+  };
+
+  /**
+   * Assert if value has own property of type
+   * @alias ASSERT.ofTbTypes
+   * @memberOf  module:xerrors
+   * @param {Object}  value value to check
+   * @param {String} types types to check
+   * @param {...(String|*)} [msgPartials] message partials for the assert {@link module:xerrors~makeMsg}
+   * @see type is determined using {@link TB.typeof}
+   * @return {Boolean}
+   */
+  assert.ofTbTypes = function( value, types ) {
+    var typesArr;
+    var tbType;
+
+    if ( TB.isString( types ) ) {
+      typesArr = types.split( TB.CONFIG.TYPE_DELIMITER );
+    } else if ( TB.isArray( type ) ) {
+      typesArr = types;
+    } else {
+      assert( false, 'Failed in assert: expected types to be string or array, but "%s" given for %s', types, value );
+    }
+    tbType = TB.typeof( value );
+
+    return assertSugar( TB.contains( typesArr, tbType ), TB.toArray( arguments ).slice( 2 ), 'Value must be of any of types "%s", but "%s" given for %s', types, tbType, value );
+  };
+
+  return assert;
+}
+
+/**
+ * Traces content
+ * @todo this function must really send http request one day
+ * @deprecated it's not implemented yet
+ * @alias FLUSH
+ * @memberOf module:xerrors
+ * @return {object} promise
+ */
+var flush = function( ) {
+  var data = {
+    trace: traceData.join( '\r\n' ),
+    browser: TB.Browser.getFullInfo( ),
+  };
+
+  // TODO send real http request
+  return new Promise( TB.noop );
+};
+
+/**
+ * Starts a code benchmark
+ * @alias BENCHMARK_START
+ * @memberOf module:xerrors
+ * @param  {String} [name] name of the benchmark; if not provided will be used the value of TB.CONFIG.DEFAULT_BENCHMARK_NAME
+ */
+var benchmarkStart = function( name ) {
+  name = name || TB.CONFIG.DEFAULT_BENCHMARK_NAME;
+
+  benchmarkData[ name ] = {
+    start: new Date( ),
+  };
+  console.time( name );
+  trace( 'Benchmark start %s at %s', name, benchmarkData[ name ].start );
+};
+/**
+ * Starts a code benchmark
+ * @alias BENCHMARK_END
+ * @memberOf module:xerrors
+ * @param  {String} [name] name of the benchmark; if not provided will be used the value of TB.CONFIG.DEFAULT_BENCHMARK_NAME
+ */
+var benchmarkEnd = function( name ) {
+  name = name || TB.CONFIG.DEFAULT_BENCHMARK_NAME;
+
+  if ( !benchmarkData.hasOwnProperty( name ) ) {
+    return;
+  }
+
+  benchmarkData[ name ].end = new Date( );
+  var period = benchmarkData[ name ].end - benchmarkData[ name ].start;
+
+  console.timeEnd( name );
+  trace( 'Benchmark end "%s" for %s ( %s|%s )', name, period, benchmarkData[ name ].start.toISOString( ), benchmarkData[ name ].end.toISOString( ) );
+  delete benchmarkData[ name ];
+};
+
+TB.TRACE = trace;
+TB.ASSERT = assertWrapper( TB.CONFIG.ERR_SYS );
+TB.ASSERT_PEER = assertWrapper( TB.CONFIG.ERR_PEER );
+TB.ASSERT_USER = assertWrapper( TB.CONFIG.ERR_USER );
+TB.THROW = throwErrorWrapper( TB.CONFIG.ERR_SYS );
+TB.THROW_PEER = throwErrorWrapper( TB.CONFIG.ERR_PEER );
+TB.THROW_USER = throwErrorWrapper( TB.CONFIG.ERR_USER );
+TB.FLUSH = flush;
+TB.BENCHMARK_START = benchmarkStart;
+TB.BENCHMARK_END = benchmarkEnd;
+
+if ( TB.CONFIG.DEBUG_IN_GLOBAL_SCOPE ) {
+  var globalDebugFunctionNames = ['ASSERT', 'ASSERT_PEER', 'ASSERT_USER', 'TRACE', 'THROW', 'THROW_PEER', 'THROW_USER', 'FLUSH', 'BENCHMARK_START', 'BENCHMARK_END'];
+
+  for ( var i = 0, l = globalDebugFunctionNames.length; i &lt; l; i++ ) {
+    var debugFunctionName = globalDebugFunctionNames[ i ];
+
+    window[ debugFunctionName ] = TB[ debugFunctionName ];
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> on Tue Dec 15 2015 17:37:16 GMT+0200 (EET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

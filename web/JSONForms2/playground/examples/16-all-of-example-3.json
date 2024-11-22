@@ -1,0 +1,71 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+    "type": "object",
+    "properties": {
+      "mod": {
+        "type": "array",
+        "title": "Mood of the day",
+        "items": {
+          "title": "Friend",
+          "type": "object",
+          "properties": {
+            "nick": {
+              "title": "Nickname",
+              "type": "array",
+              "items": {
+                "title": "Items too deep to count",
+                "type": "object",
+                "properties": {
+                  "nicky": {
+                    "title": "hi",
+                    "type": "object",
+                    "properties": {
+                      "swag123": {
+                        "type": "string",
+                        "title": "hu123"
+                      },
+                      "allOf": [
+                        {
+                          "swag": {
+                            "type": "string",
+                            "title": "hu"
+                          }
+                        },
+                        {
+                          "swagerson": {
+                            "type": "string",
+                            "title": "huavo"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+          }
+        },
+        "allOf": [
+          {
+            "minItems": 5
+          },
+          {
+            "maxItems": 10
+          }
+        ]
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+    "jsonformVersion": "2.0",
+    "fields": [
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-all-of-example",
+  }
+}

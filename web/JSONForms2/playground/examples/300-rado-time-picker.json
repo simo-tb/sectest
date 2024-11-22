@@ -1,0 +1,258 @@
+{
+    "content": {},
+    "schema": {
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+        "type": "object",
+        "required": [
+            "name",
+            "currency"
+        ],
+        "properties": {
+            "name": {
+                "type": "string",
+                "title": "Name",
+                "description": "Name"
+            },
+            "currency": {
+                "refTable": "currencies",
+                "refCol": "name",
+                "type": "string",
+                "title": "Currency",
+                "description": "Currency",
+                "refType":"reference"
+            },
+            "displays": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "title": "Time intervals",
+                    "required": [
+                        "main"
+                    ],
+                    "properties": {
+                        "main": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "ip_addr": {
+                            "enum": [
+                                "10.10.10.10",
+                                "10.10.10.11"
+                            ],
+                            "type": "string",
+                            "default": "10.10.10.10"
+                        }
+                    }
+                },
+                "title": "Displays",
+                "default": [
+                    {}
+                ],
+                "minItems": 1,
+                "gridLayout": true,
+                "enableDeletingItems": false
+            },
+            "reward_type": {
+                "type": "object",
+                "title": "Reward Type",
+                "properties": {
+                    "material_prize": {
+                        "type": "object",
+                        "title": "Material prize",
+                        "properties": {
+                            "reward_prize": {
+                                "type": "string",
+                                "title": "Description"
+                            }
+                        }
+                    },
+                    "money_to_machine": {
+                        "type": "object",
+                        "title": "Money to machine",
+                        "properties": {
+                            "reward_prize": {
+                                "type": "number",
+                                "title": "Reward, cents"
+                            }
+                        }
+                    }
+                }
+            },
+            "days_of_week": {
+                "type": "array",
+                "items": {
+                    "enum": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "type": "string"
+                },
+                "default": []
+            },
+            "machines":{
+                "type":"array",
+                "items":{
+                    "type":"string"
+                }
+            },
+            "period": {
+                "title": "aaa",
+                "type": "object",
+                "properties": {
+                    "start_date": {
+                        "type": "string",
+                        "default": "2017-04-13 00:00:00"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "default": "2017-04-14 00:00:00"
+                    }
+                }
+            },
+            "time_intervals": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "title": "Time intervals",
+                    "properties": {
+                        "end_time": {
+                            "type": "string",
+                            "default": "2001-01-01 00:00:00"
+                        },
+                        "start_time": {
+                            "type": "string",
+                            "default": "2001-01-01 00:00:00"
+                        }
+                    }
+                },
+                "title": "Time intervals",
+                "gridLayout": true,
+                "enableDeletingItems": true
+            },
+            "promo_math_lucky_hour": {
+                "type": "object",
+                "title": " ",
+                "properties": {
+                    "saturation": {
+                        "type": "number",
+                        "title": "Saturation"
+                    }
+                }
+            },
+            "min_bet": {
+                "type": "number",
+                "Title": "Min bet allowed, cents",
+                "minimum":1
+            }
+        }
+    },
+    "form": {
+        "fields": [
+            {
+                "key": "name"
+            },
+            {
+                "key": "currency"
+            },
+            {
+                "type": "fieldset",
+                "title": "Period",
+                "gridLayout": true,
+                "items": [
+                    {
+                        "key": "period/start_date",
+                        "type": "datetimepicker",
+                        "title": "Promotion Start date"
+                    },
+                    {
+                        "key": "period/end_date",
+                        "type": "datetimepicker",
+                        "title": "Promotion End date"
+                    }
+                ]
+            },
+            {
+                "key": "days_of_week",
+                "type": "multipleselect",
+                "title": "Days of week"
+            },
+            {
+                "key": "machines",
+                "type": "multipleselect",
+                "title": "Machines"
+            },
+            {
+                "key":"min_bet",
+                "title":"Min bet, cents"
+            },
+            {
+                "type": "selectfieldset",
+                "items": [
+                    {
+                        "key": "promo_math_lucky_hour",
+                        "legend": "Lucky Hour"
+                    }
+                ],
+                "title": "Math type"
+            },
+            {
+                "key": "reward_type",
+                "type": "selectfieldset",
+                "items": [
+                    {
+                        "key": "reward_type/money_to_machine"
+                    },
+                    {
+                        "key": "reward_type/material_prize"
+                    }
+                ]
+            },
+            {
+                "key": "time_intervals",
+                "type": "array",
+                "items": {
+                    "type": "fieldset",
+                    "items": [
+                        {
+                            "key": "time_intervals[]/start_time",
+                            "type": "datetimepicker",
+                            "title": "Start time"
+                        },
+                        {
+                            "key": "time_intervals[]/end_time",
+                            "type": "datetimepicker",
+                            "title": "End time"
+                        }
+                    ]
+                },
+                "gridLayout": true
+            },
+            {
+                "key": "displays",
+                "type": "array",
+                "items": {
+                    "type": "section",
+                    "items": [
+                        {
+                            "key": "displays[]/ip_addr",
+                            "title": "Display #"
+                        },
+                        {
+                            "key": "displays[]/main",
+                            "type": "radiobuttonset",
+                            "title": "Is public"
+                        }
+                    ]
+                },
+                "gridLayout": true
+            }
+        ],
+        "schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+        "jsonformVersion": "2.0"
+    }
+}

@@ -1,0 +1,632 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "default": "Defffffffault"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "enableDefault": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "fields": ["*"],
+    "jsonformVersion": "2.0"
+  }
+}
+/*
+ {
+  "schema": {
+    "id": "test",
+    "type": "object",
+    "properties": {
+      "foo": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "test",
+    "fields": [
+      { "key": "foo/test" }
+    ]
+  }
+}
+
+ {
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "type": "object",
+    "properties": {
+      "age": {
+        "type": "integer",
+        "minimum": 12,
+        "exclusiveMinimum": true,
+        "title": "My age!"
+      },
+      "fname": {
+        "title": "My first name!",
+        "type": "object",
+        "properties": {
+          "mname": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "title": "презиме",
+            "properties": {
+              "a": {
+                "type": "string",
+                "enum": ["x", "y"],
+                "enumNames": ["name X", "name Y"]
+              },
+              "b": {
+                "type": "string"
+              }
+            }
+          },
+          "bday": {
+            "type": "string",
+            "title": "дата на раждане",
+            "minLength": 2
+          }
+        },
+        "required": [
+          "bday",
+          "mname"
+        ]
+      },
+      "name": {
+        "type": "string",
+        "title": "my Na",
+        "enum": ["a", "b"],
+        "enumNames": ["name A", "name B"]
+      }
+    },
+    "required": [
+      "name"
+    ]
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "title": "asdf",
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "име",
+            "type": "section",
+            "legend": "test {{value}}",
+            "items": [
+              {
+                "title": "малко име",
+                "key": "name",
+                "valueInLegend": true
+              }
+            ]
+          },
+          {
+            "title": "възраст",
+            "type": "section",
+            "legend": "test2 {{value}}",
+            "items": [
+              {
+                "title": "възраст",
+                "key": "age",
+                "valueInLegend": true
+              }
+            ]
+          },
+          {
+            "title": "допълнителна информация",
+            "type": "section",
+            "legend": "test3 {{value}}",
+            "items": [
+              {
+                "title": "презиме2",
+                "legend": "prezime {{value}}",
+                "key": "fname/mname",
+                "type": "tabobject",
+                "items": [
+                  {
+                    "type": "section",
+                    "legend": "inner legend {{value}}",
+                    "items": [
+                      {
+                        "key": "fname/mname/a",
+                        "valueInLegend": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "items": [
+                      {
+                        "key": "fname/mname/b"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "дата на раждане",
+                "minLength": 2,
+                "key": "fname/bday"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "age": 10,
+    "name": "sad"
+  }
+}
+
+
+{
+  "schema": {
+    "id": "asd",
+    "type": "object",
+    "properties": {
+      "te/st": {
+        "type": "string"
+      },
+      "test": {
+        "type": "string"
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "asd",
+    "fields": [
+      { "key": "te~1st" }, { "key": "test" },
+      { "type": "submit", "title": "submit" }
+    ]
+  }
+}
+
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+      "type": "object",
+      "properties": {
+        "arr1": {
+          "type": ["array", "null"],
+          "title": "1. Nullable array initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr2": {
+          "type": "array",
+          "title": "2. Non-Nullable array initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr3": {
+          "type": ["array", "null"],
+          "title": "3. Nullable tabarray initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr4": {
+          "type": "array",
+          "title": "4. Non-Nullable tabarray initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr5": {
+          "type": ["array", "null"],
+          "title": "5. Nullable hidden initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr6": {
+          "type": "array",
+          "title": "6. Non-Nullable hidden initial []",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr7": {
+          "type": ["array", "null"],
+          "title": "7. Nullable array initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr8": {
+          "type": "array",
+          "title": "8. Non-Nullable array initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr9": {
+          "type": ["array", "null"],
+          "title": "9. Nullable tabarray initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr10": {
+          "type": "array",
+          "title": "10. Non-Nullable tabarray initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+        "arr11": {
+          "type": ["array", "null"],
+          "title": "11. Nullable hidden initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        },
+
+        // should ASSERT
+        "arr12": {
+          "type": "array",
+          "title": "12. Non-Nullable hidden initial null",
+          "items": {
+            "title": "Test",
+            "type": "string"
+          }
+        }
+
+      }
+  },
+
+    "form": {
+      "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+      "jsonformVersion": "2.0",
+      "fields": [
+        {
+          "type": "array",
+          "key": "arr1"
+        },
+        {
+          "type": "array",
+          "key": "arr2"
+        },
+        {
+          "type": "tabarray",
+          "key": "arr3"
+        },
+        {
+          "type": "tabarray",
+          "key": "arr4"
+        },
+        {
+          "type": "hidden",
+          "key": "arr5"
+        },
+        {
+          "type": "hidden",
+          "key": "arr6"
+        },
+        {
+          "type": "array",
+          "key": "arr7"
+        },
+        {
+          "type": "array",
+          "key": "arr8"
+        },
+        {
+          "type": "tabarray",
+          "key": "arr9"
+        },
+        {
+          "type": "tabarray",
+          "key": "arr10"
+        },
+        {
+          "type": "hidden",
+          "key": "arr11"
+        },
+
+        {
+          "type": "hidden",
+          "key": "arr12"
+        },
+
+        {
+          "title": "Submit",
+          "type": "submit"
+        }
+      ]
+    },
+    "content": {
+      "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-array",
+      "arr1": [],
+      "arr2": [],
+      "arr3": [],
+      "arr4": [],
+      "arr5": [],
+      "arr6": [],
+      "arr7": null,
+      "arr8": null,
+      "arr9": null,
+      "arr10": null,
+      "arr11": null,
+      "arr12": null
+    }
+}
+
+
+ {
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "a": {
+        "type": "boolean"
+      },
+      "b": {
+        "type": "number",
+        "title": "B"
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "fields": [
+      {
+        "type": "section",
+        "gridLayout": true,
+        "items": [
+          { "key" : "a", "rowWidth": "sixth" },
+          { "key" : "b", "rowWidth": "sixth" }
+        ]
+      }
+    ],
+    "jsonformVersion": "2.0"
+  }
+}
+
+
+ {
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "type": "object",
+    "properties": {
+      "connection": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "title": "Outbound",
+              "type": "object",
+              "properties": {
+                "anyOfId": {
+                  "type": "string",
+                  "enum": ["outbound"]
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "port": {
+                  "title": "Port",
+                  "type": ["integer", "null"]
+                },
+                "remote_ip": {
+                  "title": "Remote IP",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "title": "Inbound",
+              "type": "object",
+              "properties": {
+                "anyOfId": {
+                  "type": "string",
+                  "enum": ["inbound"]
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "port": {
+                  "title": "Port",
+                  "type": "integer"
+                },
+                "whitelist": {
+                  "title": "Whitelist",
+                  "type": "array",
+                  "defaultNumberOfItems": 0,
+                  "items": {
+                    "type": "string",
+                    "title": "ip"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "jsonformVersion": "2.0",
+    "fields": [
+      "*",
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}
+
+
+ {
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "type": "object",
+    "properties": {
+      "connection": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "title": "Outbound",
+              "type": "object",
+              "properties": {
+                "anyOfId": {
+                  "type": "string",
+                  "enum": ["outbound"]
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "port": {
+                  "title": "Port",
+                  "type": ["integer", "null"]
+                },
+                "remote_ip": {
+                  "title": "Remote IP",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "title": "Inbound",
+              "type": "object",
+              "properties": {
+                "anyOfId": {
+                  "type": "string",
+                  "enum": ["inbound"]
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "port": {
+                  "title": "Port",
+                  "type": "integer"
+                },
+                "whitelist": {
+                  "title": "Whitelist",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "jsonformVersion": "2.0",
+    "fields": [
+      "*",
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}
+
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "type": "object",
+    "properties": {
+      "menu": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["red", "green", "blue"]
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-questions",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "menu",
+        "type": "checkboxes"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}
+
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-select-basic",
+    "type": "object",
+    "properties": {
+      "ismale": {
+        "type": ["boolean", "null"],
+        "title": "Is male?"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-select-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "ismale",
+        "type": "select",
+        "required": true
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  }
+}
+
+*/

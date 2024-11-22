@@ -1,0 +1,142 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/3-radios-advanced",
+    "type": "object",
+    "properties": {
+      "language": {
+        "type": "string",
+        "title": "Best language",
+        "enum": [
+          "JavaScript",
+          "Python",
+          "PHP",
+          "Perl",
+          "Ruby",
+          "Java",
+          "C++",
+          "Go",
+          "other"
+        ]
+      },
+      "cool": {
+        "type": "boolean",
+        "title": "Is it cool?"
+      },
+      "cool2": {
+        "type": "boolean",
+        "title": "Is it cool again?"
+      },
+      "address": {
+        "type": "object",
+        "title": "Location survey",
+        "description": "please answer the following questions about your location",
+        "properties": {
+          "country": {
+            "type": "boolean",
+            "title": "Country population",
+            "description": "Does your country have more than 10 million citizens"
+          },
+          "city": {
+            "type": ["boolean", "null"],
+            "title": "City population",
+            "description": "Does the city you live in have more than 1 million people"
+          }
+        },
+        "required": ["country", "city"]
+      },
+      "contacts": {
+        "type": "array",
+        "title": "Contact list",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Contact name",
+              "type": "string",
+              "default": "Mike"
+            },
+            "operator": {
+              "title": "Contact mobile provider",
+              "type": "string",
+              "enum": [ "Mtel", "Vivacom", "Telenor", "Bob", "other"],
+              "default": "Vivacom"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/3-radios-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "language",
+        "type": "radios"
+      },
+      {
+        "title": "Hidden radiobutton",
+        "description": "Only becomes visible after choosing true on the previous option",
+        "key": "cool",
+        "type": "radios",
+        "titleMap": {
+          "false": "Not at all",
+          "true": "Very cool"
+        }
+      },
+      {
+        "key": "cool2",
+        "type": "radios",
+        "options": {
+          "false": "Not at all",
+          "true": "Very cool"
+        }
+      },
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "address/city",
+                "type": "radios"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "address/country",
+                "type": "radios"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contacts",
+        "type": "tabarray",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "key": "contacts[]/name"
+            },
+            {
+              "key": "contacts[]/operator",
+              "type": "radios",
+              "inline": true
+            }
+          ]
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  }
+}

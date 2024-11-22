@@ -1,0 +1,27 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-inet-format-example",
+    "type": "object",
+    "properties": {
+      "html": {
+        "title": "Some html field",
+        "type": "string",
+        "format": "html"
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-inet-format-example",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "html"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}
+

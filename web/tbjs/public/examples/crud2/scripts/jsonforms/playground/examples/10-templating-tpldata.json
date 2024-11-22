@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-tpldata",
+    "type": "object",
+    "properties": {
+      "age": {
+        "type": "integer",
+        "title": "Age"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-tpldata",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "age",
+        "title": "{{user.name}}'s age"
+      }
+    ]
+  },
+
+  "tpldata": {
+    "user": {
+      "name": "tidoust"
+    }
+  }
+}

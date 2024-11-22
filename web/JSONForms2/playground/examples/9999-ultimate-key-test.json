@@ -1,0 +1,285 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "type": "object",
+    "properties": {
+      "u~sers": {
+        "type": "array",
+        "title": "Users",
+        "items": {
+          "title": "User",
+          "type": "object",
+          "properties": {
+            "name": {"type":"string", "title": "Name"},
+            "a/ccounts": {
+              "type": "array",
+              "title": "Accounts",
+              "items": {
+                "title": "Account",
+                "type": "object",
+                "properties": {
+                  "i.nfo": {
+                    "type": "object",
+                    "title": "Personal info",
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "title": "Address"
+                      },
+                      "name": {
+                        "type": "object",
+                        "title": "Names",
+                        "properties": {
+                          "fname": {
+                            "type": "string",
+                            "title": "First name"
+                          },
+                          "lname": {
+                            "type": "string",
+                            "title": "Last name"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "[b]{a}lanc[e]": {
+                    "title": "Balance",
+                    "type": "object",
+                    "properties": {
+                      "USD": {
+                        "type": "object",
+                        "title": "USD",
+                        "properties": {
+                          "amount": {
+                            "type": "string",
+                            "title": "Amount"
+                          }
+                        }
+                      },
+                      "BGN": {
+                        "type": "object",
+                        "title": "BGN",
+                        "properties": {
+                          "amount": {
+                            "type": "string",
+                            "title": "Amount"
+                          }
+                        }
+                      },
+                      "EUR": {
+                        "type": "object",
+                        "title": "EUR",
+                        "properties": {
+                          "amount": {
+                            "type": "string",
+                            "title": "Amount"
+                          }
+                        }
+                      },
+                      "AUD": {
+                        "type": "object",
+                        "title": "AUD",
+                        "properties": {
+                          "amount": {
+                            "type": "string",
+                            "title": "Amount"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "u~0sers",
+        "type": "tabarray",
+        "forceTabSelect": true,
+        "enableSorting": true,
+        "items": {
+          "type": "section",
+          "key": "u~0sers[]",
+          "legend": "User {{idx}}. {{value}}",
+          "items": [
+            {
+              "key": "u~0sers[]/name",
+              "valueInLegend": true
+            },
+            {
+              "type": "tabarray",
+              "enableSorting": true,
+              "key": "u~0sers[]/a~1ccounts",
+              "items": {
+                "type": "section",
+                "key": "u~0sers[]/a~1ccounts[]",
+                "title": "Account {{idx}}",
+                "items": {
+                  "type": "tabobject",
+                  "key": "u~0sers[]/a~1ccounts[]",
+                  "items": [
+                    {
+                      "type": "section",
+                      "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7",
+                      "items": {
+                        "type": "tabobject",
+                        "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7",
+                        "forceTabSelect": true,
+                        "items": [
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7/USD"
+                          },
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7/BGN"
+                          },
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7/EUR"
+                          },
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/~6b~7~3a~4lanc~6e~7/AUD"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "key": "u~0sers[]/a~1ccounts[]/i.nfo",
+                      "items": {
+                        "type": "tabobject",
+                        "key": "u~0sers[]/a~1ccounts[]/i.nfo",
+                        "items": [
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/i.nfo/address",
+                            "items": {
+                              "key": "u~0sers[]/a~1ccounts[]/i.nfo/address"
+                            }
+                          },
+                          {
+                            "type": "section",
+                            "key": "u~0sers[]/a~1ccounts[]/i.nfo/name",
+                            "items": [
+                              {
+                                "key": "u~0sers[]/a~1ccounts[]/i.nfo/name/fname"
+                              },
+                              {
+                                "key": "u~0sers[]/a~1ccounts[]/i.nfo/name/lname"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "u~sers": [
+      {
+        "name": "Marti",
+        "a/ccounts": [
+          {
+            "[b]{a}lanc[e]": {
+              "USD": {
+                "amount": "1000"
+              },
+              "BGN": {
+                "amount": "2000"
+              },
+              "EUR": {
+                "amount": "3000"
+              },
+              "AUD": {
+                "amount": "4000"
+              }
+            },
+            "i.nfo": {
+              "address": "123",
+              "name": {
+                "fname": "marti",
+                "lname": "last name"
+              }
+            }
+          },
+          {
+            "name": "asdf",
+            "[b]{a}lanc[e]": {
+              "USD": {
+                "amount": "1111111111"
+              },
+              "BGN": {
+                "amount": "22222222"
+              },
+              "EUR": {
+                "amount": "3333333333"
+              },
+              "AUD": {
+                "amount": "44444444444444"
+              }
+            },
+            "i.nfo": {
+              "address": "222222222",
+              "name": {
+                "fname": "sadf",
+                "lname": "asdfas sadfasdf"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Asdf",
+        "a/ccounts": [
+          {
+            "[b]{a}lanc[e]": {
+              "USD": {
+                "amount": "1"
+              },
+              "BGN": {
+                "amount": "2"
+              },
+              "EUR": {
+                "amount": "3"
+              },
+              "AUD": {
+                "amount": "4"
+              }
+            },
+            "i.nfo": {
+              "address": "ttttt",
+              "name": {
+                "fname": "aaaaaaaaa",
+                "lname": "bbbbbbbbbbbb"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,5203 @@
+{
+  "resources": {},
+  "formNameranslations": "JSONFORMS::CRUD::accounts",
+  "translations": {
+    "DBForms__accounts__preferences_json": {
+      "player settings": {},
+      "prefered locales": {},
+      "monthly bet limit, cents": {},
+      "self barring reason": {},
+      "how did you hear about us": {},
+      "self barring": {},
+      "selected deposit promo": {},
+      "limits": {},
+      "selected deposit type": {},
+      "rejected promotions": {},
+      "preferences": {},
+      "deposit": {},
+      "daily bet limit, cents": {},
+      "selected deposit promo at": {}
+    },
+    "DBForms__accounts__admin_settings_json": {
+      "barring": {},
+      "deposit bar": {},
+      "admin bar reason": {},
+      "login bar": {},
+      "admin settings": {},
+      "manually allowed promotions": {},
+      "promotions": {},
+      "payments": {},
+      "cashout bar": {},
+      "limits": {},
+      "privileges": {},
+      "is admin barred": {},
+      "bookmaking daily bet limit, cents": {},
+      "casino daily bet limit, cents": {},
+      "payment tools": {}
+    }
+  },
+  "content": {
+    "registration_country__jf_approval_code": null,
+    "personal_doc_is_unlimited": null,
+    "block_freerounds": 0,
+    "personal_doc_issued_at": "2023-06-27",
+    "account_status_level__user_updated_at": null,
+    "personal_doc_type_id": 1,
+    "admin_settings": {
+      "privileges": {
+        "payments": {
+          "verified_payment_systems": null,
+          "payment_tools": {
+            "EASYPAYEGN": {
+              "tools": {
+                "9506131070": {
+                  "inserted_at": "2021-08-11 10:32:28",
+                  "is_verified": true
+                }
+              }
+            },
+            "PAYSYSCASHTERMINAL": {
+              "tools": {
+                "Mime7o": {
+                  "is_verified": false,
+                  "inserted_at": "2022-03-11 00:46:48"
+                },
+                "mime7o": {
+                  "is_verified": false,
+                  "inserted_at": "2022-04-04 04:29:08"
+                },
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-12-08 22:07:23"
+                }
+              }
+            },
+            "EASYPAYEAD": {
+              "tools": {
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-03-24 06:49:34"
+                }
+              }
+            },
+            "FASTPAY1": {
+              "tools": {
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-12-29 18:13:20"
+                }
+              }
+            },
+            "BANKACC_BGN": {
+              "tools": {
+                "02/0000001527288096": {
+                  "is_verified": true,
+                  "inserted_at": "2023-08-28 02:04:30"
+                },
+                "BG26STSA93001527288096": {
+                  "is_verified": true,
+                  "inserted_at": "2023-08-28 02:08:13"
+                }
+              }
+            },
+            "PAYSYSEPAY": {
+              "tools": {
+                "000000": {
+                  "is_verified": true,
+                  "inserted_at": "2023-09-05 19:30:05"
+                },
+                "mimiwinbet@gmail.com": {
+                  "is_verified": true,
+                  "inserted_at": "2023-09-17 08:23:15"
+                }
+              }
+            }
+          }
+        },
+        "is_login_barred": false,
+        "is_cashout_barred": false,
+        "is_deposit_barred": false
+      },
+      "barring": {
+        "is_admin_barred": false,
+        "admin_bar_count": 1,
+        "admin_bar_reason": "ninaivona3@gmail.com"
+      },
+      "promotions": {
+        "manually_allowed_promotions": [
+          {
+            "notes": null,
+            "timestamp": "2021-03-04 10:10:00",
+            "promo_id": 445
+          },
+          {
+            "promo_id": 486,
+            "timestamp": "2021-03-24 11:00:00",
+            "notes": null
+          },
+          {
+            "promo_id": 502,
+            "notes": null,
+            "timestamp": "2021-04-23 10:50:00"
+          },
+          {
+            "promo_id": 791,
+            "timestamp": "2021-04-28 11:33:00",
+            "notes": null
+          },
+          {
+            "promo_id": 845,
+            "notes": null,
+            "timestamp": "2021-06-18 15:57:00"
+          },
+          {
+            "timestamp": "2021-06-30 14:03:00",
+            "notes": null,
+            "promo_id": 552
+          },
+          {
+            "promo_id": 544,
+            "timestamp": "2021-07-12 12:50:00",
+            "notes": null
+          },
+          {
+            "promo_id": 898,
+            "notes": null,
+            "timestamp": "2021-09-08 17:30:00"
+          },
+          {
+            "promo_id": 483,
+            "notes": null,
+            "timestamp": "2021-10-01 09:25:00"
+          },
+          {
+            "promo_id": 480,
+            "notes": null,
+            "timestamp": "2021-10-05 10:05:00"
+          },
+          {
+            "timestamp": "2021-12-06 11:00:00",
+            "notes": null,
+            "promo_id": 873
+          },
+          {
+            "notes": null,
+            "timestamp": "2022-03-22 09:15:00",
+            "promo_id": 472
+          },
+          {
+            "timestamp": "2022-04-18 09:00:00",
+            "notes": null,
+            "promo_id": 230
+          },
+          {
+            "timestamp": "2022-07-08 09:45:00",
+            "notes": null,
+            "promo_id": 233
+          },
+          {
+            "promo_id": 936,
+            "timestamp": "2022-07-26 10:55:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2022-10-31 09:40:00",
+            "promo_id": 551
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-01-23 13:10:52",
+            "promo_id": 241
+          },
+          {
+            "promo_id": 977,
+            "notes": null,
+            "timestamp": "2023-04-06 10:20:00"
+          },
+          {
+            "promo_id": 1227,
+            "notes": null,
+            "timestamp": "2023-06-09 07:35:00"
+          },
+          {
+            "promo_id": 1228,
+            "timestamp": "2023-06-10 07:35:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-06-18 00:05:00.095316",
+            "promo_id": 1045
+          },
+          {
+            "timestamp": "2023-07-09 07:45:00",
+            "notes": null,
+            "promo_id": 773
+          },
+          {
+            "timestamp": "2023-07-12 07:45:00",
+            "notes": null,
+            "promo_id": 473
+          },
+          {
+            "promo_id": 1046,
+            "notes": null,
+            "timestamp": "2023-08-07 00:18:06.647543"
+          },
+          {
+            "timestamp": "2023-08-07 07:35:00",
+            "notes": null,
+            "promo_id": 224
+          },
+          {
+            "promo_id": 476,
+            "notes": null,
+            "timestamp": "2023-08-08 07:45:00"
+          },
+          {
+            "promo_id": 469,
+            "timestamp": "2023-08-09 07:35:00",
+            "notes": null
+          },
+          {
+            "promo_id": 479,
+            "notes": null,
+            "timestamp": "2023-08-11 07:45:00"
+          },
+          {
+            "timestamp": "2023-08-12 10:48:38",
+            "notes": null,
+            "promo_id": 772
+          },
+          {
+            "promo_id": 775,
+            "notes": null,
+            "timestamp": "2023-08-13 07:45:00"
+          },
+          {
+            "promo_id": 229,
+            "notes": null,
+            "timestamp": "2023-08-14 07:45:00"
+          },
+          {
+            "promo_id": 556,
+            "notes": null,
+            "timestamp": "2023-08-16 12:14:39"
+          },
+          {
+            "promo_id": 474,
+            "timestamp": "2023-08-17 07:45:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-08-18 07:35:00",
+            "promo_id": 471
+          },
+          {
+            "promo_id": 770,
+            "notes": null,
+            "timestamp": "2023-08-19 07:35:00"
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-08-22 07:35:00",
+            "promo_id": 468
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-03 07:35:00",
+            "promo_id": 771
+          },
+          {
+            "promo_id": 477,
+            "timestamp": "2023-09-06 07:45:00",
+            "notes": null
+          },
+          {
+            "promo_id": 475,
+            "notes": null,
+            "timestamp": "2023-09-08 07:45:00"
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-09 07:45:00",
+            "promo_id": 774
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-14 07:45:00",
+            "promo_id": 470
+          }
+        ]
+      },
+      "regulatory": {
+        "is_login_check_required": false,
+        "last_login_check_status": "NAP Response: {\"responseInfo\":\"Лице с идентификатор 950613**** към дата 17.09.2023 10:45:40 не е вписано в Регистъра по чл. 10г от Закона за хазарта.\",\"responseCode\":0}",
+        "last_login_check_at": "2023-09-17 10:45:41.366997+03",
+        "failed_login_check_count": 0
+      },
+      "limits": {
+        "casino_daily_bet_limit_cents": null,
+        "bookmaking_daily_bet_limit_cents": null
+      }
+    },
+    "account_status_level__jf_approval_user": null,
+    "personal_doc_type__row": {
+      "deleted": null,
+      "name": "ID Card",
+      "jf_approval_diff_checksum": null,
+      "archived": null,
+      "updated_version": null,
+      "updated_by": null,
+      "tb_sync_updated_at": "2018-01-19T19:40:04",
+      "inserted_at": null,
+      "jf_approval_pending_data": null,
+      "archived_at": null,
+      "jf_approval_user": null,
+      "inserted_by": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "jf_approval_timestamp": null,
+      "archived_by": null,
+      "ordering": 1000,
+      "id": 1,
+      "jf_approval_code": null,
+      "code": "IDCARD",
+      "updated_at": null
+    },
+    "personal_id_type__updated_by": "NOLOGIN",
+    "inet_status": null,
+    "account_status_level__row": {
+      "archived_by": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "jf_approval_timestamp": null,
+      "jf_approval_pending_data": null,
+      "archived_at": null,
+      "jf_approval_user": null,
+      "tb_sync_updated_at": "2019-09-17T16:49:33",
+      "updated_version": null,
+      "updated_by": null,
+      "archived": null,
+      "tier_points_max_value": 5000,
+      "deleted": null,
+      "is_active": true,
+      "updated_at": null,
+      "jf_approval_code": null,
+      "id": 4,
+      "ordering": 400,
+      "inserted_by": null,
+      "inserted_at": null,
+      "is_calculable": true,
+      "jf_approval_diff_checksum": null,
+      "name": "PLATINUM"
+    },
+    "is_personal_data_masked": false,
+    "personal_id_type__jf_approval_user": null,
+    "marketing_referrer__archived": null,
+    "currency__inserted_by": null,
+    "archived": false,
+    "preferences": {
+      "locales": [
+        "bg_BG"
+      ],
+      "deposit": {
+        "selected_deposit_promo_at": "2023-09-15 17:41:15",
+        "selected_deposit_promo_id": 470,
+        "rejected_deposit_promotions": [
+          {
+            "timestamp": "2021-01-18 23:38:12",
+            "promo_id": 71
+          },
+          {
+            "promo_id": 771,
+            "timestamp": "2022-03-21 00:40:39"
+          },
+          {
+            "promo_id": 968,
+            "timestamp": "2022-03-21 00:40:41"
+          }
+        ],
+        "selected_deposit_type": "regular_deposit"
+      },
+      "how_did_you_hear_about_us": null,
+      "limits": {
+        "monthly_deposit_limit_set_at": null,
+        "yearly_deposit_limit_cents": null,
+        "weekly_deposit_limit_cents": null,
+        "yearly_deposit_limit_set_at": null,
+        "monthly_bet_limit_cents": null,
+        "daily_bet_limit_cents": null,
+        "weekly_deposit_limit_set_at": null,
+        "max_session_length_minutes": null,
+        "daily_deposit_limit_set_at": null,
+        "daily_deposit_limit_cents": null,
+        "default_bet_amount_cents": null,
+        "monthly_deposit_limit_cents": null
+      },
+      "barring": {
+        "is_self_barred": null
+      },
+      "favourite_games": {
+        "217": "217",
+        "248": "248",
+        "266": "266",
+        "282": "282",
+        "290": "290",
+        "328": "328",
+        "345": "345",
+        "353": "353",
+        "355": "355",
+        "357": "357",
+        "401": "401",
+        "409": "409",
+        "419": "419",
+        "424": "424",
+        "438": "438",
+        "445": "445",
+        "446": "446",
+        "452": "452",
+        "545": "545",
+        "573": "573",
+        "624": "624",
+        "630": "630",
+        "636": "636",
+        "640": "640",
+        "647": "647",
+        "655": "655",
+        "666": "666",
+        "670": "670",
+        "680": "680",
+        "693": "693",
+        "694": "694",
+        "697": "697",
+        "698": "698",
+        "736": "736",
+        "741": "741",
+        "744": "744",
+        "780": "780",
+        "782": "782",
+        "789": "789",
+        "794": "794",
+        "797": "797",
+        "802": "802",
+        "811": "811",
+        "814": "814",
+        "815": "815",
+        "37859": "37859",
+        "160601": "160601",
+        "160603": "160603",
+        "172024": "172024",
+        "172026": "172026",
+        "172208": "172208",
+        "172209": "172209",
+        "172262": "172262",
+        "172416": "172416",
+        "172486": "172486",
+        "188475": "188475",
+        "188476": "188476",
+        "188534": "188534",
+        "188541": "188541",
+        "188548": "188548",
+        "188549": "188549",
+        "188568": "188568",
+        "188575": "188575",
+        "188616": "188616",
+        "188628": "188628",
+        "189557": "189557",
+        "244500": "244500",
+        "265977": "265977",
+        "265983": "265983",
+        "266009": "266009",
+        "266031": "266031",
+        "271054": "271054",
+        "284356": "284356",
+        "284391": "284391",
+        "284439": "284439",
+        "284863": "284863",
+        "284866": "284866",
+        "284872": "284872",
+        "298471": "298471",
+        "300286": "300286",
+        "303410": "303410",
+        "303422": "303422",
+        "325456": "325456",
+        "325464": "325464",
+        "331493": "331493",
+        "340554": "340554"
+      }
+    },
+    "marketing_referrer__user_updated_at": null,
+    "account_status_level__inserted_by": null,
+    "block_credit": 0,
+    "verified_email": null,
+    "bonus_credit": 0,
+    "personal_doc_type__archived": null,
+    "login": "mime7o",
+    "currency_bonus_wager_req_init": "0.00",
+    "registration_country__user_updated_by": null,
+    "marketing_referrer__jf_approval_code": null,
+    "country__jf_approval_diff_checksum": null,
+    "currency_block_freebet_credit": "0.00",
+    "admin_password": null,
+    "tier_points": "4416.6255",
+    "crm_sync": false,
+    "country__updated_at": "2023-08-15T06:44:02.662768+03:00",
+    "personal_doc_type__archived_by": null,
+    "last_activity_timestamp": "2023-09-17 12:15:34",
+    "account_status_level__row_jsonexpand": "{\"id\":4,\"name\":\"PLATINUM\",\"ordering\":400,\"tb_sync_updated_at\":\"2019-09-17T16:49:33\",\"tier_points_max_value\":5000,\"is_calculable\":true,\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":null,\"updated_by\":null,\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":null,\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"is_active\":true,\"user_updated_at\":null,\"user_updated_by\":null}",
+    "citizenship_country_id": 35,
+    "has_accepted_making_donations": false,
+    "citizenship__inserted_by": null,
+    "class_id__name": "Member",
+    "postal_code": null,
+    "checked_out_timestamp": null,
+    "marketing_referrer__row_jsonexpand": "{\"id\":395,\"name\":\"PB-0115\",\"code\":\"PB-0115\",\"type_id\":1,\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":null,\"updated_by\":null,\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":null,\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"user_updated_at\":null,\"user_updated_by\":null}",
+    "currency__user_updated_by": null,
+    "personal_doc_type__name": "ID Card",
+    "currency__archived_by": null,
+    "password": "$1$4chMlJ13$6sJv.dDFhrIZEZgL10ZIH0",
+    "account_status_level__updated_version": null,
+    "freebet_wager_req_init": "0",
+    "currency__jf_approval_timestamp": null,
+    "registration_country__inserted_by": null,
+    "promo_points": "1.79",
+    "draw_points": "0",
+    "registration_country__jf_approval_user": null,
+    "updated_at": "2023-09-17 12:15:34.242007+03",
+    "currency_block_noncashable_wr_credit": "0.00",
+    "personal_doc_type__tb_sync_updated_at": "2018-01-19T19:40:04",
+    "last_get_promotion_json": null,
+    "account_level_id": 4,
+    "marketing_referrer__jf_approval_pending_data": null,
+    "currency__is_iso4217": true,
+    "country__inserted_by": null,
+    "personal_doc_expires_at": "2033-06-27",
+    "registration_country__jf_approval_pending_data": null,
+    "crm_client_data": null,
+    "block_bonus_points": "0",
+    "reg_number": "145121",
+    "personal_id_type__name": "EGN",
+    "currency__jf_approval_diff_checksum": null,
+    "middle_name": null,
+    "currency_block_credit": "0.00",
+    "currency__user_updated_at": null,
+    "account_status_level__tb_sync_updated_at": "2019-09-17T16:49:33",
+    "currency__tb_sync_updated_at": "2021-08-11T08:04:09",
+    "email": "mimiwinbet@gmail.com",
+    "citizenship__phone_code": "359",
+    "additional_fields": {
+      "report_start_time": "2023-09-18T00:00:00",
+      "report_end_time": "2023-09-19T00:00:00"
+    },
+    "registration_country__row": {
+      "archived": null,
+      "updated_by": "NOLOGIN",
+      "updated_version": 2,
+      "deleted": null,
+      "tb_sync_updated_at": "2023-08-15T06:44:03",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "jf_approval_timestamp": null,
+      "phone_code": "359",
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "archived_by": null,
+      "jf_approval_diff_checksum": null,
+      "name": "Bulgaria",
+      "code_alpha3": "BGR",
+      "id": 35,
+      "code": "BG",
+      "jf_approval_code": null,
+      "updated_at": "2023-08-15T06:44:02.662768+03:00",
+      "inserted_at": null,
+      "inserted_by": null
+    },
+    "personal_doc_type__updated_by": null,
+    "registered_from_ip_addr": "185.240.144.17",
+    "citizenship__jf_approval_diff_checksum": null,
+    "gender": 2,
+    "last_login_timestamp": "2023-09-17 10:45:41.275448+03",
+    "account_status_level__tier_points_max_value": 5000,
+    "citizenship__jf_approval_user": null,
+    "country__archived_by": null,
+    "currency__jf_approval_pending_data": null,
+    "citizenship__updated_at": "2023-08-15T06:44:02.662768+03:00",
+    "citizenship__code": "BG",
+    "citizenship__name": "Bulgaria",
+    "freebet_credit_init": "0",
+    "full_descr": "Мария Митева (145121)",
+    "marketing_referrer__row": {
+      "archived": null,
+      "updated_version": null,
+      "updated_by": null,
+      "jf_approval_diff_checksum": null,
+      "name": "PB-0115",
+      "deleted": null,
+      "updated_at": null,
+      "id": 395,
+      "jf_approval_code": null,
+      "code": "PB-0115",
+      "inserted_by": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "type_id": 1,
+      "jf_approval_timestamp": null,
+      "archived_by": null,
+      "inserted_at": null,
+      "jf_approval_pending_data": null,
+      "jf_approval_user": null,
+      "archived_at": null
+    },
+    "account_status_level__archived_by": null,
+    "currency_freebet_wager_req_init": "0.00",
+    "citizenship__archived_by": null,
+    "currency__row_jsonexpand": "{\"id\":1028,\"name\":\"Bulgarian lev (BGN)\",\"code\":\"BGN\",\"digits_after_decimal_separator\":2,\"symbol\":\"лв.\",\"is_symbol_position_front\":false,\"tb_sync_updated_at\":\"2021-08-11T08:04:09\",\"code_digits\":975,\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":\"2021-08-11T08:04:09.223505+03:00\",\"updated_by\":\"NOLOGIN\",\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":5,\"denoms\":[],\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"is_iso4217\":true,\"digits_after_decimal_separator_format\":2,\"user_updated_at\":null,\"user_updated_by\":null}",
+    "registration_country__row_jsonexpand": "{\"id\":35,\"name\":\"Bulgaria\",\"code\":\"BG\",\"tb_sync_updated_at\":\"2023-08-15T06:44:03\",\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":\"2023-08-15T06:44:02.662768+03:00\",\"updated_by\":\"NOLOGIN\",\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":2,\"phone_code\":\"359\",\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"code_alpha3\":\"BGR\",\"user_updated_at\":null,\"user_updated_by\":null}",
+    "personal_doc_type__row_jsonexpand": "{\"id\":1,\"name\":\"ID Card\",\"ordering\":1000,\"tb_sync_updated_at\":\"2018-01-19T19:40:04\",\"code\":\"IDCARD\",\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":null,\"updated_by\":null,\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":null,\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"user_updated_at\":null,\"user_updated_by\":null}",
+    "personal_doc_number": "652591084",
+    "brand_id": 45,
+    "is_phone_verified": false,
+    "is_anon": false,
+    "marketing_referrer__inserted_by": null,
+    "is_verified": true,
+    "is_password_change_required": false,
+    "marketing_referrer__inserted_at": null,
+    "block_noncashable_credit": 0,
+    "is_blacklisted_old": false,
+    "bonus_promo_id": null,
+    "registered_from_remote_system_id": null,
+    "bonus_points": "2180.0545",
+    "personal_id_type__user_updated_at": null,
+    "pin_code": "2484",
+    "secret_answer": "shouldn't be required!",
+    "has_picture": false,
+    "bg_nap_id": null,
+    "person_id": null,
+    "account_type_id": 10,
+    "citizenship__code_alpha3": "BGR",
+    "inet_client_id": null,
+    "personal_id_type__country_id": 35,
+    "personal_doc_type__id": 1,
+    "verified_phone": null,
+    "crm_client_id": "0743e623-5cf5-48a3-93a2-2f8acbeea8f8",
+    "inserted_at": "2021-01-18 23:35:30.404829+02",
+    "tmp_password": null,
+    "preferences_json": {
+      "locales": [
+        "bg_BG"
+      ],
+      "deposit": {
+        "selected_deposit_promo_at": "2023-09-15 17:41:15",
+        "selected_deposit_promo_id": 470,
+        "rejected_deposit_promotions": [
+          {
+            "timestamp": "2021-01-18 23:38:12",
+            "promo_id": 71
+          },
+          {
+            "promo_id": 771,
+            "timestamp": "2022-03-21 00:40:39"
+          },
+          {
+            "promo_id": 968,
+            "timestamp": "2022-03-21 00:40:41"
+          }
+        ],
+        "selected_deposit_type": "regular_deposit"
+      },
+      "how_did_you_hear_about_us": null,
+      "limits": {
+        "monthly_deposit_limit_set_at": null,
+        "yearly_deposit_limit_cents": null,
+        "weekly_deposit_limit_cents": null,
+        "yearly_deposit_limit_set_at": null,
+        "monthly_bet_limit_cents": null,
+        "daily_bet_limit_cents": null,
+        "weekly_deposit_limit_set_at": null,
+        "max_session_length_minutes": null,
+        "daily_deposit_limit_set_at": null,
+        "daily_deposit_limit_cents": null,
+        "default_bet_amount_cents": null,
+        "monthly_deposit_limit_cents": null
+      },
+      "barring": {
+        "is_self_barred": null
+      },
+      "favourite_games": {
+        "217": "217",
+        "248": "248",
+        "266": "266",
+        "282": "282",
+        "290": "290",
+        "328": "328",
+        "345": "345",
+        "353": "353",
+        "355": "355",
+        "357": "357",
+        "401": "401",
+        "409": "409",
+        "419": "419",
+        "424": "424",
+        "438": "438",
+        "445": "445",
+        "446": "446",
+        "452": "452",
+        "545": "545",
+        "573": "573",
+        "624": "624",
+        "630": "630",
+        "636": "636",
+        "640": "640",
+        "647": "647",
+        "655": "655",
+        "666": "666",
+        "670": "670",
+        "680": "680",
+        "693": "693",
+        "694": "694",
+        "697": "697",
+        "698": "698",
+        "736": "736",
+        "741": "741",
+        "744": "744",
+        "780": "780",
+        "782": "782",
+        "789": "789",
+        "794": "794",
+        "797": "797",
+        "802": "802",
+        "811": "811",
+        "814": "814",
+        "815": "815",
+        "37859": "37859",
+        "160601": "160601",
+        "160603": "160603",
+        "172024": "172024",
+        "172026": "172026",
+        "172208": "172208",
+        "172209": "172209",
+        "172262": "172262",
+        "172416": "172416",
+        "172486": "172486",
+        "188475": "188475",
+        "188476": "188476",
+        "188534": "188534",
+        "188541": "188541",
+        "188548": "188548",
+        "188549": "188549",
+        "188568": "188568",
+        "188575": "188575",
+        "188616": "188616",
+        "188628": "188628",
+        "189557": "189557",
+        "244500": "244500",
+        "265977": "265977",
+        "265983": "265983",
+        "266009": "266009",
+        "266031": "266031",
+        "271054": "271054",
+        "284356": "284356",
+        "284391": "284391",
+        "284439": "284439",
+        "284863": "284863",
+        "284866": "284866",
+        "284872": "284872",
+        "298471": "298471",
+        "300286": "300286",
+        "303410": "303410",
+        "303422": "303422",
+        "325456": "325456",
+        "325464": "325464",
+        "331493": "331493",
+        "340554": "340554"
+      }
+    },
+    "currency_id__code": "BGN",
+    "registration_country__phone_code": "359",
+    "nick_name": "Mime7o",
+    "cash_deposit": "0",
+    "country__user_updated_at": null,
+    "promo_credit": "0",
+    "user_updated_by": null,
+    "personal_doc_type__jf_approval_user": null,
+    "country__code_alpha3": "BGR",
+    "marketing_referrer__name": "PB-0115",
+    "currency_noncashable_credit": "0.00",
+    "country__jf_approval_code": null,
+    "citizenship__jf_approval_timestamp": null,
+    "updated_version": 1138386,
+    "country__phone_code": "359",
+    "registration_country__inserted_at": null,
+    "country__jf_approval_timestamp": null,
+    "inet_status_json": null,
+    "has_accepted_marketing": true,
+    "currency__deleted": null,
+    "block_freebet_credit": 0,
+    "currency_noncashable_wr_credit": "0.00",
+    "personal_id_type__updated_version": 1,
+    "marketing_referrer__jf_approval_diff_checksum": null,
+    "account_status_level__archived_at": null,
+    "credit_updated_at": "2023-09-17 09:31:05",
+    "country_id": 35,
+    "currency_block_noncashable_credit": "0.00",
+    "currency__jf_approval_code": null,
+    "block_cash_deposit": "0",
+    "marketing_referrer__type_id": 1,
+    "registration_country__archived_at": null,
+    "registration_country__archived_by": null,
+    "marketing_referrer__archived_by": null,
+    "registration_country__id": 35,
+    "currency_freebet_credit": "0.00",
+    "jf_approval_pending_data": null,
+    "personal_doc_type__ordering": 1000,
+    "personal_doc_type__code": "IDCARD",
+    "personal_doc_type__user_updated_at": null,
+    "block_bonus_credit": 0,
+    "currency__updated_at": "2021-08-11T08:04:09.223505+03:00",
+    "account_status_level__jf_approval_diff_checksum": null,
+    "block_noncashable_wr_credit": 0,
+    "currency__archived": null,
+    "birth_date_text": "1995-06-13",
+    "personal_id_type__jf_approval_diff_checksum": null,
+    "personal_doc_type__inserted_by": null,
+    "country__archived": null,
+    "marketing_referrer__user_updated_by": null,
+    "is_freebet_active": false,
+    "personal_id_type_id": 1,
+    "account_id": "1b5a93f63fa83215a90631090c176d20",
+    "currency__code": "BGN",
+    "currency_freebet_wager_req_unfulfill": "0.00",
+    "citizenship__updated_version": 2,
+    "personal_id_type__jf_approval_timestamp": null,
+    "how_did_you_hear_about_us": "null",
+    "archived_at": null,
+    "account_status_level__deleted": null,
+    "country__id": 35,
+    "personal_id_type__code": "BGEGN",
+    "id_hash": "1b5a93f63fa83215a90631090c176d20",
+    "jf_approval_code": null,
+    "account_level_id__name": "PLATINUM",
+    "first_cashout_timestamp": "2022-03-24 12:06:39+02",
+    "last_cashout_id": 69718256,
+    "registration_country__tb_sync_updated_at": "2023-08-15T06:44:03",
+    "noncashable_wr_credit": 0,
+    "bonus_active": false,
+    "country__updated_by": "NOLOGIN",
+    "extra_attached_at": null,
+    "account_status_level__ordering": 400,
+    "currency__jf_approval_user": null,
+    "admin_bar_reason": "\"ninaivona3@gmail.com\"",
+    "personal_id_type__jf_approval_code": null,
+    "registration_country__user_updated_at": null,
+    "address2": null,
+    "tb_sync_updated_at": "2023-09-17 09:31:05",
+    "citizenship__row": {
+      "updated_at": "2023-08-15T06:44:02.662768+03:00",
+      "code": "BG",
+      "jf_approval_code": null,
+      "id": 35,
+      "inserted_by": null,
+      "inserted_at": null,
+      "code_alpha3": "BGR",
+      "jf_approval_diff_checksum": null,
+      "name": "Bulgaria",
+      "archived_by": null,
+      "phone_code": "359",
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "tb_sync_updated_at": "2023-08-15T06:44:03",
+      "updated_by": "NOLOGIN",
+      "updated_version": 2,
+      "archived": null,
+      "deleted": null
+    },
+    "deleted": false,
+    "country__deleted": null,
+    "country__row": {
+      "updated_at": "2023-08-15T06:44:02.662768+03:00",
+      "code": "BG",
+      "jf_approval_code": null,
+      "id": 35,
+      "inserted_by": null,
+      "inserted_at": null,
+      "code_alpha3": "BGR",
+      "name": "Bulgaria",
+      "jf_approval_diff_checksum": null,
+      "archived_by": null,
+      "jf_approval_timestamp": null,
+      "phone_code": "359",
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "archived_at": null,
+      "jf_approval_user": null,
+      "jf_approval_pending_data": null,
+      "tb_sync_updated_at": "2023-08-15T06:44:03",
+      "updated_by": "NOLOGIN",
+      "updated_version": 2,
+      "archived": null,
+      "deleted": null
+    },
+    "personal_doc_type__jf_approval_timestamp": null,
+    "currency__code_digits": 975,
+    "notes": "Вер. с ЛК + ePay чужд  + лк(чужда) заключен на 16/09/23 Лука Откл.на 17,09,23г - Джулия////  трябва да тегли 130 към \tePay",
+    "last_cashout_timestamp": "2023-09-17 12:15:34.242007+03",
+    "marketing_referrer_id__name": "PB-0115",
+    "inserted_by": "NOLOGIN",
+    "account_status_level__name": "PLATINUM",
+    "registration_country__code": "BG",
+    "account_status_level__archived": null,
+    "country__updated_version": 2,
+    "citizenship__inserted_at": null,
+    "account_status_level__inserted_at": null,
+    "last_name": "Митева",
+    "first_deposit_timestamp": "2021-01-19 00:08:43+02",
+    "last_get_promotion": null,
+    "personal_id_type__jf_approval_pending_data": null,
+    "city_of_birth": null,
+    "citizenship__user_updated_at": null,
+    "currency_wager_req_unfulfill": "0.00",
+    "registration_country__archived": null,
+    "registration_country__jf_approval_timestamp": null,
+    "country__tb_sync_updated_at": "2023-08-15T06:44:03",
+    "block_control_q_id": null,
+    "personal_id_type__ordering": 1000,
+    "block_promo_credit": "0",
+    "currency__is_symbol_position_front": false,
+    "currency__digits_after_decimal_separator_format": 2,
+    "citizenship__id": 35,
+    "currency_wager_req_init": "0.00",
+    "first_deposit_id": 8098795,
+    "currency__id": 1028,
+    "invalid_login_count": 0,
+    "personal_doc_type__inserted_at": null,
+    "currency__row": {
+      "digits_after_decimal_separator_format": 2,
+      "symbol": "лв.",
+      "is_symbol_position_front": false,
+      "tb_sync_updated_at": "2021-08-11T08:04:09",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "digits_after_decimal_separator": 2,
+      "jf_approval_pending_data": null,
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "archived_by": null,
+      "archived": null,
+      "updated_by": "NOLOGIN",
+      "updated_version": 5,
+      "deleted": null,
+      "id": 1028,
+      "code": "BGN",
+      "jf_approval_code": null,
+      "updated_at": "2021-08-11T08:04:09.223505+03:00",
+      "inserted_at": null,
+      "denoms": [],
+      "inserted_by": null,
+      "is_iso4217": true,
+      "code_digits": 975,
+      "name": "Bulgarian lev (BGN)",
+      "jf_approval_diff_checksum": null
+    },
+    "admin_settings_json": {
+      "privileges": {
+        "payments": {
+          "verified_payment_systems": null,
+          "payment_tools": {
+            "EASYPAYEGN": {
+              "tools": {
+                "9506131070": {
+                  "inserted_at": "2021-08-11 10:32:28",
+                  "is_verified": true
+                }
+              }
+            },
+            "PAYSYSCASHTERMINAL": {
+              "tools": {
+                "Mime7o": {
+                  "is_verified": false,
+                  "inserted_at": "2022-03-11 00:46:48"
+                },
+                "mime7o": {
+                  "is_verified": false,
+                  "inserted_at": "2022-04-04 04:29:08"
+                },
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-12-08 22:07:23"
+                }
+              }
+            },
+            "EASYPAYEAD": {
+              "tools": {
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-03-24 06:49:34"
+                }
+              }
+            },
+            "FASTPAY1": {
+              "tools": {
+                "9506131070": {
+                  "is_verified": true,
+                  "inserted_at": "2022-12-29 18:13:20"
+                }
+              }
+            },
+            "BANKACC_BGN": {
+              "tools": {
+                "02/0000001527288096": {
+                  "is_verified": true,
+                  "inserted_at": "2023-08-28 02:04:30"
+                },
+                "BG26STSA93001527288096": {
+                  "is_verified": true,
+                  "inserted_at": "2023-08-28 02:08:13"
+                }
+              }
+            },
+            "PAYSYSEPAY": {
+              "tools": {
+                "000000": {
+                  "is_verified": true,
+                  "inserted_at": "2023-09-05 19:30:05"
+                },
+                "mimiwinbet@gmail.com": {
+                  "is_verified": true,
+                  "inserted_at": "2023-09-17 08:23:15"
+                }
+              }
+            }
+          }
+        },
+        "is_login_barred": false,
+        "is_cashout_barred": false,
+        "is_deposit_barred": false
+      },
+      "barring": {
+        "is_admin_barred": false,
+        "admin_bar_count": 1,
+        "admin_bar_reason": "ninaivona3@gmail.com"
+      },
+      "promotions": {
+        "manually_allowed_promotions": [
+          {
+            "notes": null,
+            "timestamp": "2021-03-04 10:10:00",
+            "promo_id": 445
+          },
+          {
+            "promo_id": 486,
+            "timestamp": "2021-03-24 11:00:00",
+            "notes": null
+          },
+          {
+            "promo_id": 502,
+            "notes": null,
+            "timestamp": "2021-04-23 10:50:00"
+          },
+          {
+            "promo_id": 791,
+            "timestamp": "2021-04-28 11:33:00",
+            "notes": null
+          },
+          {
+            "promo_id": 845,
+            "notes": null,
+            "timestamp": "2021-06-18 15:57:00"
+          },
+          {
+            "timestamp": "2021-06-30 14:03:00",
+            "notes": null,
+            "promo_id": 552
+          },
+          {
+            "promo_id": 544,
+            "timestamp": "2021-07-12 12:50:00",
+            "notes": null
+          },
+          {
+            "promo_id": 898,
+            "notes": null,
+            "timestamp": "2021-09-08 17:30:00"
+          },
+          {
+            "promo_id": 483,
+            "notes": null,
+            "timestamp": "2021-10-01 09:25:00"
+          },
+          {
+            "promo_id": 480,
+            "notes": null,
+            "timestamp": "2021-10-05 10:05:00"
+          },
+          {
+            "timestamp": "2021-12-06 11:00:00",
+            "notes": null,
+            "promo_id": 873
+          },
+          {
+            "notes": null,
+            "timestamp": "2022-03-22 09:15:00",
+            "promo_id": 472
+          },
+          {
+            "timestamp": "2022-04-18 09:00:00",
+            "notes": null,
+            "promo_id": 230
+          },
+          {
+            "timestamp": "2022-07-08 09:45:00",
+            "notes": null,
+            "promo_id": 233
+          },
+          {
+            "promo_id": 936,
+            "timestamp": "2022-07-26 10:55:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2022-10-31 09:40:00",
+            "promo_id": 551
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-01-23 13:10:52",
+            "promo_id": 241
+          },
+          {
+            "promo_id": 977,
+            "notes": null,
+            "timestamp": "2023-04-06 10:20:00"
+          },
+          {
+            "promo_id": 1227,
+            "notes": null,
+            "timestamp": "2023-06-09 07:35:00"
+          },
+          {
+            "promo_id": 1228,
+            "timestamp": "2023-06-10 07:35:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-06-18 00:05:00.095316",
+            "promo_id": 1045
+          },
+          {
+            "timestamp": "2023-07-09 07:45:00",
+            "notes": null,
+            "promo_id": 773
+          },
+          {
+            "timestamp": "2023-07-12 07:45:00",
+            "notes": null,
+            "promo_id": 473
+          },
+          {
+            "promo_id": 1046,
+            "notes": null,
+            "timestamp": "2023-08-07 00:18:06.647543"
+          },
+          {
+            "timestamp": "2023-08-07 07:35:00",
+            "notes": null,
+            "promo_id": 224
+          },
+          {
+            "promo_id": 476,
+            "notes": null,
+            "timestamp": "2023-08-08 07:45:00"
+          },
+          {
+            "promo_id": 469,
+            "timestamp": "2023-08-09 07:35:00",
+            "notes": null
+          },
+          {
+            "promo_id": 479,
+            "notes": null,
+            "timestamp": "2023-08-11 07:45:00"
+          },
+          {
+            "timestamp": "2023-08-12 10:48:38",
+            "notes": null,
+            "promo_id": 772
+          },
+          {
+            "promo_id": 775,
+            "notes": null,
+            "timestamp": "2023-08-13 07:45:00"
+          },
+          {
+            "promo_id": 229,
+            "notes": null,
+            "timestamp": "2023-08-14 07:45:00"
+          },
+          {
+            "promo_id": 556,
+            "notes": null,
+            "timestamp": "2023-08-16 12:14:39"
+          },
+          {
+            "promo_id": 474,
+            "timestamp": "2023-08-17 07:45:00",
+            "notes": null
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-08-18 07:35:00",
+            "promo_id": 471
+          },
+          {
+            "promo_id": 770,
+            "notes": null,
+            "timestamp": "2023-08-19 07:35:00"
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-08-22 07:35:00",
+            "promo_id": 468
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-03 07:35:00",
+            "promo_id": 771
+          },
+          {
+            "promo_id": 477,
+            "timestamp": "2023-09-06 07:45:00",
+            "notes": null
+          },
+          {
+            "promo_id": 475,
+            "notes": null,
+            "timestamp": "2023-09-08 07:45:00"
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-09 07:45:00",
+            "promo_id": 774
+          },
+          {
+            "notes": null,
+            "timestamp": "2023-09-14 07:45:00",
+            "promo_id": 470
+          }
+        ]
+      },
+      "regulatory": {
+        "is_login_check_required": false,
+        "last_login_check_status": "NAP Response: {\"responseInfo\":\"Лице с идентификатор 950613**** към дата 17.09.2023 10:45:40 не е вписано в Регистъра по чл. 10г от Закона за хазарта.\",\"responseCode\":0}",
+        "last_login_check_at": "2023-09-17 10:45:41.366997+03",
+        "failed_login_check_count": 0
+      },
+      "limits": {
+        "casino_daily_bet_limit_cents": null,
+        "bookmaking_daily_bet_limit_cents": null
+      }
+    },
+    "first_name": "Мария",
+    "checked_in": false,
+    "marketing_referrer__id": 395,
+    "account_status_level__jf_approval_code": null,
+    "personal_id_type__deleted": false,
+    "marketing_referrer__updated_version": null,
+    "account_status_level__updated_at": null,
+    "registration_country__code_alpha3": "BGR",
+    "jf_approval_user": null,
+    "country__archived_at": null,
+    "currency__name": "Bulgarian lev (BGN)",
+    "last_calced_period": "2023-09",
+    "extra_type_id": 3,
+    "payments_data": {},
+    "payments_data_json": {},
+    "checked_in_timestamp": "2021-01-18 23:35:30",
+    "noncashable_credit": 0,
+    "has_accepted_marketing_sms": true,
+    "brand_id__name": "eCasino",
+    "extra_attached_to_account_id": null,
+    "personal_id_type_id__name": "EGN",
+    "marketing_referrer__jf_approval_timestamp": null,
+    "inet_client_login": null,
+    "personal_doc_type__deleted": null,
+    "is_email_verified": false,
+    "currency_id": 1028,
+    "account_status_level__is_calculable": true,
+    "country__inserted_at": null,
+    "registration_country__updated_by": "NOLOGIN",
+    "has_accepted_ts_and_cs": true,
+    "country__name": "Bulgaria",
+    "block_started_at": null,
+    "personal_id": "9506131070",
+    "first_cashout_id": 29390636,
+    "currency_block_bonus_credit": "0.00",
+    "marketing_referrer__archived_at": null,
+    "has_accepted_marketing_web_notif": true,
+    "address1": null,
+    "archived_by": null,
+    "country__jf_approval_pending_data": null,
+    "last_device_id": null,
+    "marketing_referrer__code": "PB-0115",
+    "personal_id_type__updated_at": "2022-08-16T06:39:11.005967+03:00",
+    "secret_question": "should it be required?",
+    "personal_id_type__archived_at": null,
+    "bonus_wager_req_init": 0,
+    "crm_level": "PLATINUM",
+    "personal_id_type__inserted_by": "manol",
+    "is_staff": false,
+    "last_deposit_timestamp": "2023-09-15 16:04:27+03",
+    "block_draw_points": "0",
+    "citizenship__archived_at": null,
+    "currency__symbol": "лв.",
+    "personal_doc_type__jf_approval_pending_data": null,
+    "credit": 85,
+    "auth_json": {},
+    "block_tier_points": "0",
+    "citizenship__archived": null,
+    "citizenship__jf_approval_code": null,
+    "personal_id_type__archived_by": null,
+    "currency_credit": "0.85",
+    "freebet_credit": 0,
+    "citizenship__jf_approval_pending_data": null,
+    "account_status_level__user_updated_by": null,
+    "personal_doc_issuer": null,
+    "personal_id_type__user_updated_by": null,
+    "citizenship__tb_sync_updated_at": "2023-08-15T06:44:03",
+    "country__row_jsonexpand": "{\"id\":35,\"name\":\"Bulgaria\",\"code\":\"BG\",\"tb_sync_updated_at\":\"2023-08-15T06:44:03\",\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":\"2023-08-15T06:44:02.662768+03:00\",\"updated_by\":\"NOLOGIN\",\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":2,\"phone_code\":\"359\",\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"code_alpha3\":\"BGR\",\"user_updated_at\":null,\"user_updated_by\":null}",
+    "marketing_referrer_id": 395,
+    "currency_bonus_credit": "0.00",
+    "freerounds": 0,
+    "user_updated_at": null,
+    "registration_country__updated_at": "2023-08-15T06:44:02.662768+03:00",
+    "under_surveillance_old": false,
+    "updated_by": "NOLOGIN",
+    "registration_country__jf_approval_diff_checksum": null,
+    "personal_doc_type__jf_approval_code": null,
+    "personal_id_type__tb_sync_updated_at": "2022-08-16T06:39:11",
+    "tmp_password_expires_at": null,
+    "registration_country__updated_version": 2,
+    "country__code": "BG",
+    "account_status_level__is_active": true,
+    "country__user_updated_by": null,
+    "last_deposit_id": 69560950,
+    "currency__denoms": [],
+    "account_status_level__id": 4,
+    "personal_doc_type__archived_at": null,
+    "initial_password": null,
+    "block_promo_points": "0",
+    "personal_doc_type__updated_at": null,
+    "personal_doc_type__jf_approval_diff_checksum": null,
+    "marketing_referrer__deleted": null,
+    "account_status_level__jf_approval_timestamp": null,
+    "auth": {},
+    "registered_at": "2021-01-18 23:35:30",
+    "id": 30489590,
+    "personal_id_type__id": 1,
+    "registration_country__name": "Bulgaria",
+    "additional_fields_json": {
+      "report_start_time": "2023-09-18T00:00:00",
+      "report_end_time": "2023-09-19T00:00:00"
+    },
+    "account_status_level__jf_approval_pending_data": null,
+    "jf_approval_diff_checksum": null,
+    "class_id": 1,
+    "citizenship__user_updated_by": null,
+    "citizenship__deleted": null,
+    "citizenship__row_jsonexpand": "{\"id\":35,\"name\":\"Bulgaria\",\"code\":\"BG\",\"tb_sync_updated_at\":\"2023-08-15T06:44:03\",\"inserted_at\":null,\"inserted_by\":null,\"updated_at\":\"2023-08-15T06:44:02.662768+03:00\",\"updated_by\":\"NOLOGIN\",\"archived\":null,\"archived_at\":null,\"archived_by\":null,\"deleted\":null,\"updated_version\":2,\"phone_code\":\"359\",\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"code_alpha3\":\"BGR\",\"user_updated_at\":null,\"user_updated_by\":null}",
+    "currency__updated_version": 5,
+    "marketing_referrer__updated_by": null,
+    "freebet_wager_req_unfulfill": "0",
+    "personal_doc_type__user_updated_by": null,
+    "currency__archived_at": null,
+    "personal_id_type__row_jsonexpand": "{\"id\":1,\"name\":\"EGN\",\"ordering\":1000,\"inserted_at\":\"2015-05-11T12:51:57.844189+03:00\",\"inserted_by\":\"manol\",\"updated_at\":\"2022-08-16T06:39:11.005967+03:00\",\"updated_by\":\"NOLOGIN\",\"archived\":false,\"archived_at\":null,\"archived_by\":null,\"deleted\":false,\"tb_sync_updated_at\":\"2022-08-16T06:39:11\",\"code\":\"BGEGN\",\"updated_version\":1,\"jf_approval_pending_data\":null,\"jf_approval_diff_checksum\":null,\"jf_approval_timestamp\":null,\"jf_approval_user\":null,\"jf_approval_code\":null,\"country_id\":35,\"user_updated_at\":null,\"user_updated_by\":null}",
+    "personal_id_type__inserted_at": "2015-05-11T12:51:57.844189+03:00",
+    "address3": null,
+    "referral_login": null,
+    "bonus_wager_req_unfulfill": 0,
+    "status_id": 1,
+    "personal_id_type__row": {
+      "deleted": false,
+      "archived": false,
+      "updated_by": "NOLOGIN",
+      "updated_version": 1,
+      "tb_sync_updated_at": "2022-08-16T06:39:11",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "archived_by": null,
+      "jf_approval_diff_checksum": null,
+      "name": "EGN",
+      "inserted_at": "2015-05-11T12:51:57.844189+03:00",
+      "inserted_by": "manol",
+      "ordering": 1000,
+      "country_id": 35,
+      "id": 1,
+      "code": "BGEGN",
+      "jf_approval_code": null,
+      "updated_at": "2022-08-16T06:39:11.005967+03:00"
+    },
+    "registration_country__deleted": null,
+    "marketing_referrer__jf_approval_user": null,
+    "country__jf_approval_user": null,
+    "registered_from_country_id": 35,
+    "account_status_level__updated_by": null,
+    "marketing_referrer__updated_at": null,
+    "currency__digits_after_decimal_separator": 2,
+    "currency__inserted_at": null,
+    "personal_id_type__archived": false,
+    "phone_numbers": null,
+    "jf_approval_timestamp": null,
+    "registered_from_user_agent": null,
+    "currency__updated_by": "NOLOGIN",
+    "citizenship__updated_by": "NOLOGIN",
+    "personal_doc_type__updated_version": null,
+    "currency_bonus_wager_req_unfulfill": "0.00",
+    "birth_date": "1995-06-13"
+  },
+  "current_database_time": "2023-09-18 15:05:02.776822+03",
+  "IS_BEFORE_SAVE_CONTENT_OVERRIDEN": 1,
+  "schema": {
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "type": "object",
+    "title": "Accounts",
+    "properties": {
+      "login": {
+        "title": "Login",
+        "type": "string",
+        "searchBy": "*",
+        "ordering": 100
+      },
+      "referral_login": {
+        "ordering": 4300,
+        "searchBy": "*",
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Referral"
+      },
+      "address3": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 3700,
+        "title": "Address line 3"
+      },
+      "secret_answer": {
+        "ordering": 2970,
+        "type": "string",
+        "title": "Secret answer"
+      },
+      "address2": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 3600,
+        "title": "Address line 2"
+      },
+      "block_bonus_points": {
+        "type": [
+          "null",
+          "number",
+          "string"
+        ],
+        "ordering": 2600,
+        "title": "Current Blocked Bonus points",
+        "format": "numeric"
+      },
+      "registered_from_remote_system_id": {
+        "refTableView": "remote_api_systems_vw",
+        "refType": "fkey",
+        "default": 1,
+        "filterForm": {},
+        "refCol": "id",
+        "title": "Registration Remote System",
+        "refColTitle": "name",
+        "ordering": 4500,
+        "type": [
+          "integer",
+          "null"
+        ],
+        "refTable": "remote_api_systems"
+      },
+      "marketing_referrer_id": {
+        "refTableView": "marketing_referrers_vw",
+        "filterForm": {},
+        "default": 1,
+        "refType": "fkey",
+        "refColTitle": "name",
+        "title": "Marketing referrer",
+        "refCol": "id",
+        "refTable": "marketing_referrers",
+        "type": "integer",
+        "ordering": 3800
+      },
+      "personal_doc_expires_at": {
+        "title": "Personal Document expires at",
+        "type": [
+          "null",
+          "string"
+        ],
+        "searchBy": "*",
+        "ordering": 1150
+      },
+      "personal_doc_issuer": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 1200,
+        "title": "Personal Document Issuer"
+      },
+      "first_name": {
+        "type": "string",
+        "searchBy": "*",
+        "ordering": 300,
+        "title": "First name"
+      },
+      "admin_settings_json": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/admin_settings_json"
+          },
+          "with": {
+            "title": "Admin settings",
+            "ordering": 10000
+          }
+        }
+      },
+      "account_level_id": {
+        "refTable": "account_status_levels",
+        "type": "integer",
+        "ordering": 2900,
+        "refColTitle": "name",
+        "title": "Account Level",
+        "refCol": "id",
+        "filterForm": {},
+        "refType": "fkey",
+        "refTableView": "account_status_levels_vw"
+      },
+      "is_password_change_required": {
+        "title": "Force Password change",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "invalid_login_count": {
+        "ordering": 5000,
+        "type": "integer",
+        "title": "Invalid Login count"
+      },
+      "is_verified": {
+        "type": "boolean",
+        "ordering": 4000,
+        "title": "Account verified"
+      },
+      "last_cashout_id": {
+        "type": [
+          "null",
+          "integer"
+        ],
+        "ordering": 4270,
+        "title": "Last Cashout ID"
+      },
+      "first_cashout_timestamp": {
+        "title": "First Cashout At",
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 4255
+      },
+      "auth_json": {
+        "type": "object",
+        "title": "Auth"
+      },
+      "block_tier_points": {
+        "ordering": 2700,
+        "type": [
+          "null",
+          "number",
+          "string"
+        ],
+        "format": "numeric",
+        "title": "Current Blocked Status points"
+      },
+      "is_phone_verified": {
+        "type": "boolean",
+        "ordering": 1210,
+        "title": "Phone Verified"
+      },
+      "brand_id": {
+        "ordering": 3900,
+        "refTable": "brands",
+        "type": "integer",
+        "title": "Brand",
+        "refCol": "id",
+        "refColTitle": "name",
+        "refType": "fkey",
+        "filterForm": {},
+        "default": 1,
+        "refTableView": "brands_vw"
+      },
+      "personal_doc_number": {
+        "title": "Personal Document #",
+        "ordering": 1000,
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "country_id": {
+        "filterForm": {},
+        "refType": "fkey",
+        "refTableView": "countries_vw",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "refTable": "countries",
+        "ordering": 3400,
+        "refColTitle": "name",
+        "refCol": "id",
+        "title": "Address country"
+      },
+      "first_deposit_id": {
+        "ordering": 4239,
+        "type": [
+          "null",
+          "integer"
+        ],
+        "title": "First Deposit ID"
+      },
+      "personal_doc_type_id": {
+        "refColTitle": "name",
+        "refCol": "id",
+        "title": "Personal Document Type",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "refTable": "account_personal_doc_types",
+        "ordering": 1050,
+        "refTableView": "account_personal_doc_types_vw",
+        "filterForm": {},
+        "refType": "fkey"
+      },
+      "personal_doc_issued_at": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "searchBy": "*",
+        "ordering": 1100,
+        "title": "Personal Document Issued at"
+      },
+      "id": {
+        "searchBy": "*",
+        "readOnly": true,
+        "title": "ID",
+        "type": "integer",
+        "ordering": 50
+      },
+      "is_staff": {
+        "type": "boolean",
+        "ordering": 13000,
+        "title": "Staff Account"
+      },
+      "last_deposit_timestamp": {
+        "ordering": 4240,
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Last Deposit At"
+      },
+      "block_draw_points": {
+        "format": "numeric",
+        "title": "Current Blocked Draw points",
+        "ordering": 2800,
+        "type": [
+          "null",
+          "number",
+          "string"
+        ]
+      },
+      "secret_question": {
+        "ordering": 2940,
+        "type": "string",
+        "title": "Secret question"
+      },
+      "birth_date": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 500,
+        "title": "Birth date"
+      },
+      "has_accepted_marketing": {
+        "title": "Accepted marketing Email",
+        "ordering": 4200,
+        "type": "boolean"
+      },
+      "id_hash": {
+        "readOnly": true,
+        "title": "ID Hash",
+        "type": "string",
+        "ordering": 4700
+      },
+      "registered_from_user_agent": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "ordering": 4600,
+        "title": "Registration User Agent"
+      },
+      "last_login_timestamp": {
+        "title": "Last Login At",
+        "ordering": 4237,
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "phone_numbers": {
+        "title": "Phone Number",
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 1200
+      },
+      "password": {
+        "ordering": 200,
+        "type": "string",
+        "title": "Password"
+      },
+      "block_promo_points": {
+        "type": [
+          "string",
+          "number"
+        ],
+        "ordering": 2500,
+        "format": "numeric",
+        "title": "Current Blocked Shopping points"
+      },
+      "gender": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "ordering": 600,
+        "title": "Gender",
+        "enum": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "enumNames": [
+          "Unknown",
+          "Male",
+          "Female",
+          "Inapplicable"
+        ]
+      },
+      "has_accepted_marketing_web_notif": {
+        "title": "Accepted marketing Web Notif",
+        "type": "boolean",
+        "ordering": 4220
+      },
+      "address1": {
+        "ordering": 3500,
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Address line 1"
+      },
+      "registered_from_ip_addr": {
+        "ordering": 4400,
+        "type": "string",
+        "title": "Registration IP Address",
+        "readOnly": true
+      },
+      "personal_id": {
+        "title": "Personal ID",
+        "searchBy": "*",
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 800
+      },
+      "postal_code": {
+        "ordering": 3750,
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Postal Code"
+      },
+      "personal_id_type_id": {
+        "refColTitle": "name",
+        "refCol": "id",
+        "title": "Personal ID type",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "refTable": "account_personal_id_types",
+        "ordering": 900,
+        "refTableView": "account_personal_id_types",
+        "filterForm": {},
+        "refType": "fkey"
+      },
+      "first_cashout_id": {
+        "title": "First Cashout ID",
+        "ordering": 4265,
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "nick_name": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 300,
+        "title": "Nickname"
+      },
+      "first_deposit_timestamp": {
+        "title": "First Deposit At",
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 4238
+      },
+      "last_deposit_id": {
+        "type": [
+          "null",
+          "integer"
+        ],
+        "ordering": 4250,
+        "title": "Last Deposit ID"
+      },
+      "has_accepted_ts_and_cs": {
+        "type": "boolean",
+        "ordering": 4100,
+        "title": "Accepted T's & C's"
+      },
+      "has_accepted_making_donations": {
+        "type": "boolean",
+        "ordering": 4230,
+        "title": "Accepted making Donations"
+      },
+      "email": {
+        "title": "Email",
+        "ordering": 3000,
+        "type": "string",
+        "searchBy": "*"
+      },
+      "citizenship_country_id": {
+        "refTableView": "countries_vw",
+        "filterForm": {},
+        "refType": "fkey",
+        "refColTitle": "name",
+        "refCol": "id",
+        "title": "Citizenship country",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "refTable": "countries",
+        "ordering": 700
+      },
+      "preferences_json": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/preferences_json"
+          },
+          "with": {
+            "title": "Preferences",
+            "ordering": 10000
+          }
+        }
+      },
+      "registered_from_country_id": {
+        "refType": "fkey",
+        "filterForm": {},
+        "refTableView": "countries_vw",
+        "ordering": 4450,
+        "refTable": "countries",
+        "type": [
+          "null",
+          "integer"
+        ],
+        "title": "Registration Country (GeoIP)",
+        "refCol": "id",
+        "readOnly": true,
+        "refColTitle": "name"
+      },
+      "is_email_verified": {
+        "title": "Email Verified",
+        "ordering": 3040,
+        "type": "boolean"
+      },
+      "tmp_password": {
+        "ordering": 15300,
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Temporary password"
+      },
+      "last_activity_timestamp": {
+        "title": "Last Active At",
+        "type": "string",
+        "searchBy": "*",
+        "ordering": 4235
+      },
+      "currency_id": {
+        "refTableView": "currencies_vw",
+        "filterForm": {},
+        "refType": "fkey",
+        "readOnly": true,
+        "refColTitle": "name",
+        "refCol": "id",
+        "title": "Currency",
+        "type": "integer",
+        "refTable": "currencies",
+        "ordering": 1250
+      },
+      "last_name": {
+        "ordering": 400,
+        "type": "string",
+        "searchBy": "*",
+        "title": "Last name"
+      },
+      "last_cashout_timestamp": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 4260,
+        "title": "Last Cashout At"
+      },
+      "notes": {
+        "title": "Notes",
+        "ordering": 16000,
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "has_accepted_marketing_sms": {
+        "title": "Accepted marketing SMS",
+        "ordering": 4210,
+        "type": "boolean"
+      },
+      "admin_password": {
+        "title": "Admin password",
+        "ordering": 15000,
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "tmp_password_expires_at": {
+        "title": "Temporary password expires at",
+        "ordering": 15600,
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "required": [
+      "account_level_id",
+      "preferences_json",
+      "is_email_verified",
+      "secret_question",
+      "has_accepted_marketing_sms",
+      "has_accepted_marketing",
+      "brand_id",
+      "login",
+      "admin_settings_json",
+      "secret_answer",
+      "block_promo_points",
+      "email",
+      "marketing_referrer_id",
+      "first_name",
+      "has_accepted_ts_and_cs",
+      "password",
+      "last_name",
+      "is_verified",
+      "has_accepted_marketing_web_notif"
+    ],
+    "$schemaId": "http://jsonschemas.telebid-pro.com/jf_crud_schema/db/accounts",
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/preferences_json": {
+        "properties": {
+          "limits": {
+            "properties": {
+              "monthly_deposit_limit_cents": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "title": "Montly deposit limit(cents)"
+              },
+              "yearly_deposit_limit_cents": {
+                "title": "Yearly deposit limit, cents",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "yearly_deposit_limit_set_at": {
+                "title": "Yearly deposit limit set at",
+                "format": "iso8601datetime",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "monthly_bet_limit_cents": {
+                "title": "Montly bet limit (cents)",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "weekly_deposit_limit_set_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Weekly deposit limit set at",
+                "format": "iso8601datetime"
+              },
+              "max_session_length_minutes": {
+                "title": "Max session length (minutes)",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "daily_deposit_limit_set_at": {
+                "format": "iso8601datetime",
+                "title": "Daily deposit limit set at",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "daily_deposit_limit_cents": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "title": "Daily deposit limit, cents"
+              },
+              "default_bet_amount_cents": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "title": "Default bet amount (cents)"
+              },
+              "monthly_deposit_limit_set_at": {
+                "format": "iso8601datetime",
+                "title": "Monthly deposit limit set at",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "weekly_deposit_limit_cents": {
+                "title": "Weekly deposit limit, cents",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "daily_bet_limit_cents": {
+                "title": "Daily bet limit (cents)",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            },
+            "title": "Limits",
+            "type": "object"
+          },
+          "barring": {
+            "title": "Barring",
+            "properties": {
+              "is_self_barred": {
+                "type": [
+                  "null",
+                  "boolean"
+                ],
+                "default": false,
+                "title": "Is self barred"
+              },
+              "self_bar_count": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Self bar count"
+              },
+              "self_bar_reason": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "title": "Self bar reason"
+              }
+            },
+            "type": "object"
+          },
+          "deposit": {
+            "type": "object",
+            "title": "Deposit",
+            "properties": {
+              "selected_deposit_promo_at": {
+                "format": "iso8601datetime",
+                "title": "Selected deposit promo at",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "rejected_deposit_promotions": {
+                "type": [
+                  "null",
+                  "array"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "format": "iso8601datetime",
+                      "title": "Rejected at",
+                      "type": "string"
+                    },
+                    "promo_id": {
+                      "title": "Promotion",
+                      "constraintMsgs": "Invalid Promotion",
+                      "refCol": "id",
+                      "refColTitle": "name",
+                      "refTable": "promotions",
+                      "type": "integer"
+                    }
+                  },
+                  "title": "Rejected promotions"
+                }
+              },
+              "selected_deposit_promo_id": {
+                "refTable": "promotions",
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "refColTitle": "name",
+                "title": "Selected Deposit Promo",
+                "refCol": "id",
+                "constraintMsgs": "Invalid Promo"
+              },
+              "selected_deposit_type": {
+                "enumNames": [
+                  "Regular deposit",
+                  "Specific promotion",
+                  "Skip promotions",
+                  "none"
+                ],
+                "enum": [
+                  "regular_deposit",
+                  "specific_promotion",
+                  "skip_promotions",
+                  null
+                ],
+                "default": "regular_deposit",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "title": "Selected deposit type"
+              },
+              "pending_deposits": {
+                "items": {
+                  "refColTitle": "id",
+                  "refCol": "id",
+                  "constraintMsgs": "Invalid Account Transfer",
+                  "title": "Pending Deposits",
+                  "type": "integer",
+                  "refTable": "account_transfers"
+                },
+                "type": [
+                  "null",
+                  "array"
+                ]
+              }
+            }
+          },
+          "how_did_you_hear_about_us": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "How did you hear about us"
+          },
+          "locales": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "refTable": "locales",
+              "type": "string",
+              "title": "Locale",
+              "refCol": "locale",
+              "constraintMsgs": "Invalid Locale"
+            }
+          }
+        },
+        "title": "Account preferences",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "type": [
+          "object",
+          "null"
+        ],
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/preferences_json"
+      },
+      "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04": {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "dependencies": {
+          "refType": [
+            "refTable",
+            "refCol"
+          ],
+          "refNameCol": [
+            "refTable",
+            "refCol"
+          ],
+          "exclusiveMaximum": [
+            "maximum"
+          ],
+          "refCol": [
+            "refTable"
+          ],
+          "exclusiveMinimum": [
+            "minimum"
+          ],
+          "refTable": [
+            "refCol"
+          ]
+        },
+        "properties": {
+          "minProperties": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "isMultilanguage": {
+            "type": "boolean",
+            "default": false
+          },
+          "maxProperties": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "properties": {
+            "type": "object",
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            }
+          },
+          "maxLength": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "refType": {
+            "enum": [
+              "fkey",
+              "relation",
+              "reference",
+              "view"
+            ],
+            "type": "string"
+          },
+          "minItems": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "minLength": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "description": {
+            "type": "string"
+          },
+          "maxItems": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "translated": {
+            "type": "boolean",
+            "default": false
+          },
+          "required": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "pattern": {
+            "format": "regex",
+            "type": "string"
+          },
+          "oneOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "items": {
+            "default": {},
+            "anyOf": [
+              {
+                "$ref": "#"
+              },
+              {
+                "$ref": "#/definitions/schemaArray"
+              }
+            ]
+          },
+          "exclusiveMaximum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "not": {
+            "$ref": "#"
+          },
+          "enum": {
+            "uniqueItems": true,
+            "type": "array",
+            "minItems": 1
+          },
+          "definitions": {
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "default": {},
+            "type": "object"
+          },
+          "type": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/simpleTypes"
+              },
+              {
+                "items": {
+                  "$ref": "#/definitions/simpleTypes"
+                },
+                "uniqueItems": true,
+                "type": "array",
+                "minItems": 1
+              }
+            ]
+          },
+          "minimum": {
+            "type": "number"
+          },
+          "additionalItems": {
+            "default": {},
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ]
+          },
+          "maximum": {
+            "type": "number"
+          },
+          "exclusiveMinimum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "fileMimeTypes": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "title": {
+            "type": "string"
+          },
+          "default": {},
+          "multipleOf": {
+            "exclusiveMinimum": true,
+            "type": "number",
+            "minimum": 0
+          },
+          "$schema": {
+            "type": "string",
+            "format": "uri"
+          },
+          "isUIHidden": {
+            "default": false,
+            "type": "boolean"
+          },
+          "dependencies": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$ref": "#"
+                },
+                {
+                  "$ref": "#/definitions/stringArray"
+                }
+              ]
+            },
+            "type": "object"
+          },
+          "refTable": {
+            "type": "string"
+          },
+          "patternProperties": {
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "default": {},
+            "type": "object"
+          },
+          "additionalProperties": {
+            "default": {},
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ]
+          },
+          "refCol": {
+            "type": "string"
+          },
+          "uniqueItems": {
+            "default": false,
+            "type": "boolean"
+          },
+          "refNameCol": {
+            "type": "string"
+          },
+          "fileMaxSize": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "anyOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "allOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "default": {},
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "description": "Core schema meta-schema",
+        "definitions": {
+          "schemaArray": {
+            "items": {
+              "$ref": "#"
+            },
+            "type": "array",
+            "minItems": 1
+          },
+          "stringArray": {
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "simpleTypes": {
+            "enum": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ]
+          },
+          "positiveIntegerDefault0": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/positiveInteger"
+              },
+              {
+                "default": 0
+              }
+            ]
+          }
+        }
+      },
+      "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/admin_settings_json": {
+        "id": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/admin_settings_json",
+        "title": "Admin settings",
+        "properties": {
+          "limits": {
+            "type": "object",
+            "title": "Privileges",
+            "properties": {
+              "default_bet_amount_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Default bet amount, cents"
+              },
+              "casino_daily_bet_limit_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Casino Daily bet limit, cents"
+              },
+              "profit_shutdown": {
+                "type": "object",
+                "properties": {
+                  "profit_shutdown_amount_cents": {
+                    "type": "integer",
+                    "title": "Profit shutdown amount, cents"
+                  },
+                  "override_profit_shutdown_until": {
+                    "title": "Override Profit shutdown until",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "override_profit_shutdown_amount_cents": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "title": "Override Profit shutdown amount, cents"
+                  }
+                },
+                "title": "Profit shutdown"
+              },
+              "monthly_deposit_limit_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Monthly deposit limit, cents"
+              },
+              "bookmaking_daily_bet_limit_cents": {
+                "title": "Bookmaking Daily bet limit, cents",
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "max_session_length_minutes": {
+                "default": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Max session length, minutes"
+              },
+              "daily_deposit_limit_cents": {
+                "title": "Daily deposit limit, cents",
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "daily_bet_limit_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Daily bet limit, cents"
+              },
+              "monthly_bet_limit_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Monthly bet limit, cents"
+              },
+              "max_bet_amount_cents": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Max bet amount, cents"
+              }
+            }
+          },
+          "regulatory": {
+            "properties": {
+              "last_login_check_status": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "title": "Last Login check status"
+              },
+              "is_login_check_required": {
+                "type": [
+                  "null",
+                  "boolean"
+                ],
+                "title": "Required login check"
+              },
+              "failed_login_check_count": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Failed login check's count"
+              },
+              "last_login_check_at": {
+                "title": "Last Login check at",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "title": "Regulatory",
+            "type": "object"
+          },
+          "barring": {
+            "type": "object",
+            "title": "Barring",
+            "properties": {
+              "is_admin_barred": {
+                "title": "Is admin barred",
+                "type": "boolean"
+              },
+              "admin_bar_count": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Admin bar count"
+              },
+              "admin_barred_until": {
+                "title": "Admin barred until",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "admin_bar_reason": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "title": "Admin bar reason"
+              }
+            },
+            "required": [
+              "is_admin_barred"
+            ]
+          },
+          "privileges": {
+            "title": "Privileges",
+            "properties": {
+              "payments": {
+                "properties": {
+                  "payment_tools": {
+                    "type": "object",
+                    "properties": {
+                      "PAYSYSEPAY": {
+                        "properties": {
+                          "tools": {
+                            "type": "object",
+                            "properties": {
+                              "mimiwinbet@gmail.com": {
+                                "type": "object",
+                                "properties": {
+                                  "is_verified": {
+                                    "default": false,
+                                    "type": "boolean",
+                                    "title": "Is Verified"
+                                  },
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "readOnly": true,
+                                    "title": "Inserted At"
+                                  }
+                                }
+                              },
+                              "000000": {
+                                "properties": {
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "readOnly": true,
+                                    "title": "Inserted At"
+                                  },
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "default": false,
+                                    "type": "boolean"
+                                  }
+                                },
+                                "type": "object"
+                              }
+                            }
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "BANKACC_BGN": {
+                        "type": "object",
+                        "properties": {
+                          "tools": {
+                            "properties": {
+                              "02/0000001527288096": {
+                                "type": "object",
+                                "properties": {
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "type": "boolean",
+                                    "default": false
+                                  },
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "title": "Inserted At",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "BG26STSA93001527288096": {
+                                "properties": {
+                                  "inserted_at": {
+                                    "readOnly": true,
+                                    "title": "Inserted At",
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "type": "boolean",
+                                    "default": false
+                                  }
+                                },
+                                "type": "object"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        }
+                      },
+                      "FASTPAY1": {
+                        "properties": {
+                          "tools": {
+                            "type": "object",
+                            "properties": {
+                              "9506131070": {
+                                "properties": {
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "title": "Inserted At",
+                                    "readOnly": true
+                                  },
+                                  "is_verified": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "title": "Is Verified"
+                                  }
+                                },
+                                "type": "object"
+                              }
+                            }
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "EASYPAYEAD": {
+                        "properties": {
+                          "tools": {
+                            "properties": {
+                              "9506131070": {
+                                "properties": {
+                                  "inserted_at": {
+                                    "readOnly": true,
+                                    "title": "Inserted At",
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "type": "boolean",
+                                    "default": false
+                                  }
+                                },
+                                "type": "object"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "PAYSYSCASHTERMINAL": {
+                        "properties": {
+                          "tools": {
+                            "properties": {
+                              "9506131070": {
+                                "properties": {
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "default": false,
+                                    "type": "boolean"
+                                  },
+                                  "inserted_at": {
+                                    "readOnly": true,
+                                    "title": "Inserted At",
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  }
+                                },
+                                "type": "object"
+                              },
+                              "mime7o": {
+                                "type": "object",
+                                "properties": {
+                                  "inserted_at": {
+                                    "readOnly": true,
+                                    "title": "Inserted At",
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "default": false,
+                                    "type": "boolean"
+                                  }
+                                }
+                              },
+                              "Mime7o": {
+                                "type": "object",
+                                "properties": {
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "title": "Inserted At",
+                                    "readOnly": true
+                                  },
+                                  "is_verified": {
+                                    "title": "Is Verified",
+                                    "default": false,
+                                    "type": "boolean"
+                                  }
+                                }
+                              }
+                            },
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "EASYPAYEGN": {
+                        "type": "object",
+                        "properties": {
+                          "tools": {
+                            "properties": {
+                              "9506131070": {
+                                "properties": {
+                                  "inserted_at": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ],
+                                    "readOnly": true,
+                                    "title": "Inserted At"
+                                  },
+                                  "is_verified": {
+                                    "default": false,
+                                    "type": "boolean",
+                                    "title": "Is Verified"
+                                  }
+                                },
+                                "type": "object"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "type": "object"
+              },
+              "is_cashout_barred": {
+                "title": "Cashout bar",
+                "type": "boolean"
+              },
+              "is_deposit_barred": {
+                "title": "Deposit bar",
+                "type": "boolean"
+              },
+              "is_login_barred": {
+                "title": "Login bar",
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "promotions": {
+            "type": "object",
+            "properties": {
+              "manually_allowed_promotions": {
+                "items": {
+                  "title": "Manually allowed promotions",
+                  "properties": {
+                    "timestamp": {
+                      "format": "iso8601datetime",
+                      "title": "Allowed at",
+                      "type": "string"
+                    },
+                    "notes": {
+                      "title": "Notes",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "promo_id": {
+                      "type": "integer",
+                      "refTable": "promotions",
+                      "refColTitle": "name",
+                      "constraintMsgs": "Invalid Promotion",
+                      "refCol": "id",
+                      "title": "Promotion"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": [
+                  "null",
+                  "array"
+                ]
+              }
+            },
+            "title": "Promotions"
+          }
+        },
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "type": "object"
+      }
+    },
+    "id": "http://jsonschemas.telebid-pro.com/jf_crud_schema/db/accounts"
+  },
+  "IS_LOAD_FORM_OVERRIDEN": 0,
+  "locales": [
+    {
+      "decimal_separator": ",",
+      "deleted": null,
+      "nplurals": 3,
+      "locale": "es_ES",
+      "updated_by": "NOLOGIN",
+      "updated_version": 16,
+      "archived": null,
+      "jf_approval_user": null,
+      "iso639_2": "ces",
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "archived_by": null,
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "jf_approval_diff_checksum": null,
+      "inserted_at": null,
+      "inserted_by": null,
+      "notes": "(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2",
+      "jf_approval_code": null,
+      "thousands_separator": null,
+      "lang_name": "Spanish ES",
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "plural_form": 8
+    },
+    {
+      "decimal_separator": ".",
+      "deleted": null,
+      "nplurals": 2,
+      "locale": "en_GB",
+      "updated_by": "NOLOGIN",
+      "updated_version": 16,
+      "archived": null,
+      "iso639_2": "ang",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "archived_by": null,
+      "jf_approval_timestamp": null,
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "jf_approval_diff_checksum": null,
+      "inserted_at": null,
+      "inserted_by": null,
+      "notes": "(n != 1)",
+      "jf_approval_code": null,
+      "thousands_separator": ",",
+      "lang_name": "English GB",
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "plural_form": 1
+    },
+    {
+      "updated_version": 16,
+      "updated_by": "NOLOGIN",
+      "archived": null,
+      "locale": "bg_BG",
+      "deleted": null,
+      "nplurals": 2,
+      "decimal_separator": ",",
+      "archived_by": null,
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "jf_approval_timestamp": null,
+      "jf_approval_pending_data": null,
+      "iso639_2": "bul",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_diff_checksum": null,
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "plural_form": 1,
+      "jf_approval_code": null,
+      "notes": "(n != 1)",
+      "thousands_separator": null,
+      "lang_name": "Bulgarian BG",
+      "inserted_by": null,
+      "inserted_at": null
+    },
+    {
+      "locale": "ru_RU",
+      "updated_version": 16,
+      "updated_by": "NOLOGIN",
+      "archived": null,
+      "decimal_separator": ",",
+      "deleted": null,
+      "nplurals": 3,
+      "jf_approval_pending_data": null,
+      "jf_approval_user": null,
+      "iso639_2": "kru",
+      "archived_at": null,
+      "archived_by": null,
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "jf_approval_timestamp": null,
+      "jf_approval_diff_checksum": null,
+      "jf_approval_code": null,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "thousands_separator": " ",
+      "lang_name": "Russian RU",
+      "plural_form": 7,
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "inserted_at": null,
+      "inserted_by": null
+    },
+    {
+      "jf_approval_diff_checksum": null,
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "plural_form": 7,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "jf_approval_code": null,
+      "thousands_separator": ".",
+      "lang_name": "Serbian RS",
+      "inserted_by": null,
+      "inserted_at": null,
+      "updated_by": "NOLOGIN",
+      "updated_version": 16,
+      "archived": null,
+      "locale": "sr_RS",
+      "deleted": null,
+      "nplurals": 3,
+      "decimal_separator": ",",
+      "archived_by": null,
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "jf_approval_user": null,
+      "iso639_2": "srd",
+      "archived_at": null,
+      "jf_approval_pending_data": null
+    },
+    {
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "plural_form": 3,
+      "lang_name": "Latvian LV",
+      "thousands_separator": null,
+      "jf_approval_code": null,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)",
+      "inserted_by": null,
+      "inserted_at": null,
+      "jf_approval_diff_checksum": null,
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "jf_approval_timestamp": null,
+      "archived_by": null,
+      "jf_approval_pending_data": null,
+      "iso639_2": "alv",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "archived": null,
+      "updated_version": 16,
+      "updated_by": "NOLOGIN",
+      "locale": "lv_LV",
+      "nplurals": 3,
+      "deleted": null,
+      "decimal_separator": ","
+    },
+    {
+      "locale": "ka_GE",
+      "archived": null,
+      "updated_version": 16,
+      "updated_by": "NOLOGIN",
+      "decimal_separator": ".",
+      "deleted": null,
+      "nplurals": 2,
+      "jf_approval_pending_data": null,
+      "jf_approval_user": null,
+      "iso639_2": "aka",
+      "archived_at": null,
+      "user_updated_at": null,
+      "user_updated_by": null,
+      "jf_approval_timestamp": null,
+      "archived_by": null,
+      "jf_approval_diff_checksum": null,
+      "lang_name": "Georgian GE",
+      "thousands_separator": ",",
+      "jf_approval_code": null,
+      "notes": "(n > 1)",
+      "plural_form": 2,
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "inserted_at": null,
+      "inserted_by": null
+    },
+    {
+      "jf_approval_timestamp": null,
+      "user_updated_by": null,
+      "user_updated_at": null,
+      "archived_by": null,
+      "iso639_2": "ota",
+      "jf_approval_user": null,
+      "archived_at": null,
+      "jf_approval_pending_data": null,
+      "deleted": null,
+      "nplurals": 2,
+      "decimal_separator": ",",
+      "archived": null,
+      "updated_by": "NOLOGIN",
+      "updated_version": 16,
+      "locale": "tr_TR",
+      "inserted_by": null,
+      "inserted_at": null,
+      "plural_form": 2,
+      "updated_at": "2021-08-11 08:45:46.66432+03",
+      "thousands_separator": ".",
+      "lang_name": "Turkish TR",
+      "notes": "(n > 1)",
+      "jf_approval_code": null,
+      "jf_approval_diff_checksum": null
+    }
+  ],
+  "unique_key_columns": [],
+  "IS_LOAD_CONTENT_OVERRIDEN": 1,
+  "form": {
+    "asForeignKey": {
+      "tableName": "accounts",
+      "refColTitle": "id",
+      "refCol": "id"
+    },
+    "excludedFields": [
+      {
+        "list": true,
+        "key": "password"
+      },
+      {
+        "list": true,
+        "key": "nick_name"
+      },
+      {
+        "key": "birth_date",
+        "list": true
+      },
+      {
+        "key": "gender",
+        "list": true
+      },
+      {
+        "key": "citizenship_country_id",
+        "list": true,
+        "foreign_filter": "U2FsdGVkX1_ILpRPDAgDcySmVbv7zqzY9frrLZDlj0_Jw8mi-_hYAHqYMrdLpvnfROL0l4bWI0M0onraXW8LvZI2zDew2KpmFTaJ5ZbJhhr-cPb4yafU6Kg9TGvWsaoyRW6UV9M93JPGsFg_VSJqhRNf66u6qBocNLTC0n2QSL5CB7cYR1WLWrqQrbsazNYFL1vzaJWIYiJodA79nrzVgG2HQhL2q7VfqjqJGSkii0TRdgKcRA4FsDk12U4RNJRKjY4Ks5bnIOAjuLChAnQnBaEKhZ0kfebfw1f1I2mX6Nrxao7UQjVwynOEfJCCO6s0TtT7lPuefpTjnv2AZ2YjlrMAryBtbVsicktw68C24I1R3enNVMabQFaegLA_4JTYE5SJTjk9Q4RLwef7H2kGpOsMm9JqvhVJ5OkmNOGz2ktgLGpJl4yw7doyOC_3RsVfZBERmBSSvzSFbc-U0pp7Tv8a8-8OmfnRLlMXfVgJnJSmytTh4A4eAeFLmwAX0aZHgGo8lUBrMcE"
+      },
+      {
+        "foreign_filter": "U2FsdGVkX19ZwyIJwKnZBWRcQpVyoo-4BF3X4cTNtH0M_yS35d5PZFxGcAaSOkDTPZr_tdn49xBISLCmQcD2boBrjq8G-lTuOy0Kbx7y6dxE1mEbZX27bD8Add24oZlb9oLoPJHyEsOuyd-FBnrzGaGX-FKx42XZq4AnxFV_iMzG0w_nZ-m59feEwRDS9Pa077UZ-EMs2ZLBKLWdnPjbRGT6FnbA8F1k4GIlfrNtT3-3qCWhHBTcgBWvXdmgtjCjNzFvKi6cEc_hh-nrHAzGzyiQrLFBteaJzTPjAAe0lsUvoGPZlCTszT3yxG1ef3m1EJG0A4fdSvmdkZ-U2RQh90mQ2SKmsiFZ6naW62l6d07Wzwb7riWtg_InUiCz3kTeg3T97KA-fyjZW8oO9FpO1wz43hsGkZFsieaAp4nqav6Z8r_Ad9ihffCX2noM0KE1ByqJXLULHpqfEQmstTsyktDC51BEC5oDXdCJc3bPPMqvEqKhI-Vxd9EVIamA_hCB4r1HeIRLyAtFBnR-n_xUZNH0OThysOTjTPaV9k3CWEo",
+        "list": true,
+        "key": "personal_id_type_id"
+      },
+      {
+        "key": "personal_doc_number",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "personal_doc_type_id"
+      },
+      {
+        "key": "personal_doc_issuer",
+        "list": true
+      },
+      {
+        "key": "is_phone_verified",
+        "list": true
+      },
+      {
+        "key": "currency_id",
+        "list": true
+      },
+      {
+        "key": "account_level_id",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "secret_question"
+      },
+      {
+        "key": "secret_answer",
+        "list": true
+      },
+      {
+        "key": "is_email_verified",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "country_id"
+      },
+      {
+        "key": "address1",
+        "list": true
+      },
+      {
+        "key": "address2",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "address3"
+      },
+      {
+        "key": "postal_code",
+        "list": true
+      },
+      {
+        "key": "marketing_referrer_id",
+        "list": true
+      },
+      {
+        "key": "brand_id",
+        "list": true
+      },
+      {
+        "key": "is_verified",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "has_accepted_ts_and_cs"
+      },
+      {
+        "key": "has_accepted_marketing",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "has_accepted_marketing_sms"
+      },
+      {
+        "list": true,
+        "key": "has_accepted_marketing_web_notif"
+      },
+      {
+        "key": "registered_from_ip_addr",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "registered_from_remote_system_id"
+      },
+      {
+        "list": true,
+        "key": "registered_from_user_agent"
+      },
+      {
+        "list": true,
+        "key": "preferences_json"
+      },
+      {
+        "list": true,
+        "key": "admin_settings_json"
+      },
+      {
+        "list": true,
+        "key": "admin_password"
+      },
+      {
+        "key": "tmp_password",
+        "list": true
+      },
+      {
+        "key": "tmp_password_expires_at",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "invalid_login_count"
+      },
+      {
+        "key": "is_password_change_required",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "auth_json"
+      }
+    ],
+    "filterProperties": {
+      "currency_bonus_credit": {
+        "title": "Current Bonus, money",
+        "ordering": 950,
+        "key": "currency_bonus_credit",
+        "type": "string",
+        "searchBy": "*"
+      },
+      "currency_freebet_credit": {
+        "searchBy": "*",
+        "key": "currency_freebet_credit",
+        "type": "string",
+        "ordering": 990,
+        "title": "Current Freebet, money"
+      },
+      "personal_doc_expires_at": {
+        "searchBy": "*",
+        "ordering": 1150,
+        "type": "string",
+        "key": "personal_doc_expires_at",
+        "title": "Personal Document expires at"
+      },
+      "currency_noncashable_credit": {
+        "title": "Current Noncashable Cash, money",
+        "ordering": 920,
+        "key": "currency_noncashable_credit",
+        "type": "string",
+        "searchBy": "*"
+      },
+      "freerounds": {
+        "searchBy": "*",
+        "title": "Current Free Rounds",
+        "ordering": 995,
+        "type": "integer",
+        "key": "freerounds"
+      },
+      "currency_wager_req_unfulfill": {
+        "searchBy": "*",
+        "title": "W/R Unfulfill",
+        "ordering": 980,
+        "type": "string",
+        "key": "currency_wager_req_unfulfill"
+      },
+      "registered_at": {
+        "title": "Registered at",
+        "type": "string",
+        "key": "registered_at",
+        "ordering": 780,
+        "searchBy": "*"
+      },
+      "currency_noncashable_wr_credit": {
+        "searchBy": "*",
+        "title": "Current Noncashable With WR, money",
+        "type": "string",
+        "key": "currency_noncashable_wr_credit",
+        "ordering": 930
+      },
+      "login": {
+        "searchBy": "*",
+        "type": "string",
+        "key": "login",
+        "ordering": 300,
+        "title": "Login"
+      },
+      "birth_date_text": {
+        "title": "Birth Date",
+        "ordering": 1050,
+        "type": "string",
+        "key": "birth_date_text",
+        "format": "iso8601datetime",
+        "searchBy": "*"
+      },
+      "referral_login": {
+        "ordering": 1100,
+        "type": "string",
+        "key": "referral_login",
+        "title": "Referral",
+        "searchBy": "*"
+      },
+      "personal_doc_issued_at": {
+        "searchBy": "*",
+        "title": "Personal Document Issued at",
+        "ordering": 1100,
+        "type": "string",
+        "key": "personal_doc_issued_at"
+      },
+      "id": {
+        "title": "ID",
+        "key": "id",
+        "type": "integer",
+        "ordering": 100,
+        "searchBy": "*"
+      },
+      "currency_wager_req_init": {
+        "searchBy": "*",
+        "key": "currency_wager_req_init",
+        "type": "string",
+        "ordering": 965,
+        "title": "W/R init"
+      },
+      "brand_id__name": {
+        "title": "Brand",
+        "type": "string",
+        "key": "brand_id__name",
+        "ordering": 700,
+        "searchBy": "*"
+      },
+      "marketing_referrer_id__name": {
+        "title": "Marketing referrer",
+        "ordering": 750,
+        "type": "string",
+        "key": "marketing_referrer_id__name",
+        "searchBy": "*"
+      },
+      "currency_id__code": {
+        "searchBy": "*",
+        "title": "Currency",
+        "key": "currency_id__code",
+        "type": "string",
+        "ordering": 1000
+      },
+      "email": {
+        "searchBy": "*",
+        "defaultOperator": "=",
+        "key": "email",
+        "type": "string",
+        "ordering": 400,
+        "title": "Email"
+      },
+      "last_activity_timestamp": {
+        "searchBy": "*",
+        "key": "last_activity_timestamp",
+        "type": "string",
+        "ordering": 800,
+        "title": "Last Activity at",
+        "crudOrdering": 800
+      },
+      "last_name": {
+        "searchBy": "*",
+        "defaultOperator": "=",
+        "key": "last_name",
+        "type": "string",
+        "ordering": 600,
+        "title": "Last name"
+      },
+      "currency_credit": {
+        "title": "Current Cashable, money",
+        "ordering": 900,
+        "type": "string",
+        "key": "currency_credit",
+        "searchBy": "*"
+      },
+      "personal_id": {
+        "type": "string",
+        "key": "personal_id",
+        "ordering": 850,
+        "title": "Personal ID",
+        "searchBy": "*"
+      },
+      "first_name": {
+        "searchBy": "*",
+        "defaultOperator": "=",
+        "key": "first_name",
+        "type": "string",
+        "ordering": 500,
+        "title": "First name"
+      }
+    },
+    "strictNumberTypes": false,
+    "includedForms": {
+      "DBForms::accounts::preferences_json": {
+        "isStrict": false,
+        "required": false,
+        "title": "DBForms::accounts::preferences_json",
+        "jsonformVersion": "2.0",
+        "form_name": "DBForms::accounts::preferences_json",
+        "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/preferences_json",
+        "fields": [
+          {
+            "ordering": 0,
+            "type": "tabobject",
+            "items": [
+              {
+                "type": "section",
+                "title": "Preferences",
+                "items": [
+                  {
+                    "key": "barring/is_self_barred",
+                    "title": "Self Barring"
+                  },
+                  {
+                    "key": "barring/self_bar_reason",
+                    "type": "text",
+                    "preview": true,
+                    "title": "Self Barring reason"
+                  },
+                  {
+                    "title": "Self Barring count",
+                    "key": "barring/self_bar_count",
+                    "type": "preview"
+                  },
+                  {
+                    "key": "locales",
+                    "type": "multipleselect",
+                    "title": "Prefered Locales"
+                  }
+                ]
+              },
+              {
+                "items": [
+                  {
+                    "title": "Daily bet limit, cents",
+                    "key": "limits/daily_bet_limit_cents"
+                  },
+                  {
+                    "title": "Monthly bet limit, cents",
+                    "key": "limits/monthly_bet_limit_cents"
+                  },
+                  {
+                    "title": "Daily deposit limit, cents",
+                    "key": "limits/daily_deposit_limit_cents"
+                  },
+                  {
+                    "title": "Daily deposit limit set at",
+                    "key": "limits/daily_deposit_limit_set_at"
+                  },
+                  {
+                    "key": "limits/weekly_deposit_limit_cents",
+                    "title": "Weekly deposit limit, cents"
+                  },
+                  {
+                    "title": "Weekly deposit limit set at",
+                    "key": "limits/weekly_deposit_limit_set_at"
+                  },
+                  {
+                    "key": "limits/monthly_deposit_limit_cents",
+                    "title": "Monthly deposit limit, cents"
+                  },
+                  {
+                    "key": "limits/monthly_deposit_limit_set_at",
+                    "title": "Monthly deposit limit set at"
+                  },
+                  {
+                    "key": "limits/yearly_deposit_limit_cents",
+                    "title": "Yearly deposit limit, cents"
+                  },
+                  {
+                    "key": "limits/yearly_deposit_limit_set_at",
+                    "title": "Yearly deposit limit set at"
+                  }
+                ],
+                "title": "Limits",
+                "type": "section"
+              },
+              {
+                "title": "Deposit",
+                "items": [
+                  {
+                    "key": "deposit/selected_deposit_type",
+                    "title": "Selected deposit type"
+                  },
+                  {
+                    "key": "deposit/selected_deposit_promo_id",
+                    "type": "select",
+                    "title": "Selected Deposit Promo"
+                  },
+                  {
+                    "key": "deposit/selected_deposit_promo_at",
+                    "title": "Selected Deposit Promo At"
+                  },
+                  {
+                    "title": "Rejected Promotions",
+                    "items": {
+                      "type": "section",
+                      "items": [
+                        {
+                          "key": "deposit/rejected_deposit_promotions[]/promo_id",
+                          "foreign_filter": "U2FsdGVkX180cikKo8xUUNw-egTPHO_x1FUTCVHqz2A-20WMpkB_kxTn3a38NszT-wFmfKOvw8VGB3zeGp6mF3y8uJuE1tfoqu0KeFZO4nWTx2UstXYVlabQHXujXAje77LPHot2TWvRu6YQ7DvWBuZRiCqcF0YoQ_7TdMQSbK_FGdn5DylN0rASIgyZQFsiylAnN7ketFY"
+                        },
+                        {
+                          "key": "deposit/rejected_deposit_promotions[]/timestamp"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                ],
+                "type": "section"
+              }
+            ],
+            "title": "Player Settings"
+          },
+          {
+            "title": "How did you hear about us",
+            "ordering": 100,
+            "preview": true,
+            "type": "text",
+            "key": "how_did_you_hear_about_us"
+          }
+        ],
+        "schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/preferences_json"
+      },
+      "DBForms::accounts::admin_settings_json": {
+        "form_name": "DBForms::accounts::admin_settings_json",
+        "schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/admin_settings_json",
+        "fields": [
+          {
+            "ordering": 0,
+            "type": "tabobject",
+            "items": [
+              {
+                "title": "Barring",
+                "items": [
+                  {
+                    "key": "barring/is_admin_barred",
+                    "type": "checkbox"
+                  },
+                  {
+                    "type": "textarea",
+                    "key": "barring/admin_bar_reason",
+                    "required": false
+                  },
+                  {
+                    "key": "barring/admin_bar_count",
+                    "type": "preview"
+                  }
+                ],
+                "type": "section"
+              },
+              {
+                "title": "Limits",
+                "items": [
+                  {
+                    "type": "number",
+                    "key": "limits/bookmaking_daily_bet_limit_cents",
+                    "required": false
+                  },
+                  {
+                    "key": "limits/casino_daily_bet_limit_cents",
+                    "type": "number",
+                    "required": false
+                  }
+                ],
+                "type": "section"
+              },
+              {
+                "key": "privileges",
+                "type": "section",
+                "title": "Privileges",
+                "items": [
+                  {
+                    "key": "privileges/is_login_barred",
+                    "type": "checkbox"
+                  },
+                  {
+                    "key": "privileges/is_deposit_barred",
+                    "type": "checkbox"
+                  },
+                  {
+                    "type": "checkbox",
+                    "key": "privileges/is_cashout_barred"
+                  },
+                  {
+                    "title": "Payments",
+                    "items": [
+                      {
+                        "items": [
+                          {
+                            "type": "section",
+                            "key": "privileges/payments/payment_tools/BANKACC_BGN",
+                            "items": [
+                              {
+                                "title": "Tools",
+                                "items": [
+                                  {
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/BG26STSA93001527288096",
+                                    "properties": {
+                                      "inserted_at": {
+                                        "title": "Inserted At",
+                                        "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/BG26STSA93001527288096/inserted_at",
+                                        "type": "preview"
+                                      },
+                                      "is_verified": {
+                                        "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/BG26STSA93001527288096/is_verified",
+                                        "default": false,
+                                        "type": "boolean",
+                                        "title": "Is Verified"
+                                      }
+                                    },
+                                    "title": "BG26STSA93001527288096"
+                                  },
+                                  {
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/02~10000001527288096",
+                                    "properties": {
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/02~10000001527288096/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      },
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/BANKACC_BGN/tools/02~10000001527288096/is_verified",
+                                        "default": false
+                                      }
+                                    },
+                                    "title": "02/0000001527288096"
+                                  }
+                                ],
+                                "type": "tabobject",
+                                "key": "privileges/payments/payment_tools/BANKACC_BGN/tools"
+                              }
+                            ],
+                            "title": "BANKACC_BGN"
+                          },
+                          {
+                            "items": [
+                              {
+                                "title": "Tools",
+                                "items": [
+                                  {
+                                    "properties": {
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "key": "privileges/payments/payment_tools/EASYPAYEAD/tools/9506131070/is_verified",
+                                        "default": false,
+                                        "type": "boolean"
+                                      },
+                                      "inserted_at": {
+                                        "title": "Inserted At",
+                                        "type": "preview",
+                                        "key": "privileges/payments/payment_tools/EASYPAYEAD/tools/9506131070/inserted_at"
+                                      }
+                                    },
+                                    "title": "9506131070",
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/EASYPAYEAD/tools/9506131070"
+                                  }
+                                ],
+                                "type": "tabobject",
+                                "key": "privileges/payments/payment_tools/EASYPAYEAD/tools"
+                              }
+                            ],
+                            "title": "EASYPAYEAD",
+                            "key": "privileges/payments/payment_tools/EASYPAYEAD",
+                            "type": "section"
+                          },
+                          {
+                            "key": "privileges/payments/payment_tools/EASYPAYEGN",
+                            "type": "section",
+                            "title": "EASYPAYEGN",
+                            "items": [
+                              {
+                                "key": "privileges/payments/payment_tools/EASYPAYEGN/tools",
+                                "type": "tabobject",
+                                "items": [
+                                  {
+                                    "properties": {
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/EASYPAYEGN/tools/9506131070/is_verified",
+                                        "default": false
+                                      },
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/EASYPAYEGN/tools/9506131070/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      }
+                                    },
+                                    "title": "9506131070",
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/EASYPAYEGN/tools/9506131070"
+                                  }
+                                ],
+                                "title": "Tools"
+                              }
+                            ]
+                          },
+                          {
+                            "items": [
+                              {
+                                "items": [
+                                  {
+                                    "title": "9506131070",
+                                    "properties": {
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/FASTPAY1/tools/9506131070/is_verified",
+                                        "default": false
+                                      },
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/FASTPAY1/tools/9506131070/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      }
+                                    },
+                                    "key": "privileges/payments/payment_tools/FASTPAY1/tools/9506131070",
+                                    "type": "section"
+                                  }
+                                ],
+                                "title": "Tools",
+                                "type": "tabobject",
+                                "key": "privileges/payments/payment_tools/FASTPAY1/tools"
+                              }
+                            ],
+                            "title": "FASTPAY1",
+                            "type": "section",
+                            "key": "privileges/payments/payment_tools/FASTPAY1"
+                          },
+                          {
+                            "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL",
+                            "type": "section",
+                            "items": [
+                              {
+                                "items": [
+                                  {
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/9506131070",
+                                    "title": "9506131070",
+                                    "properties": {
+                                      "is_verified": {
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/9506131070/is_verified",
+                                        "default": false,
+                                        "title": "Is Verified"
+                                      },
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/9506131070/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "properties": {
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/mime7o/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      },
+                                      "is_verified": {
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/mime7o/is_verified",
+                                        "default": false,
+                                        "title": "Is Verified"
+                                      }
+                                    },
+                                    "title": "mime7o",
+                                    "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/mime7o",
+                                    "type": "section"
+                                  },
+                                  {
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/Mime7o",
+                                    "title": "Mime7o",
+                                    "properties": {
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/Mime7o/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      },
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools/Mime7o/is_verified",
+                                        "type": "boolean",
+                                        "default": false
+                                      }
+                                    }
+                                  }
+                                ],
+                                "title": "Tools",
+                                "type": "tabobject",
+                                "key": "privileges/payments/payment_tools/PAYSYSCASHTERMINAL/tools"
+                              }
+                            ],
+                            "title": "PAYSYSCASHTERMINAL"
+                          },
+                          {
+                            "items": [
+                              {
+                                "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools",
+                                "type": "tabobject",
+                                "title": "Tools",
+                                "items": [
+                                  {
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/mimiwinbet@gmail.com",
+                                    "title": "mimiwinbet@gmail.com",
+                                    "properties": {
+                                      "is_verified": {
+                                        "title": "Is Verified",
+                                        "type": "boolean",
+                                        "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/mimiwinbet@gmail.com/is_verified",
+                                        "default": false
+                                      },
+                                      "inserted_at": {
+                                        "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/mimiwinbet@gmail.com/inserted_at",
+                                        "type": "preview",
+                                        "title": "Inserted At"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "properties": {
+                                      "inserted_at": {
+                                        "title": "Inserted At",
+                                        "type": "preview",
+                                        "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/000000/inserted_at"
+                                      },
+                                      "is_verified": {
+                                        "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/000000/is_verified",
+                                        "type": "boolean",
+                                        "default": false,
+                                        "title": "Is Verified"
+                                      }
+                                    },
+                                    "title": "000000",
+                                    "type": "section",
+                                    "key": "privileges/payments/payment_tools/PAYSYSEPAY/tools/000000"
+                                  }
+                                ]
+                              }
+                            ],
+                            "title": "PAYSYSEPAY",
+                            "type": "section",
+                            "key": "privileges/payments/payment_tools/PAYSYSEPAY"
+                          }
+                        ],
+                        "title": "Payment Tools",
+                        "type": "tabobject",
+                        "key": "privileges/payments/payment_tools"
+                      }
+                    ],
+                    "key": "privileges/payments",
+                    "type": "section"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "title": "Promotions",
+                "items": [
+                  {
+                    "title": "Manually allowed promotions",
+                    "items": {
+                      "type": "section",
+                      "items": [
+                        {
+                          "key": "promotions/manually_allowed_promotions[]/promo_id",
+                          "foreign_filter": "U2FsdGVkX1-665GvsQeFF4F7itG0QRrdB5eWwn1lfoqcUD4zsdJCOO9KY_l4cDTwR_l2VLIyif7VV9axskmTIZZVn_or-Et1AYEGysj9k87EIOEkvMvaG_su-UvTZ1xVr8b3VSG6thDdtyedX3144_RaOGaYsBbnatsGY5RMGeK76NtSW-razXuPBP-YCnfWnFcOIJ77M2xfGDgQL1cZT-QuMkHbqpcQHD3NhMKv2JOM_aB45G9X_sSTCZos7LOD"
+                        },
+                        {
+                          "key": "promotions/manually_allowed_promotions[]/timestamp"
+                        },
+                        {
+                          "key": "promotions/manually_allowed_promotions[]/notes",
+                          "type": "textarea"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                ]
+              },
+              {
+                "items": [
+                  {
+                    "type": "select",
+                    "key": "regulatory/is_login_check_required"
+                  },
+                  {
+                    "key": "regulatory/last_login_check_at",
+                    "type": "preview"
+                  },
+                  {
+                    "key": "regulatory/last_login_check_status",
+                    "type": "preview"
+                  },
+                  {
+                    "type": "number",
+                    "key": "regulatory/failed_login_check_count"
+                  }
+                ],
+                "title": "Regulatory",
+                "type": "section",
+                "key": "regulatory"
+              }
+            ],
+            "title": "Admin settings"
+          }
+        ],
+        "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/db/accounts/admin_settings_json",
+        "title": "DBForms::accounts::admin_settings_json",
+        "isStrict": false,
+        "required": false,
+        "jsonformVersion": "2.0"
+      }
+    },
+    "jsonformVersion": "2.0",
+    "contains_contact_data": true,
+    "fieldProperties": {},
+    "title": "JSONFORMS::CRUD::accounts",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/jf_crud_schema/db/accounts",
+    "fields": [
+      {
+        "crudOrdering": 0,
+        "ordering": 0,
+        "key": "id",
+        "type": "number"
+      },
+      {
+        "crudOrdering": 100,
+        "ordering": 100,
+        "key": "login",
+        "type": "text",
+        "is_lc_format": true,
+        "defaultOperator": "="
+      },
+      {
+        "ordering": 200,
+        "type": "text",
+        "key": "password"
+      },
+      {
+        "ordering": 300,
+        "type": "text",
+        "key": "nick_name"
+      },
+      {
+        "defaultOperator": "=",
+        "crudOrdering": 300,
+        "ordering": 400,
+        "type": "text",
+        "key": "first_name"
+      },
+      {
+        "defaultOperator": "=",
+        "type": "text",
+        "key": "last_name",
+        "ordering": 500,
+        "crudOrdering": 400
+      },
+      {
+        "format": "iso8601datetime",
+        "type": "datepicker",
+        "key": "birth_date",
+        "ordering": 600
+      },
+      {
+        "ordering": 650,
+        "type": "select",
+        "key": "gender"
+      },
+      {
+        "key": "citizenship_country_id",
+        "type": "select",
+        "ordering": 700,
+        "foreign_filter": "U2FsdGVkX1_ILpRPDAgDcySmVbv7zqzY9frrLZDlj0_Jw8mi-_hYAHqYMrdLpvnfROL0l4bWI0M0onraXW8LvZI2zDew2KpmFTaJ5ZbJhhr-cPb4yafU6Kg9TGvWsaoyRW6UV9M93JPGsFg_VSJqhRNf66u6qBocNLTC0n2QSL5CB7cYR1WLWrqQrbsazNYFL1vzaJWIYiJodA79nrzVgG2HQhL2q7VfqjqJGSkii0TRdgKcRA4FsDk12U4RNJRKjY4Ks5bnIOAjuLChAnQnBaEKhZ0kfebfw1f1I2mX6Nrxao7UQjVwynOEfJCCO6s0TtT7lPuefpTjnv2AZ2YjlrMAryBtbVsicktw68C24I1R3enNVMabQFaegLA_4JTYE5SJTjk9Q4RLwef7H2kGpOsMm9JqvhVJ5OkmNOGz2ktgLGpJl4yw7doyOC_3RsVfZBERmBSSvzSFbc-U0pp7Tv8a8-8OmfnRLlMXfVgJnJSmytTh4A4eAeFLmwAX0aZHgGo8lUBrMcE"
+      },
+      {
+        "type": "text",
+        "key": "personal_id",
+        "ordering": 800,
+        "crudOrdering": 900,
+        "defaultOperator": "="
+      },
+      {
+        "ordering": 900,
+        "type": "select",
+        "key": "personal_id_type_id",
+        "foreign_filter": "U2FsdGVkX19ZwyIJwKnZBWRcQpVyoo-4BF3X4cTNtH0M_yS35d5PZFxGcAaSOkDTPZr_tdn49xBISLCmQcD2boBrjq8G-lTuOy0Kbx7y6dxE1mEbZX27bD8Add24oZlb9oLoPJHyEsOuyd-FBnrzGaGX-FKx42XZq4AnxFV_iMzG0w_nZ-m59feEwRDS9Pa077UZ-EMs2ZLBKLWdnPjbRGT6FnbA8F1k4GIlfrNtT3-3qCWhHBTcgBWvXdmgtjCjNzFvKi6cEc_hh-nrHAzGzyiQrLFBteaJzTPjAAe0lsUvoGPZlCTszT3yxG1ef3m1EJG0A4fdSvmdkZ-U2RQh90mQ2SKmsiFZ6naW62l6d07Wzwb7riWtg_InUiCz3kTeg3T97KA-fyjZW8oO9FpO1wz43hsGkZFsieaAp4nqav6Z8r_Ad9ihffCX2noM0KE1ByqJXLULHpqfEQmstTsyktDC51BEC5oDXdCJc3bPPMqvEqKhI-Vxd9EVIamA_hCB4r1HeIRLyAtFBnR-n_xUZNH0OThysOTjTPaV9k3CWEo"
+      },
+      {
+        "type": "text",
+        "key": "personal_doc_number",
+        "ordering": 1000
+      },
+      {
+        "key": "personal_doc_type_id",
+        "type": "select",
+        "ordering": 1050
+      },
+      {
+        "ordering": 1100,
+        "key": "personal_doc_issued_at",
+        "type": "datepicker",
+        "crudOrdering": 2200
+      },
+      {
+        "ordering": 1200,
+        "key": "personal_doc_expires_at",
+        "type": "datetimepicker",
+        "crudOrdering": 2300
+      },
+      {
+        "ordering": 1300,
+        "key": "personal_doc_issuer",
+        "type": "text"
+      },
+      {
+        "key": "phone_numbers",
+        "type": "text",
+        "ordering": 1400,
+        "crudOrdering": 2000
+      },
+      {
+        "ordering": 1500,
+        "type": "select",
+        "key": "is_phone_verified"
+      },
+      {
+        "ordering": 1600,
+        "key": "currency_id",
+        "type": "select"
+      },
+      {
+        "ordering": 1700,
+        "type": "preview",
+        "default": "0.85",
+        "title": "Current Regular Cashable, money"
+      },
+      {
+        "type": "preview",
+        "default": "0.00",
+        "ordering": 1800,
+        "title": "Current Non-Cashable, money"
+      },
+      {
+        "title": "Current Non-Cashable with WR, money",
+        "ordering": 1900,
+        "default": "0.00",
+        "type": "preview"
+      },
+      {
+        "title": "Current Bonus, money",
+        "default": "0.00",
+        "type": "preview",
+        "ordering": 2000
+      },
+      {
+        "title": "Bonus W/R Init, money",
+        "type": "preview",
+        "default": "0.00",
+        "ordering": 2100
+      },
+      {
+        "ordering": 2200,
+        "type": "preview",
+        "default": "0.00",
+        "title": "Bonus W/R Unfulfill, money"
+      },
+      {
+        "ordering": 2300,
+        "type": "preview",
+        "default": "0.00",
+        "title": "Current Freebet, money"
+      },
+      {
+        "ordering": 2400,
+        "default": 0,
+        "type": "preview",
+        "title": "Current Free Rounds"
+      },
+      {
+        "title": "Current Shopping points",
+        "type": "preview",
+        "default": "1.79",
+        "ordering": 2500
+      },
+      {
+        "ordering": 2600,
+        "default": "2180.0545",
+        "type": "preview",
+        "title": "Current Bonus points"
+      },
+      {
+        "type": "preview",
+        "default": "4416.6255",
+        "ordering": 2700,
+        "title": "Current Status points"
+      },
+      {
+        "title": "Current Lottery points",
+        "ordering": 2800,
+        "type": "preview",
+        "default": "0"
+      },
+      {
+        "type": "preview",
+        "default": "0.00",
+        "ordering": 2900,
+        "title": "Current Blocked Regular Cashable, money"
+      },
+      {
+        "title": "Current Blocked Non-Cashable, money",
+        "ordering": 3000,
+        "default": "0.00",
+        "type": "preview"
+      },
+      {
+        "ordering": 3100,
+        "type": "preview",
+        "default": "0.00",
+        "title": "Current Blocked Non-Cashable with WR, money"
+      },
+      {
+        "title": "Current Blocked Bonus, money",
+        "ordering": 3200,
+        "default": "0.00",
+        "type": "preview"
+      },
+      {
+        "type": "preview",
+        "default": "0.00",
+        "ordering": 3300,
+        "title": "Current Blocked Freebet, money"
+      },
+      {
+        "type": "preview",
+        "default": 0,
+        "ordering": 3400,
+        "title": "Current Blocked Free Rounds"
+      },
+      {
+        "title": "Current Blocked Shopping points",
+        "ordering": 3500,
+        "default": "0",
+        "type": "preview"
+      },
+      {
+        "type": "preview",
+        "default": "0",
+        "ordering": 3600,
+        "title": "Current Blocked Bonus points"
+      },
+      {
+        "title": "Current Blocked Status points",
+        "type": "preview",
+        "default": "0",
+        "ordering": 3700
+      },
+      {
+        "title": "Current Blocked Lottery points",
+        "ordering": 3800,
+        "default": "0",
+        "type": "preview"
+      },
+      {
+        "ordering": 3900,
+        "key": "account_level_id",
+        "type": "select"
+      },
+      {
+        "key": "secret_question",
+        "type": "text",
+        "ordering": 4000
+      },
+      {
+        "ordering": 4100,
+        "key": "secret_answer",
+        "type": "text"
+      },
+      {
+        "defaultOperator": "=",
+        "is_lc_format": true,
+        "ordering": 4200,
+        "type": "text",
+        "key": "email",
+        "crudOrdering": 200
+      },
+      {
+        "key": "is_email_verified",
+        "type": "select",
+        "ordering": 4300
+      },
+      {
+        "ordering": 4400,
+        "type": "select",
+        "key": "country_id"
+      },
+      {
+        "key": "address1",
+        "type": "text",
+        "ordering": 4500
+      },
+      {
+        "ordering": 4600,
+        "key": "address2",
+        "type": "text"
+      },
+      {
+        "ordering": 4700,
+        "type": "text",
+        "key": "address3"
+      },
+      {
+        "ordering": 4800,
+        "type": "text",
+        "key": "postal_code"
+      },
+      {
+        "type": "select",
+        "key": "marketing_referrer_id",
+        "ordering": 4900
+      },
+      {
+        "ordering": 5000,
+        "type": "select",
+        "key": "brand_id"
+      },
+      {
+        "ordering": 5100,
+        "key": "is_verified",
+        "type": "select"
+      },
+      {
+        "ordering": 5200,
+        "type": "select",
+        "key": "has_accepted_ts_and_cs"
+      },
+      {
+        "key": "has_accepted_marketing",
+        "type": "select",
+        "ordering": 5300
+      },
+      {
+        "ordering": 5400,
+        "key": "has_accepted_marketing_sms",
+        "type": "select"
+      },
+      {
+        "ordering": 5500,
+        "type": "select",
+        "key": "has_accepted_marketing_web_notif"
+      },
+      {
+        "ordering": 5550,
+        "key": "has_accepted_making_donations",
+        "type": "select"
+      },
+      {
+        "crudOrdering": 2100,
+        "key": "referral_login",
+        "type": "text",
+        "ordering": 5600
+      },
+      {
+        "type": "text",
+        "key": "registered_from_ip_addr",
+        "ordering": 5700
+      },
+      {
+        "readOnly": true,
+        "ordering": 5800,
+        "key": "registered_from_remote_system_id",
+        "type": "select"
+      },
+      {
+        "key": "registered_from_user_agent",
+        "type": "text",
+        "ordering": 5900,
+        "readOnly": true
+      },
+      {
+        "crudOrdering": 800,
+        "readOnly": true,
+        "ordering": 5950,
+        "type": "preview",
+        "key": "last_activity_timestamp",
+        "format": "iso8601datetime"
+      },
+      {
+        "ordering": 5955,
+        "key": "last_login_timestamp",
+        "type": "preview",
+        "readOnly": true,
+        "format": "iso8601datetime"
+      },
+      {
+        "key": "first_deposit_timestamp",
+        "type": "preview",
+        "ordering": 5960,
+        "readOnly": true,
+        "format": "iso8601datetime"
+      },
+      {
+        "ordering": 5965,
+        "key": "first_cashout_timestamp",
+        "type": "preview",
+        "readOnly": true,
+        "format": "iso8601datetime"
+      },
+      {
+        "readOnly": true,
+        "key": "last_deposit_timestamp",
+        "type": "preview",
+        "ordering": 5970,
+        "format": "iso8601datetime"
+      },
+      {
+        "format": "iso8601datetime",
+        "type": "preview",
+        "key": "last_cashout_timestamp",
+        "ordering": 5975,
+        "readOnly": true
+      },
+      {
+        "ordering": 6000,
+        "key": "preferences_json",
+        "includeForm": "DBForms::accounts::preferences_json"
+      },
+      {
+        "includeForm": "DBForms::accounts::admin_settings_json",
+        "ordering": 6100,
+        "key": "admin_settings_json"
+      },
+      {
+        "list": true,
+        "ordering": 6150,
+        "key": "is_staff"
+      },
+      {
+        "key": "admin_password",
+        "type": "text",
+        "ordering": 6200
+      },
+      {
+        "type": "preview",
+        "key": "tmp_password",
+        "ordering": 6300
+      },
+      {
+        "type": "preview",
+        "key": "tmp_password_expires_at",
+        "ordering": 6400
+      },
+      {
+        "key": "notes",
+        "type": "textarea",
+        "ordering": 6500,
+        "crudOrdering": 2500
+      },
+      {
+        "type": "number",
+        "key": "invalid_login_count",
+        "ordering": 6600
+      },
+      {
+        "type": "select",
+        "key": "is_password_change_required",
+        "ordering": 6700
+      },
+      {
+        "type": "jsoneditor",
+        "key": "auth_json",
+        "ordering": 6800
+      },
+      {
+        "key": "id_hash",
+        "type": "text",
+        "ordering": 6900,
+        "crudOrdering": 2400
+      },
+      {
+        "title": "Manual Add to account",
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_manual_account_transfer&operation=add&account_id=30489590';",
+        "type": "button"
+      },
+      {
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_manual_account_transfer&operation=withdraw&account_id=30489590';",
+        "title": "Manual Withdraw from account",
+        "type": "button"
+      },
+      {
+        "type": "button",
+        "title": "Manual Bonus to account",
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_manual_account_bonus&account_id=30489590';"
+      },
+      {
+        "type": "button",
+        "title": "Manual Points Correction",
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=manual_account_points_correction&account_id=30489590';"
+      },
+      {
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_summaries&account_id=30489590';",
+        "title": "Summaries",
+        "type": "button"
+      },
+      {
+        "type": "button",
+        "onClick": "location.href='app?p0=accountsrep_account_transfers&f00_start=2023-09-18 00:00:00&f00_end=2023-09-19 00:00:00&f00_groupby=1&f01=30489590&display_as=table&export_as=xlsx&export_pdf_o=portrait&export_pdf_p=A4&export_pdf_f=&sid=accounts_rep_account_transfers&run_report=1&sr=600';",
+        "title": "Statement"
+      },
+      {
+        "type": "button",
+        "onClick": "location.href='app?p0=accountsrep_game_statistics&f00_start=2023-09-18 00:00:00&f00_end=2023-09-19 00:00:00&f00_groupby=0&f01=30489590&f03_groupby=1&f04_groupby=1&f05_groupby=1&f06_groupby=0&f07_groupby=0&display_as=table&export_as=xlsx&export_pdf_o=portrait&export_pdf_p=A4&export_pdf_f=&sid=game_statistics&run_report=1&sr=600';",
+        "title": "Gaming"
+      },
+      {
+        "title": "Images",
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_account_images&account_id=30489590';",
+        "type": "button"
+      },
+      {
+        "type": "button",
+        "onClick": "location.href='app?view=accounts_dbforms_list_accounts&custom_view=accounts_notes&account_id=30489590';",
+        "title": "Audit History"
+      }
+    ],
+    "contains_personal_data": true,
+    "form_name": "JSONFORMS::CRUD::accounts",
+    "includedFields": [
+      {
+        "list": true,
+        "key": "marketing_referrer_id__name",
+        "type": "string",
+        "crudOrdering": 500,
+        "title": "Marketing referrer"
+      },
+      {
+        "list": true,
+        "crudOrdering": 600,
+        "title": "Account Level",
+        "type": "string",
+        "key": "account_level_id__name"
+      },
+      {
+        "list": true,
+        "format": "iso8601datetime",
+        "key": "registered_at",
+        "type": "string",
+        "crudOrdering": 700,
+        "title": "Registered at"
+      },
+      {
+        "list": true,
+        "key": "currency_credit",
+        "type": "number",
+        "crudOrdering": 1000,
+        "title": "Current Cashable, money"
+      },
+      {
+        "list": true,
+        "title": "Current Noncashable Cash, money",
+        "crudOrdering": 1100,
+        "type": "number",
+        "key": "currency_noncashable_credit"
+      },
+      {
+        "title": "Current Noncashable With WR, money",
+        "crudOrdering": 1200,
+        "type": "number",
+        "key": "currency_noncashable_wr_credit",
+        "list": true
+      },
+      {
+        "list": true,
+        "crudOrdering": 1300,
+        "title": "Current Bonus, money",
+        "key": "currency_bonus_credit",
+        "type": "number"
+      },
+      {
+        "type": "number",
+        "key": "currency_wager_req_init",
+        "title": "W/R init",
+        "crudOrdering": 1400,
+        "list": true
+      },
+      {
+        "list": true,
+        "type": "number",
+        "key": "currency_wager_req_unfulfill",
+        "title": "W/R Unfulfill",
+        "crudOrdering": 1500
+      },
+      {
+        "title": "Current Freebet, money",
+        "crudOrdering": 1600,
+        "key": "currency_freebet_credit",
+        "type": "number",
+        "list": true
+      },
+      {
+        "list": true,
+        "key": "freerounds",
+        "type": "number",
+        "title": "Current Free Rounds",
+        "crudOrdering": 1700
+      },
+      {
+        "list": true,
+        "type": "string",
+        "key": "currency_id__code",
+        "title": "Currency",
+        "crudOrdering": 1800
+      },
+      {
+        "format": "iso8601datetime",
+        "list": true,
+        "key": "birth_date_text",
+        "type": "string",
+        "crudOrdering": 1900,
+        "title": "Birth Date"
+      }
+    ],
+    "isStrict": false
+  },
+  "locale": "bg_BG",
+  "permissions": {
+    "delete": 0,
+    "update": 1,
+    "has_approval_enabled": true,
+    "insert": 0,
+    "approval_update": 0,
+    "read": 1
+  },
+  "status": {
+    "status": "ok"
+  },
+  "pending": {
+    "diff": "",
+    "has_pending": false,
+    "meta": {
+      "can_approve": [
+        {
+          "title": "Теодора (teodora.tsvetkova@palmsbet.com)",
+          "id": "T.Tsvetkova"
+        },
+        {
+          "title": "Lachezar (lpetrov@palmsbet.com)",
+          "id": "lpetrov"
+        },
+        {
+          "id": "Pavlin.Tsonev",
+          "title": "Павлин (pavlin.tsonev@palmsbet.com)"
+        },
+        {
+          "title": "Mitko (mitko.nikolov@palmsbet.com)",
+          "id": "MitkoNikolov"
+        },
+        {
+          "title": "Катрин (katrin.ignatova@palmsbet.com)",
+          "id": "katrin.ignatova"
+        },
+        {
+          "id": "Ceco",
+          "title": "Tsetso (doichev@palmsbet.com)"
+        },
+        {
+          "title": "Тодор (todor.vasev@palmsbet.com)",
+          "id": "todor.vasev"
+        },
+        {
+          "id": "MartinKosev",
+          "title": "Martin (martin.kosev@palmsbet.com)"
+        },
+        {
+          "id": "boris.lazarov",
+          "title": "Boris (boris.lazarov@palmsbet.com)"
+        },
+        {
+          "id": "Alex",
+          "title": "Александър (a.ivanov@palmsbet.com)"
+        },
+        {
+          "title": "Ивайло (ivazov@palmsbet.com)",
+          "id": "I.Prashtov"
+        },
+        {
+          "id": "mstoyanova",
+          "title": "Моника (m.stoyanova@palmsbet.com)"
+        },
+        {
+          "id": "Viki",
+          "title": "Viki (viktoria.pendova@palmsbet.com)"
+        },
+        {
+          "title": "Моника (monika.chaveevana@palmsbet.com)",
+          "id": "monika.chaveevana"
+        },
+        {
+          "id": "Preslav",
+          "title": "Preslav (preslav.stefanov@palmsbet.com)"
+        },
+        {
+          "id": "ivo.iliev",
+          "title": "ivo.iliev (ivo.iliev@palmsbet.com)"
+        },
+        {
+          "id": "ivo.nikolov",
+          "title": "Ivo (ivo.nikolov@palmsbet.com)"
+        },
+        {
+          "title": "Павел (pavel.pavlov@palmsbet.com)",
+          "id": "Pavel.Pavlov"
+        },
+        {
+          "id": "Anton.dikov",
+          "title": "Anton (аnton.dikov@palmsbet.com)"
+        },
+        {
+          "title": "ivan (ivan.naydenov@palmsbet.com)",
+          "id": "ivan.naydenov"
+        },
+        {
+          "id": "Bogomil",
+          "title": "Bogomil (bogomil_atanasov_1988@abv.bg)"
+        },
+        {
+          "title": "Dannie (d.nikolova@palmsbet.com)",
+          "id": "Dannie"
+        },
+        {
+          "title": "Ognyan (ognyan.marinov@palmsbet.com)",
+          "id": "OgnyanMarinov"
+        },
+        {
+          "id": "dzaharieva",
+          "title": "Desislava (d.zaharieva@palmsbet.com)"
+        },
+        {
+          "title": "1 (1)",
+          "id": "kpenchev"
+        },
+        {
+          "id": "Maksim.Rotaev",
+          "title": "Maksim (maksim.rotaev@palmsbet.com)"
+        },
+        {
+          "id": "nikola.korudzhijski",
+          "title": "Никола (nikola.korudzhijski@palmsbet.com)"
+        },
+        {
+          "title": "Станислава (stanislava.stoyanova@palmsbet.com)",
+          "id": "Stanislava"
+        },
+        {
+          "id": "daniel.georgiev",
+          "title": "daniel.georgiev (daniel.georgiev@palmsbet.com)"
+        },
+        {
+          "title": "Strashimir (strashimir.rizov@palmsbet.com,)",
+          "id": "strashimir.rizov"
+        },
+        {
+          "id": "Stefani",
+          "title": "Стефани Николаева (stefani.gergova@palmsbet.com)"
+        },
+        {
+          "id": "iyankov",
+          "title": "Иван (i.yankov@palmsbet.com)"
+        },
+        {
+          "id": "Aleksandra.Zdravkova",
+          "title": "Aleksandra (aleksandra.zdravkova@palmsbet.com)"
+        },
+        {
+          "id": "V.Dimitrova",
+          "title": "Вяра (levski@palmsbet.com)"
+        },
+        {
+          "title": "borislav.popov (borislav.popov@palmsbet.com)",
+          "id": "borislav.popov"
+        },
+        {
+          "id": "borislava.borisova@palmsbet.com",
+          "title": "borislava (borislava.borisova@palmsbet.com)"
+        },
+        {
+          "id": "V.Angelova",
+          "title": "Виктория (madrid@palmsbet.com)"
+        },
+        {
+          "title": "Матей (matei.matev@palmsbet.com)",
+          "id": "matei.matev"
+        },
+        {
+          "title": "Simona (simona.hokinova@palmsbet.com)",
+          "id": "simona.hokinova"
+        },
+        {
+          "id": "NikolDimitrova",
+          "title": "Nikol (nikol.dimitrova@palmsbet.com)"
+        },
+        {
+          "title": "Yordan (yordan.yordanov@palmsbet.com)",
+          "id": "yordan.yordanov"
+        },
+        {
+          "title": "Milen (milen.antov@palmsbet.com)",
+          "id": "Milen.Antov"
+        },
+        {
+          "title": "Владислав (vladislav.kostadinov@palmsbet.com)",
+          "id": "vladislav.kostadinov"
+        },
+        {
+          "title": "Николай (nikolay.nikolov@palmsbet.com)",
+          "id": "Niki"
+        },
+        {
+          "id": "DzhuliaNikolova",
+          "title": "Dzhulia (dzhulia.nikolova@palmsbet.com)"
+        },
+        {
+          "title": "Деян (deyan.popov@palmsbet.com)",
+          "id": "deyan.popov@palmsbet.com"
+        },
+        {
+          "title": "Nikolay (nikolay.yovchev@palmsbet.com)",
+          "id": "nikolay.yovchev"
+        },
+        {
+          "id": "Z.Yordanova",
+          "title": "Зорница (madrid@palmsbet.com)"
+        },
+        {
+          "id": "slavi",
+          "title": "Svetoslav (s.georgiev@palmsbet.com)"
+        },
+        {
+          "id": "velizar.yankov",
+          "title": "Velizar (velizar.yankov@palmsbet.com)"
+        },
+        {
+          "title": "infoserv (support@palsmbet.com)",
+          "id": "infoserv"
+        },
+        {
+          "title": "Александър (aleksandar.lilov@palmsbet.com)",
+          "id": "aleksandar.lilov"
+        },
+        {
+          "id": "Eli",
+          "title": "1 (1)"
+        },
+        {
+          "title": "Boyko (boyko.bonev@palmsbet.com)",
+          "id": "Boyko"
+        },
+        {
+          "title": "Dimitar (dimitar.udev@palmsbet.com)",
+          "id": "DimitarUdev"
+        },
+        {
+          "id": "nap",
+          "title": "Nap (empty@mail.com)"
+        },
+        {
+          "id": "manuela.zheleva",
+          "title": "manuela (manuela.zheleva@palmsbet.com)"
+        },
+        {
+          "title": "Angel (apashkulev@palmsbet.com)",
+          "id": "Angel"
+        },
+        {
+          "title": "antonio (antonio.krastev@palmsbet.com)",
+          "id": "antonio.krastev"
+        },
+        {
+          "id": "M.Dyulgerova",
+          "title": "Мина (mina.dyulgerova@palmsbet.com)"
+        },
+        {
+          "id": "Mladen",
+          "title": "Mladen (mladen.todorov@palmsbet.com)"
+        },
+        {
+          "title": "Cvetelina (t.yoncheva@palmsbet.com)",
+          "id": "cveti"
+        },
+        {
+          "id": "KrasimiraAleksova",
+          "title": "Krasimira (krasimira.aleksova@palmsbet.com)"
+        },
+        {
+          "id": "S.Hristova",
+          "title": "Силвия (pirotska@palmsbet.com)"
+        },
+        {
+          "title": "Smilena (nqma@palmsbet.com)",
+          "id": "Smilena"
+        },
+        {
+          "title": "Жан (jhadjinikolov@palmsbet.com)",
+          "id": "Jan"
+        },
+        {
+          "title": "Илияна (iliyana.petrova@palmsbet.com)",
+          "id": "iliyana.petrova"
+        },
+        {
+          "title": "Атанас (atanas.mihalev@palmsbet.com)",
+          "id": "A.Mihalev"
+        },
+        {
+          "title": "Емма (emma.ignatova@palmsbet.com)",
+          "id": "emma.ignatova"
+        },
+        {
+          "id": "M.Mirchev",
+          "title": "Martin (martin.mirchev@palmsbet.com)"
+        },
+        {
+          "title": "Yavor (yavor.krastev@palmsbet.com)",
+          "id": "yavor.krastev"
+        },
+        {
+          "id": "LukaArsov",
+          "title": "Luka (luka.arsov@palmsbet.com)"
+        },
+        {
+          "id": "A.Zhivkova",
+          "title": "Албена (lulin@palmsbet.com)"
+        },
+        {
+          "id": "svetoslava.stefanova",
+          "title": "Светослава (svetoslava.stefanova@palmsbet.com)"
+        },
+        {
+          "id": "RadoslavToshkov",
+          "title": "Radoslav (radoslav.toshkov@palmsbet.com)"
+        },
+        {
+          "title": "Rossi (rossi.mckee@ctgaming.com)",
+          "id": "rossi.mckee"
+        },
+        {
+          "title": "Несрин (nesrin.hallal@palmsbet.com)",
+          "id": "N.Hallal"
+        },
+        {
+          "id": "V.Vladimirova",
+          "title": "Виктория (viktoria.vladimirova@palmsbet.com)"
+        },
+        {
+          "id": "ivanyankov",
+          "title": "Ivan (i.yankov@palmsbet.com)"
+        },
+        {
+          "id": "ivo.petkov",
+          "title": "Ivo (ivo.petkov@ctgaming.com)"
+        },
+        {
+          "id": "Ivona",
+          "title": "Ivona (ivona.yoveva@palmsbet.com)"
+        },
+        {
+          "title": "Roman (roman@palmsbet.com)",
+          "id": "Roman"
+        },
+        {
+          "title": "Владимир (vladimir.kotsev@palmsbet.com)",
+          "id": "Vladimir.Kotsev"
+        },
+        {
+          "title": "1 (1)",
+          "id": "ipetrova"
+        },
+        {
+          "title": "georgi (georgi.milev@palmsbet.com)",
+          "id": "georgi.milev"
+        },
+        {
+          "title": "Irina (irina.zaharieva@ctgaming.com)",
+          "id": "irina.zaharieva"
+        },
+        {
+          "id": "kiril.kirov",
+          "title": "Kiril (kiril.kirov@palmsbet.com)"
+        },
+        {
+          "title": "Radoslav (radoslav.ganchev@palmsbet.com)",
+          "id": "Radi"
+        },
+        {
+          "title": "Валентин (v.ivanov@palmsbet.com)",
+          "id": "Valentin"
+        },
+        {
+          "title": "Боряна (boryana.ivanova@palmsbet.com)",
+          "id": "boryana.ivanova"
+        },
+        {
+          "title": "Martin (martin.dimitrov@palmsbet.com)",
+          "id": "Martin.Dimitrov"
+        },
+        {
+          "title": "1 (1)",
+          "id": "bnedelev"
+        },
+        {
+          "title": "Hristina (hristina.chukarkova@palmsbet.com)",
+          "id": "HristinaChukarkova"
+        },
+        {
+          "id": "Sjiarov",
+          "title": "aleksandar (aleksandar.syarov@palmsbet.com)"
+        },
+        {
+          "id": "tatevos.nuradian",
+          "title": "Tatevos (tatevos.nuradian@palmsbet.com)"
+        },
+        {
+          "title": "Genadiy (genadiy.mihaylov@palmsbet.com)",
+          "id": "genadiy.mihaylov"
+        },
+        {
+          "id": "Darina.buradzhieva",
+          "title": "Darina (darina.buradzhieva@palmsbet.com)"
+        },
+        {
+          "title": "Vasil (vasil.petrov@palmsbet.com)",
+          "id": "vasil.petrov"
+        },
+        {
+          "title": "Денислав (denislav.ganchev@palmsbet.com)",
+          "id": "Denislav.Ganchev"
+        },
+        {
+          "title": "1 (1)",
+          "id": "irina"
+        },
+        {
+          "id": "D.Arnaudov",
+          "title": "Димитър (pavlovo@palmsbet.com)"
+        },
+        {
+          "id": "D.Ivanova",
+          "title": "Даяна (dayana.ivanova@palmsbet.com)"
+        },
+        {
+          "id": "ivaylo.dimitrov",
+          "title": "Ivaylo (ivaylo.dimitrov@palmsbet.com)"
+        },
+        {
+          "title": "Plamen (plamen.kostov@palmsbet.com)",
+          "id": "Plamen.Kostov"
+        },
+        {
+          "title": "Ivona (ivona.dimitrova@palmsbet.com)",
+          "id": "ivona.dimitrova"
+        },
+        {
+          "id": "milena.baleva",
+          "title": "milena.baleva (milena.baleva@palmsbet.com)"
+        },
+        {
+          "title": "Gabi (gabriela.simova@palmsbet.com)",
+          "id": "Gabi"
+        },
+        {
+          "id": "Nikolay.Dimitrov",
+          "title": "Nikolay (nikolay.dimitrov@palmsbet.com)"
+        },
+        {
+          "title": "Liliya (liliya.davidova@palmsbet.com)",
+          "id": "L.Davidova"
+        },
+        {
+          "id": "AntonSimeonov",
+          "title": "Anton (anton.simeonov@palmsbet.com)"
+        },
+        {
+          "title": "Николай (nikolay.yovchev@palmsbet.com)",
+          "id": "nikolaiyovchev"
+        },
+        {
+          "id": "Simo",
+          "title": "simeon (simeon.mavrodiev@palmsbet.com)"
+        }
+      ]
+    }
+  }
+}

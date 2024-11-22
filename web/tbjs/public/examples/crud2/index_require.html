@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CRUD DataTables</title>
+
+    <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/datatables/media/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/font-awesome/css/font-awesome.css">
+
+    <style>
+      .numeric {
+        text-align: right;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Ecamples with require</h1>
+    <script src="./bower_components/requirejs/require.js" data-main="./scripts/config"></script>
+    <script>
+
+      // requirejs(function(require) {
+      //   window._ = require('lodash-5');
+      // });
+
+      // require('lodash-5'); // разчита се, че в ./scripts/config ... някъде е настроено откъде да се зареди js file-а
+      // или
+      // require('lodash-5', '/cdn/lodash-4.18.4/dist/lodash.min.js'); // дава се точния файл, който да се ползва за зареждане на файла, освен ако вече не настроен път за него
+      // как require.js ще се държи, ако се зареди дадена библиотека, след това се смени пътя до нейния файл и след това се изиска отново
+
+    </script>
+
+    <!-- <script src="./scripts/module.js"></script> -->
+  </body>
+</html>

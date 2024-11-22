@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>ChartsJS</title>
+
+     <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- lodash -->
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- Chart.js -->
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+
+    <script src="scripts/lib/tb.core.js"></script>
+    <script src="scripts/lib/tb.xerrors.js"></script>
+    <script src="scripts/lib/tb.request.js"></script>
+    <script src="scripts/lib/tb.file.js"></script>
+    <script src="scripts/lib/tb.dispatcher.js"></script>
+    <script src="scripts/lib/tb.service.js"></script>
+    <script src="scripts/lib/tb.chart.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="tb-chart"></div>
+
+    <script type="text/javascript">
+      var tbChart = new TB.ChartJs(document.querySelector('#tb-chart'), JSON.parse('{"chart":{"type":"bar","data":{"labels":["ZoneTest21","ZoneTestTesttttt","ZoneTestTesttttt","Казино"],"datasets":[{"label":"# in Zone","data":[151330,2000,66381,10000],"type":"bar","hidden":false},{"label":"Last Mechanical IN","type":"bar","hidden":false,"data":[10000,0,50000,0]},{"label":"Last Mechanical OUT","data":[0,0,0,0],"hidden":true,"type":"bar"}]}}}'));
+    </script>
+
+  </body>
+  </html>
+

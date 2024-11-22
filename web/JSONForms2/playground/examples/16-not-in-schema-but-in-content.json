@@ -1,0 +1,35 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-not-in-schema-but-in-content",
+    "type": "object",
+    "properties": {
+      "friends": {
+        "type": "string",
+        "title": "Frinedly guy"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-not-in-schema-but-in-content",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "friends",
+        "prepend": "I feel",
+        "append": "today",
+        "htmlClass": "usermood",
+        "placeholder": "incredibly and admirably great",
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      } 
+    ]
+  },
+
+  "content": {
+    "friends": "big guy",
+    "someNonRealSchemaButStillShouldBeInOutput": 123,
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JSON Form Playground - Trunk</title>
+    <link rel="stylesheet" type="text/css" href="/deps/opt/bootstrap/css/bootstrap.css">
+<!--    <link rel="stylesheet" type="text/css" href="../deps/opt/jqueryui/jquery.ui.custom.css"> -->
+<!--    <link rel="stylesheet" type="text/css" href="../deps/opt/jqueryui/jquery.ui.theme.css"> -->
+    <link href="/pub/DataTables-bootstrap-1.10/datatables.min.css"   rel="stylesheet" type="text/css">
+    <link href="/pub/jsoneditor-5.22.0/jsoneditor.min.css"   rel="stylesheet" type="text/css">
+
+    <link href="/pub/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../deps/opt/drawerjs/drawerJs.min.css" />
+    <link href="../css/style.css"   rel="stylesheet" type="text/css">
+    <style>
+    #bs-example-navbar-collapse-1 form.tb-jf-hasrequired:after {
+      display: none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" style="position: relative;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" >JSONForm 2.0 examples - trunk</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form" class="navbar-form navbar-left" enctype="multipart/form-data"></form>
+        </div>
+    </nav>
+
+    <div class="container">
+      <div class="span12 col-xs-12">
+        Inject submit button: <input type="checkbox" id="injector" />
+      </div>
+      <div class="span12 col-xs-12">
+        Add numeration: <input type="checkbox" id="add-numeration" />
+      </div>
+
+      <!-- JFtiny button and modal! -->
+      <div class="span12 col-xs-12">
+        <button class="btn btn-primary" type="button" id="get-jftiny-html">Get JFtiny Form</button>
+
+        <div class="modal" tabindex="-1" role="dialog" id="exampleModalLong">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">JFTiny форма</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="jf-tiny-html-modal-text">Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="span12 col-xs-12">
+        <div id="source"></div>
+      </div>
+      <div class="span12 col-xs-12">
+        <div id="result" class=""></div>
+      </div>
+
+      <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script src="../deps/external_scripts/jquery.min.js"></script>
+    <script src="../deps/external_scripts/lodash4.min.js"></script>
+    <!-- <script src="../deps/opt/json-validators/ZSchema-browser.js"></script> -->
+
+    <!-- AJV json schema validator -->
+    <script src="../deps/scripts/ajv.min.js"></script>
+
+    <script src="../deps/tbjs/js/tb.core.js"></script>
+    <script src="../deps/tbjs/js/tb.xerrors.js"></script>
+    <script src="../deps/tbjs/js/tb.file.js"></script>
+    <script src="../deps/tbjs/js/tb.template.js"></script>
+    <script src="../deps/tbjs/js/tb.translate.js"></script>
+
+    <script src="../deps/scripts/tbjson.deepmerge.js"></script>
+    <script src="../deps/scripts/tbjson.jsonpointer.js"></script>
+    <script src="../deps/scripts/tbjson.traverse.js"></script>
+    <script src="../deps/scripts/tbjson.traverseSchema.js"></script>
+    <!-- <script src="../deps/scripts/tbjson.url-test.js"></script> -->
+    <script src="../deps/scripts/tbjson.url.js"></script>
+    <script src="../deps/scripts/tbjson.schemaResolver.js"></script>
+    <script src="../deps/scripts/tbjson.ajv2tb.js"></script>
+    <script src="../deps/scripts/tbjson.ajv2tb.js"></script>
+    <script src="../deps/scripts/tbjson.generatesubtree.js"></script>
+
+    <script src="../deps/opt/moment/min/moment.min.js"></script>
+    <script src="../deps/opt/datepicker/bootstrap-datetimepicker.js"></script>
+    <!--script src="../deps/opt/jqueryui/jquery.ui.core.js"></script>
+    <script src="../deps/opt/jqueryui/jquery.ui.widget.js"></script>
+    <script src="../deps/opt/jqueryui/jquery.ui.mouse.js"></script>
+    <script src="../deps/opt/jqueryui/jquery.ui.sortable.js"></script-->
+    <script src="../deps/opt/jqueryui/jquery.ui.custom.js"></script>
+    <script src="../deps/opt/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../deps/opt/bootstrap-plugins/bootstrap-dropdown.js"></script>
+    <script src="../deps/opt/bootstrap-plugins/bootstrap-typeahead.js"></script>
+    <script src="../deps/opt/spectrum/spectrum.js"></script>
+    <script src="../deps/opt/selectize/selectize.js"></script>
+    <script src="../deps/opt/ace/ace.js"></script>
+    <script src="../deps/opt/tinymce/tinymce.min.js"></script>
+    <script src="../deps/opt/drawerjs/drawerJs.standalone.js"></script>
+
+<!--  uncomment to use any of the highlighting styles
+    // <script src="../deps/opt/ace/mode-json.js"></script>
+    // <script src="../deps/opt/ace/mode-html.js"></script>
+    // <script src="../deps/opt/ace/mode-css.js"></script>
+    // <script src="../deps/opt/ace/mode-javascript.js"></script>
+    // <script src="../deps/opt/ace/mode-less.js"></script>
+    // <script src="../deps/opt/ace/mode-markdown.js"></script> -->
+    <script src="../deps/opt/select2-4.0.0/dist/js/select2.full.js"></script>
+    <!-- load datatables-->
+
+    <script src="../lib/jf.utils.js"></script>
+    <script src="../lib/jsonform.js"></script>
+
+    <!-- load the plugins after jsonform -->
+    <script src="../deps/opt/select2-4.0.0/dist/js/select2.full.js"></script>
+    <script src="../deps/opt/tb-jf-plugins/select2/select2.js"></script>
+    <script src="../lib/plugins/tab-controls.js"></script>
+
+    <script src="../deps/opt/orderedselect/jquery.orderedselect.js"></script>
+    <script src="../deps/opt/tb-jf-plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../deps/opt/tb-jf-plugins/timerangepicker/timerangepicker.js"></script>
+    <script src="../deps/opt/tb-jf-plugins/datetimerangepicker/datetimerangepicker.js"></script>
+    <script src="../deps/opt/tb-jf-plugins/questions/questions.js"></script>
+    <script src="/pub/jsoneditor-5.22.0/jsoneditor.min.js"></script>
+
+    <script src="/pub/DataTables-bootstrap-1.10/DataTables-1.10.18/js/jquery.dataTables.js"></script>
+    <script src="/pub/DataTables-bootstrap-1.10/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <script src="playground.js"></script>
+  </body>
+</html>

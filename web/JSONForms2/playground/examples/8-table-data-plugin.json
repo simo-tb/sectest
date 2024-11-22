@@ -1,0 +1,88 @@
+{
+  "form": {
+    "isStrict": false,
+    "fields": [
+      {
+        "title": "EUR fees",
+        "key": "table_values",
+        "type": "datatable",
+        
+        "enableAddingItems": false,
+        "enableDeletingItems": false,
+        "canView": false,
+        "canEdit": false,
+        
+        "items": {
+          "type": "datatablerow",
+          "items": [
+            {
+              "title": "Fee Name",
+              "key": "table_values[]/fee_name",
+              "type": "preview",
+              "showTitleInPreview": false
+            },
+            {
+              "title": "Fee Age",
+              "key": "table_values[]/age",
+              "align": "right",
+              "showTitleInPreview": false,
+              "numeric": true,
+              "type": "preview"
+            },
+            {
+              "title": "Fee Image 1",
+              "key": "table_values[]/fee_img2",
+              "showTitleInPreview": false,
+              "type": "preview",
+              "format": "iso8601datetime"
+            },
+            {
+              "title": "Fee Pg..1231313131",
+              "key": "table_values[]/pgint",
+              "showTitleInPreview": false,
+              "type": "preview"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "table_values": [
+      {"fee_name": "test1", "age": 2},
+      {"fee_name": "test2", "age": 2},
+      {"fee_name": "test3", "age": 2},
+      {"fee_name": "test4", "age": 2},
+      {"fee_name": "test5", "age": 2},
+      {"fee_name": "test6", "age": 2},
+      {"fee_name": "test7", "age": 2},
+      {"fee_name": "test8", "age": 2},
+      {"fee_name": "test9", "age": 2},
+      {"fee_name": "test10", "age": 2},
+      {"fee_name": "test11", "age": 2},
+      {"fee_name": "test12", "age": 2},
+      {"fee_name": "test13", "age": 2},
+      {"fee_name": "test14", "age": 2},
+      {"fee_name": "test15", "age": 2},
+      {"fee_name": "test16"},
+      {"fee_name": "test17"},
+      {"fee_name": "test18"},
+      {"fee_name": "test19"},
+      {"fee_name": "test20"},
+      {"fee_name": "test21"},
+      {"fee_name": "test22"},
+      {"fee_name": "test23"},
+      {"fee_name": "test24"},
+      {"fee_name": "test25"},
+      {"fee_name": "test26"},
+      {"fee_name": "test27"},
+      {"fee_name": "test28"},
+      {"fee_name": "test29"},
+      {"fee_name": "test30"},
+    ]
+  }
+}

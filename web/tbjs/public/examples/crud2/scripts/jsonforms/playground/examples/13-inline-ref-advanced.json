@@ -1,0 +1,95 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/13-refs",
+    "type": "object",
+    "properties": {
+      "name": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-name#"
+      },
+      "composite": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details#"
+      },
+      "simple": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details#/properties/age"
+      },
+      "refname": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details#/properties/name"
+      },
+      "objectref": {
+        "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details#/properties/object/properties/simpleref"
+      }
+    },
+
+    "definitions": {
+      "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/playground/13-personal-details",
+        "type": "object",
+        "title": "Полета",
+        "properties": {
+            "age": {
+              "title": "Възраст",
+              "type": "integer"
+            },
+            "name": {
+              "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-name#"
+            },
+            "object": {
+              "title": "object",
+              "type": "object",
+              "properties": {
+                "simpleref": {
+                  "$ref": "http://jschemas.tbpro.com/tblib/jf/playground/13-name#"
+                }
+              }
+            }
+        }
+      },
+      "http://jschemas.tbpro.com/tblib/jf/playground/13-name": {
+        "id": "http://jschemas.tbpro.com/tblib/jf/playground/13-name#",
+        "title": "Име",
+        "type": "string",
+        "minLength": 2
+      }
+    }
+  },
+
+ "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/13-refs",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "composite"
+      },
+      {
+        "key": "simple"
+      },
+      {
+        "key": "refname"
+      },
+      {
+        "key": "objectref"
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "name": "B",
+    "composite": {
+      "age": 12,
+      "name": "Bob",
+      "object": {
+        "simpleref": "Bob"
+      }
+    },
+    "simple": 12,
+    "refname": "Bob",
+    "objectref": "Bob",
+  }
+}

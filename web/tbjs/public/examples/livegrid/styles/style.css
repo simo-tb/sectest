@@ -1,0 +1,186 @@
+.tb-lg-element {
+  position: relative;
+  overflow: hidden;
+}
+
+.tb-lg-element * {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.tb-lg-element.tb-lg-panning {
+  cursor: move;
+}
+
+.tb-lg-resize {
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.tb-lg-wrapper {
+  position: relative;
+  transform-origin: 0px 0px;
+}
+
+.tb-lg-wrapper-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.tb-lg-element .tb-lg-navbar {
+  height: 3.5rem;
+  display: initial;
+}
+
+.tb-lg-navbar {
+  position: absolute;
+  display: none;
+  left: 0px;
+  height: 0px;
+  top: -2.5rem;
+  padding-bottom: 1rem;
+  padding-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  transition: 250ms all;
+  color: white;
+  font-family: sans-serif;
+}
+
+.tb-lg-navbar:hover,
+.tb-lg-navbar.tb-lg-active {
+  /*display: block;*/
+  height: 2.5rem;
+  padding: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 250ms all;
+}
+
+.tb-lg-navbar input[type="range"] {
+  height: 5rem;
+  width: 1rem;
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+}
+
+.tb-lg-navbar .tb-lg-btn {
+  height: 2.1rem;
+}
+
+.tb-lg-navbar .tb-lg-btn[name="save"]:disabled {
+  max-width: 0px;
+  padding: 0px;
+  border: none;
+  margin: 0px;
+}
+.tb-lg-navbar .tb-lg-btn[name="save"] {
+  max-width: 100px;
+}
+
+.tb-lg-navbar:hover .tb-lg-subnavbar:hover .tb-lg-content {
+  top: 2.5rem;
+}
+.tb-lg-navbar:hover .tb-lg-subnavbar .tb-lg-content {
+  top: 2.5rem;
+}
+.tb-lg-navbar .tb-lg-subnavbar .tb-lg-content {
+  top: 3.5rem;
+}
+.tb-lg-subnavbar {
+  display: inline-block;
+  position: relative;
+}
+.tb-lg-subnavbar .tb-lg-content {
+  height: 0px;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transition: 250ms all;
+  background: rgba(0, 0, 0, 0.2);
+}
+.tb-lg-subnavbar:hover .tb-lg-content {
+  height: 12rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+.tb-lg-navbar table {
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+}
+.tb-lg-navbar td{
+  height: 1rem;
+}
+
+.tb-lg-btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.9rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  background: rgba(255, 255, 255, 1);
+  border: 1px outset rgba(180, 180, 180, 1);
+  color: black;
+  padding: 1px 6px;
+  margin: 0rem 0.2rem;
+}
+
+.tb-lg-btn:active, .tb-lg-btn.tb-lg-active {
+  background: rgba(200, 200, 200, 1);
+  border-style: inset;
+}
+
+.tb-lg-items-container {
+  position: relative;
+}
+
+.tb-lg-item {
+  display: inline-block;
+  overflow: auto;
+}
+
+.tb-lg-element:not(.tb-lg-editing) .tb-lg-item .tb-lg-navbar {
+  height: 0px;
+}
+
+.tb-lg-element.tb-lg-editing .tb-lg-item .tb-lg-navbar {
+  /*height: initial;*/
+  height: 0px;
+}
+
+.tb-lg-element.tb-lg-griddable .tb-lg-item {
+  position: absolute;
+}
+
+.tb-lg-element.tb-lg-griddable .tb-lg-items-container {
+  width: 100%;
+  height: 100%;
+}
+
+.tb-lg-element.tb-lg-griddable .tb-lg-item .tb-lg-item-content  {
+  width: 100%;
+  height: 100%;
+}
+svg.tb-lg-grid {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
+  display: none;
+}
+
+svg line {
+  stroke: rgb(6,120,155);
+  stroke-width: 2px;
+}
+
+.tb-lg-editing svg.tb-lg-grid {
+  display: block;
+}

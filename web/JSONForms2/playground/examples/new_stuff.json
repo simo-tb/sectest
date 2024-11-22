@@ -1,0 +1,225 @@
+{  
+   "schema": {
+	   "id":"http://jsonschemas.telebid-pro.com/p2p/db/investors/personal_data_json",
+	   "type":"object",
+	   "required":[  
+	      "emails",
+	      "phones",
+	      "pid_city",
+	      "last_name",
+	      "birth_date",
+	      "first_name",
+	      "pid_address",
+	      "pid_country",
+	      "contact_city",
+	      "birth_country",
+	      "pid_post_code",
+	      "preferred_lang",
+	      "contact_address",
+	      "contact_country",
+	      "personal_number",
+	      "contact_post_code"
+	   ],
+	   "properties":{  
+	      "emails":{  
+	         "type":"array",
+	         "items":{  
+	            "type":"string",
+	            "title":"Email"
+	         },
+	         "title":"Emails",
+	         "minItems":1
+	      },
+	      "phones":{  
+	         "type":"array",
+	         "items":{  
+	            "type":"string",
+	            "title":"Phone"
+	         },
+	         "title":"phones",
+	         "minItems":1
+	      },
+	      "picture":{  
+	         "type":"string",
+	         "title":"Picture"
+	      },
+	      "pid_city":{  
+	         "type":"string",
+	         "title":"PID City"
+	      },
+	      "pid_docs":{  
+	         "type":"array",
+	         "items":{  
+	            "type":"object",
+	            "title":"PID Document",
+	            "required":[  
+	               "id",
+	               "type",
+	               "issue_date",
+	               "expiration_date",
+	               "files"
+	            ],
+	            "properties":{  
+	               "id":{  
+	                  "type":"string",
+	                  "title":"ID"
+	               },
+	               "type":{  
+	                  "type":"string",
+	                  "title":"Type"
+	               },
+	               "files":{  
+	                  "type":"array",
+	                  "items":{  
+	                     "type":"string",
+	                     "title":"File",
+	                     "fileMaxSize":"20000"
+	                  },
+	                  "title":"Files"
+	               },
+	               "issue_date":{  
+	                  "type":"string",
+	                  "title":"Issue Date"
+	               },
+	               "expiration_date":{  
+	                  "type":"string",
+	                  "title":"Expiration Date"
+	               }
+	            }
+	         },
+	         "title":"PID Documents"
+	      },
+	      "gender_id":{  
+	         "type":"integer",
+	         "title":"Gender",
+	         "refCol":"id",
+	         "minimum":0,
+	         "refType":"fkey",
+	         "refTable":"genders"
+	      },
+	      "last_name":{  
+	         "type":"string",
+	         "title":"Last name"
+	      },
+	      "birth_date":{  
+	         "type":"string",
+	         "title":"Birth date"
+	      },
+	      "first_name":{  
+	         "type":"string",
+	         "title":"First name"
+	      },
+	      "pid_address":{  
+	         "type":"string",
+	         "title":"PID Address"
+	      },
+	      "pid_country":{  
+	         "type":"string",
+	         "title":"PID Country",
+	         "refCol":"code",
+	         "refType":"reference",
+	         "refTable":"countries"
+	      },
+	      "address_docs":{  
+	         "type":"array",
+	         "items":{  
+	            "type":"object",
+	            "title":"Address Document",
+	            "required":[  
+	               "id",
+	               "type",
+	               "issue_date",
+	               "expiration_date",
+	               "files"
+	            ],
+	            "properties":{  
+	               "id":{  
+	                  "type":"string",
+	                  "title":"ID"
+	               },
+	               "type":{  
+	                  "type":"string",
+	                  "title":"Type"
+	               },
+	               "files":{  
+	                  "type":"array",
+	                  "items":{  
+	                     "type":"string",
+	                     "title":"File"
+	                  },
+	                  "title":"Files"
+	               },
+	               "issue_date":{  
+	                  "type":"string",
+	                  "title":"Issue Date"
+	               },
+	               "expiration_date":{  
+	                  "type":"string",
+	                  "title":"Expiration Date"
+	               }
+	            }
+	         },
+	         "title":"Address Documents"
+	      },
+	      "contact_city":{  
+	         "type":"string",
+	         "title":"Contact City"
+	      },
+	      "annual_income":{  
+	         "type":"string",
+	         "title":"Annual Income"
+	      },
+	      "birth_country":{  
+	         "type":"string",
+	         "title":"Birth Country",
+	         "refCol":"code",
+	         "refType":"reference",
+	         "refTable":"countries"
+	      },
+	      "field_of_work":{  
+	         "type":"string",
+	         "title":"Field of work"
+	      },
+	      "pid_post_code":{  
+	         "type":"string",
+	         "title":"PID Post Code"
+	      },
+	      "preferred_lang":{  
+	         "type":"string",
+	         "title":"Preffered Language",
+	         "refCol":"locale",
+	         "refType":"reference",
+	         "refTable":"locales"
+	      },
+	      "contact_address":{  
+	         "type":"string",
+	         "title":"Contact Address"
+	      },
+	      "contact_country":{  
+	         "type":"string",
+	         "title":"Contact Country",
+	         "refCol":"code",
+	         "refType":"reference",
+	         "refTable":"countries"
+	      },
+	      "personal_number":{  
+	         "type":"string",
+	         "title":"Personal Number"
+	      },
+	      "seniority_level":{  
+	         "type":"string",
+	         "title":"Seniority Level"
+	      },
+	      "contact_post_code":{  
+	         "type":"string",
+	         "title":"Contact Post Code"
+	      }
+	   }
+	},
+	"form": {
+		"$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/investors/personal_data_json",
+    	"jsonformVersion": "2.0",
+    	"fields": [
+    	]
+	}
+}

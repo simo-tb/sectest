@@ -1,0 +1,33 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+      "comma-dangle": [0, "always-multiline"],
+      "no-console": [0]
+
+    },
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "console": false,
+        "Promise": false,
+        "$": false,
+        "_": false,
+
+        "bowser": false,
+        "d3": false,
+
+        "TB": true,
+        "jQuery": true,
+        "ASSERT": false,
+        "ASSERT_PEER": false,
+        "ASSERT_USER": false,
+        "TRACE": false,
+        "THROW": false,
+        "THROW_PEER": false,
+        "THROW_USER": false
+    },
+    "extends": "eslint:recommended"
+}

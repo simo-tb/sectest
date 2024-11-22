@@ -1,0 +1,144 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "type": "object",
+    "properties": {
+      "comment": {
+        "type": "string",
+        "title": "Comment"
+      },
+      "fname": {
+        "type": "string",
+        "title": "First Name"
+      },
+      "sname": {
+        "type": "string",
+        "title": "Second Name"
+      },
+      "age": {
+        "type": "number",
+        "title": "Age"
+      },
+      "friends": {
+        "type": "array",
+        "title": "Friend",
+        "items": {
+          "title": "Friend",
+          "type": "object",
+          "properties": {
+            "nick": {
+              "type": "string",
+              "title": "Nickname"
+            }
+          }
+        }
+      },
+      "orderedselectwidthexample": {
+        "type": "array",
+        "title": "Ordered Selected People",
+        "items": {
+          "title": "Ordered Selected Person",
+          "type": "string",
+          "enum": [
+            "Jack Russell",
+            "Kroasan the Frenchie",
+            "Bully the Bulldog",
+            "Pinchy the Pincher"
+          ]
+        }
+      },
+      "multipleselectwidthexample": {
+        "type": "array",
+        "title": "Selected People",
+        "items": {
+          "title": "Selected Person",
+          "type": "string",
+          "enum": [
+            "Jack Russell",
+            "Kroasan the Frenchie",
+            "Bully the Bulldog",
+            "Pinchy the Pincher"
+          ]
+        }
+      },
+      "things": {
+        "type": "object"
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "comment",
+        "type": "textarea",
+        "rowWidth": 12
+      },
+      {
+        "type": "section",
+        "title": "Author",
+        "description": "fill in your personal information",
+        "items": [
+          {
+            "key": "fname",
+            "rowWidth": 4
+          },
+          {
+            "key": "sname",
+            "rowWidth": 4
+          },
+          {
+            "key": "age",
+            "rowWidth": 4
+          }
+        ]
+      },
+      {
+        "type": "tabarray",
+        "rowWidth": 6,
+        "name": "friends",
+        "enableSorting": true,
+        "items": {
+          "type": "section",
+          "legend": "user {{value}}",
+          "items": [
+            {
+              "key": "friends[]/nick",
+              "valueInLegend": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "jsoneditor",
+        "key": "things",
+        "rowWidth": 6
+      },
+      {
+        "type": "orderedselect",
+        "key": "orderedselectwidthexample",
+        "rowWidth": 6
+      },
+      {
+        "type": "multipleselect",
+        "key": "multipleselectwidthexample",
+        "rowWidth": 6
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabarray-basic",
+    "friends": [
+      {
+        "nick": "mick"
+      },
+      {
+        "nick": "mick2"
+      }
+    ],
+    "things": {
+      "preferences": {}
+    }
+  }
+}

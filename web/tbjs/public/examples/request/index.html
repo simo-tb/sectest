@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TBLIB::TBJS</title>
+</head>
+<body>
+	<script src="./bower_components/lodash/lodash.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/lib/tb.core.js"></script>
+    <script src="scripts/lib/tb.xerrors.js"></script>
+    <script src="scripts/lib/tb.request.js"></script>
+    <!-- <script src="scripts/lib/tb.request.js"></script> -->
+	<script>
+    var data = { payload_jsonrpc: '{"jsonrpc":"2.0","id":1,"method":"get_strings","params":{"transaction_id":1}}' };
+	//
+	window.request = TB.Request({
+         data: data,
+         // method: 'post',
+         url: 'http://10.21.2.24:8060/langsheetapi',
+         processData: true,
+         retardTimeout: 2,
+         retardCb: function() { alert('slowwwwww') }
+    })
+
+    this.request.promise.then(function() {
+         console.log( 'success!', arguments );
+    }, function() {
+
+        console.log( 'error!', arguments );
+    } );
+   
+
+
+
+/*
+		ASSERT_USER(0, "msg");
+
+	ASSERT_USER.isNumber(0, {
+		code: "U0",
+		msg: "MOMCHIL E VINOVEN",
+	});
+
+	setTimeout(function() {
+		ASSERT_USER(0, {
+			code: "U0",
+			msg: "TESTTTTT USER",
+		});
+	})
+
+	setTimeout(function() {
+		ASSERT_PEER(0, {
+			code: "P1",
+			msg: "TESTTTTT PEER"
+		})
+	})
+
+	setTimeout(function() {
+		ASSERT(0, {
+			code:  "S2",
+			msg: "TESTTTTT SYS",
+		});
+	})
+
+	setTimeout(function() {
+		THROW_USER({
+			code: "U90",
+			msg: "THROW USER $PLACE_ME$",
+			msgParams: {
+				PLACE_ME: 'UNGA-BUNGA'
+			},
+			debug: {},
+		});
+	});
+
+	setTimeout(function() {
+		THROW_PEER({
+			code: 'P91',
+			msg: 'THROW PEER',
+		})
+	})
+
+	setTimeout(function() {
+		THROW_SYS({
+			code: 'S92',
+			msg: 'THROW SYS',
+		});
+	})
+
+	setTimeout(function() {
+		throw new Error('Dakdaskdkaskdas')
+	})
+
+	setTimeout(function() {
+		throw {a: 111}
+	})
+
+	setTimeout(function() {
+		eval('asd + 4');
+	})
+
+	function withName() {
+		eval('inside try + 4');
+
+	}
+
+
+	try {
+		withName();
+	} catch(e) {
+		a = TB.ERROR_HANDLER(e);
+
+		console.info(a)
+	}
+
+
+	// TRY(function try() {
+	// 	THROW_OPEN_CONN();
+	//
+	//
+	// }, function catch() {
+	//
+	//
+	//
+	// });
+	//
+	// TRY(function try() {
+	//
+	//
+	// });
+*/
+
+	</script>
+</body>
+</html>

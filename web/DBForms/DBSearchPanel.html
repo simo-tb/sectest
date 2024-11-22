@@ -1,0 +1,89 @@
+
+
+<!--&add_js_function($function_name, 
+                     $table_name escape 'js', 
+		     $search_template escape 'js', 
+		     $search_filter='' escape 'js',
+		     $result_id escape 'js', 
+		     $result_desc escape 'js', 
+		     $result_ordering='' escape 'js', 
+		     $distinct='' escape 'js', 
+		     $limit='' escape 'js', 
+		     $unlimit='0' escape 'js',
+		     $offset='' escape 'js', 
+		     $default_condition='' escape 'js', 
+		     $form_name escape 'js', 
+		     $field_name escape 'js', 
+		     $not_required_field='0' escape 'js', 
+		     $blank_option_value='' escape 'js', 
+		     $blank_option_text='' escape 'js', 
+		     $search_script escape 'js', 
+		     $buffer_frame='buffer' escape 'js', 
+		     $search_text_select_name='__default__' , 
+		     $search_text_js_exp='NOT USED' escape 'js', 
+		     $search_column_js_expr='""' escape 'js', 
+		     $result_choose_first_option='' escape 'js', 
+		     $on_search_function='null' escape 'js', 
+		     $on_found_function='null' escape 'js', 
+		     $add_params='' escape 'js'                  )-->
+<SCRIPT language="JavaScript">
+
+  function $function_name()
+   {
+
+    this.searchTemplate = '$search_template';
+    this.fieldNotRequired = $not_required_field;
+    this.firstBlankOptionValue = '$blank_option_value';
+    this.firstBlankOptionText = '$blank_option_text';
+    this.serverURL = window.location.pathname + '/../' + '$search_script';
+
+    this.searchFilter = '$search_filter'; 
+    this.distinct = '$distinct';
+    this.searchLimit = '$limit';
+    this.searchUnlimit = '$unlimit';
+    this.searchOffset = '$offset';
+    this.defaultCondition = '$default_condition';
+    this.searchOrdering = '$result_ordering';
+
+    <!--&search_column_plain($search_column='')--> 
+    this.searchColumn = '$search_column';
+    <!--/&search_column_plain --> 
+    <!--&search_column_select($select_column_name) -->
+    this.searchColumnSelect = this.formObj.$select_column_name;
+    <!--/&search_column_select --> 
+    this.searchStringTextBox = this.formObj.search_$field_name;
+		this.searchStringSelectBox = this.formObj.$search_text_select_name;
+
+    this.searchGetParams = '$add_params';
+
+    /*change onSearch function -> this.onSearch = onSearch$function_name */
+    /*change onFound function -> this.onFound = onFound$function_name */
+    this.onSearch = $on_search_function;
+    this.onFound = $on_found_function;
+
+
+    }
+   new TableSearch('$field_name','$form_name', '$table_name', '$result_id', '$result_desc', $function_name);
+
+</SCRIPT>
+<!--/&add_js_function-->
+
+<!--&no_search()-->
+ &nbsp;
+<!--/&no_search-->
+
+<!--&search($search_func_name, $field_name, $default_search_string='', $form_name='', $on_search_function='null')--> 
+    <div class="input-group">
+        <input type="text" name="search_$field_name" class="search form-control input-sm dbf-search" value="$default_search_string" size="12" placeholder="Search for...">
+        <span class="input-group-btn">
+            <a href="javascript:search('$field_name', '$form_name', null, $on_search_function);" class="btn btn-primary input-sm dbf-search-btn">
+                <i class="fa fa-search"></i>
+            </a>
+        </span>
+    </div>
+<!--/&search-->
+
+
+
+
+

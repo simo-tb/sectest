@@ -1,0 +1,43 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/14-fileRequest",
+    "type": "object",
+    "properties": {
+      "massive": {
+        "type": "array",
+        "title": "arra",
+        "items": {
+          "title": "test",
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": ["string", "null"],
+              "title": "File to upload2",
+              "format": "file",
+              "items": {
+                "type": "string"
+              },
+              "isMultiple": true,
+              "fileMimeTypes": ["image/png", "image/jpeg"],
+              "fileMaxSize": 102400,
+            }
+          }
+        }
+      },
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/14-fileRequest",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "massive",
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}
+

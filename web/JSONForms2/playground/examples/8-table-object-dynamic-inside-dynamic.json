@@ -1,0 +1,76 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-dynamic-sections",
+    "type": "object",
+    "properties": {
+      "car": {
+        "type": "object",
+        "properties": {
+          "engine": {
+            "type":"string"
+          }
+        }
+      }
+    },
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "leadBy": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-dynamic-sections",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "legend" : "{{dynamicKey}}",
+            "isTemplateField": true,
+            "items": [
+              {
+                "type": "tabobject",
+                "items": [
+                  {
+                    "type": "section",
+                    "legend" : "{{dynamicKey}}",
+                    "isTemplateField": true,
+                    "items": [
+                      "{}/leadBy/{}/name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "Go"
+      }
+    ],
+    "jsonformVersion": "2.0"
+  },
+  "content": {
+    "simo": {
+      "leadBy": {
+        "momo": {
+          "name": "momo"
+        }
+      }
+    }
+  }
+}

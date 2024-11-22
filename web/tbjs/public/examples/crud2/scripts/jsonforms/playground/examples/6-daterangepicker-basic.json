@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-basic",
+    "type": "object",
+    "properties": {
+      "contractperiod": {
+        "type": "string"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-basic",
+    "jsonformVersion": "2.0",
+    "minDate": "2009-01-01",
+    "maxDate": "2021-01-01",
+    "fields": [
+      {
+        "title": "Период на договора",
+        "key": "contractperiod",
+        "type": "daterangepicker",
+        "pluginoptions": {
+          "startlabel": "начало",
+          "endlabel": "край",
+          "minDate": "2006-10-10",
+          "maxDate": "2021-01-01"
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-basic",
+    "contractperiod": "2010-10-01/2020-10-01"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-advanced",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "string",
+        "title": "How do you feel today?",
+        "description": "Describe how you feel in 300 symbols",
+        "maxLength": 300
+      },
+      "moodyesterday": {
+        "type": "string",
+        "title": "How did you feel yesterday?",
+        "description": "Yesterday you answeredthe following",
+        "maxLength": 300,
+        "readOnly": true
+      },
+      "address": {
+        "type": "object",
+        "title": "Permanent address",
+        "description": "enter your country, street number and zip code",
+        "properties": {
+          "country": {
+            "type": "string",
+            "title": "Country",
+            "maxLength": 500
+          },
+          "street": {
+            "type": "string",
+            "title": "Street number"
+          },
+          "zip": {
+            "type": "integer",
+            "title": "ZIP code"
+          }
+        },
+        "required": ["country"]
+      },
+      "twitterfeed": {
+        "type": "array",
+        "title": "Richard Stallman's latest tweets",
+        "items": {
+          "type": "string",
+          "title": "tweet",
+          "maxLength": 120
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mood",
+        "type": "textarea",
+        "placeholder": "I'm happy!"
+      },
+      {
+        "key": "moodyesterday",
+        "type": "textarea"
+      },
+      {
+        "type": "tabobject",
+        "title": "Location settings",
+        "items": [
+          {
+            "title": "Required settings",
+            "type": "section",
+            "items": [
+              {
+                "title": "Describe your country in 500 words",
+                "key": "address/country",
+                "type": "textarea",
+                "required": true
+              },
+              {
+                "title": "Tell us about your street",
+                "description": "Is it dangerous? Are there any parking spots?",
+                "key": "address/street",
+                "type": "textarea",
+                "required": true
+              }
+            ]
+          },
+          {
+            "title": "Optional settings",
+            "type": "section",
+            "items": [
+              {
+                "title": "ZIP code",
+                "description": "Write a short essey your favourite digit in your ZIP code",
+                "key": "address/zip",
+                "enableReset": true,
+                "type": "textarea"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "twitterfeed",
+        "type": "tabarray",
+        "description": "Listen closely and maybe one day your beard will be just as big!",
+        "readOnly": true
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-advanced",
+    "story": "In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.",
+    "moodyesterday": "fine",
+    "twitterfeed": [
+      "Join the Church of Emacs, and you too can be a saint!",
+      "Writing non-free software is not an ethically legitimate activity, so if people who do this run into trouble, that's good!",
+      "Freedom three is the freedom to help your community. That's the freedom to distribute or publish modified versions, when you wish.",
+      "You know, if you were *really* going to starve, you'd be justified in writing proprietary software.",
+      "C++ is a badly designed and ugly language. It would be a shame to use it in Emacs."
+    ]
+  }
+}

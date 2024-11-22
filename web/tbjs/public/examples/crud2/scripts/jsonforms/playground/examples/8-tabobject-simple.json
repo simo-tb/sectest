@@ -1,0 +1,83 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "type": "object",
+    "properties": {
+      "age": {
+        "type": "integer",
+        "minimum": 12,
+        "exclusiveMinimum": true
+      },
+      "fname": {
+        "type": "object",
+        "properties": {
+          "mname": {
+            "type": ["string", "null"],
+            "title": "презиме"
+          },
+          "bday": {
+            "type": "string",
+            "title": "дата на раждане",
+            "minLength": 2
+          }
+        },
+         "required": ["bday", "mname"]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": ["name"]
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "име",
+            "type": "section",
+            "items": [
+              {
+                "title": "малко име",
+                "key": "name"
+              }
+            ]
+          },
+          {
+            "title": "възраст",
+            "type": "section",
+            "items": [
+              {
+                "title": "възраст",
+                "key": "age"
+              }
+            ]
+          },
+          {
+            "title": "допълнителна информация",
+            "type": "section",
+            "items": [
+              {
+                "title": "друга информация",
+                "key": "fname"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "age": 10
+  }
+}

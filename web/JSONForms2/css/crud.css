@@ -1,0 +1,133 @@
+select.input-sm.tb-jf2-crud-compact-filters-op {
+  height: 36px;
+  border-radius: 3px;
+}
+
+.tb-jf2-crud-compact-filters-value-input {
+  height: 36px;
+  border-radius: 3px;
+}
+
+.tb-jf2-crud-compact-filters-remove-condition {
+  width: 36px;
+  height: 36px;
+}
+
+.tb-jf2-crud-compact-filters-row > td {
+  padding: 2px;
+}
+
+.disable-click{
+  pointer-events:none;
+}
+
+.dropdown-menu {
+  min-width: initial;
+}
+
+#tb-jf-mie-import-multiple-button, #tb-jf-mie-update-multiple-button {
+  width: 100%;
+}
+
+#tb-jf-crud-compact-filters-select-record {
+  min-width: 400px;
+  height: 34px;
+}
+
+.tb-jf2-crud-datum-image {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+#tb-jf-mie-import-multiple-button, #tb-jf-mie-update-multiple-button, .jf-crud-aditional-actions {
+  display: inline;
+	background: none!important;
+  border: none;
+  width: revert;
+  color: #5A738E;
+  cursor: pointer;
+  margin: 0px;
+  padding-left: 1px;
+}
+[data-init-start-jf2-crud] {
+  margin-bottom: 9px;
+}
+
+#tb-jf-mie-import-multiple-button:hover, #tb-jf-mie-update-multiple-button:hover, .jf-crud-aditional-actions:hover {
+  color: #23527c;
+}
+
+.jf-crud-btn-group {
+  min-width: max-content;
+}
+
+.jf-crud-reorder-actions {
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 0 6px;
+}
+
+.crud-column-customize{
+  vertical-align: middle;
+}
+
+a.crud-customizable.customization-active {
+  color: #5cb85c;
+}
+
+a.crud-customizable.col-non-customized {
+  color: #5cb85c;
+}
+
+a.crud-customizable.col-customized {
+  color: orange;
+}
+
+a.crud-customizable {
+	cursor: pointer;
+}
+
+select[readonly], input[readonly] {
+	cursor: not-allowed;
+}
+/*
+a.btn.disabled {
+	pointer-events: all !important;
+}
+*/
+
+.tb-disabled {
+	cursor: not-allowed;
+	pointer-events: all !important;
+}
+
+.tb-disabled:active {
+	pointer-events: none !important;
+}
+
+.quicksave-popup {
+	min-height: 0 !important;
+	position: fixed;
+	bottom: 5%;
+	right: 4%;
+}
+
+select.crud-customizable.customization-active {
+  border: 1px solid #5cb85c;
+  color: #5cb85c;
+}
+
+select.crud-customizable.col-non-customized {
+  border: 1px solid #5cb85c;
+  color: #5cb85c;
+}
+
+select.crud-customizable.col-customized {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+

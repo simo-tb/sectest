@@ -1,0 +1,47 @@
+ <html>
+     <head>
+      <script language="JavaScript">
+      
+function BrowserCheck() 
+{
+	var b = navigator.appName
+	if (b=="Netscape") this.b = "ns"
+	else if (b=="Microsoft Internet Explorer") this.b = "ie"
+	else this.b = b
+	this.version = navigator.appVersion
+	this.v = parseInt(this.version)
+	this.ns = (this.b=="ns" && this.v>=4)
+	this.ns4 = (this.b=="ns" && this.v==4)
+	this.ns5 = (this.b=="ns" && this.v==5)
+	this.ie = (this.b=="ie" && this.v>=4)
+	this.ie4 = (this.version.indexOf('MSIE 4')>0)
+	this.ie5 = (this.version.indexOf('MSIE 5')>0)
+	this.min = (this.ns||this.ie)
+}
+
+is = new BrowserCheck(); //detect browser
+
+//Create option Array with Your results HERE 
+function returnResult(bufferName)
+{
+	var foundArr = new Array(
+	      new Option("Option1", "1"),
+	      new Option("Option2", "2"),
+	      new Option("Option3", "3"),
+	      new Option("Option4", "4"),
+	      new Option("Option5", "5")
+	);    
+	var dynSelectObj = (is.ns4) ?  getDynSelectObjByBufferName(bufferName) : parent.window.getDynSelectObjByBufferName(bufferName);
+
+	dynSelectObj.foundArr = foundArr;
+	dynSelectObj.resultSelectedIndex = 0;
+	
+	dynSelectObj.returnDynSelectResult();
+}
+      </script>
+     </head>
+			
+	<body onLoad="(is.ns4) ? returnResult(this.name) : returnResult(window.name) ">
+	</body>
+    </html>
+ 

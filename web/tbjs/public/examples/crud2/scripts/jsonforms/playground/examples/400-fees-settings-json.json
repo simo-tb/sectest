@@ -1,0 +1,411 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/p2p/db/fees/settings-json",
+    "type": "object",
+    "properties": {
+      "bgn": {
+        "type": "object",
+        "title": "EUR",
+        "properties": {
+          "range_values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "range1": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range2": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range3": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range4": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range5": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range6": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range7": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range8": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range9": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range10": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "fee_name": {
+                  "type": "string"
+                },
+                "is_pending": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "eur": {
+        "type": "object",
+        "title": "EUR",
+        "properties": {
+          "range_values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "range1": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range2": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range3": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range4": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range5": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range6": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range7": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range8": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range9": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "range10": {
+                  "type": "object",
+                  "properties": {
+                    "perc": {
+                      "type": "number"
+                    },
+                    "fixed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "fee_name": {
+                  "type": "string"
+                },
+                "is_pending": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "eur/range_values[]/fee_name",
+                      "title": "Fee Name"
+                    },
+                    {
+                      "key": "eur/range_values[]/is_pending",
+                      "title": "Is pending"
+                    },
+                    {
+                      "key": "eur/range_values[]/range1/fixed",
+                      "title": "Range 0 - 100 (Amount)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range1/perc",
+                      "title": "Range 0 - 100 (%)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range2/fixed",
+                      "title": "Range 100.01 - 200 (Amount)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range2/perc",
+                      "title": "Range 100.01 - 200 (%)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range3/fixed",
+                      "title": "Range 200.01 - 300 (Amount)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range3/perc",
+                      "title": "Range 200.01 - 300 (%)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range4/fixed",
+                      "title": "Range 300.01 - 400 (Amount)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range4/perc",
+                      "title": "Range 300.01 - 400 (%)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range5/fixed",
+                      "title": "Range 400.01 - 500 (Amount)"
+                    },
+                    {
+                      "key": "eur/range_values[]/range5/perc",
+                      "title": "Range 400.01 - 500 (%)"
+                    }
+                  ]
+                },
+                "title": "EUR fees",
+                "tabeOptions": {
+                  "isExpandable": false
+                }
+              }
+            ],
+            "title": "EUR"
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "bgn/range_values[]/fee_name",
+                      "title": "Fee Name"
+                    },
+                    {
+                      "key": "bgn/range_values[]/is_pending",
+                      "title": "Is pending"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range1/fixed",
+                      "title": "Range 0 - 100 (Amount)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range1/perc",
+                      "title": "Range 0 - 100 (%)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range2/fixed",
+                      "title": "Range 100.01 - 200 (Amount)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range2/perc",
+                      "title": "Range 100.01 - 200 (%)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range3/fixed",
+                      "title": "Range 200.01 - 300 (Amount)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range3/perc",
+                      "title": "Range 200.01 - 300 (%)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range4/fixed",
+                      "title": "Range 300.01 - 400 (Amount)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range4/perc",
+                      "title": "Range 300.01 - 400 (%)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range5/fixed",
+                      "title": "Range 400.01 - 500 (Amount)"
+                    },
+                    {
+                      "key": "bgn/range_values[]/range5/perc",
+                      "title": "Range 400.01 - 500 (%)"
+                    }
+                  ]
+                },
+                "title": "BGN fees",
+                "tabeOptions": {
+                  "isExpandable": false
+                }
+              }
+            ],
+            "title": "BGN"
+          }
+        ]
+      }
+    ],
+    "schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/fees/settings-json",
+    "jsonformVersion": "2.0"
+  }
+}

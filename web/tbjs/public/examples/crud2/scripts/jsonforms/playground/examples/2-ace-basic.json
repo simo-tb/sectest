@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/2-ace-basic",
+    "type": "object",
+    "properties": {
+      "field": {
+        "type": "string",
+        "maxLength": 10000,
+        "title": "A field"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/2-ace-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "field",
+        "type": "ace",
+        "aceMode": "css"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}

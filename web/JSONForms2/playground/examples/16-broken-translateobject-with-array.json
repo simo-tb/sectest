@@ -1,0 +1,80 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/16-should-break-tabobject-with-array",
+    "type": "object",
+    "properties": {
+      "fname": {
+        "type": "object",
+        "properties": {
+          "bday": {
+            "type": "array",
+            "title": "magicName",
+            "enableSorting": true,
+            "items": {
+              "title": "Friend",
+              "type": "object",
+              "properties": {
+                "nickJagger": {
+                  "type": "object",
+                  "title": "Should be broken",
+                  "isMultilanguage": true,
+                  "additionalProperties": {
+                    "title": "Annual income",
+                    "type": "string"
+                  },
+                },
+              },
+            }
+          }
+        }
+      },
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-should-break-tabobject-with-array",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "допълнителна информация",
+            "type": "section",
+            "items": [
+              {
+                "title": "друга информация",
+                "key": "fname",
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/16-should-break-tabobject-with-array",
+    "fname": {
+      "bday": [
+        {
+          "nickJagger": {
+            "en_US": "sad",
+            "bg_BG": "sad2",
+          }
+        },
+        {
+          "nickJagger": {
+            "en_US": "sad3",
+            "bg_BG": "sad4",
+          }
+        },
+      ],
+    },
+  },
+  "locales": ["bg_BG", "en_GB", "es_AR"]
+}

@@ -1,0 +1,89 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-fieldset",
+    "type": "object",
+    "properties": {
+      "comment": {
+        "type": "string",
+        "title": "Comment"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "default": "sad",
+      },
+      "age": {
+        "type": "number",
+        "title": "Age",
+        "default": 12,
+      },
+      "test": {
+        "type": "object",
+        "title": "test",
+        "properties": {
+          "test1": {
+            "type": "string",
+            "title": "stringTest",
+            "default": "12",
+          },
+          "test2": {
+            "type": "string",
+            "title": "stringTest2",
+            "default": "12",
+          },
+          "test3": {
+            "type": "object",
+            "title": "stringTest3",
+            "properties": {
+              "test3test1": {
+                "type": "number",
+                "title": "OGN",
+              },
+              "test3test2": {
+                "type": "string",
+                "title": "OGS",
+              },
+              "test3test3": {
+                "type": "string",
+                "enum": [
+                  "1", "sad", "sadness", "123"
+                ],
+                "title": "OGES",
+              },
+              "test3test4": {
+                "type": "number",
+                "title": "OGEN",
+                "enum": [1, 2, 123, 345623, 656734, 2e10, 213]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-fieldset",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "comment",
+        "type": "textarea"
+      },
+      {
+        "type": "fieldset",
+        "title": "Author",
+        "expandable": true,
+        "items": [
+          "name",
+          "age",
+          "test"
+        ]
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  }
+}

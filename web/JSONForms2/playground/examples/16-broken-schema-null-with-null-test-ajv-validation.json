@@ -1,0 +1,1803 @@
+{
+  "formName": "JF::tblib::promotions",
+  "locales": [
+    {
+      "iso639_2": "ang",
+      "locale": "en_GB",
+      "plural_form": 1,
+      "lang_name": "English GB",
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "notes": "(n != 1)",
+      "nplurals": 2,
+      "locale": "bg_BG",
+      "iso639_2": "bul",
+      "lang_name": "Bulgarian BG",
+      "plural_form": 1
+    },
+    {
+      "lang_name": "Russian RU",
+      "plural_form": 7,
+      "locale": "ru_RU",
+      "iso639_2": "kru",
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+    },
+    {
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)",
+      "nplurals": 3,
+      "locale": "sr_RS",
+      "iso639_2": "srd",
+      "lang_name": "Serbian RS",
+      "plural_form": 7
+    },
+    {
+      "plural_form": 3,
+      "lang_name": "Latvian LV",
+      "iso639_2": "alv",
+      "locale": "lv_LV",
+      "nplurals": 3,
+      "notes": "(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)"
+    },
+    {
+      "plural_form": 2,
+      "lang_name": "Georgian GE",
+      "iso639_2": "aka",
+      "locale": "ka_GE",
+      "nplurals": 2,
+      "notes": "(n > 1)"
+    }
+  ],
+  "sp": "U2FsdGVkX1_oPR6Pfh5AWza_nV0tXQczwpyo2VsbrxWb3G8pgoSKY85bt--bwfQGIb5eE8z3yTk4VbRstgPOww6a2vHdX8Yu6M4VDmA9vN6hBBXsnbnWOQJmA_WwjcBwncosPPF2w-ovC33ZmVUfr_xmoX9d2VObeHGxEzCJy0X9H9k-M4bgbtrV_xiIZBluHhoC_iE-cg320NhJeH6CsAZn7UJQNMQRGrhesuOzKgn7zrXCMJrD0dUt1ludzcQDNo-RvxdpXEVhjwDeeFc_Xw",
+  "form": {
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tblib/db/promotions?v=1.0",
+    "fields": null,
+    "jsonformVersion": "2.0"
+  },
+  "schema": {
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "id": "http://jsonschemas.telebid-pro.com/tblib/db/promotions?v=1.0",
+    "properties": {
+      "cash_amount_wager_req_factor": {
+        "ordering": 90,
+        "title": "Cash Wager req Factor",
+        "type": "string",
+        "format": "numeric"
+      },
+      "ui_settings_json": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/cms/db/promotions/ui_settings_json?v=1"
+          },
+          "with": {
+            "ordering": 350,
+            "title": "UI settings",
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        }
+      },
+      "cash_to_promo_amount_factor": {
+        "ordering": 100,
+        "title": "Cash to Promo factor",
+        "type": [
+          "null",
+          "string"
+        ],
+        "format": "numeric"
+      },
+      "bonus_points_cash_back": {
+        "ordering": 160,
+        "title": "Bonus Points Cash Back",
+        "type": [
+          "null",
+          "string"
+        ],
+        "format": "numeric"
+      },
+      "promo_amount": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/money_t"
+          },
+          "with": {
+            "ordering": 130,
+            "title": "Promo, cents",
+            "type": [
+              "null",
+              null
+            ]
+          }
+        }
+      },
+      "inserted_by_remote_system_id": {
+        "refTable": "remote_api_systems",
+        "refCol": "id",
+        "ordering": 170,
+        "type": [
+          "null",
+          "integer"
+        ],
+        "filterSchema": null,
+        "refIsStatic": false,
+        "refType": "fkey",
+        "title": "Inserted by Remote System"
+      },
+      "reward_type_id": {
+        "title": "Reward type",
+        "refType": "fkey",
+        "refIsStatic": false,
+        "filterSchema": null,
+        "type": "integer",
+        "ordering": 250,
+        "refCol": "id",
+        "refTable": "promo_reward_types"
+      },
+      "descr": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "ordering": 180,
+        "title": "Description"
+      },
+      "end_date": {
+        "ordering": 30,
+        "title": "End Date",
+        "type": [
+          "null",
+          "string"
+        ],
+        "dateHasTz": false,
+        "format": "iso8601time"
+      },
+      "cash_amount_input": {
+        "ordering": 70,
+        "title": "Cash Input",
+        "type": "boolean"
+      },
+      "ordering": {
+        "type": [
+          "null",
+          "integer"
+        ],
+        "title": "Ordering",
+        "ordering": 50
+      },
+      "type_id": {
+        "refTable": "promo_types",
+        "refCol": "id",
+        "ordering": 220,
+        "type": "integer",
+        "filterSchema": null,
+        "refIsStatic": false,
+        "title": "Promo type",
+        "refType": "fkey"
+      },
+      "cycle_period_minutes_offset": {
+        "ordering": 370,
+        "title": "Cycle period minutes offset",
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "account_level_id": {
+        "refTable": "account_status_levels",
+        "refCol": "id",
+        "ordering": 240,
+        "type": [
+          "null",
+          "integer"
+        ],
+        "filterSchema": null,
+        "refIsStatic": false,
+        "title": "Account level",
+        "refType": "fkey"
+      },
+      "spent_budget_promo_points": {
+        "title": "Spent budget",
+        "ordering": 310,
+        "format": "numeric",
+        "type": "string"
+      },
+      "promo_amount_input": {
+        "ordering": 110,
+        "title": "Promo Input",
+        "type": "boolean"
+      },
+      "remote_id": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Remote id",
+        "ordering": 190
+      },
+      "spent_budget_tier_points": {
+        "ordering": 320,
+        "title": "Spent budget",
+        "type": "string",
+        "format": "numeric"
+      },
+      "spent_budget_noncashable_credit": {
+        "$merge": {
+          "with": {
+            "ordering": 280,
+            "title": "Spent budget bonus play"
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/ucents_t"
+          }
+        }
+      },
+      "spent_budget_draw_points": {
+        "ordering": 330,
+        "title": "Spent budget",
+        "type": "string",
+        "format": "numeric"
+      },
+      "reward_json": {
+        "$merge": {
+          "with": {
+            "type": "object",
+            "title": "Reward",
+            "ordering": 260
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/cms/db/promotions/reward_json?v=1"
+          }
+        }
+      },
+      "bonus_points_required": {
+        "format": "numeric",
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "Player Level",
+        "ordering": 150
+      },
+      "is_external": {
+        "title": "Is external",
+        "ordering": 210,
+        "type": "boolean"
+      },
+      "spent_budget_credit": {
+        "$merge": {
+          "with": {
+            "ordering": 270,
+            "title": "Spent budget credit"
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/ucents_t"
+          }
+        }
+      },
+      "promo_amount_wager_req_factor": {
+        "ordering": 140,
+        "title": "Promo Wager req Factor",
+        "type": "string",
+        "format": "numeric"
+      },
+      "spent_budget_bonus_credit": {
+        "$merge": {
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/ucents_t"
+          },
+          "with": {
+            "ordering": 290,
+            "title": "Spent budget"
+          }
+        }
+      },
+      "promo_settings_json": {
+        "$merge": {
+          "with": {
+            "ordering": 230,
+            "title": "Promo Settings",
+            "type": "object"
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/cms/db/promotions/promo_settings_json?v=1"
+          }
+        }
+      },
+      "cycle_period_days_offset": {
+        "title": "Cycle period days offset",
+        "ordering": 360,
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "min_cash_amount": {
+        "title": "Minimum Cash Amount",
+        "ordering": 60,
+        "format": "numeric",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "promo_group": {
+        "type": [
+          "null",
+          "integer"
+        ],
+        "title": "Promo group",
+        "ordering": 340
+      },
+      "start_date": {
+        "title": "Start Date",
+        "ordering": 20,
+        "format": "iso8601time",
+        "type": "string",
+        "dateHasTz": false
+      },
+      "cycle_period_id": {
+        "type": "integer",
+        "title": "Cycle Period",
+        "ordering": 380
+      },
+      "promo_amount_type_id": {
+        "title": "Promo Type",
+        "ordering": 120,
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "cash_amount_type_id": {
+        "type": [
+          "null",
+          "integer"
+        ],
+        "title": "Cash Type",
+        "ordering": 80
+      },
+      "name": {
+        "$merge": {
+          "with": {
+            "title": "Name",
+            "ordering": 40
+          },
+          "source": {
+            "$ref": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t"
+          }
+        }
+      },
+      "spent_budget_bonus_points": {
+        "ordering": 300,
+        "title": "Spent budget",
+        "type": "string",
+        "format": "numeric"
+      }
+    },
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/cms/db/promotions/ui_settings_json?v=1": {
+        "type": "object",
+        "title": "UI Settings",
+        "id": "http://jsonschemas.telebid-pro.com/cms/db/promotions/ui_settings_json?v=1",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "properties": {
+          "receipt_tmpl_html": {
+            "additionalProperties": {
+              "type": "string",
+              "ordering": 1100
+            },
+            "title": "Receipt template, html",
+            "isMultilanguage": true,
+            "description": "Receipt template when player buys promotion. Possible variables: $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$, $VOUCHER_INIT_VOLUMES$",
+            "type": "object"
+          },
+          "promo_descr": {
+            "description": "Promotions description to be shown to the customers. Possible variables: $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$",
+            "type": "object",
+            "title": "Promotion description",
+            "isMultilanguage": true,
+            "additionalProperties": {
+              "ordering": 600,
+              "type": "string"
+            }
+          },
+          "voucher_body": {
+            "title": "Voucher body text",
+            "isMultilanguage": true,
+            "additionalProperties": {
+              "type": "string",
+              "ordering": 800
+            },
+            "type": "object",
+            "description": "Text to be shown in the body of the voucher. Possible variables: $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$, $VOUCHER_NUMBER$"
+          },
+          "voucher_tmpl_html": {
+            "title": "Voucher template, html",
+            "isMultilanguage": true,
+            "additionalProperties": {
+              "type": "string",
+              "ordering": 1000
+            },
+            "description": "Voucher template. Possible variables: $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$, $VOUCHER_NUMBER$, $REDEEMED_VOLUMES$",
+            "type": "object"
+          },
+          "promo_name": {
+            "isMultilanguage": true,
+            "title": "Promotion name",
+            "additionalProperties": {
+              "ordering": 10,
+              "type": "string"
+            },
+            "type": "object",
+            "description": "Promotion name to be shown to the players"
+          },
+          "buy_success_msg": {
+            "description": "Message when successfully got promotion. Possible variables: $CASINO_NAME$, $PLAYER_LEVEL$, $PLAYER_FIRST_NAME$, $PLAYER_LAST_NAME$, $PLAYER_NICK_NAME$, $PLAYER_REG_NUMBER$, $PROMO_NAME$, $BONUS_CREDIT$, $BONUS_POINTS$, $CREDIT$, $LOTTERY_POINTS$, $BONUS_PLAY$, $PROMO_CREDIT$, $SHOPPING_POINTS$, $STATUS_POINTS$, $ACTIVE_SINCE_DATE$, $ACTIVE_SINCE_TIME$, $EXPIRES_AT_DATE$, $EXPIRES_AT_TIME$",
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "ordering": 700
+            },
+            "isMultilanguage": true,
+            "title": "Player success message"
+          }
+        }
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/dbdomains/ucents_t": {
+        "minimum": 0,
+        "type": "integer",
+        "id": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/ucents_t",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04"
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t": {
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/name_t",
+        "type": "string"
+      },
+      "http://jsonschemas.telebid-pro.com/cms/db/promotions/reward_json?v=1": {
+        "type": "object",
+        "description": "Reward",
+        "properties": {
+          "amounts": {
+            "properties": {
+              "bonus_points": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Bonus Points",
+                "default": 0,
+                "ordering": 2400,
+                "maximum": 10000000,
+                "title": "Bonus Points"
+              },
+              "credit": {
+                "description": "Cashable Credit",
+                "minimum": 0,
+                "type": "integer",
+                "title": "Cashable Credit",
+                "default": 0,
+                "maximum": 10000000,
+                "ordering": 2100
+              },
+              "bonus_credit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Extended Play",
+                "maximum": 10000000,
+                "ordering": 2300,
+                "default": 0,
+                "title": "Extended Play"
+              },
+              "promo_points": {
+                "default": 0,
+                "maximum": 10000000,
+                "ordering": 2500,
+                "title": "Shopping Points",
+                "minimum": 0,
+                "type": "integer",
+                "description": "Shopping Points"
+              },
+              "draw_points": {
+                "title": "Lottery Points",
+                "maximum": 10000000,
+                "ordering": 2700,
+                "default": 0,
+                "description": "Lottery Points",
+                "type": "integer",
+                "minimum": 0
+              },
+              "tier_points": {
+                "description": "Status Points",
+                "type": "integer",
+                "minimum": 0,
+                "title": "Status Points",
+                "ordering": 2600,
+                "maximum": 10000000,
+                "default": 0
+              },
+              "noncashable_credit": {
+                "description": "Bonus Play(Noncashable Credit)",
+                "type": "integer",
+                "minimum": 0,
+                "title": "Bonus Play(Noncashable Credit)",
+                "ordering": 2200,
+                "maximum": 10000000,
+                "default": 0
+              }
+            },
+            "title": "Amounts",
+            "type": "object",
+            "description": "Money and points"
+          },
+          "voucher": {
+            "required": [
+              "active_since_days",
+              "active_since_hours",
+              "expires_at_days",
+              "expires_at_hours",
+              "voucher_volumes",
+              "limit_vouchers_per_day"
+            ],
+            "title": "Voucher",
+            "properties": {
+              "limit_vouchers_per_day": {
+                "title": "Limit vouchers per day",
+                "ordering": 2000,
+                "maximum": 10000000,
+                "default": 0,
+                "description": "Limit vouchers per day",
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "minimum": 0
+              },
+              "active_since_hours": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "minimum": 0,
+                "title": "Voucher active after, hours",
+                "maximum": 23,
+                "ordering": 1110,
+                "default": 0
+              },
+              "day_of_month": {
+                "description": "If \"Voucher active at, Day of month\" is used, \"Voucher active after, days\" is ignored ",
+                "type": "integer",
+                "minimum": 0,
+                "title": "Voucher active at, Day of month",
+                "ordering": 1090,
+                "default": 0
+              },
+              "expires_at_hours": {
+                "minimum": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "title": "Voucher expires after, hours",
+                "default": 0,
+                "ordering": 1210,
+                "maximum": 23
+              },
+              "voucher_volumes": {
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "description": "How many volumes in one voucher.",
+                "ordering": 1300,
+                "default": 1,
+                "title": "Voucher volumes"
+              },
+              "active_since_days": {
+                "title": "Voucher active after, days",
+                "ordering": 1100,
+                "default": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "minimum": 0
+              },
+              "expires_at_days": {
+                "title": "Voucher expires after, days",
+                "default": 30,
+                "ordering": 1200,
+                "minimum": 0,
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "description": "Voucher",
+            "type": "object"
+          }
+        },
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/cms/db/promotions/reward_json?v=1",
+        "title": "Reward"
+      },
+      "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04": {
+        "description": "Core schema meta-schema",
+        "dependencies": {
+          "refType": [
+            "refTable",
+            "refCol"
+          ],
+          "exclusiveMinimum": [
+            "minimum"
+          ],
+          "refCol": [
+            "refTable"
+          ],
+          "refTable": [
+            "refCol"
+          ],
+          "refNameCol": [
+            "refTable",
+            "refCol"
+          ],
+          "exclusiveMaximum": [
+            "maximum"
+          ]
+        },
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "properties": {
+          "refNameCol": {
+            "type": "string"
+          },
+          "exclusiveMaximum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "items": {
+            "default": {},
+            "anyOf": [
+              {
+                "$ref": "#"
+              },
+              {
+                "$ref": "#/definitions/schemaArray"
+              }
+            ]
+          },
+          "maximum": {
+            "type": "number"
+          },
+          "isMultilanguage": {
+            "default": false,
+            "type": "boolean"
+          },
+          "maxItems": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "fileMimeTypes": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "oneOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "id": {
+            "format": "uri",
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "minProperties": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "enum": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "allOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "refTable": {
+            "type": "string"
+          },
+          "minimum": {
+            "type": "number"
+          },
+          "pattern": {
+            "format": "regex",
+            "type": "string"
+          },
+          "fileMaxSize": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "properties": {
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "type": "object"
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ],
+            "default": {}
+          },
+          "minLength": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "definitions": {
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            },
+            "type": "object"
+          },
+          "default": {},
+          "required": {
+            "$ref": "#/definitions/stringArray"
+          },
+          "isUIHidden": {
+            "type": "boolean",
+            "default": false
+          },
+          "translated": {
+            "type": "boolean",
+            "default": false
+          },
+          "anyOf": {
+            "$ref": "#/definitions/schemaArray"
+          },
+          "type": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/simpleTypes"
+              },
+              {
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/definitions/simpleTypes"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            ]
+          },
+          "minItems": {
+            "$ref": "#/definitions/positiveIntegerDefault0"
+          },
+          "refType": {
+            "enum": [
+              "fkey",
+              "relation",
+              "reference"
+            ],
+            "type": "string"
+          },
+          "uniqueItems": {
+            "default": false,
+            "type": "boolean"
+          },
+          "refCol": {
+            "type": "string"
+          },
+          "patternProperties": {
+            "type": "object",
+            "default": {},
+            "additionalProperties": {
+              "$ref": "#"
+            }
+          },
+          "$schema": {
+            "type": "string",
+            "format": "uri"
+          },
+          "dependencies": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$ref": "#"
+                },
+                {
+                  "$ref": "#/definitions/stringArray"
+                }
+              ]
+            },
+            "type": "object"
+          },
+          "additionalItems": {
+            "default": {},
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#"
+              }
+            ]
+          },
+          "exclusiveMinimum": {
+            "default": false,
+            "type": "boolean"
+          },
+          "not": {
+            "$ref": "#"
+          },
+          "maxProperties": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "maxLength": {
+            "$ref": "#/definitions/positiveInteger"
+          },
+          "multipleOf": {
+            "exclusiveMinimum": true,
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "type": "object",
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "default": {},
+        "definitions": {
+          "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "schemaArray": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#"
+            }
+          },
+          "simpleTypes": {
+            "enum": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ]
+          },
+          "stringArray": {
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "type": "array",
+            "minItems": 1
+          },
+          "positiveIntegerDefault0": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/positiveInteger"
+              },
+              {
+                "default": 0
+              }
+            ]
+          }
+        }
+      },
+      "http://jsonschemas.telebid-pro.com/tblib/dbdomains/money_t": {
+        "id": "http://jsonschemas.telebid-pro.com/tblib/dbdomains/money_t",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "numeric": [
+          15,
+          10
+        ],
+        "version": 1,
+        "format": "numeric",
+        "type": "string"
+      },
+      "http://jsonschemas.telebid-pro.com/cms/db/promotions/promo_settings_json?v=1": {
+        "title": "Promotion Settings",
+        "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+        "id": "http://jsonschemas.telebid-pro.com/cms/db/promotions/promo_settings_json?v=1",
+        "properties": {
+          "conditions": {
+            "items": {
+              "type": "object",
+              "properties": {
+                "event": {
+                  "description": "Event",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "enum": [
+                    "register",
+                    "earned_points",
+                    "check_in"
+                  ],
+                  "title": "Event",
+                  "default": "check_in",
+                  "ordering": 3000
+                },
+                "is_enabled": {
+                  "enum": [
+                    0,
+                    1
+                  ],
+                  "enumNames": [
+                    "NO",
+                    "YES"
+                  ],
+                  "title": "Is enabled",
+                  "default": 1,
+                  "ordering": 2990,
+                  "description": "Is enabled",
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "filters": {
+                  "description": "Filters",
+                  "type": "object",
+                  "title": "Filters",
+                  "required": [
+                    "event_count",
+                    "event_expires_days"
+                  ],
+                  "properties": {
+                    "min_earned_points": {
+                      "properties": {
+                        "draw_points": {
+                          "title": "Lottery Points",
+                          "default": 0,
+                          "ordering": 4300,
+                          "maximum": 100000000000,
+                          "description": "Lottery Points",
+                          "minimum": 0,
+                          "type": "integer"
+                        },
+                        "promo_points": {
+                          "minimum": 0,
+                          "type": "integer",
+                          "description": "Shopping Points",
+                          "default": 0,
+                          "maximum": 100000000000,
+                          "ordering": 4100,
+                          "title": "Shopping Points"
+                        },
+                        "bonus_points": {
+                          "minimum": 0,
+                          "type": "integer",
+                          "description": "Bonus Points",
+                          "default": 0,
+                          "ordering": 4000,
+                          "maximum": 100000000000,
+                          "title": "Bonus Points"
+                        },
+                        "tier_points": {
+                          "default": 0,
+                          "ordering": 4200,
+                          "maximum": 100000000000,
+                          "title": "Status Points",
+                          "minimum": 0,
+                          "type": "integer",
+                          "description": "Status Points"
+                        }
+                      },
+                      "title": "Earned points",
+                      "type": "object",
+                      "description": "Earned points"
+                    },
+                    "event_count": {
+                      "ordering": 3200,
+                      "maximum": 10000000,
+                      "default": 1,
+                      "title": "Event Count",
+                      "type": [
+                        "null",
+                        "integer"
+                      ],
+                      "minimum": 1,
+                      "description": "Event Count"
+                    },
+                    "event_expires_days": {
+                      "title": "Event expires, days",
+                      "maximum": 1000,
+                      "ordering": 3300,
+                      "default": 1,
+                      "description": "Event expires, days",
+                      "type": [
+                        "null",
+                        "integer"
+                      ],
+                      "minimum": 0
+                    },
+                    "days_of_week": {
+                      "type": "array",
+                      "description": "Days of week",
+                      "items": {
+                        "type": "number",
+                        "enumNames": [
+                          "Monday",
+                          "Tuesday",
+                          "Wednesday",
+                          "Thursday",
+                          "Friday",
+                          "Saturday",
+                          "Sunday"
+                        ],
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7"
+                        ]
+                      },
+                      "ordering": 3600,
+                      "title": "Days of week"
+                    },
+                    "event_until_oclock": {
+                      "title": "Event until, oclock",
+                      "ordering": 3500,
+                      "description": "Event until, oclock",
+                      "type": "string"
+                    },
+                    "machines": {
+                      "type": "array",
+                      "refColTitle": "zone_numb",
+                      "title": "Machines #",
+                      "refType": "fkey",
+                      "refCol": "id",
+                      "description": "Machine Zone Numbers",
+                      "refTable": "machines",
+                      "items": {
+                        "type": "string"
+                      },
+                      "ordering": 3800
+                    },
+                    "event_since_oclock": {
+                      "type": "string",
+                      "description": "Event since, oclock",
+                      "ordering": 3400,
+                      "title": "Event since, oclock"
+                    },
+                    "days_of_month": {
+                      "type": "array",
+                      "description": "Days of month",
+                      "ordering": 3700,
+                      "items": {
+                        "type": "number",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8",
+                          "9",
+                          "10",
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "16",
+                          "17",
+                          "18",
+                          "19",
+                          "20",
+                          "21",
+                          "22",
+                          "23",
+                          "24",
+                          "25",
+                          "26",
+                          "27",
+                          "28",
+                          "29",
+                          "30",
+                          "31"
+                        ]
+                      },
+                      "title": "Days of month"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "is_enabled",
+                "event"
+              ],
+              "title": "Condition 1"
+            },
+            "title": "Event Based Promotion",
+            "type": "array"
+          },
+          "limits": {
+            "properties": {
+              "max_cash_amount_cents": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Max. cash amount to be received",
+                "ordering": 1200,
+                "maximum": 10000000,
+                "title": "Max. cash amount, cents"
+              },
+              "period": {
+                "description": "Period type, default is Lottery period type",
+                "type": "string",
+                "enum": [
+                  "day",
+                  "week0",
+                  "week1",
+                  "month",
+                  "year"
+                ],
+                "title": "Period Type",
+                "default": "day",
+                "ordering": 1100
+              },
+              "budget": {
+                "description": "Money and points",
+                "type": "object",
+                "required": [
+                  "credit",
+                  "noncashable_credit",
+                  "bonus_credit",
+                  "bonus_points",
+                  "promo_points",
+                  "tier_points",
+                  "draw_points"
+                ],
+                "title": "Budget",
+                "properties": {
+                  "promo_points": {
+                    "title": "Shopping Points",
+                    "ordering": 2500,
+                    "maximum": 100000000000,
+                    "default": 0,
+                    "description": "Shopping Points",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "minimum": 0
+                  },
+                  "bonus_credit": {
+                    "title": "Extended Play",
+                    "maximum": 100000000000,
+                    "ordering": 2300,
+                    "default": 0,
+                    "description": "Extended Play",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "minimum": 0
+                  },
+                  "draw_points": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "minimum": 0,
+                    "description": "Lottery Points",
+                    "ordering": 2700,
+                    "maximum": 100000000000,
+                    "default": 0,
+                    "title": "Lottery Points"
+                  },
+                  "credit": {
+                    "title": "Cashable Credit",
+                    "maximum": 100000000000,
+                    "ordering": 2100,
+                    "default": 0,
+                    "description": "Cashable Credit",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "minimum": 0
+                  },
+                  "bonus_points": {
+                    "title": "Bonus Points",
+                    "ordering": 2400,
+                    "maximum": 100000000000,
+                    "default": 0,
+                    "description": "Bonus Points",
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "minimum": 0
+                  },
+                  "noncashable_credit": {
+                    "default": 0,
+                    "ordering": 2200,
+                    "maximum": 100000000000,
+                    "title": "Bonus Play(Noncashable Credit)",
+                    "minimum": 0,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "Bonus Play(Noncashable Credit)"
+                  },
+                  "tier_points": {
+                    "minimum": 0,
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "Status Points",
+                    "default": 0,
+                    "maximum": 100000000000,
+                    "ordering": 2600,
+                    "title": "Status Points"
+                  }
+                }
+              },
+              "max_promo_amount_cents": {
+                "title": "Max. promo amount, cents",
+                "ordering": 1300,
+                "maximum": 10000000,
+                "description": "Max. promo amount to be received",
+                "minimum": 0,
+                "type": "integer"
+              },
+              "promo_count": {
+                "description": "Promotion per period",
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "minimum": 1,
+                "title": "Promotion per period",
+                "ordering": 1000,
+                "maximum": 10000000,
+                "default": 1
+              },
+              "for_deposits_to": {
+                "title": "For deposits to",
+                "ordering": 1500,
+                "maximum": 10000000,
+                "description": " (Only applicable for Promotions of type 'Deposit' & 'Admin')",
+                "minimum": 0,
+                "type": "integer"
+              },
+              "promo_receiver": {
+                "enum": [
+                  "account",
+                  "referral"
+                ],
+                "title": "Promo receiver",
+                "default": "account",
+                "ordering": 1150,
+                "description": "Receiver of the promotion.",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "for_deposits_from": {
+                "minimum": 0,
+                "type": "integer",
+                "description": " (Only applicable for Promotions of type 'Deposit' & 'Admin')",
+                "maximum": 10000000,
+                "ordering": 1400,
+                "title": "For deposits from"
+              }
+            },
+            "required": [
+              "promo_count",
+              "promo_receiver"
+            ],
+            "title": "Limits",
+            "type": "object",
+            "description": "Limits"
+          },
+          "exchange_conditions": {
+            "type": "object",
+            "properties": {
+              "step_noncashable_bonus_points_to_noncashable": {
+                "default": 0,
+                "ordering": 3400,
+                "title": "Step Noncashable, cents",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Step Noncashable, cents"
+              },
+              "min_noncashable_bonus_points_to_noncashable": {
+                "title": "Min Noncashable, cents",
+                "maximum": 100000000000,
+                "ordering": 3300,
+                "default": 0,
+                "description": "Min Noncashable, cents",
+                "type": [
+                  "null",
+                  "integer"
+                ],
+                "minimum": 0
+              }
+            },
+            "title": "Exchange based promotions",
+            "required": [
+              "min_noncashable_bonus_points_to_noncashable",
+              "step_noncashable_bonus_points_to_noncashable"
+            ]
+          }
+        },
+        "type": "object"
+      }
+    },
+    "title": "Promotions",
+    "required": [
+      "id",
+      "start_date",
+      "name",
+      "cash_amount_input",
+      "cash_amount_wager_req_factor",
+      "promo_amount_input",
+      "promo_amount_wager_req_factor",
+      "id_hash",
+      "is_external",
+      "type_id",
+      "promo_settings_json",
+      "reward_type_id",
+      "reward_json",
+      "spent_budget_credit",
+      "spent_budget_noncashable_credit",
+      "spent_budget_bonus_credit",
+      "spent_budget_bonus_points",
+      "spent_budget_promo_points",
+      "spent_budget_tier_points",
+      "spent_budget_draw_points",
+      "cycle_period_id"
+    ],
+    "type": "object"
+  },
+  "translations": null,
+  "content": {
+    "ui_settings": {
+      "voucher_body_translation": {
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "lv_LV": null,
+        "sr_RS": null
+      },
+      "buy_success_msg_translation": {
+        "ka_GE": null,
+        "en_GB": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "lv_LV": null,
+        "sr_RS": null
+      },
+      "promo_name_translation": {
+        "lv_LV": "a",
+        "sr_RS": "a",
+        "bg_BG": "a",
+        "ru_RU": "a",
+        "ka_GE": "a",
+        "en_GB": "a"
+      },
+      "promo_descr_translation": {
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null
+      },
+      "voucher_tmpl_html_translation": {
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null,
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null
+      },
+      "_JSONFORMS_CONTENT_VERSION": "1.0",
+      "receipt_tmpl_html_translation": {
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null,
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null
+      }
+    },
+    "is_external": false,
+    "spent_budget_credit": 0,
+    "id": 1147,
+    "promo_amount_wager_req_factor": 0,
+    "spent_budget_bonus_credit": 0,
+    "promo_settings_json": {
+      "_JSONFORMS_CONTENT_VERSION": "0.02",
+      "exchange_conditions": {
+        "step_noncashable_bonus_points_to_noncashable": 0,
+        "min_noncashable_bonus_points_to_noncashable": 0
+      },
+      "limits": {
+        "period": "day",
+        "promo_count": 1,
+        "budget": {
+          "bonus_points": 99999,
+          "credit": "99999",
+          "promo_points": 99999,
+          "draw_points": 99999,
+          "bonus_credit": 99999,
+          "noncashable_credit": 99999,
+          "tier_points": 99999
+        }
+      },
+      "conditions": [
+        {
+          "filters": {
+            "event_expires_days": 17,
+            "event_count": 1,
+            "min_earned_points": {
+              "tier_points": 0,
+              "bonus_points": 1,
+              "promo_points": 0,
+              "draw_points": 0
+            },
+            "event_until_oclock": "24:00",
+            "days_of_week": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "event_since_oclock": "01:00",
+            "days_of_month": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            "machines": [
+              "68"
+            ]
+          },
+          "is_enabled": 1,
+          "event": "check_in"
+        },
+        {
+          "event": "check_in",
+          "filters": {
+            "event_until_oclock": null,
+            "days_of_week": null,
+            "min_earned_points": {
+              "tier_points": null,
+              "draw_points": null,
+              "promo_points": null,
+              "bonus_points": null
+            },
+            "event_count": 1,
+            "event_expires_days": 1,
+            "machines": null,
+            "event_since_oclock": null,
+            "days_of_month": null
+          },
+          "is_enabled": 0
+        },
+        {
+          "event": "check_in",
+          "is_enabled": 0,
+          "filters": {
+            "days_of_week": null,
+            "event_until_oclock": null,
+            "event_expires_days": 1,
+            "event_count": 1,
+            "min_earned_points": {
+              "tier_points": null,
+              "bonus_points": null,
+              "promo_points": null,
+              "draw_points": null
+            },
+            "event_since_oclock": null,
+            "days_of_month": null,
+            "machines": null
+          }
+        }
+      ]
+    },
+    "id_hash": "4184098244583750b58397abdd52fe2f",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tblib/db/promotions?v=1.0",
+    "cycle_period_days_offset": null,
+    "full_descr": "Promo32",
+    "min_cash_amount": null,
+    "promo_settings": {
+      "_JSONFORMS_CONTENT_VERSION": "0.02",
+      "exchange_conditions": {
+        "step_noncashable_bonus_points_to_noncashable": 0,
+        "min_noncashable_bonus_points_to_noncashable": 0
+      },
+      "limits": {
+        "period": "day",
+        "promo_count": 1,
+        "budget": {
+          "bonus_points": 99999,
+          "credit": "99999",
+          "promo_points": 99999,
+          "draw_points": 99999,
+          "bonus_credit": 99999,
+          "noncashable_credit": 99999,
+          "tier_points": 99999
+        }
+      },
+      "conditions": [
+        {
+          "filters": {
+            "event_expires_days": 17,
+            "event_count": 1,
+            "min_earned_points": {
+              "tier_points": 0,
+              "bonus_points": 1,
+              "promo_points": 0,
+              "draw_points": 0
+            },
+            "event_until_oclock": "24:00",
+            "days_of_week": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "event_since_oclock": "01:00",
+            "days_of_month": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            "machines": [
+              "68"
+            ]
+          },
+          "is_enabled": 1,
+          "event": "check_in"
+        },
+        {
+          "event": "check_in",
+          "filters": {
+            "event_until_oclock": null,
+            "days_of_week": null,
+            "min_earned_points": {
+              "tier_points": null,
+              "draw_points": null,
+              "promo_points": null,
+              "bonus_points": null
+            },
+            "event_count": 1,
+            "event_expires_days": 1,
+            "machines": null,
+            "event_since_oclock": null,
+            "days_of_month": null
+          },
+          "is_enabled": 0
+        },
+        {
+          "event": "check_in",
+          "is_enabled": 0,
+          "filters": {
+            "days_of_week": null,
+            "event_until_oclock": null,
+            "event_expires_days": 1,
+            "event_count": 1,
+            "min_earned_points": {
+              "tier_points": null,
+              "bonus_points": null,
+              "promo_points": null,
+              "draw_points": null
+            },
+            "event_since_oclock": null,
+            "days_of_month": null,
+            "machines": null
+          }
+        }
+      ]
+    },
+    "promo_group": null,
+    "start_date": "2015-09-15T00:00:00",
+    "cycle_period_id": 1,
+    "promo_amount_type_id": null,
+    "cash_amount_type_id": null,
+    "name": "Promo32",
+    "spent_budget_bonus_points": 0,
+    "cash_amount_wager_req_factor": 0,
+    "cash_to_promo_amount_factor": null,
+    "ui_settings_json": {
+      "voucher_body_translation": {
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "lv_LV": null,
+        "sr_RS": null
+      },
+      "buy_success_msg_translation": {
+        "ka_GE": null,
+        "en_GB": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "lv_LV": null,
+        "sr_RS": null
+      },
+      "promo_name_translation": {
+        "lv_LV": "a",
+        "sr_RS": "a",
+        "bg_BG": "a",
+        "ru_RU": "a",
+        "ka_GE": "a",
+        "en_GB": "a"
+      },
+      "promo_descr_translation": {
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null,
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null
+      },
+      "voucher_tmpl_html_translation": {
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null,
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null
+      },
+      "_JSONFORMS_CONTENT_VERSION": "1.0",
+      "receipt_tmpl_html_translation": {
+        "bg_BG": null,
+        "sr_RS": null,
+        "lv_LV": null,
+        "en_GB": null,
+        "ka_GE": null,
+        "ru_RU": null
+      }
+    },
+    "bonus_points_cash_back": null,
+    "inserted_by_remote_system_id": null,
+    "promo_amount": null,
+    "descr": "11",
+    "reward_type_id": 10,
+    "end_date": "2017-06-28T00:00:00",
+    "cash_amount_input": false,
+    "ordering": null,
+    "type_id": 10,
+    "cycle_period_minutes_offset": null,
+    "account_level_id": null,
+    "spent_budget_promo_points": 0,
+    "remote_id": "32",
+    "promo_amount_input": false,
+    "spent_budget_tier_points": 0,
+    "spent_budget_noncashable_credit": 0,
+    "reward": {
+      "_JSONFORMS_CONTENT_VERSION": "0.02",
+      "amounts": {
+        "bonus_points": null,
+        "credit": null,
+        "bonus_credit": null,
+        "promo_points": null,
+        "draw_points": null,
+        "noncashable_credit": null,
+        "tier_points": null
+      },
+      "voucher": {
+        "limit_vouchers_per_day": 0,
+        "day_of_month": null,
+        "active_since_hours": 0,
+        "voucher_volumes": 1,
+        "expires_at_hours": 0,
+        "active_since_days": 0,
+        "expires_at_days": 30
+      }
+    },
+    "spent_budget_draw_points": 0,
+    "reward_json": {
+      "_JSONFORMS_CONTENT_VERSION": "0.02",
+      "amounts": {
+        "bonus_points": null,
+        "credit": null,
+        "bonus_credit": null,
+        "promo_points": null,
+        "draw_points": null,
+        "noncashable_credit": null,
+        "tier_points": null
+      },
+      "voucher": {
+        "limit_vouchers_per_day": 0,
+        "day_of_month": null,
+        "active_since_hours": 0,
+        "voucher_volumes": 1,
+        "expires_at_hours": 0,
+        "active_since_days": 0,
+        "expires_at_days": 30
+      }
+    },
+    "bonus_points_required": null
+  }
+}

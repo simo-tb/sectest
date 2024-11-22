@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-value",
+    "type": "object",
+    "properties": {
+      "thoughts": {
+        "type": "array",
+        "title": "Thoughts",
+        "items": {
+          "type": "string",
+          "title": "A thought",
+          "default": "Grmpf"
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/10-templating-value",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabarray",
+        "items": [
+          {
+            "type": "section",
+            "legend": "{{idx}}. {{value}}",
+            "items": [
+              {
+                "key": "thoughts[]",
+                "title": "Thought {{idx}}",
+                "valueInLegend": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+}

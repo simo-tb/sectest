@@ -1,0 +1,81 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-advanced",
+    "type": "object",
+    "properties": {
+      "contractperiod": {
+        "type": "string"
+      },
+      "insuranceperiod": {
+        "type": "string"
+      },
+      "sickleaveperiod": {
+        "type": "string"
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-advanced",
+    "jsonformVersion": "2.0",
+    "minDate": "2010-01-01",
+    "maxDate": "2016-01-01",
+    "fields": [
+      {
+        "title": "Период на договора",
+        "description": "pluin опции: датите между 2011-01-01 и 2011-01-04 са забранени, начален избор по дни, показване на седмица от годината, бутон за изчистване на полето, inline поле за избор вместо popup поле.",
+        "key": "contractperiod",
+        "type": "daterangepicker",
+        "pluginoptions": {
+          "startlabel": "начало",
+          "endlabel": "край",
+          "minDate": "2010-10-10",
+          "maxDate": "2015-01-01",
+          "disabledDates": ["2011-01-01", "2011-01-02", "2011-01-03", "2011-01-04"],
+          "viewMode": "days",
+          "calendarWeeks": true,
+          "showClear": true,
+          "inline": true
+        }
+      },
+      {
+        "title": "Период на застраховка",
+        "description": "pluin опции: всички дати с изключение на тези между 2011-01-01 и 2011-01-04 са забранени, начален избор по седмици, избора на дата и час се показват един до друг (хоризонтално)",
+        "key": "insuranceperiod",
+        "type": "daterangepicker",
+        "pluginoptions": {
+          "startlabel": "начало на застраховката",
+          "endlabel": "край на застраховката",
+          "minDate": "2016-01-01",
+          "maxDate": "2016-01-10",
+          "enabledDates": ["2016-01-01", "2016-01-02", "2016-01-03", "2016-01-04"],
+          "viewMode": "months",
+          "sideBySide": true
+        }
+      },
+      {
+        "title": "Период на болничен",
+        "description": "pluin опции: всички дати са разрешени с изключение на събота и неделя, бутон за изчистване на полето",
+        "key": "sickleaveperiod",
+        "type": "daterangepicker",
+        "pluginoptions": {
+          "startlabel": "начало",
+          "endlabel": "край",
+          "minDate": "2016-01-01",
+          "maxDate": "2016-10-10",
+          "daysOfWeekDisabled": [0,6],
+          "showClear": true
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-daterangepicker-advanced",
+    "contractstartdate": "2011-01-05/2011-01-08"
+  }
+}

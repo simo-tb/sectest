@@ -1,0 +1,84 @@
+{
+  "schema" : {
+    "id": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json",
+    "type": "object",
+    "properties": {
+      "min_invest_amount": {
+        "type": "object",
+        "title": "Minimum Invest Amount",
+        "properties": {
+          "BGN": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "number",
+                "title": "For all originators"
+              },
+              "all": {
+                "type": "number",
+                "title": "For all originators"
+              }
+            }
+          },
+          "EUR": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "number",
+                "title": "For all originators"
+              },
+              "all": {
+                "type": "number",
+                "title": "For all originators"
+              }
+            }
+          }
+        }
+      },
+      "second_market_part_invest": {
+        "type": "boolean",
+        "title": "Can buy part of loan on Secondary Market?"
+      }
+    }
+  },
+
+  "form":  {
+    "isStrict": false,
+    "$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "min_invest_amount",
+        "type": "tabobject",
+        "items": [
+          {
+            "title": "BGN",
+            "type": "section",
+            "items": [
+              {
+                "key": "min_invest_amount/BGN",
+                "title": "Minimum Invest Amount",
+                "type": "fieldset"
+              }
+            ]
+          },
+          {
+            "title": "EUR",
+            "type": "section",
+            "items": [
+              {
+                "key": "min_invest_amount/EUR",
+                "title": "Minimum Invest Amount",
+                "type": "fieldset"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "second_market_part_invest",
+        "type": "checkbox"
+      }
+    ]
+  }
+}

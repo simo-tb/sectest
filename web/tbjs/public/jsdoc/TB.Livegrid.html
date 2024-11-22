@@ -1,0 +1,7779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Livegrid - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="TB.Dispatcher.html">Dispatcher</a><ul class='methods'><li data-type='method'><a href="TB.Dispatcher.html#dispatch">dispatch</a></li><li data-type='method'><a href="TB.Dispatcher.html#off">off</a></li><li data-type='method'><a href="TB.Dispatcher.html#on">on</a></li></ul></li><li><a href="TB.File.html">File</a><ul class='methods'><li data-type='method'><a href="TB.File.html#_prepareData">_prepareData</a></li><li data-type='method'><a href="TB.File.html#download">download</a></li></ul></li><li><a href="TB.Livegrid.html">Livegrid</a><ul class='methods'><li data-type='method'><a href="TB.Livegrid.html#_d3GridItemsDraggable">_d3GridItemsDraggable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3GridZoomable">_d3GridZoomable</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3SetupGrid">_d3SetupGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateBackgroundGrid">_d3UpdateBackgroundGrid</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItemContents">_d3UpdateItemContents</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateItems">_d3UpdateItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateResizeValues">_d3UpdateResizeValues</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateWrapper">_d3UpdateWrapper</a></li><li data-type='method'><a href="TB.Livegrid.html#_d3UpdateZoomValue">_d3UpdateZoomValue</a></li><li data-type='method'><a href="TB.Livegrid.html#_gApplyResizeItems">_gApplyResizeItems</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutoscale">_gAutoscale</a></li><li data-type='method'><a href="TB.Livegrid.html#_gAutosize">_gAutosize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gGetItemAtIndex">_gGetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gRemoveItemAtIndex">_gRemoveItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gResetMinMaxPositionedXY">_gResetMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gSetItemAtIndex">_gSetItemAtIndex</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateElementSize">_gUpdateElementSize</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateItemCoordinates">_gUpdateItemCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateMinMaxPositionedXY">_gUpdateMinMaxPositionedXY</a></li><li data-type='method'><a href="TB.Livegrid.html#_gUpdateUnpositionedItemsCoordinates">_gUpdateUnpositionedItemsCoordinates</a></li><li data-type='method'><a href="TB.Livegrid.html#_gZoomCallback">_gZoomCallback</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderResize">_handlerOnChangeSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnChangeSliderZoom">_handlerOnChangeSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnClear">_handlerOnClickBtnClear</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnResize">_handlerOnClickBtnResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnClickBtnZoom">_handlerOnClickBtnZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderResize">_handlerOnInputSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnInputSliderZoom">_handlerOnInputSliderZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#_handlerOnMousewheelSliderResize">_handlerOnMousewheelSliderResize</a></li><li data-type='method'><a href="TB.Livegrid.html#_prepareGlobalCSS">_prepareGlobalCSS</a></li><li data-type='method'><a href="TB.Livegrid.html#_returnDatum">_returnDatum</a></li><li data-type='method'><a href="TB.Livegrid.html#_stringifyCssRules">_stringifyCssRules</a></li><li data-type='method'><a href="TB.Livegrid.html#_timeoutExpireObject">_timeoutExpireObject</a></li><li data-type='method'><a href="TB.Livegrid.html#disableEditMode">disableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#emit">emit</a></li><li data-type='method'><a href="TB.Livegrid.html#enableEditMode">enableEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#prefixClassName">prefixClassName</a></li><li data-type='method'><a href="TB.Livegrid.html#save">save</a></li><li data-type='method'><a href="TB.Livegrid.html#setGridZoom">setGridZoom</a></li><li data-type='method'><a href="TB.Livegrid.html#setItemsSize">setItemsSize</a></li><li data-type='method'><a href="TB.Livegrid.html#toggleEditMode">toggleEditMode</a></li><li data-type='method'><a href="TB.Livegrid.html#updateElements">updateElements</a></li><li data-type='method'><a href="TB.Livegrid.html#updateItems">updateItems</a></li></ul></li><li><a href="TB.Request.html">Request</a><ul class='methods'><li data-type='method'><a href="TB.Request.html#_buildParams">_buildParams</a></li><li data-type='method'><a href="TB.Request.html#_checkResponseStatus">_checkResponseStatus</a></li><li data-type='method'><a href="TB.Request.html#_completeCallback">_completeCallback</a></li><li data-type='method'><a href="TB.Request.html#_errorCallback">_errorCallback</a></li><li data-type='method'><a href="TB.Request.html#_getTypeFromResponseHeader">_getTypeFromResponseHeader</a></li><li data-type='method'><a href="TB.Request.html#_getXHR">_getXHR</a></li><li data-type='method'><a href="TB.Request.html#_handlerReadystatechangeXHR">_handlerReadystatechangeXHR</a></li><li data-type='method'><a href="TB.Request.html#_makeRequest">_makeRequest</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestJSONP">_makeRequestJSONP</a></li><li data-type='method'><a href="TB.Request.html#_makeRequestXHR">_makeRequestXHR</a></li><li data-type='method'><a href="TB.Request.html#_setCredentials">_setCredentials</a></li><li data-type='method'><a href="TB.Request.html#_setHeaders">_setHeaders</a></li><li data-type='method'><a href="TB.Request.html#_successCallback">_successCallback</a></li><li data-type='method'><a href="TB.Request.html#_toQueryString">_toQueryString</a></li><li data-type='method'><a href="TB.Request.html#abort">abort</a></li></ul></li><li><a href="TB.Service.html">Service</a><ul class='methods'><li data-type='method'><a href="TB.Service.html#getNextRequestId">getNextRequestId</a></li></ul></li><li><a href="TB.Translate.html">Translate</a><ul class='methods'><li data-type='method'><a href="TB.Translate.html#.getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#.getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#.getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#.getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#.gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#_getRawTranslation">_getRawTranslation</a></li><li data-type='method'><a href="TB.Translate.html#_init">_init</a></li><li data-type='method'><a href="TB.Translate.html#getcurrency">getcurrency</a></li><li data-type='method'><a href="TB.Translate.html#getdate">getdate</a></li><li data-type='method'><a href="TB.Translate.html#getdatetime">getdatetime</a></li><li data-type='method'><a href="TB.Translate.html#gethash">gethash</a></li><li data-type='method'><a href="TB.Translate.html#getnumber">getnumber</a></li><li data-type='method'><a href="TB.Translate.html#gettext">gettext</a></li><li data-type='method'><a href="TB.Translate.html#gettime">gettime</a></li><li data-type='method'><a href="TB.Translate.html#reinit">reinit</a></li><li data-type='method'><a href="TB.Translate.html#setCurrency">setCurrency</a></li><li data-type='method'><a href="TB.Translate.html#setLocale">setLocale</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-xerrors.html">xerrors</a><ul class='methods'><li data-type='method'><a href="module-xerrors.html#.ASSERT">ASSERT</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.eq">ASSERT.eq</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ge">ASSERT.ge</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.gt">ASSERT.gt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasProperty">ASSERT.hasProperty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbType">ASSERT.hasPropertyOfTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.hasPropertyOfTbTypes">ASSERT.hasPropertyOfTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isDefined">ASSERT.isDefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isEmpty">ASSERT.isEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isNotEmpty">ASSERT.isNotEmpty</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.isUndefined">ASSERT.isUndefined</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.le">ASSERT.le</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.lt">ASSERT.lt</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbType">ASSERT.ofTbType</a></li><li data-type='method'><a href="module-xerrors.html#.ASSERT.ofTbTypes">ASSERT.ofTbTypes</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_END">BENCHMARK_END</a></li><li data-type='method'><a href="module-xerrors.html#.BENCHMARK_START">BENCHMARK_START</a></li><li data-type='method'><a href="module-xerrors.html#.FLUSH">FLUSH</a></li><li data-type='method'><a href="module-xerrors.html#.TRACE">TRACE</a></li><li data-type='method'><a href="module-xerrors.html#~makeMsg">makeMsg</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="TB.html">TB</a><ul class='methods'><li data-type='method'><a href="TB.html#.applyCssRules">applyCssRules</a></li><li data-type='method'><a href="TB.html#.assign">assign</a></li><li data-type='method'><a href="TB.html#.camelCaseToDashes">camelCaseToDashes</a></li><li data-type='method'><a href="TB.html#.classExtend">classExtend</a></li><li data-type='method'><a href="TB.html#.cloneFunction">cloneFunction</a></li><li data-type='method'><a href="TB.html#.contains">contains</a></li><li data-type='method'><a href="TB.html#.get">get</a></li><li data-type='method'><a href="TB.html#.isArray">isArray</a></li><li data-type='method'><a href="TB.html#.isArrayLike">isArrayLike</a></li><li data-type='method'><a href="TB.html#.isBetween">isBetween</a></li><li data-type='method'><a href="TB.html#.isBoolean">isBoolean</a></li><li data-type='method'><a href="TB.html#.isDate">isDate</a></li><li data-type='method'><a href="TB.html#.isDefined">isDefined</a></li><li data-type='method'><a href="TB.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="TB.html#.isFunction">isFunction</a></li><li data-type='method'><a href="TB.html#.isNumber">isNumber</a></li><li data-type='method'><a href="TB.html#.isObject">isObject</a></li><li data-type='method'><a href="TB.html#.isString">isString</a></li><li data-type='method'><a href="TB.html#.isUndefined">isUndefined</a></li><li data-type='method'><a href="TB.html#.JSON2CSS">JSON2CSS</a></li><li data-type='method'><a href="TB.html#.limitToRange">limitToRange</a></li><li data-type='method'><a href="TB.html#.map">map</a></li><li data-type='method'><a href="TB.html#.merge">merge</a></li><li data-type='method'><a href="TB.html#.noop">noop</a></li><li data-type='method'><a href="TB.html#.normalizeDate">normalizeDate</a></li><li data-type='method'><a href="TB.html#.parseQueryParams">parseQueryParams</a></li><li data-type='method'><a href="TB.html#.set">set</a></li><li data-type='method'><a href="TB.html#.toArray">toArray</a></li><li data-type='method'><a href="TB.html#.toPx">toPx</a></li><li data-type='method'><a href="TB.html#.typeof">typeof</a></li><li data-type='method'><a href="TB.html#.underscoreToDash">underscoreToDash</a></li><li data-type='method'><a href="TB.html#.urlAppend">urlAppend</a></li><li data-type='method'><a href="TB.html#.values">values</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Livegrid</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="TB.html">TB</a>.</span>
+        
+        Livegrid
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Livegrid"><span class="type-signature"></span>new Livegrid<span class="signature">(settings)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>TB.Livegrid plugin</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>settings</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>init settings for the plugin</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#DOMSelector">DOMSelector</a></span>
+|
+
+<span class="param-type"><a href="global.html#DOMElement">DOMElement</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>parent element of the plugin</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>menuElement</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#DOMSelector">DOMSelector</a></span>
+|
+
+<span class="param-type"><a href="global.html#DOMElement">DOMElement</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>parent element of the menu</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, <a href="global.html#InitTypeObject">InitTypeObject</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>definition of types</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>externalControlMenu</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>DEPRECATED see hideInactiveMenu</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>hideInactiveMenu</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>do not show inactive menu</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>menuItems</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    ['save', 'edit', 'resize', 'zoom']
+                
+                </td>
+            
+
+            <td class="description last"><p>if empty array or defined falsable value, do not show menu in active mode at all, else it's array of strings, explaining order and type of menu items. Possible values: 'zoom', 'resize', 'cancel', 'save'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>prefixClassName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'tb-lg-class-'
+                
+                </td>
+            
+
+            <td class="description last"><p>prefix of all autogenerated class names</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>grid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>if falsable value, there is no grid</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>isEditable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>whether items are editable ( can be repositioned etc )</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isEnabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>if true, there would be a grid</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autoscale</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>if true, the grid autoscales to show all elements on the grid</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autosize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>DEPRECATED</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autoheight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>set height automatically</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemAutoscale</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>scale item's content until it fits</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    100
+                
+                </td>
+            
+
+            <td class="description last"><p>width of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    100
+                
+                </td>
+            
+
+            <td class="description last"><p>height of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minItemWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    50
+                
+                </td>
+            
+
+            <td class="description last"><p>minumum width of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxItemWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    300
+                
+                </td>
+            
+
+            <td class="description last"><p>maximum width of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minItemHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    50
+                
+                </td>
+            
+
+            <td class="description last"><p>minumum height of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxItemHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    300
+                
+                </td>
+            
+
+            <td class="description last"><p>maximum height of a single item in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>stepZoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0.1
+                
+                </td>
+            
+
+            <td class="description last"><p>step zoom level</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minZoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0.1
+                
+                </td>
+            
+
+            <td class="description last"><p>minimum zoom level</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxZoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"><p>maximum zoom level</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>disableWheelZoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>disable mousewheel zoom</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>disablePanningInNormalMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>enable map panning only in edit mode</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemsBuffer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    10
+                
+                </td>
+            
+
+            <td class="description last"><p>number of spare items from the left and bottom most items</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unpositionedItemsPerRow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    20
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unpositionedItemsBuffer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>block's data</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line38">line 38</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>Dispatch</li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="_timeouts"><span class="type-signature"></span>_timeouts<span class="type-signature"> :Object</span></h4>
+
+
+
+
+<div class="description">
+    <p>Timeouts map</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line233">line 233</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="css"><span class="type-signature"></span>css<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    <p>Ordered CSS rules</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line161">line 161</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="disableMenu"><span class="type-signature"></span>disableMenu<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    <p>Flag is menu is disabled at all</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line149">line 149</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMbtnEdit"><span class="type-signature"></span>DOMbtnEdit<span class="type-signature"> :D3Selection</span></h4>
+
+
+
+
+<div class="description">
+    <p>Edit button</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">D3Selection</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line116">line 116</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMbtnSave"><span class="type-signature"></span>DOMbtnSave<span class="type-signature"> :D3Selection</span></h4>
+
+
+
+
+<div class="description">
+    <p>Save button</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">D3Selection</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line122">line 122</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMel"><span class="type-signature"></span>DOMel<span class="type-signature"> :<a href="global.html#D3selection">D3selection</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Keeps d3 selection container element, passed on initialization</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#D3selection">D3selection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line86">line 86</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMitemsContainer"><span class="type-signature"></span>DOMitemsContainer<span class="type-signature"> :<a href="global.html#D3selection">D3selection</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Wraps around blocks</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#D3selection">D3selection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line104">line 104</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMmenuEl"><span class="type-signature"></span>DOMmenuEl<span class="type-signature"> :<a href="global.html#D3selection">D3selection</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Keeps d3 selection container menu element, passed on initialization</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#D3selection">D3selection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line92">line 92</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMnavbar"><span class="type-signature"></span>DOMnavbar<span class="type-signature"> :<a href="global.html#D3selection">D3selection</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Navbar</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#D3selection">D3selection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line110">line 110</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DOMWrapper"><span class="type-signature"></span>DOMWrapper<span class="type-signature"> :<a href="global.html#D3selection">D3selection</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Wraps around blocks and background grid</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#D3selection">D3selection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line98">line 98</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="elHeight"><span class="type-signature"></span>elHeight<span class="type-signature"> :Number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Plugin DOM element height</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line137">line 137</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="elWidth"><span class="type-signature"></span>elWidth<span class="type-signature"> :Number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Plugin DOM element width</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="g"><span class="type-signature"></span>g<span class="type-signature"> :Object</span></h4>
+
+
+
+
+<div class="description">
+    <p>Grid members holder</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>isEnabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>grid to be drawn</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>editMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>is in edit mode</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>translateX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>translate position X axis</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>translateY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>translate position Y axis</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minPositionedX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>minimum X coordinate of all current grid items</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxPositionedX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum X coordinate of all current grid items</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minPositionedY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>minimum Y coordinate of all current grid items</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxPositionedY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum Y coordinate of all current grid items</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>colsCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>number of grid columns</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rowsCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>number of grid rows</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>width of single grid item</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>itemHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>height of single grid item</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wrapperActiveWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>width of items wrapper (actual width of the whole grid)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wrapperActiveHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>width of items wrapper (actual height of the whole grid)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unpositionedElements</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>unpositioned items without fixed place on the grid</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>index table for items with fixed coordinates</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTableAll</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>index table for items with calculated coordinates</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTableSnapshot</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>index table for items with temporary coordinates (in editMode)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="objList"><span class="type-signature"></span>objList<span class="type-signature"> :Object</span></h4>
+
+
+
+
+<div class="description">
+    <p>Objects hash map</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line173">line 173</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="objList"><span class="type-signature"></span>objList<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    <p>Objects list</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line167">line 167</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="s"><span class="type-signature">(readonly) </span>s<span class="type-signature"> :Object</span></h4>
+
+
+
+
+<div class="description">
+    <p>Holdя settings of the plugin</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line138">line 138</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="types"><span class="type-signature"></span>types<span class="type-signature"> :Object</span></h4>
+
+
+
+
+<div class="description">
+    <p>Map of defined block types</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line155">line 155</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3GridItemsDraggable"><span class="type-signature">(private) </span>_d3GridItemsDraggable<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Maked grid's items draggable (changing their position)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1209">line 1209</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>support swapping two objects</li>
+        
+            <li>support draging items out of current visible grid</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3GridZoomable"><span class="type-signature">(private) </span>_d3GridZoomable<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Make grid zoomable using d3 zoom behaviour</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1147">line 1147</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3SetupGrid"><span class="type-signature">(private) </span>_d3SetupGrid<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Executes when grid is enabled.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1313">line 1313</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateBackgroundGrid"><span class="type-signature">(private) </span>_d3UpdateBackgroundGrid<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Redraw background grid</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1113">line 1113</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateItemContents"><span class="type-signature">(private) </span>_d3UpdateItemContents<span class="signature">(objectsD3)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update items contents</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>objectsD3</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>array of d3 data</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1755">line 1755</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateItems"><span class="type-signature">(private) </span>_d3UpdateItems<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update items DOM</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1779">line 1779</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateResizeValues"><span class="type-signature">(private) </span>_d3UpdateResizeValues<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update content of item's resize values shown in the upper navbar</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1098">line 1098</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateWrapper"><span class="type-signature">(private) </span>_d3UpdateWrapper<span class="signature">(width<span class="signature-attributes">nullable</span>, height<span class="signature-attributes">nullable</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Updates wrapper size (width and height) by given values or set it to best
+size to show all content</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>width in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>height in pixels</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1279">line 1279</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_d3UpdateZoomValue"><span class="type-signature">(private) </span>_d3UpdateZoomValue<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update content of item's zoom value shown in the upper navbar</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1106">line 1106</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gApplyResizeItems"><span class="type-signature">(private) </span>_gApplyResizeItems<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Apply resize of items in the grid</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line854">line 854</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gAutoscale"><span class="type-signature">(private) </span>_gAutoscale<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Autoscale container elements. Set's zoom level to value which allowes
+displaying all elements in current container element size</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line896">line 896</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gAutosize"><span class="type-signature"></span>_gAutosize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Autosize containers element size (width and height). grid will be shown
+with zoom level 1, even when screen size is not enough, so in most
+cases it'll produce scrollbars to the window (or overflowed parent)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>Experimental feature, please do not use</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line913">line 913</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gGetItemAtIndex"><span class="type-signature">(private) </span>_gGetItemAtIndex<span class="signature">(x, y, indexTable)</span><span class="type-signature"> &rarr; (nullable) {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Get item at given posion in given index table</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>y</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>index table to search in</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1549">line 1549</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>found element at given position</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gRemoveItemAtIndex"><span class="type-signature">(private) </span>_gRemoveItemAtIndex<span class="signature">(x, y, indexTable)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Remove item at given position in given index table</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>y</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>index table to search in</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1561">line 1561</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>result of delete operator</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gResetMinMaxPositionedXY"><span class="type-signature">(private) </span>_gResetMinMaxPositionedXY<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update grid's min and max positioned element coordinates to 0</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line882">line 882</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gSetItemAtIndex"><span class="type-signature">(private) </span>_gSetItemAtIndex<span class="signature">(x, y, value, indexTable)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set item at given position in given index table</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>item at this position</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indexTable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#indexTable">indexTable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>indexTable to set in</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1574">line 1574</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>positioned item</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gUpdateElementSize"><span class="type-signature">(private) </span>_gUpdateElementSize<span class="signature">(width, height)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Updates container element size (width and height) with passed parameters</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>width in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>height in pixels</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line930">line 930</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gUpdateItemCoordinates"><span class="type-signature"></span>_gUpdateItemCoordinates<span class="signature">(rawObj, obj)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update element's coordinates with new value or use old ones</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rawObj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>raw update object data</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>object to get updated</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line681">line 681</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gUpdateMinMaxPositionedXY"><span class="type-signature">(private) </span>_gUpdateMinMaxPositionedXY<span class="signature">(x, y)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Update grid's min and max positioned element coordinates</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>check value for X axis</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>check value for Y axis</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line869">line 869</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gUpdateUnpositionedItemsCoordinates"><span class="type-signature"></span>_gUpdateUnpositionedItemsCoordinates<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Updates temporary coordinates for unpositioned items (items without X and Y
+coordinates )</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line715">line 715</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_gZoomCallback"><span class="type-signature">(private) </span>_gZoomCallback<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>After zoom apply new X and Y translation to wrapper</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1333">line 1333</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnChangeSliderResize"><span class="type-signature">(private) </span>_handlerOnChangeSliderResize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when resize slider is changed</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line794">line 794</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnChangeSliderZoom"><span class="type-signature">(private) </span>_handlerOnChangeSliderZoom<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler zoom buttons clicked</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line760">line 760</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnClickBtnClear"><span class="type-signature"></span>_handlerOnClickBtnClear<span class="signature">(item)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when clear coordinates of item is clicked</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>item</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>item object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line843">line 843</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnClickBtnResize"><span class="type-signature">(private) </span>_handlerOnClickBtnResize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when resize items buttons are clicked</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line819">line 819</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnClickBtnZoom"><span class="type-signature">(private) </span>_handlerOnClickBtnZoom<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when zoom buttons are clicked</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line768">line 768</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnInputSliderResize"><span class="type-signature">(private) </span>_handlerOnInputSliderResize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when resize slider gets input</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line787">line 787</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnInputSliderZoom"><span class="type-signature"></span>_handlerOnInputSliderZoom<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when zoom slider gets input</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line752">line 752</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_handlerOnMousewheelSliderResize"><span class="type-signature">(private) </span>_handlerOnMousewheelSliderResize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Event handler when resize slider is mousewheeled</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line801">line 801</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_prepareGlobalCSS"><span class="type-signature"></span>_prepareGlobalCSS<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Prepare global css for use</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1358">line 1358</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>generated css</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_returnDatum"><span class="type-signature">(private) </span>_returnDatum<span class="signature">(path<span class="signature-attributes">nullable</span>)</span><span class="type-signature"> &rarr; {*}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>D3 helper - return datum value by path</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>property path</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1393">line 1393</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>value</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_stringifyCssRules"><span class="type-signature">(private) </span>_stringifyCssRules<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Convert css array to string</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1373">line 1373</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_timeoutExpireObject"><span class="type-signature"></span>_timeoutExpireObject<span class="signature">(obj)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set timeout to expire object</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>[description]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line941">line 941</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="disableEditMode"><span class="type-signature">(private) </span>disableEditMode<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Disable edit mode of the grid</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1632">line 1632</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="emit"><span class="type-signature"></span>emit<span class="signature">(eventName, data)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Emit event for listeners</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>eventName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>name of the dispatched event</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>event data</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1530">line 1530</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="enableEditMode"><span class="type-signature">(private) </span>enableEditMode<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Enable edit mode of the grid</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1594">line 1594</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="prefixClassName"><span class="type-signature"></span>prefixClassName<span class="signature">(className)</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set prefix to generated class names to prevent collision</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>className</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>class name to prefix</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line673">line 673</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Prefixed class name</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="save"><span class="type-signature">(private) </span>save<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Save grid coordinates</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1695">line 1695</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setGridZoom"><span class="type-signature"></span>setGridZoom<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Programatically set grid zoom</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1687">line 1687</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setItemsSize"><span class="type-signature"></span>setItemsSize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Programatically set size of items</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1672">line 1672</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="toggleEditMode"><span class="type-signature">(private) </span>toggleEditMode<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Toggle edit mode of the grid</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1583">line 1583</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="updateElements"><span class="type-signature"></span>updateElements<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd class="yes-def tag-deprecated"><ul class="dummy"><li>Yes</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1407">line 1407</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="updateItems"><span class="type-signature"></span>updateItems<span class="signature">(data)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Refresh plugin data</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>list of objects to update</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tb.livegrid.js.html">tb.livegrid.js</a>, <a href="tb.livegrid.js.html#line1415">line 1415</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> on Tue Dec 15 2015 17:37:17 GMT+0200 (EET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

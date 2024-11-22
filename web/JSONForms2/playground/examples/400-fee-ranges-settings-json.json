@@ -1,0 +1,225 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/p2p/db/fee-ranges/settings-json",
+    "type": "object",
+    "properties": {
+      "bgn": {
+        "type": "object",
+        "title": "EUR",
+        "properties": {
+          "ranges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "range1_to": {
+                  "type": "number"
+                },
+                "range2_to": {
+                  "type": "number"
+                },
+                "range3_to": {
+                  "type": "number"
+                },
+                "range4_to": {
+                  "type": "number"
+                },
+                "range5_to": {
+                  "type": "number"
+                },
+                "range1_from": {
+                  "type": "number"
+                },
+                "range2_from": {
+                  "type": "number"
+                },
+                "range3_from": {
+                  "type": "number"
+                },
+                "range4_from": {
+                  "type": "number"
+                },
+                "range5_from": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      },
+      "eur": {
+        "type": "object",
+        "title": "EUR",
+        "properties": {
+          "ranges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "range1_to": {
+                  "type": "number"
+                },
+                "range2_to": {
+                  "type": "number"
+                },
+                "range3_to": {
+                  "type": "number"
+                },
+                "range4_to": {
+                  "type": "number"
+                },
+                "range5_to": {
+                  "type": "number"
+                },
+                "range1_from": {
+                  "type": "number"
+                },
+                "range2_from": {
+                  "type": "number"
+                },
+                "range3_from": {
+                  "type": "number"
+                },
+                "range4_from": {
+                  "type": "number"
+                },
+                "range5_from": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "eur/ranges[]/range1_from",
+                      "title": "Range 1 From",
+                      "enableReset": true
+                    },
+                    {
+                      "key": "eur/ranges[]/range1_to",
+                      "title": "Range 1 To"
+                    },
+                    {
+                      "key": "eur/ranges[]/range2_from",
+                      "title": "Range 2 From"
+                    },
+                    {
+                      "key": "eur/ranges[]/range2_to",
+                      "title": "Range 2 To"
+                    },
+                    {
+                      "key": "eur/ranges[]/range3_from",
+                      "title": "Range 3 From"
+                    },
+                    {
+                      "key": "eur/ranges[]/range3_to",
+                      "title": "Range 3 To"
+                    },
+                    {
+                      "key": "eur/ranges[]/range4_from",
+                      "title": "Range 4 From"
+                    },
+                    {
+                      "key": "eur/ranges[]/range4_to",
+                      "title": "Range 4 To"
+                    },
+                    {
+                      "key": "eur/ranges[]/range5_from",
+                      "title": "Range 5 From"
+                    },
+                    {
+                      "key": "eur/ranges[]/range5_to",
+                      "title": "Range 5 To"
+                    }
+                  ]
+                },
+                "title": "EUR fee ranges",
+                "tabeOptions": {
+                  "isExpandable": false
+                }
+              }
+            ],
+            "title": "EUR"
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "type": "table",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "key": "bgn/ranges[]/range1_from",
+                      "title": "Range 1 From"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range1_to",
+                      "title": "Range 1 To"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range2_from",
+                      "title": "Range 2 From"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range2_to",
+                      "title": "Range 2 To"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range3_from",
+                      "title": "Range 3 From"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range3_to",
+                      "title": "Range 3 To"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range4_from",
+                      "title": "Range 4 From"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range4_to",
+                      "title": "Range 4 To"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range5_from",
+                      "title": "Range 5 From"
+                    },
+                    {
+                      "key": "bgn/ranges[]/range5_to",
+                      "title": "Range 5 To"
+                    }
+                  ]
+                },
+                "title": "BGN fee ranges",
+                "tabeOptions": {
+                  "isExpandable": false
+                }
+              }
+            ],
+            "title": "BGN"
+          }
+        ]
+      }
+    ],
+    "$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/fee-ranges/settings-json",
+    "jsonformVersion": "2.0",
+    "isStrict": false
+  }
+}

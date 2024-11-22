@@ -1,0 +1,964 @@
+{
+  "form": {
+    "isStrict": false,
+    "fields": [
+      {
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "enableSorting": true,
+                "key": "annual_incomes"
+              }
+            ],
+            "title": "Annual incomes"
+          },
+          {
+            "items": [
+              {
+                "enableSorting": true,
+                "key": "doc_types"
+              }
+            ],
+            "title": "Doc types",
+            "type": "section"
+          },
+          {
+            "title": "Employees ranges",
+            "items": [
+              {
+                "enableSorting": true,
+                "key": "employees"
+              }
+            ],
+            "type": "section"
+          },
+          {
+            "items": [
+              {
+                "enableSorting": true,
+                "key": "fields_of_work"
+              }
+            ],
+            "title": "Fields of work",
+            "type": "section"
+          },
+          {
+            "title": "Seniority levels",
+            "items": [
+              {
+                "enabledSorting": true,
+                "key": "seniority_levels"
+              }
+            ],
+            "type": "section"
+          }
+        ],
+        "legend": "Event Based Promotion",
+        "type": "tabobject"
+      },
+      {
+        "key": "max_invest_amount_autoinvest"
+      },
+      {
+        "key": "min_invest_amount_autoinvest"
+      },
+      {
+        "key": "min_invest_amount_primary_market"
+      },
+      {
+        "key": "min_invest_amount_secondary_market"
+      },
+      {
+        "key": "nar_settings"
+      },
+      {
+        "key": "notifications"
+      },
+      {
+        "key": "second_market_part_invest"
+      },
+      {
+        "type": "submit",
+        "title": "submit",
+      }
+    ],
+    "$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json",
+    "jsonformVersion": "2.0"
+  },
+  "content": {
+    "$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json",
+    "min_invest_amount_autoinvest": {
+      "BGN": "10",
+      "EUR": "10"
+    },
+    "fields_of_work": [
+      {
+        "en_US": "work",
+        "bg_BG": "работа",
+        "et_EE": "",
+        "de_DE": ""
+      }
+    ],
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+    "employees": [
+      {
+        "bg_BG": "10 - 100",
+        "en_US": "10 - 100",
+        "de_DE": "10 - 100",
+        "et_EE": "10 - 100"
+      }
+    ],
+    "$$schemaId": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json",
+    "notifications": {
+      "daily_summary": {
+        "default": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-daily-summary-en&hide_page_title=1",
+        "en_US": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-daily-summary-en&hide_page_title=1",
+        "bg_BG": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-daily-summary-en&hide_page_title=1"
+      },
+      "monthly_summary": {
+        "default": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-monthly-summary-en&hide_page_title=1",
+        "bg_BG": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-monthly-summary-en&hide_page_title=1",
+        "en_US": "http://p2p-prodv.tb-pro.com/?tb_page_section=your-iuvo-monthly-summary-en&hide_page_title=1"
+      }
+    },
+    "max_invest_amount_autoinvest": {
+      "BGN": "100",
+      "EUR": "100"
+    },
+    "doc_types": [
+      {
+        "et_EE": "",
+        "de_DE": "",
+        "en_US": "ID Card",
+        "bg_BG": "Лична карта"
+      },
+      {
+        "en_US": "Passport",
+        "bg_BG": "Паспорт",
+        "et_EE": "",
+        "de_DE": ""
+      },
+      {
+        "en_US": "Driver's license",
+        "bg_BG": "Шофьорска книжка",
+        "de_DE": "",
+        "et_EE": ""
+      }
+    ],
+    "nar_settings": {
+      "1": {
+        "days_delay_61_plus": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_31_to_60": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_4_to_15": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_16_to_30": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_0_to_3": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        }
+      },
+      "5": {
+        "days_delay_0_to_3": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_16_to_30": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_61_plus": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_4_to_15": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        },
+        "days_delay_31_to_60": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1
+        }
+      }
+    },
+    "second_market_part_invest": true,
+    "min_invest_amount_primary_market": {
+      "BGN": {
+        "1": 10,
+        "5": 10,
+        "all": "10"
+      },
+      "EUR": {
+        "1": 10,
+        "5": 10,
+        "all": "10"
+      }
+    },
+    "min_invest_amount_secondary_market": {
+      "BGN": {
+        "1": 0.01,
+        "5": 0,
+        "all": "0.01"
+      },
+      "EUR": {
+        "1": 0.01,
+        "5": 0,
+        "all": "0.01"
+      }
+    },
+    "annual_incomes": [
+      {
+        "en_US": "Less than €5000",
+        "bg_BG": "По - малко от €5000",
+        "et_EE": "",
+        "de_DE": ""
+      },
+      {
+        "en_US": "€5,000 - €9,999",
+        "bg_BG": "€5,000 - €9,999",
+        "et_EE": "",
+        "de_DE": ""
+      },
+      {
+        "en_US": "€10,000 - €19,999",
+        "bg_BG": "€10,000 - €19,999",
+        "de_DE": "",
+        "et_EE": ""
+      },
+      {
+        "et_EE": "",
+        "de_DE": "",
+        "en_US": "€20,000 - €34,999",
+        "bg_BG": "€20,000 - €34,999"
+      },
+      {
+        "et_EE": "",
+        "de_DE": "",
+        "en_US": "€35,000 - €49,999",
+        "bg_BG": "€35,000 - €49,999"
+      },
+      {
+        "de_DE": "",
+        "et_EE": "",
+        "bg_BG": "€50,000 - €74,999",
+        "en_US": "€50,000 - €74,999"
+      },
+      {
+        "et_EE": "",
+        "de_DE": "",
+        "bg_BG": "€75,000 - €99,999",
+        "en_US": "€75,000 - €99,999"
+      },
+      {
+        "de_DE": "",
+        "et_EE": "",
+        "bg_BG": "€100,000 - €149,999",
+        "en_US": "€100,000 - €149,999"
+      },
+      {
+        "en_US": "€150,000 - €199,999",
+        "bg_BG": "€150,000 - €199,999",
+        "de_DE": "",
+        "et_EE": ""
+      },
+      {
+        "en_US": "€200,000 or more",
+        "bg_BG": "€200,000 or more",
+        "de_DE": "",
+        "et_EE": ""
+      }
+    ]
+  },
+  "status": {
+    "status": "ok"
+  },
+  "locales": [
+    {
+      "plural_form": 1,
+      "iso639_2": "bul",
+      "id": 36,
+      "lang_name": "Bulgarian BG",
+      "locale": "bg_BG",
+      "nplurals": 2,
+      "notes": "(n != 1)"
+    },
+    {
+      "iso639_2": "del",
+      "plural_form": 1,
+      "id": 55,
+      "lang_name": "German DE",
+      "locale": "de_DE",
+      "notes": "(n != 1)",
+      "nplurals": 2
+    },
+    {
+      "id": 74,
+      "iso639_2": "ang",
+      "plural_form": 1,
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "lang_name": "English US",
+      "locale": "en_US"
+    },
+    {
+      "locale": "et_EE",
+      "lang_name": "Estonian EE",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "iso639_2": "est",
+      "plural_form": 1,
+      "id": 99
+    }
+  ],
+  "sp": "Salted__À!£I{^§\u0000C$óÔ/ã³!",
+  "schema": {
+    "properties": {
+      "min_invest_amount_secondary_market": {
+        "title": "Minimum Invest Principal Amount (Secondary Market)",
+        "properties": {
+          "BGN": {
+            "properties": {
+              "1": {
+                "title": "EasyCredit",
+                "type": "number"
+              },
+              "5": {
+                "type": "number",
+                "title": "VivaCredit"
+              },
+              "all": {
+                "format": "unumeric",
+                "type": "string",
+                "title": "For all originators"
+              }
+            },
+            "type": "object"
+          },
+          "EUR": {
+            "properties": {
+              "1": {
+                "type": "number",
+                "title": "EasyCredit"
+              },
+              "5": {
+                "title": "VivaCredit",
+                "type": "number"
+              },
+              "all": {
+                "title": "For all originators",
+                "format": "unumeric",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "annual_incomes": {
+        "type": "array",
+        "title": "Annual   incomes",
+        "items": {
+          "isMultilanguage": true,
+          "type": "object",
+          "additionalProperties": {
+            "title": "Annual income",
+            "type": "string"
+          },
+          "title": "Annual income"
+        }
+      },
+      "nar_settings": {
+        "type": "object",
+        "title": "NAR Settings",
+        "properties": {
+          "1": {
+            "title": "EasyCredit",
+            "properties": {
+              "days_delay_61_plus": {
+                "type": "object",
+                "title": "Delay - 61 plus days",
+                "properties": {
+                  "1": {
+                    "type": "number",
+                    "title": "A"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "title": "D",
+                    "type": "number"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                }
+              },
+              "days_delay_4_to_15": {
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "type": "number",
+                    "title": "B"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "title": "D",
+                    "type": "number"
+                  },
+                  "6": {
+                    "type": "number",
+                    "title": "HR"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                },
+                "title": "Delay - 4 to 5 days",
+                "type": "object"
+              },
+              "days_delay_31_to_60": {
+                "title": "Delay - 31 to 60 days",
+                "properties": {
+                  "1": {
+                    "type": "number",
+                    "title": "A"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "type": "number",
+                    "title": "D"
+                  },
+                  "6": {
+                    "type": "number",
+                    "title": "HR"
+                  },
+                  "7": {
+                    "type": "number",
+                    "title": "E"
+                  }
+                },
+                "type": "object"
+              },
+              "days_delay_0_to_3": {
+                "type": "object",
+                "title": "Delay - 0 to 3 days",
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "title": "C",
+                    "type": "number"
+                  },
+                  "4": {
+                    "title": "D",
+                    "type": "number"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "type": "number",
+                    "title": "E"
+                  }
+                }
+              },
+              "days_delay_16_to_30": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "type": "number",
+                    "title": "B"
+                  },
+                  "3": {
+                    "title": "C",
+                    "type": "number"
+                  },
+                  "4": {
+                    "title": "D",
+                    "type": "number"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                },
+                "title": "Delay - 16 to 30 days"
+              }
+            },
+            "type": "object"
+          },
+          "5": {
+            "properties": {
+              "days_delay_16_to_30": {
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "type": "number",
+                    "title": "B"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "type": "number",
+                    "title": "D"
+                  },
+                  "6": {
+                    "type": "number",
+                    "title": "HR"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                },
+                "title": "Delay - 16 to 30 days",
+                "type": "object"
+              },
+              "days_delay_0_to_3": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "type": "number",
+                    "title": "A"
+                  },
+                  "2": {
+                    "type": "number",
+                    "title": "B"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "type": "number",
+                    "title": "D"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "type": "number",
+                    "title": "E"
+                  }
+                },
+                "title": "Delay - 0 to 3 days"
+              },
+              "days_delay_61_plus": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "type": "number",
+                    "title": "D"
+                  },
+                  "6": {
+                    "type": "number",
+                    "title": "HR"
+                  },
+                  "7": {
+                    "type": "number",
+                    "title": "E"
+                  }
+                },
+                "title": "Delay - 61 plus days"
+              },
+              "days_delay_31_to_60": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "title": "A",
+                    "type": "number"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "type": "number",
+                    "title": "C"
+                  },
+                  "4": {
+                    "type": "number",
+                    "title": "D"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                },
+                "title": "Delay - 31 to 60 days"
+              },
+              "days_delay_4_to_15": {
+                "properties": {
+                  "1": {
+                    "type": "number",
+                    "title": "A"
+                  },
+                  "2": {
+                    "title": "B",
+                    "type": "number"
+                  },
+                  "3": {
+                    "title": "C",
+                    "type": "number"
+                  },
+                  "4": {
+                    "title": "D",
+                    "type": "number"
+                  },
+                  "6": {
+                    "title": "HR",
+                    "type": "number"
+                  },
+                  "7": {
+                    "title": "E",
+                    "type": "number"
+                  }
+                },
+                "title": "Delay - 4 to 5 days",
+                "type": "object"
+              }
+            },
+            "title": "VivaCredit",
+            "type": "object"
+          }
+        }
+      },
+      "min_invest_amount_primary_market": {
+        "type": "object",
+        "properties": {
+          "BGN": {
+            "properties": {
+              "1": {
+                "title": "EasyCredit",
+                "type": "number"
+              },
+              "5": {
+                "type": "number",
+                "title": "VivaCredit"
+              },
+              "all": {
+                "format": "unumeric",
+                "type": "string",
+                "title": "For all originators"
+              }
+            },
+            "type": "object"
+          },
+          "EUR": {
+            "properties": {
+              "1": {
+                "type": "number",
+                "title": "EasyCredit"
+              },
+              "5": {
+                "title": "VivaCredit",
+                "type": "number"
+              },
+              "all": {
+                "format": "unumeric",
+                "type": "string",
+                "title": "For all originators"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "title": "Minimum Invest Amount (Primary Market)"
+      },
+      "second_market_part_invest": {
+        "type": "boolean",
+        "title": "Can buy part of loan on Secondary Market?"
+      },
+      "seniority_levels": {
+        "title": "Seniority levels",
+        "items": {
+          "title": "Seniority level",
+          "additionalProperties": {
+            "type": "string",
+            "title": "Seniority level"
+          },
+          "type": "object",
+          "isMultilanguage": true
+        },
+        "type": "array"
+      },
+      "max_invest_amount_autoinvest": {
+        "properties": {
+          "BGN": {
+            "title": "BGN",
+            "type": "string",
+            "format": "unumeric"
+          },
+          "EUR": {
+            "title": "EUR",
+            "type": "string",
+            "format": "unumeric"
+          }
+        },
+        "title": "Auto Invest - Max Invest Amount",
+        "type": "object"
+      },
+      "doc_types": {
+        "items": {
+          "title": "Document type",
+          "additionalProperties": {
+            "title": "Document type",
+            "type": "string"
+          },
+          "type": "object",
+          "isMultilanguage": true
+        },
+        "title": "Document types",
+        "type": "array"
+      },
+      "min_invest_amount_autoinvest": {
+        "properties": {
+          "BGN": {
+            "title": "BGN",
+            "type": "string",
+            "format": "unumeric"
+          },
+          "EUR": {
+            "format": "unumeric",
+            "type": "string",
+            "title": "EUR"
+          }
+        },
+        "title": "Auto Invest - Minimum Invest Amount",
+        "type": "object"
+      },
+      "fields_of_work": {
+        "type": "array",
+        "title": "Fields of work",
+        "items": {
+          "isMultilanguage": true,
+          "type": "object",
+          "title": "Field of work",
+          "additionalProperties": {
+            "title": "Field of work",
+            "type": "string"
+          }
+        }
+      },
+      "employees": {
+        "type": "array",
+        "title": "Number of employees",
+        "items": {
+          "additionalProperties": {
+            "title": "Employees range",
+            "type": "string"
+          },
+          "title": "Employees range",
+          "type": "object",
+          "isMultilanguage": true
+        }
+      },
+      "notifications": {
+        "properties": {
+          "monthly_summary": {
+            "type": "object",
+            "properties": {
+              "default": {
+                "type": "string",
+                "title": "Default monthly summary template"
+              },
+              "en_US": {
+                "title": "en_US monthly summary template",
+                "type": "string"
+              },
+              "bg_BG": {
+                "title": "bg_BG monthly summary template",
+                "type": "string"
+              }
+            }
+          },
+          "daily_summary": {
+            "type": "object",
+            "properties": {
+              "default": {
+                "type": "string",
+                "title": "Default daily summary  template"
+              },
+              "en_US": {
+                "title": "en_US daily summary template",
+                "type": "string"
+              },
+              "bg_BG": {
+                "title": "bg_BG daily summary template",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "title": "Notifications Settings",
+        "type": "object"
+      }
+    },
+    "_JSONFORMS_VERSION": "2.0",
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom": {
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "refCol": {
+                "type": "string"
+              },
+              "refTable": {
+                "type": "string"
+              },
+              "translated": {
+                "default": false,
+                "type": "boolean"
+              },
+              "refType": {
+                "type": "string",
+                "default": "reference",
+                "enum": [
+                  "fkey",
+                  "reference"
+                ]
+              }
+            },
+            "dependencies": {
+              "refType": [
+                "refTable",
+                "refCol"
+              ],
+              "refCol": [
+                "refTable"
+              ],
+              "refTable": [
+                "refCol"
+              ]
+            }
+          },
+          {
+            "$ref": "http://json-schema.org/draft-04/schema#"
+          }
+        ],
+        "description": "Telebid extensions to JSON Schema"
+      }
+    },
+    "type": "object",
+    "id": "http://jsonschemas.telebid-pro.com/p2p/db/system-settings/settings-json"
+  }
+}

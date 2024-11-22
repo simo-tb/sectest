@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>P2P</title>
+
+        <!-- <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/jquery-1.min.js?minv=1.9.1"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+		<link href="//10.24.2.12:5007/cdn/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">	
+	
+        <link href="//10.24.2.12:5007/cdn/bootstrap-3.3.5-dist/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+                
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/bootstrap-3.min.js?minv=3.3.5"></script>
+
+        <!------ TB external libs ------>
+
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/lodash-3.min.js?minv=3.10.1"></script>
+
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/loader-1.js?minv=1.1.0"></script>
+
+        <!--<script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/moment-2.js?minv=2.13.0"></script>-->
+        <script type="text/javascript" src="http://p2pqa.tb-pro.com/cdn/version2016111701/js/moment-with-locales-1.js?minv=1.0.0"></script>
+
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/bootstrap-select-1.min.js?minv=1.6.2"></script>
+        <link rel="stylesheet" type="text/css" href="http://10.24.2.12:5007/cdn/version2016111701/css/bootstrap-select-1.min.css?minv=1.6.2"/>
+
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/bootstrap-datetimepicker-4.js?minv=4.17.37"></script>
+        <link rel="stylesheet" type="text/css" href="http://10.24.2.12:5007/cdn/version2016111701/css/bootstrap-datetimepicker-4.css?minv=4.17.37" />
+
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/signals-1.js?minv=1.0.0"></script>
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/hasher-1.js?minv=1.2.0"></script>
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/crossroads-0.js?minv=0.12.2"></script>
+
+        <script type="text/javascript" src="http://p2pqa.tb-pro.com/cdn/version2016111701/js/jquery-editable-select.min.js?minv=2.2.4"></script>
+           <link href="http://p2pqa.tb-pro.com/cdn/version2016111701/css/jquery-editable-select.min.css?minv=4.2.2" rel="stylesheet" />
+
+        <link href="http://10.24.2.12:5007/cdn/css/font-awesome.min.css" rel="stylesheet"/>
+
+        <link href="http://10.24.2.12:6005/p2p-ui/pub/css/tbp2p.css" rel="stylesheet"/>
+        <link href="https://tbp2p.iuvo-group.com/cdn/flag-icon-css-master/css/flag-icon.min.css" rel="stylesheet"/>
+        
+        <script type="text/javascript" src="http://10.24.2.12:5007/cdn/version2016111701/js/promise-1.min.js?minv=1.0.0"></script>
+
+        <!------ TB external libs ------>    
+        <!------ TB libs ------>        
+
+        <script type="text/javascript" src="http://10.24.2.12:6005/p2p-ui/pub/js/all-2.js?minv=1.0.0"></script>
+        <link href="http://10.24.2.12:6005/p2p-ui/pub/css/all-1.css?minv=1.0.0" rel="stylesheet" />
+
+
+        <script type="text/javascript" src="http://10.24.2.12:6005/p2p-ui/pub/js/p2pload-7.js"></script>
+        <link href="http://10.24.2.12:5005/p2p-ui/pub/version2016111701/css/tbp2p-1.css?minv=1.0.0" rel="stylesheet">
+
+
+        <!------ TB libs ------>
+
+
+        <!------ TB libs ------>
+
+		<script type="text/javascript">
+			window.TB = window.TB || {};
+			TB.P2P_CONTAINER = TB.P2P_CONTAINER || '.p2p_container';
+		</script>
+	
+
+        <script type="text/javascript">
+			$(document).ready(function() {
+
+                TB.p2p_get_account_balances();
+				//TB.session_token = "7e41e3abf27ece5f0672abe688511b7c";
+				var lang = "en_US";
+
+                var url_vars = getUrlVars();
+                
+                console.log("Session Token URL ", url_vars);                
+                
+                if(typeof url_vars['p2'] !== 'undefined') {
+                    TB.session_token = url_vars['p2'];
+                    localStorage.setItem('session', JSON.stringify({session_token: url_vars['p2']})); 
+                }
+
+				if(typeof TB.session_token === 'undefined' || TB.session_token.length <= 0)
+				{
+					p2p_load(undefined, 'login_page', lang);
+				}
+
+				$(".p2p_nav_btn").click(function() {
+					var page = $(this).data("page");
+
+					p2p_load(TB.session_token, page, lang);
+				});
+
+
+                document.addEventListener('tbp2p_account_balances', function (e) { 
+                    console.log("Custom eventzzz ", e);
+                }, false);
+
+                function getUrlVars()
+                {
+                    var vars = [], hash;
+                    var hashes = window.location.href.slice(window.location.href.indexOf('#') + 1).split(';');
+                    for(var i = 0; i < hashes.length; i++)
+                    {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                }
+			});
+        </script>
+
+        <style>
+            #p2p_chart_weeks_currencies_loans_amount_currency_BGN {
+				color: #7FCC51;
+            }
+			#p2p_chart_weeks_currencies_loans_amount_currency_EUR {
+				color: #09B54E;
+			}
+			#p2p_chart_currencies_loans_amount_euro_currency_BGN {
+				color: #7FCC51;
+			}
+			#p2p_chart_currencies_loans_amount_euro_currency_EUR {
+				color: #09B54E;
+			}
+			#p2p_chart_currencies_loans_amount_currency_BGN {
+				color: #7FCC51;
+			}
+			#p2p_chart_currencies_loans_amount_currency_EUR {
+				color: #09B54E;
+			}
+			#p2p_chart_months_periods_loans_amount_0_3 {
+				color: #7FCC51;
+			}
+			#p2p_chart_months_periods_loans_amount_3_6 {
+				color: #09B54E;
+			}
+			#p2p_chart_months_periods_loans_amount_6_12 {
+				color: #074B3E;
+			}
+			#p2p_chart_months_periods_loans_amount_12_24 {
+				color: #FCBE13;
+			}
+			#p2p_chart_months_periods_loans_amount_24_48 {
+				color: #626B66;
+			}
+			#p2p_chart_months_periods_loans_amount_48_60 {
+				color: #C2D3CD;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_1 {
+				color: #7FCC51;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_2 {
+				color: #09B54E;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_3 {
+				color: #074B3E;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_4 {
+				color: #FCBE13;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_5 {
+				color: #FCBE13;
+			}
+			#p2p_chart_score_classes_months_loans_amount_score_class_id_6 {
+				color: #C2D3CD;
+			}
+			#p2p_chart_countries_investors_count {
+				color: #074B3E;
+			}
+
+			table th a.p2p-btn-sort {
+				color: #0E5051;
+			}
+
+            .modal-open {
+                padding-right: 17px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+		<a data-page="overview_page" class="p2p_nav_btn">Dashboard</a> |
+        <a data-page="primary_market_page" class="p2p_nav_btn">Primary market</a> |
+		<a data-page="secondary_market_page" class="p2p_nav_btn">Secondary market</a> |
+		<a data-page="my_investments_page" class="p2p_nav_btn">My Investments</a> |
+		<a data-page="account_statement_page" class="p2p_nav_btn">Account Statement</a> |
+		<a data-page="deposit_page" class="p2p_nav_btn">Deposit</a> |
+		<a data-page="withdraw_page" class="p2p_nav_btn">Withdraw</a> |
+        <a data-page="personal_info" class="p2p_nav_btn">Personal info</a> |
+        <a data-page="platform_activity_page" class="p2p_nav_btn">Platform activity</a> |
+<!--        <a data-page="daily_summary_page" class="p2p_nav_btn">Daily Summary</a> | -->
+        <a data-page="auto_invest_page" class="p2p_nav_btn">Auto Invest</a> |
+        <a data-page="general_statistics_page" class="p2p_nav_btn">General Statistics</a> |
+        <a onclick="window.open('http://10.24.2.12:6005/p2p-ui/p2p_auto_invest.pl');">Auto Invest Force</a>
+        <div id="p2p_cont">
+        </div>
+    </body>
+</html>

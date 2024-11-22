@@ -1,0 +1,860 @@
+{
+  "schema": {
+    "id": "http://jsonschemas.telebid-pro.com/jf_crud_schema/db/accounts",
+    "type": "object",
+    "title": "Accounts",
+    "$schema": "http://jsonschemas.telebid-pro.com/tbjson/schemas/jsonschema_custom04",
+    "properties": {
+      "accounts": {
+        "type": "object",
+        "title": "Account",
+        "properties": {
+            "reg_number": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Reg. number:",
+              "readOnly": true,
+              "ordering": 100
+            },
+            "first_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "First Name:",
+              "ordering": 200
+            },
+            "middle_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Middle Name:",
+              "ordering": 300
+            },
+            "last_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Last Name:",
+              "ordering": 400
+            },
+            "nickname": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Nickname:",
+              "ordering": 500
+            },
+            "gender": {
+              "enum": [
+                "UNSPECIFIED",
+                "MALE",
+                "FEMALE"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Gender:",
+              "refCol": "name",
+              "refTable": "genders",
+              "isForeignKey": true,
+              "ordering": 600
+            },
+            "birth_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Birth Date:",
+              "description": "yyyy-mm-dd",
+              "ordering": 600
+            },
+            "citizenship": {
+              "enum": [
+                "REMOVE THIS HERE!!!"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Citizenship:",
+              "refCol": "name",
+              "refTable": "countries",
+              "isForeignKey": true,
+              "ordering": 700
+            },
+            "city_of_birth": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "City of Birth:",
+              "ordering": 800
+            },
+            "allow_self_cash_out": {
+              "enum": [
+                0,
+                1
+              ],
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Allow Self Cash Out:",
+              "default": 1,
+              "ordering": 1000,
+              "enumNames": [
+                "NO",
+                "YES"
+              ]
+            },
+            "preferred_languages": {
+              "type": "array",
+              "title": "Preferred Lanuage",
+              "ordering": 1100,
+              "items": {
+                "type": "object",
+                "title": "languages",
+                "properties": {
+                  "lang": {
+                    "enum": [
+                      "REMOVE THIS HERE!!!"
+                    ],
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "title": "Language",
+                    "refCol": "lang_name",
+                    "refTable": "locales",
+                    "isForeignKey": true
+                  }
+                }
+              }
+            },
+            "personal_id_no": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "No.:",
+              "ordering": 1200
+            },
+            "personal_id_type": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Type:",
+              "refCol": "name",
+              "refTable": "account_personal_id_types",
+              "isForeignKey": true,
+              "ordering": 1300
+            },
+            "personal_document_type": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Type:",
+              "refCol": "name",
+              "refTable": "account_personal_doc_types",
+              "isForeignKey": true,
+              "ordering": 1400
+            },
+            "personal_document_no": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "No.:",
+              "ordering": 1500
+            },
+            "issuer": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Issuer:",
+              "ordering": 1600
+            
+            },
+            "issued_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Issued:",
+              "description": "yyyy-mm-dd",
+              "ordering": 1700
+            },
+            "expires_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Expires:",
+              "description": "yyyy-mm-dd",
+              "ordering": 1800
+            },
+            "never_expires": {
+              "type": "array",
+              "title": "Never expires",
+              "ordering": 1900,
+              "items": {
+                "type": "string",
+                "title": "Option",
+                "enum": [
+                  "Never expires"
+                ]
+              },
+              "minItems": 1
+            },  
+            "country": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Country:",
+              "refCol": "name",
+              "refTable": "countries",
+              "isForeignKey": true,
+              "ordering": 2000
+            },
+            "postal_code": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Postal Code:",
+              "ordering": 2100
+            },
+            "street": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Street:",
+              "ordering": 2200
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "City:",
+              "ordering": 2300
+            },
+            "additional_address_info": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Additional address info:",
+              "ordering": 2400
+            },
+            "picture": {
+              "fileMimeTypes": [
+                "image/png",
+                "image/jpeg",
+                "image/gif",
+                "application/pdf",
+                "text/url",
+                "image/webp",
+                "image/avif",
+                "image/bmp",
+                "image/tiff"
+              ],
+              "fileMaxSize": 1000,
+              "maxLength": 10000000,
+              "format": "base64file",
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Picture",
+              "ordering": 2500
+            },
+            "currency": {
+              "enum": [
+                "REMOVE THIS HERE!!!"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Currency",
+              "refCol": "name",
+              "refTable": "currencies",
+              "isForeignKey": true,
+              "ordering": 2600
+            },
+            "account_status": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Account Status",
+              "refCol": "name",
+              "refTable": "account_status",
+              "isForeignKey": true,
+              "ordering": 2700
+            },
+            "class": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Class",
+              "refCol": "name",
+              "refTable": "accounts_classifications_vw",
+              "isForeignKey": true,
+              "ordering": 2800
+            },
+            "player_files": {
+              "fileMimeTypes": [
+                "image/png",
+                "image/jpeg",
+                "image/gif",
+                "application/pdf",
+                "text/url"
+              ],
+              "fileMaxSize": 1000,
+              "maxLength": 10000000,
+              "format": "base64file",
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Player files",
+              "ordering": 2900
+            },
+            "accept_terms_and_conditions": {
+              "enum": [
+                0,
+                1
+              ],
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Accept Terms and Conditions",
+              "default": 1,
+              "ordering": 3000,
+              "enumNames": [
+                "NO",
+                "YES"
+              ]
+            },
+            "terms_and_conditions_form": {
+              "enum": [
+                "UNSPECIFIED"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Currency",
+              "enumNames": [
+                "UNSPECIFIED"
+              ],
+              "ordering": 3100
+            },
+            "contact_info_email": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Email",
+              "ordering": 3200,
+              "pattern": "^[a-zA-Z0-9_]+([.-]?[a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.-]?[a-zA-Z0-9_]+)*(.[a-zA-Z0-9_]{2,3})+$"
+            },
+            "contact_info_phone_numbers": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Phone Numbers:",
+              "description": "example: +359888888888,+35988888889",
+              "ordering": 3300
+            },
+            "marketing_referral": {
+              "enum": [
+                "REMOVE THIS HERE!!!"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Marketing Referral",
+              "refCol": "name",
+              "refTable": "marketing_referrers_vw",
+              "isForeignKey": true,
+              "ordering": 3400
+            },
+            "player_referral": {
+              "enum": [
+                "REMOVE THIS HERE!!!"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Player Referral",
+              "enumNames": [
+                "REMOVE THIS HERE!!!!"
+              ],
+              "ordering": 3500
+            },
+            "find_first_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "First Name",
+              "ordering": 200
+            },
+            "find_last_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "First Name",
+              "ordering": 200
+            },
+            "find_reg_number": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Reg. number",
+              "ordering": 100
+            },
+            "accept_marketing_msg": {
+              "enum": [
+                0,
+                1
+              ],
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Accept Marketing Messages:",
+              "default": 1,
+              "ordering": 3600,
+              "enumNames": [
+                "NO",
+                "YES"
+              ]
+            },
+            "accept_receiving_sms": {
+              "enum": [
+                0,
+                1
+              ],
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Accept Receiving SMS:",
+              "default": 1,
+              "ordering": 3700,
+              "enumNames": [
+                "NO",
+                "YES"
+              ]
+            },
+            "accept_receiving_emails": {
+              "enum": [
+                0,
+                1
+              ],
+              "type": [
+                "integer",
+                "null"
+              ],
+              "title": "Accept Receiving Emails:",
+              "default": 1,
+              "ordering": 3800,
+              "enumNames": [
+                "NO",
+                "YES"
+              ]
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Notes:",
+              "ordering": 3900
+            },
+            "level": {
+              "enum": [
+                "REMOVE THIS HERE!!!"
+              ],
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Level:",
+              "refCol": "name",
+              "refTable": "account_status_levels_vw",
+              "isForeignKey": true,
+              "ordering": 4000
+            }
+          }
+        }
+      }
+    },
+
+  "form": {
+    "$schemaId": "http://jsonschemas.telebid-pro.com/jf_crud_schema/db/accounts",
+    "jsonformVersion": "2.0",
+    "liveValidation": true,
+    "fields": [
+      {
+        "type": "section",
+        "legend": "Accounts",
+        "gridLayout": true,
+        "items": [
+          {
+            "gridLayout": true,
+            "rowWidth": "half",
+            "type": "section",
+            
+            "items": [
+              {
+                "type": "fieldset",
+                "legend": "Personal Information",
+                "items": [
+                  {
+                    "key": "accounts/reg_number" 
+                  },
+                  {
+                    "key": "accounts/first_name"
+                  },
+                  {
+                    "key": "accounts/middle_name"
+                  },
+                  {
+                    "key": "accounts/last_name"
+                  },
+                  {
+                    "key": "accounts/nickname"
+                  },
+                  {
+                    "type": "section",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/gender"
+                      },
+                      {
+                        "key": "accounts/birth_date",
+                        "type": "datepicker"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "accounts/citizenship"
+                  },
+                  {
+                    "key": "accounts/city_of_birth"
+                  },
+                  {
+                    "type": "fieldset",
+                    "legend": "Preferences",
+                    "items": [
+                      {
+                        "key": "accounts/allow_self_cash_out"
+                      },
+                      {
+                        "key": "accounts/preferred_languages[]/lang",
+                        "notitle": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Personal ID",
+                "items": [
+                  {
+                    "type": "section",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/personal_id_no"
+                      },
+                      {
+                        "key": "accounts/personal_id_type"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "submit",
+                    "title": "Change Personal ID"
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Personal Document",
+                "items": [
+                  {
+                    "key": "accounts/personal_document_type"
+                  },
+                  {
+                    "type": "section",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/personal_document_no"
+                      },
+                      {
+                        "key": "accounts/issuer"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/issued_date",
+                        "type": "datepicker"
+                      },
+                      {
+                        "key": "accounts/expires_date",
+                        "type": "datepicker"
+                      },
+                      {
+                        "key": "accounts/never_expires",
+                        "type": "checkboxes"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Home Address",
+                "gridLayout": true,
+                "items": [
+                  {
+                    "type": "section",
+                    "items": [
+                      {
+                        "key": "accounts/country"
+                      },
+                      {
+                        "key": "accounts/postal_code"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "items": [
+                      {
+                        "key": "accounts/street"
+                      },
+                      {
+                        "key": "accounts/city"
+                      },
+                      {
+                        "key": "accounts/additional_address_info"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "rowWidth": "half",
+            "gridLayout": true,
+            "items": [
+              {
+                "type": "section",
+                "items": [
+                  {
+                    "type": "fieldset",
+                    "legend": "Picture",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/picture"
+                      },
+                      {
+                        "type": "button",
+                        "title": "Camera"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "fieldset",
+                    "legend": "Player files",
+                    "items": [
+                      {
+                        "key": "accounts/player_files"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "fieldset",
+                    "legend": "Terms and Conditions",
+                    "items": [
+                      {
+                        "key": "accounts/accept_terms_and_conditions"
+                      },
+                      {
+                        "key": "accounts/terms_and_conditions_form"
+                      },
+                      {
+                        "type": "button",
+                        "title": "View Form"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "items": [
+                  {
+                    "type": "fieldset",
+                    "legend": "Currency",
+                    "items": [
+                      {
+                        "key": "accounts/currency"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "fieldset",
+                    "legend": "Account Status",
+                    "items": [
+                      {
+                        "key": "accounts/account_status"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "fieldset",
+                    "legend": "Class",
+                    "items": [
+                      {
+                        "key": "accounts/class"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Contact Information",
+                "items": [
+                  {
+                    "key": "accounts/contact_info_email",
+                    "type": "email"
+                  },
+                  {
+                    "key": "accounts/contact_info_phone_numbers"
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Marketing",
+                "items": [
+                  {
+                    "key": "accounts/marketing_referral"
+                  },
+                  {
+                    "type": "section",
+                    "gridLayout": true,
+                    "items": [
+                      {
+                        "key": "accounts/player_referral"
+                      },
+                      {
+                        "type": "button",
+                        "title": "Find"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "accounts/accept_marketing_msg"
+                  },
+                  {
+                    "key": "accounts/accept_receiving_sms"
+                  },
+                  {
+                    "key": "accounts/accept_receiving_emails"
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Notes",
+                "items": [
+                  {
+                    "key": "accounts/notes",
+                    "type": "textarea"
+                  }
+                ]
+              },
+              {
+                "type": "fieldset",
+                "legend": "Level",
+                "items": [
+                  {
+                    "key": "accounts/level"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "gridLayout": true,
+            "items": [
+              {
+                "type": "submit",
+                "title": "Cancel"
+              },
+              {
+                "type": "submit",
+                "title": "Save"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

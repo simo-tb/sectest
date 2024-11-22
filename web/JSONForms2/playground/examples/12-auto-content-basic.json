@@ -1,0 +1,17 @@
+{
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/12-auto-content-basic",
+    "name": "yoda",
+    "age": 900,
+    "birthday": "1100-02-13",
+    "musakaFanboy": true,
+    "gender": "male",
+    "astralSign": null,
+    "eyeColor": "#5c2b2b"
+  },
+  "form": {
+    "isStrict": false,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/12-auto-content-basic",
+    "jsonformVersion": "2.0"
+  }
+}

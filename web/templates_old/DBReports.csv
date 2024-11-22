@@ -1,0 +1,23 @@
+<!--&header($head)-->$head<!--/&header-->
+<!--&filt()-->
+<!--&f($filter_descr, $required_symb='', $inp_name, $value='')-->$filter_descr$required_symb;<!--&selected($text)-->$text<!--/&selected-->
+           <!--&selectbox()-->
+              <!--&opt($val, $descr)-->
+              <!--/&opt-->
+           <!--/&selectbox-->
+           <!--&textinput()-->
+           <!--/&textinput--> <!--/&f--> <!--/&filt-->
+<!--&res()-->
+<!--&hcol($text)-->$text;<!--/&hcol-->
+<!--&row()--><!--&col($text)-->$text;<!--&img()--><!--/&img--><!--&link()--><!--/&link--><!--/&col--><!--&sumcol($text='')-->$text;<!--/&sumcol-->
+<!--/&row-->
+<!--/&res-->
+<!--&graph_form()-->
+<!--&col()-->
+<!--&y()-->
+<!--/&y-->
+<!--/&col-->
+<!--&hidden()-->
+<!--/&hidden-->
+
+<!--/&graph_form-->

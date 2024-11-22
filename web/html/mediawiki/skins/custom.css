@@ -1,0 +1,44 @@
+table.dbreports {
+	border-collapse : collapse;
+}
+table.dbreports td, table.dbreports th {
+	padding : 0;
+}
+table.dbreports th {
+	font: bold;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	padding: 1px 1px 1px 2px;
+	background: #EEEEEE;
+}
+table.dbreports td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
+	padding: 1px 1px 1px 2px;
+}
+table.dbreports td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+table.dbreports tr:hover td {
+	background-color:#FFC;
+}
+
+table.dbreports tr:nth-child(2n+1) {background-color:#F9FBFF;}
+table.dbreports tr:nth-child(2n+2) {background-color:#FFFFFF;}
+
+
+/* CSS placed here will affect users of the Vector skin */
+/* remove one blank line (1 em) between the "personal tools" and the tabs */
+#left-navigation {top: 1.5em;}
+#right-navigation {margin-top: 1.5em;}
+/* Could also use #mw-page-base below */
+#mw-head-base {height: 4em;}
+
+.headertitle {padding:5px 5px 5px 5px}
+
+

@@ -1,0 +1,1920 @@
+{
+  "status": {
+    "status": "ok"
+  },
+  "locales": [
+    {
+      "locale": "en_GB",
+      "iso639_2": "ang",
+      "nplurals": 2,
+      "notes": "(n != 1)",
+      "plural_form": 1,
+      "lang_name": "English GB"
+    }
+  ],
+  "form": {
+    "templateData": {
+      "currency": [
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1152,
+          "digits_after_decimal_separator": 2,
+          "name": "United Arab Emirates dirham (AED)",
+          "code": "AED"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1001,
+          "name": "Afghan afghani (AFN)",
+          "digits_after_decimal_separator": 2,
+          "code": "AFN"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1002,
+          "digits_after_decimal_separator": 2,
+          "name": "Albanian lek (ALL)",
+          "code": "ALL"
+        },
+        {
+          "id": 1009,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "AMD",
+          "name": "Armenian dram (AMD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "id": 1046,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "ANG",
+          "digits_after_decimal_separator": 2,
+          "name": "Netherlands Antillean guilder (ANG)"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1006,
+          "digits_after_decimal_separator": 2,
+          "name": "Angolan kwanza (AOA)",
+          "code": "AOA"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1008,
+          "digits_after_decimal_separator": 2,
+          "name": "Argentine peso (ARS)",
+          "code": "ARS"
+        },
+        {
+          "code": "AUD",
+          "digits_after_decimal_separator": 2,
+          "name": "Australian dollar (AUD)",
+          "id": 1011,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "name": "Aruban florin (AWG)",
+          "digits_after_decimal_separator": 2,
+          "code": "AWG",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1010
+        },
+        {
+          "id": 1012,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "AZN",
+          "name": "Azerbaijani manat (AZN)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "id": 1024,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "BAM",
+          "digits_after_decimal_separator": 2,
+          "name": "Bosnia and Herzegovina convertible mark (BAM)"
+        },
+        {
+          "name": "Barbados dollar (BBD)",
+          "digits_after_decimal_separator": 2,
+          "code": "BBD",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1016
+        },
+        {
+          "id": 1015,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "BDT",
+          "name": "Bangladeshi taka (BDT)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "symbol": "лв.",
+          "is_symbol_position_front": 0,
+          "id": 1028,
+          "digits_after_decimal_separator": 2,
+          "name": "Bulgarian lev (BGN)",
+          "code": "BGN"
+        },
+        {
+          "id": 1014,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "BHD",
+          "name": "Bahraini dinar (BHD)",
+          "digits_after_decimal_separator": 3
+        },
+        {
+          "id": 1029,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "BIF",
+          "digits_after_decimal_separator": 0,
+          "name": "Burundian franc (BIF)"
+        },
+        {
+          "id": 1020,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "BMD",
+          "digits_after_decimal_separator": 2,
+          "name": "Bermudian dollar (BMD)"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1027,
+          "name": "Brunei dollar (BND)",
+          "digits_after_decimal_separator": 2,
+          "code": "BND"
+        },
+        {
+          "id": 1022,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "BOB",
+          "digits_after_decimal_separator": 2,
+          "name": "Boliviano (BOB)"
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Brazilian real (BRL)",
+          "code": "BRL",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1026
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1013,
+          "digits_after_decimal_separator": 2,
+          "name": "Bahamian dollar (BSD)",
+          "code": "BSD"
+        },
+        {
+          "code": "BTN",
+          "digits_after_decimal_separator": 2,
+          "name": "Bhutanese ngultrum (BTN)",
+          "id": 1021,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "name": "Botswana pula (BWP)",
+          "digits_after_decimal_separator": 2,
+          "code": "BWP",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1025
+        },
+        {
+          "code": "BYR",
+          "name": "Belarusian ruble (BYR)",
+          "digits_after_decimal_separator": 0,
+          "id": 1017,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "id": 1018,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "BZD",
+          "name": "Belize dollar (BZD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "id": 1032,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "CAD",
+          "name": "Canadian dollar (CAD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "CDF",
+          "digits_after_decimal_separator": 2,
+          "name": "Congolese franc (CDF)",
+          "id": 1048,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "CHE",
+          "digits_after_decimal_separator": 2,
+          "name": "WIR Euro (complementary currency) (CHE)",
+          "id": 1136,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "CHF",
+          "name": "Swiss franc (CHF)",
+          "digits_after_decimal_separator": 2,
+          "id": 1138,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "code": "CHW",
+          "name": "WIR Franc (complementary currency) (CHW)",
+          "digits_after_decimal_separator": 2,
+          "id": 1137,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "id": 1036,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "CLP",
+          "name": "Chilean peso (CLP)",
+          "digits_after_decimal_separator": 0
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1037,
+          "name": "Chinese yuan (CNY)",
+          "digits_after_decimal_separator": 2,
+          "code": "CNY"
+        },
+        {
+          "code": "COP",
+          "digits_after_decimal_separator": 2,
+          "name": "Colombian peso (COP)",
+          "id": 1038,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1039,
+          "name": "Unidad de Valor Real (COU)",
+          "digits_after_decimal_separator": 2,
+          "code": "COU"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1042,
+          "digits_after_decimal_separator": 2,
+          "name": "Costa Rican colon (CRC)",
+          "code": "CRC"
+        },
+        {
+          "name": "Cuban convertible peso (CUC)",
+          "digits_after_decimal_separator": 2,
+          "code": "CUC",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1044
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1045,
+          "digits_after_decimal_separator": 2,
+          "name": "Cuban peso (CUP)",
+          "code": "CUP"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1033,
+          "digits_after_decimal_separator": 0,
+          "name": "Cape Verde escudo (CVE)",
+          "code": "CVE"
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Czech koruna (CZK)",
+          "code": "CZK",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1047
+        },
+        {
+          "id": 1050,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "DJF",
+          "digits_after_decimal_separator": 0,
+          "name": "Djiboutian franc (DJF)"
+        },
+        {
+          "code": "DKK",
+          "name": "Danish krone (DKK)",
+          "digits_after_decimal_separator": 2,
+          "id": 1049,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "name": "Dominican peso (DOP)",
+          "digits_after_decimal_separator": 2,
+          "code": "DOP",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1051
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1003,
+          "digits_after_decimal_separator": 2,
+          "name": "Algerian dinar (DZD)",
+          "code": "DZD"
+        },
+        {
+          "code": "EGP",
+          "name": "Egyptian pound (EGP)",
+          "digits_after_decimal_separator": 2,
+          "id": 1052,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1053,
+          "name": "Eritrean nakfa (ERN)",
+          "digits_after_decimal_separator": 2,
+          "code": "ERN"
+        },
+        {
+          "id": 1054,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "ETB",
+          "digits_after_decimal_separator": 2,
+          "name": "Ethiopian birr (ETB)"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "€",
+          "id": 1004,
+          "name": "Euro (EUR)",
+          "digits_after_decimal_separator": 2,
+          "code": "EUR"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1056,
+          "digits_after_decimal_separator": 2,
+          "name": "Fiji dollar (FJD)",
+          "code": "FJD"
+        },
+        {
+          "id": 1055,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "FKP",
+          "digits_after_decimal_separator": 2,
+          "name": "Falkland Islands pound (FKP)"
+        },
+        {
+          "name": "Pound sterling (GBP)",
+          "digits_after_decimal_separator": 2,
+          "code": "GBP",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1153
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1059,
+          "digits_after_decimal_separator": 2,
+          "name": "Georgian lari (GEL)",
+          "code": "GEL"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1060,
+          "digits_after_decimal_separator": 2,
+          "name": "Ghanaian cedi (GHS)",
+          "code": "GHS"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1061,
+          "digits_after_decimal_separator": 2,
+          "name": "Gibraltar pound (GIP)",
+          "code": "GIP"
+        },
+        {
+          "id": 1058,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "GMD",
+          "digits_after_decimal_separator": 2,
+          "name": "Gambian dalasi (GMD)"
+        },
+        {
+          "code": "GNF",
+          "name": "Guinean franc (GNF)",
+          "digits_after_decimal_separator": 0,
+          "id": 1063,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1062,
+          "name": "Guatemalan quetzal (GTQ)",
+          "digits_after_decimal_separator": 2,
+          "code": "GTQ"
+        },
+        {
+          "id": 1064,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "GYD",
+          "name": "Guyanese dollar (GYD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1067,
+          "name": "Hong Kong dollar (HKD)",
+          "digits_after_decimal_separator": 2,
+          "code": "HKD"
+        },
+        {
+          "code": "HNL",
+          "digits_after_decimal_separator": 2,
+          "name": "Honduran lempira (HNL)",
+          "id": 1066,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "HRK",
+          "digits_after_decimal_separator": 2,
+          "name": "Croatian kuna (HRK)",
+          "id": 1043,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1065,
+          "name": "Haitian gourde (HTG)",
+          "digits_after_decimal_separator": 2,
+          "code": "HTG"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1068,
+          "name": "Hungarian forint (HUF)",
+          "digits_after_decimal_separator": 2,
+          "code": "HUF"
+        },
+        {
+          "code": "IDR",
+          "name": "Indonesian rupiah (IDR)",
+          "digits_after_decimal_separator": 2,
+          "id": 1071,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "ILS",
+          "name": "Israeli new shekel (ILS)",
+          "digits_after_decimal_separator": 2,
+          "id": 1074,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "INR",
+          "digits_after_decimal_separator": 2,
+          "name": "Indian rupee (INR)",
+          "id": 1070,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1073,
+          "name": "Iraqi dinar (IQD)",
+          "digits_after_decimal_separator": 3,
+          "code": "IQD"
+        },
+        {
+          "id": 1072,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "IRR",
+          "digits_after_decimal_separator": 0,
+          "name": "Iranian rial (IRR)"
+        },
+        {
+          "name": "Icelandic króna (ISK)",
+          "digits_after_decimal_separator": 0,
+          "code": "ISK",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1069
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Jamaican dollar (JMD)",
+          "code": "JMD",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1075
+        },
+        {
+          "id": 1077,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "JOD",
+          "digits_after_decimal_separator": 3,
+          "name": "Jordanian dinar (JOD)"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1076,
+          "digits_after_decimal_separator": 0,
+          "name": "Japanese yen (JPY)",
+          "code": "JPY"
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Kenyan shilling (KES)",
+          "code": "KES",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1079
+        },
+        {
+          "name": "Kyrgyzstani som (KGS)",
+          "digits_after_decimal_separator": 2,
+          "code": "KGS",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1081
+        },
+        {
+          "name": "Cambodian riel (KHR)",
+          "digits_after_decimal_separator": 2,
+          "code": "KHR",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1030
+        },
+        {
+          "code": "KMF",
+          "digits_after_decimal_separator": 0,
+          "name": "Comoro franc (KMF)",
+          "id": 1040,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1106,
+          "name": "North Korean won (KPW)",
+          "digits_after_decimal_separator": 0,
+          "code": "KPW"
+        },
+        {
+          "code": "KRW",
+          "name": "South Korean won (KRW)",
+          "digits_after_decimal_separator": 0,
+          "id": 1129,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "id": 1080,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "KWD",
+          "digits_after_decimal_separator": 3,
+          "name": "Kuwaiti dinar (KWD)"
+        },
+        {
+          "id": 1034,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "KYD",
+          "name": "Cayman Islands dollar (KYD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "KZT",
+          "digits_after_decimal_separator": 2,
+          "name": "Kazakhstani tenge (KZT)",
+          "id": 1078,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1082,
+          "digits_after_decimal_separator": 0,
+          "name": "Lao kip (LAK)",
+          "code": "LAK"
+        },
+        {
+          "id": 1084,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "LBP",
+          "name": "Lebanese pound (LBP)",
+          "digits_after_decimal_separator": 0
+        },
+        {
+          "code": "LKR",
+          "digits_after_decimal_separator": 2,
+          "name": "Sri Lankan rupee (LKR)",
+          "id": 1131,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "id": 1086,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "LRD",
+          "digits_after_decimal_separator": 2,
+          "name": "Liberian dollar (LRD)"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1085,
+          "digits_after_decimal_separator": 2,
+          "name": "Lesotho loti (LSL)",
+          "code": "LSL"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1088,
+          "digits_after_decimal_separator": 2,
+          "name": "Lithuanian litas (LTL)",
+          "code": "LTL"
+        },
+        {
+          "id": 1083,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "LVL",
+          "name": "Latvian lats (LVL)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1087,
+          "name": "Libyan dinar (LYD)",
+          "digits_after_decimal_separator": 3,
+          "code": "LYD"
+        },
+        {
+          "id": 1099,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "MAD",
+          "name": "Moroccan dirham (MAD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1097,
+          "name": "Moldovan leu (MDL)",
+          "digits_after_decimal_separator": 2,
+          "code": "MDL"
+        },
+        {
+          "code": "MKD",
+          "digits_after_decimal_separator": 0,
+          "name": "Macedonian denar (MKD)",
+          "id": 1090,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1101,
+          "digits_after_decimal_separator": 0,
+          "name": "Myanma kyat (MMK)",
+          "code": "MMK"
+        },
+        {
+          "id": 1098,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "MNT",
+          "name": "Mongolian tugrik (MNT)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "MOP",
+          "name": "Macanese pataca (MOP)",
+          "digits_after_decimal_separator": 2,
+          "id": 1089,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "name": "Mauritian rupee (MUR)",
+          "digits_after_decimal_separator": 2,
+          "code": "MUR",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1094
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1093,
+          "name": "Maldivian rufiyaa (MVR)",
+          "digits_after_decimal_separator": 2,
+          "code": "MVR"
+        },
+        {
+          "id": 1091,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "MWK",
+          "digits_after_decimal_separator": 2,
+          "name": "Malawian kwacha (MWK)"
+        },
+        {
+          "code": "MXN",
+          "name": "Mexican peso (MXN)",
+          "digits_after_decimal_separator": 2,
+          "id": 1095,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Malaysian ringgit (MYR)",
+          "code": "MYR",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1092
+        },
+        {
+          "name": "Mozambican metical (MZN)",
+          "digits_after_decimal_separator": 2,
+          "code": "MZN",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1100
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Namibian dollar (NAD)",
+          "code": "NAD",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1102
+        },
+        {
+          "id": 1105,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "NGN",
+          "digits_after_decimal_separator": 2,
+          "name": "Nigerian naira (NGN)"
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Nicaraguan córdoba (NIO)",
+          "code": "NIO",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1104
+        },
+        {
+          "id": 1107,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "NOK",
+          "digits_after_decimal_separator": 2,
+          "name": "Norwegian krone (NOK)"
+        },
+        {
+          "id": 1103,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "NPR",
+          "name": "Nepalese rupee (NPR)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "NZD",
+          "name": "New Zealand dollar (NZD)",
+          "digits_after_decimal_separator": 2,
+          "id": 1041,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "digits_after_decimal_separator": 3,
+          "name": "Omani rial (OMR)",
+          "code": "OMR",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1108
+        },
+        {
+          "id": 1110,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "PAB",
+          "name": "Panamanian balboa (PAB)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "PEN",
+          "name": "Peruvian nuevo sol (PEN)",
+          "digits_after_decimal_separator": 2,
+          "id": 1113,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Papua New Guinean kina (PGK)",
+          "code": "PGK",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1111
+        },
+        {
+          "name": "Philippine peso (PHP)",
+          "digits_after_decimal_separator": 2,
+          "code": "PHP",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1114
+        },
+        {
+          "code": "PKR",
+          "digits_after_decimal_separator": 2,
+          "name": "Pakistani rupee (PKR)",
+          "id": 1109,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "code": "PLN",
+          "digits_after_decimal_separator": 2,
+          "name": "Polish złoty (PLN)",
+          "id": 1164,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "id": 1112,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "PYG",
+          "name": "Paraguayan guaraní (PYG)",
+          "digits_after_decimal_separator": 0
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Qatari riyal (QAR)",
+          "code": "QAR",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1115
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Romanian new leu (RON)",
+          "code": "RON",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1116
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1122,
+          "digits_after_decimal_separator": 2,
+          "name": "Serbian dinar (RSD)",
+          "code": "RSD"
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Russian rouble (RUB)",
+          "code": "RUB",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1117
+        },
+        {
+          "name": "Rwandan franc (RWF)",
+          "digits_after_decimal_separator": 0,
+          "code": "RWF",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1118
+        },
+        {
+          "code": "SAR",
+          "name": "Saudi riyal (SAR)",
+          "digits_after_decimal_separator": 2,
+          "id": 1121,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "id": 1126,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "SBD",
+          "name": "Solomon Islands dollar (SBD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "name": "Seychelles rupee (SCR)",
+          "digits_after_decimal_separator": 2,
+          "code": "SCR",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1123
+        },
+        {
+          "code": "SDG",
+          "digits_after_decimal_separator": 2,
+          "name": "Sudanese pound (SDG)",
+          "id": 1132,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1135,
+          "digits_after_decimal_separator": 2,
+          "name": "Swedish krona (SEK)",
+          "code": "SEK"
+        },
+        {
+          "id": 1125,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "SGD",
+          "name": "Singapore dollar (SGD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "name": "Saint Helena pound (SHP)",
+          "digits_after_decimal_separator": 2,
+          "code": "SHP",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1119
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1124,
+          "name": "Sierra Leonean leone (SLL)",
+          "digits_after_decimal_separator": 0,
+          "code": "SLL"
+        },
+        {
+          "name": "Somali shilling (SOS)",
+          "digits_after_decimal_separator": 2,
+          "code": "SOS",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1127
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1133,
+          "digits_after_decimal_separator": 2,
+          "name": "Surinamese dollar (SRD)",
+          "code": "SRD"
+        },
+        {
+          "id": 1130,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "SSP",
+          "name": "South Sudanese pound (SSP)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "STD",
+          "digits_after_decimal_separator": 0,
+          "name": "São Tomé and Príncipe dobra (STD)",
+          "id": 1140,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1139,
+          "name": "Syrian pound (SYP)",
+          "digits_after_decimal_separator": 2,
+          "code": "SYP"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1134,
+          "digits_after_decimal_separator": 2,
+          "name": "Swazi lilangeni (SZL)",
+          "code": "SZL"
+        },
+        {
+          "id": 1144,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "THB",
+          "digits_after_decimal_separator": 2,
+          "name": "Thai baht (THB)"
+        },
+        {
+          "id": 1142,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "TJS",
+          "digits_after_decimal_separator": 2,
+          "name": "Tajikistani somoni (TJS)"
+        },
+        {
+          "id": 1149,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "TMT",
+          "digits_after_decimal_separator": 2,
+          "name": "Turkmenistani manat (TMT)"
+        },
+        {
+          "code": "TND",
+          "name": "Tunisian dinar (TND)",
+          "digits_after_decimal_separator": 3,
+          "id": 1147,
+          "symbol": "",
+          "is_symbol_position_front": 0
+        },
+        {
+          "id": 1145,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "TOP",
+          "name": "Tongan paʻanga (TOP)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "TRY",
+          "digits_after_decimal_separator": 2,
+          "name": "Turkish lira (TRY)",
+          "id": 1148,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "code": "TTD",
+          "name": "Trinidad and Tobago dollar (TTD)",
+          "digits_after_decimal_separator": 2,
+          "id": 1146,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "id": 1141,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "TWD",
+          "name": "New Taiwan dollar (TWD)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "id": 1143,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "TZS",
+          "digits_after_decimal_separator": 2,
+          "name": "Tanzanian shilling (TZS)"
+        },
+        {
+          "id": 1151,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "UAH",
+          "name": "Ukrainian hryvnia (UAH)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Ugandan shilling (UGX)",
+          "code": "UGX",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1150
+        },
+        {
+          "code": "USD",
+          "digits_after_decimal_separator": 2,
+          "name": "United States dollar (USD)",
+          "id": 1005,
+          "symbol": "$",
+          "is_symbol_position_front": 1
+        },
+        {
+          "name": "Uruguayan peso (UYU)",
+          "digits_after_decimal_separator": 2,
+          "code": "UYU",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1157
+        },
+        {
+          "digits_after_decimal_separator": 2,
+          "name": "Uzbekistan som (UZS)",
+          "code": "UZS",
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1158
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1160,
+          "digits_after_decimal_separator": 2,
+          "name": "Venezuelan bolívar fuerte (VEF)",
+          "code": "VEF"
+        },
+        {
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1161,
+          "digits_after_decimal_separator": 0,
+          "name": "Vietnamese dong (VND)",
+          "code": "VND"
+        },
+        {
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "id": 1159,
+          "digits_after_decimal_separator": 0,
+          "name": "Vanuatu vatu (VUV)",
+          "code": "VUV"
+        },
+        {
+          "id": 1120,
+          "symbol": "",
+          "is_symbol_position_front": 0,
+          "code": "WST",
+          "name": "Samoan tala (WST)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "code": "YER",
+          "name": "Yemeni rial (YER)",
+          "digits_after_decimal_separator": 2,
+          "id": 1162,
+          "is_symbol_position_front": 0,
+          "symbol": ""
+        },
+        {
+          "id": 1128,
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "code": "ZAR",
+          "name": "South African rand (ZAR)",
+          "digits_after_decimal_separator": 2
+        },
+        {
+          "name": "Zambian kwacha (ZMW)",
+          "digits_after_decimal_separator": 2,
+          "code": "ZMW",
+          "is_symbol_position_front": 0,
+          "symbol": "",
+          "id": 1163
+        }
+      ]
+    },
+    "fields": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "currency"
+      },
+      {
+        "items": [
+          {
+            "key": "period/start_date",
+            "type": "datetimepicker",
+            "title": "Promotion Start date"
+          },
+          {
+            "key": "period/end_date",
+            "type": "datetimepicker",
+            "title": "Promotion End date"
+          }
+        ],
+        "gridLayout": true,
+        "title": "Period",
+        "type": "fieldset"
+      },
+      {
+        "key": "days_of_week",
+        "type": "multipleselect",
+        "title": "Days of week"
+      },
+      {
+        "title": "Machines",
+        "type": "multipleselect",
+        "key": "machines"
+      },
+      {
+        "title": "Min bet, cents",
+        "key": "min_bet"
+      },
+      {
+        "items": [
+          {
+            "key": "promo_math_lucky_hour",
+            "legend": "Lucky Hour"
+          }
+        ],
+        "title": "Math type",
+        "type": "selectfieldset"
+      },
+      {
+        "items": [
+          {
+            "key": "reward_type/money_to_machine"
+          },
+          {
+            "key": "reward_type/material_prize"
+          }
+        ],
+        "type": "selectfieldset",
+        "key": "reward_type"
+      },
+      {
+        "items": {
+          "items": [
+            {
+              "title": "Start time",
+              "key": "time_intervals[]/start_time",
+              "type": "datetimepicker"
+            },
+            {
+              "title": "End time",
+              "key": "time_intervals[]/end_time",
+              "type": "datetimepicker"
+            }
+          ],
+          "type": "fieldset"
+        },
+        "type": "array",
+        "key": "time_intervals",
+        "gridLayout": true
+      },
+      {
+        "type": "array",
+        "key": "displays",
+        "gridLayout": true,
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "title": "Display #",
+              "key": "displays[]/ip_addr"
+            },
+            {
+              "title": "Is public",
+              "type": "radiobuttonset",
+              "key": "displays[]/main"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit",
+      }
+    ],
+    "jsonformVersion": "2.0",
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json"
+  },
+  "schema": {
+    "definitions": {
+      "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom": {
+        "description": "Telebid extensions to JSON Schema",
+        "id": "http://jsonschemas.telebid-pro.com/tbjson/draft-04-custom",
+        "allOf": [
+          {
+            "properties": {
+              "refCol": {
+                "type": "string"
+              },
+              "refType": {
+                "type": "string",
+                "default": "reference",
+                "enum": [
+                  "fkey",
+                  "reference"
+                ]
+              },
+              "refTable": {
+                "type": "string"
+              },
+              "translated": {
+                "default": false,
+                "type": "boolean"
+              }
+            },
+            "type": "object",
+            "dependencies": {
+              "refCol": [
+                "refTable"
+              ],
+              "refType": [
+                "refTable",
+                "refCol"
+              ],
+              "refTable": [
+                "refCol"
+              ]
+            }
+          },
+          {
+            "$ref": "http://json-schema.org/draft-04/schema#"
+          }
+        ],
+        "$schema": "http://json-schema.org/draft-04/schema#"
+      }
+    },
+    "properties": {
+      "min_bet": {
+        "Title": "Min bet allowed, cents",
+        "type": "number",
+        "minimum": 1
+      },
+      "period": {
+        "title": "aaa",
+        "properties": {
+          "end_date": {
+            "default": "2017-04-14 00:00:00",
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string",
+            "default": "2017-04-13 00:00:00"
+          }
+        },
+        "type": "object"
+      },
+      "currency": {
+        "type": "string",
+        "refType": "reference",
+        "enumNames": [
+          "United Arab Emirates dirham (AED)",
+          "Afghan afghani (AFN)",
+          "Albanian lek (ALL)",
+          "Armenian dram (AMD)",
+          "Netherlands Antillean guilder (ANG)",
+          "Angolan kwanza (AOA)",
+          "Argentine peso (ARS)",
+          "Australian dollar (AUD)",
+          "Aruban florin (AWG)",
+          "Azerbaijani manat (AZN)",
+          "Bosnia and Herzegovina convertible mark (BAM)",
+          "Barbados dollar (BBD)",
+          "Bangladeshi taka (BDT)",
+          "Bulgarian lev (BGN)",
+          "Bahraini dinar (BHD)",
+          "Burundian franc (BIF)",
+          "Bermudian dollar (BMD)",
+          "Brunei dollar (BND)",
+          "Boliviano (BOB)",
+          "Brazilian real (BRL)",
+          "Bahamian dollar (BSD)",
+          "Bhutanese ngultrum (BTN)",
+          "Botswana pula (BWP)",
+          "Belarusian ruble (BYR)",
+          "Belize dollar (BZD)",
+          "Canadian dollar (CAD)",
+          "Congolese franc (CDF)",
+          "WIR Euro (complementary currency) (CHE)",
+          "Swiss franc (CHF)",
+          "WIR Franc (complementary currency) (CHW)",
+          "Chilean peso (CLP)",
+          "Chinese yuan (CNY)",
+          "Colombian peso (COP)",
+          "Unidad de Valor Real (COU)",
+          "Costa Rican colon (CRC)",
+          "Cuban convertible peso (CUC)",
+          "Cuban peso (CUP)",
+          "Cape Verde escudo (CVE)",
+          "Czech koruna (CZK)",
+          "Djiboutian franc (DJF)",
+          "Danish krone (DKK)",
+          "Dominican peso (DOP)",
+          "Algerian dinar (DZD)",
+          "Egyptian pound (EGP)",
+          "Eritrean nakfa (ERN)",
+          "Ethiopian birr (ETB)",
+          "Euro (EUR)",
+          "Fiji dollar (FJD)",
+          "Falkland Islands pound (FKP)",
+          "Pound sterling (GBP)",
+          "Georgian lari (GEL)",
+          "Ghanaian cedi (GHS)",
+          "Gibraltar pound (GIP)",
+          "Gambian dalasi (GMD)",
+          "Guinean franc (GNF)",
+          "Guatemalan quetzal (GTQ)",
+          "Guyanese dollar (GYD)",
+          "Hong Kong dollar (HKD)",
+          "Honduran lempira (HNL)",
+          "Croatian kuna (HRK)",
+          "Haitian gourde (HTG)",
+          "Hungarian forint (HUF)",
+          "Indonesian rupiah (IDR)",
+          "Israeli new shekel (ILS)",
+          "Indian rupee (INR)",
+          "Iraqi dinar (IQD)",
+          "Iranian rial (IRR)",
+          "Icelandic króna (ISK)",
+          "Jamaican dollar (JMD)",
+          "Jordanian dinar (JOD)",
+          "Japanese yen (JPY)",
+          "Kenyan shilling (KES)",
+          "Kyrgyzstani som (KGS)",
+          "Cambodian riel (KHR)",
+          "Comoro franc (KMF)",
+          "North Korean won (KPW)",
+          "South Korean won (KRW)",
+          "Kuwaiti dinar (KWD)",
+          "Cayman Islands dollar (KYD)",
+          "Kazakhstani tenge (KZT)",
+          "Lao kip (LAK)",
+          "Lebanese pound (LBP)",
+          "Sri Lankan rupee (LKR)",
+          "Liberian dollar (LRD)",
+          "Lesotho loti (LSL)",
+          "Lithuanian litas (LTL)",
+          "Latvian lats (LVL)",
+          "Libyan dinar (LYD)",
+          "Moroccan dirham (MAD)",
+          "Moldovan leu (MDL)",
+          "Macedonian denar (MKD)",
+          "Myanma kyat (MMK)",
+          "Mongolian tugrik (MNT)",
+          "Macanese pataca (MOP)",
+          "Mauritian rupee (MUR)",
+          "Maldivian rufiyaa (MVR)",
+          "Malawian kwacha (MWK)",
+          "Mexican peso (MXN)",
+          "Malaysian ringgit (MYR)",
+          "Mozambican metical (MZN)",
+          "Namibian dollar (NAD)",
+          "Nigerian naira (NGN)",
+          "Nicaraguan córdoba (NIO)",
+          "Norwegian krone (NOK)",
+          "Nepalese rupee (NPR)",
+          "New Zealand dollar (NZD)",
+          "Omani rial (OMR)",
+          "Panamanian balboa (PAB)",
+          "Peruvian nuevo sol (PEN)",
+          "Papua New Guinean kina (PGK)",
+          "Philippine peso (PHP)",
+          "Pakistani rupee (PKR)",
+          "Polish złoty (PLN)",
+          "Paraguayan guaraní (PYG)",
+          "Qatari riyal (QAR)",
+          "Romanian new leu (RON)",
+          "Serbian dinar (RSD)",
+          "Russian rouble (RUB)",
+          "Rwandan franc (RWF)",
+          "Saudi riyal (SAR)",
+          "Solomon Islands dollar (SBD)",
+          "Seychelles rupee (SCR)",
+          "Sudanese pound (SDG)",
+          "Swedish krona (SEK)",
+          "Singapore dollar (SGD)",
+          "Saint Helena pound (SHP)",
+          "Sierra Leonean leone (SLL)",
+          "Somali shilling (SOS)",
+          "Surinamese dollar (SRD)",
+          "South Sudanese pound (SSP)",
+          "São Tomé and Príncipe dobra (STD)",
+          "Syrian pound (SYP)",
+          "Swazi lilangeni (SZL)",
+          "Thai baht (THB)",
+          "Tajikistani somoni (TJS)",
+          "Turkmenistani manat (TMT)",
+          "Tunisian dinar (TND)",
+          "Tongan paʻanga (TOP)",
+          "Turkish lira (TRY)",
+          "Trinidad and Tobago dollar (TTD)",
+          "New Taiwan dollar (TWD)",
+          "Tanzanian shilling (TZS)",
+          "Ukrainian hryvnia (UAH)",
+          "Ugandan shilling (UGX)",
+          "United States dollar (USD)",
+          "Uruguayan peso (UYU)",
+          "Uzbekistan som (UZS)",
+          "Venezuelan bolívar fuerte (VEF)",
+          "Vietnamese dong (VND)",
+          "Vanuatu vatu (VUV)",
+          "Samoan tala (WST)",
+          "Yemeni rial (YER)",
+          "South African rand (ZAR)",
+          "Zambian kwacha (ZMW)"
+        ],
+        "refCol": "code",
+        "description": "Currency",
+        "title": "Currency",
+        "enum": [
+          "AED",
+          "AFN",
+          "ALL",
+          "AMD",
+          "ANG",
+          "AOA",
+          "ARS",
+          "AUD",
+          "AWG",
+          "AZN",
+          "BAM",
+          "BBD",
+          "BDT",
+          "BGN",
+          "BHD",
+          "BIF",
+          "BMD",
+          "BND",
+          "BOB",
+          "BRL",
+          "BSD",
+          "BTN",
+          "BWP",
+          "BYR",
+          "BZD",
+          "CAD",
+          "CDF",
+          "CHE",
+          "CHF",
+          "CHW",
+          "CLP",
+          "CNY",
+          "COP",
+          "COU",
+          "CRC",
+          "CUC",
+          "CUP",
+          "CVE",
+          "CZK",
+          "DJF",
+          "DKK",
+          "DOP",
+          "DZD",
+          "EGP",
+          "ERN",
+          "ETB",
+          "EUR",
+          "FJD",
+          "FKP",
+          "GBP",
+          "GEL",
+          "GHS",
+          "GIP",
+          "GMD",
+          "GNF",
+          "GTQ",
+          "GYD",
+          "HKD",
+          "HNL",
+          "HRK",
+          "HTG",
+          "HUF",
+          "IDR",
+          "ILS",
+          "INR",
+          "IQD",
+          "IRR",
+          "ISK",
+          "JMD",
+          "JOD",
+          "JPY",
+          "KES",
+          "KGS",
+          "KHR",
+          "KMF",
+          "KPW",
+          "KRW",
+          "KWD",
+          "KYD",
+          "KZT",
+          "LAK",
+          "LBP",
+          "LKR",
+          "LRD",
+          "LSL",
+          "LTL",
+          "LVL",
+          "LYD",
+          "MAD",
+          "MDL",
+          "MKD",
+          "MMK",
+          "MNT",
+          "MOP",
+          "MUR",
+          "MVR",
+          "MWK",
+          "MXN",
+          "MYR",
+          "MZN",
+          "NAD",
+          "NGN",
+          "NIO",
+          "NOK",
+          "NPR",
+          "NZD",
+          "OMR",
+          "PAB",
+          "PEN",
+          "PGK",
+          "PHP",
+          "PKR",
+          "PLN",
+          "PYG",
+          "QAR",
+          "RON",
+          "RSD",
+          "RUB",
+          "RWF",
+          "SAR",
+          "SBD",
+          "SCR",
+          "SDG",
+          "SEK",
+          "SGD",
+          "SHP",
+          "SLL",
+          "SOS",
+          "SRD",
+          "SSP",
+          "STD",
+          "SYP",
+          "SZL",
+          "THB",
+          "TJS",
+          "TMT",
+          "TND",
+          "TOP",
+          "TRY",
+          "TTD",
+          "TWD",
+          "TZS",
+          "UAH",
+          "UGX",
+          "USD",
+          "UYU",
+          "UZS",
+          "VEF",
+          "VND",
+          "VUV",
+          "WST",
+          "YER",
+          "ZAR",
+          "ZMW"
+        ],
+        "refTable": "currencies"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "description": "Name"
+      },
+      "machines": {
+        "items": {
+          "type": "string",
+          "enum": [
+            "2| 10.40.11.36",
+            "332| 10.40.10.189",
+            "11111| 10.40.4.85",
+            "66381| 10.40.5.89",
+            "151330| 10.40.7.18",
+            "332211| 10.40.15.68"
+          ]
+        },
+        "type": "array"
+      },
+      "time_intervals": {
+        "title": "Time intervals",
+        "gridLayout": true,
+        "type": "array",
+        "enableDeletingItems": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "end_time": {
+              "default": "2001-01-01 00:00:00",
+              "type": "string"
+            },
+            "start_time": {
+              "default": "2001-01-01 00:00:00",
+              "type": "string"
+            }
+          },
+          "title": "Time intervals"
+        }
+      },
+      "reward_type": {
+        "properties": {
+          "material_prize": {
+            "properties": {
+              "reward_prize": {
+                "title": "Description",
+                "type": "string"
+              }
+            },
+            "type": "object",
+            "title": "Material prize"
+          },
+          "money_to_machine": {
+            "properties": {
+              "reward_prize": {
+                "type": "number",
+                "title": "Reward, cents"
+              }
+            },
+            "type": "object",
+            "title": "Money to machine"
+          }
+        },
+        "type": "object",
+        "title": "Reward Type"
+      },
+      "days_of_week": {
+        "type": "array",
+        "default": [],
+        "items": {
+          "type": "string",
+          "enum": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
+        }
+      },
+      "displays": {
+        "title": "Displays",
+        "gridLayout": true,
+        "type": "array",
+        "enableDeletingItems": false,
+        "items": {
+          "title": "Time intervals",
+          "properties": {
+            "ip_addr": {
+              "enum": [
+                "10.10.10.10",
+                "10.10.10.11"
+              ],
+              "default": "10.10.10.10",
+              "type": "string"
+            },
+            "main": {
+              "title": "Is Main",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "default": [
+          {}
+        ],
+        "minItems": 1
+      },
+      "promo_math_lucky_hour": {
+        "title": " ",
+        "type": "object",
+        "properties": {
+          "saturation": {
+            "title": "Saturation",
+            "type": "number"
+          }
+        }
+      }
+    },
+    "type": "object",
+    "required": [
+      "name",
+      "currency"
+    ],
+    "id": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json"
+  },
+  "content": {
+    "promo_math_lucky_hour": {
+      "saturation": 2
+    },
+    "days_of_week": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "displays": [
+      {
+        "ip_addr": "10.10.10.10",
+        "main": true
+      }
+    ],
+    "$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+    "reward_type": {
+      "money_to_machine": {
+        "reward_prize": 9999
+      }
+    },
+    "time_intervals": [
+      {
+        "start_time": "2001-01-01T11:26:00",
+        "end_time": "2001-01-01T12:26:00"
+      }
+    ],
+    "machines": [
+      "2| 10.40.11.36",
+      "332| 10.40.10.189",
+      "11111| 10.40.4.85",
+      "151330| 10.40.7.18"
+    ],
+    "currency": "BGN",
+    "name": "алабала",
+    "$$schemaId": "http://jsonschemas.telebid-pro.com/tbcasino/jpserver/db/010-promo-systems.sql/settings_json",
+    "min_bet": 1,
+    "period": {
+      "end_date": "2017-06-27T00:00:00",
+      "start_date": "2017-04-13T00:00:00"
+    }
+  }
+}

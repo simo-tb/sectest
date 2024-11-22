@@ -1,0 +1,32 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-basic",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "string",
+        "title": "How are you feeling",
+        "description": "Describe how you feel in 300 words"
+      }
+    },
+    "required": ["mood"]
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-textarea-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mood",
+        "type": "textarea",
+        "htmlClass": "usermood",
+        "fieldHtmlClass": "input-medium",
+        "placeholder": "incredibly and admirably great"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}

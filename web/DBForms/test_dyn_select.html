@@ -1,0 +1,55 @@
+<html>
+<head>
+<script language="JavaScript" src="js/dynselect.js"></script>
+</head>
+<body onReload="alert('RELOADED')" onLoad="initDynSelectObjs()">
+  
+     <form name="testForm">
+
+<script language="JavaScript">
+ function initFunc()
+ {
+   this.selectObj = eval('document.testForm.'+this.selectName);
+   this.initOptions = this.selectObj.options;
+   this.initSelectedIndex = this.selectObj.selectedIndex;
+ }
+ 
+ new DynSelect('dynSelect', null, initFunc);
+ 
+</script>
+     
+    <select name="dynSelect">
+      <option value="1">Old Option1</option>
+      <option value="2">Old Option2</option>
+      <option value="3">Old Option3</option>
+      <option value="">&nbsp;</option>
+      <option value="">&nbsp;</option>
+      <option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    </select> <input type="button" value="DynFill" onClick="fillDynSelect('dynSelect');fillDynSelect('dynSelect2')">
+<br>
+    <h2>Press button DynFill and the new options will load from server</h2>
+   
+    <script language="JavaScript"> 
+      new dynSelect('dynSelect2', null, initFunc2); 
+      function initFunc2()
+      {
+        this.selectObj = eval('document.testForm.'+this.selectName);
+      }
+    </script>
+    <select name="dynSelect2" size="3">
+      <option value="1">Op1</option>
+      <option value="2">Op2</option>
+      <option value="3">Op3</option>
+      <option value="">&nbsp;</option>
+      <option value="">&nbsp;</option>
+      <option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+      
+    </select>
+    <input type="button" value="DynFill" onClick="fillDynSelect('dynSelect2')">
+<br>* blanks are needed for browsers that does not resize select
+  </form>  
+
+<script language="JavaScript">InitDynBuffers()</script>
+
+</body>
+</html>

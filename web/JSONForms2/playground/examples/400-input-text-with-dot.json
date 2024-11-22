@@ -1,0 +1,33 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/400-input-text-with-dot",
+    "type": "object",
+    "properties": {
+      "mo.od": {
+        "type": "number",
+        "title": "This is my dot example"
+      }
+    }
+  },
+
+  "form": {
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/400-input-text-with-dot",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mo~9od",
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/400-input-text-with-dot",
+    "mo.od": 2
+  }
+}

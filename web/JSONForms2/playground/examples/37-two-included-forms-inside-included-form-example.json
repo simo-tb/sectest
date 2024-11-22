@@ -1,0 +1,172 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "transaction_country": {
+        "type": "object",
+        "title": "The country the transaction took place",
+        "properties": {
+          "code": {
+          "type": "number",
+          "title": "The code of the country"
+        },
+        "name": {
+          "type": "string",
+          "title": "The code of the country"
+        },
+        "html_signature": {
+          "type": "string",
+          "title": "HTML signature of the country"  
+        }
+      }
+      },
+      "customer": {
+        "type": "object",
+        "title": "Customer data",
+        "properties": {
+          "human_data": {
+            "type": "object",
+            "title": "Individual Customer",
+            "properties": {
+                "age": {
+                    "title": "Age of Customer",
+                    "type": "number"
+                },
+                "name": {
+                    "title": "Name of Customer",
+                    "type": "string"
+               },
+               "html_signature": {
+                 "title": "HTML signature of the Customer",
+                 "type": "string"
+               },
+               "country": {
+                 "type": "object",
+                 "title": "Country - this field is with included form",
+                 "properties": {
+                   "code": {
+                     "type": "number",
+                     "title": "The code of the country"
+                   },
+                   "name": {
+                     "type": "string",
+                     "title": "The code of the country"
+                   },
+                   "html_signature": {
+                     "type": "string",
+                     "title": "HTML signature of the country"  
+                   }
+                }
+              },
+              "other_prop_to_form": {
+                "type": "object",
+                "title": "Something that has a form",
+                "properties": {
+                  "tstring": {
+                    "type": "string",
+                    "title": "Should be tinymce"
+                  }
+                }
+              }
+            }
+          },
+          "customer_id": {
+            "type": "number",
+            "title": "Id of the customer"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "jsonformVersion": "2.0",
+    "fieldParams": {
+      "mood": {
+        "type": "tinymce"
+      },
+      "included_schema_wrapper2/included_schema/id_code": {
+        "isRange": true
+      }
+    
+    },
+    "includedForms": {
+      "human_form": {
+        "fields": [
+          {
+            "key": "age"
+          },
+          {
+            "key": "name"
+          },
+          {
+            "key": "html_signature",
+            "type": "tinymce"
+          },
+          {
+            "key": "other_prop_to_form",
+            "keyContext": "other_prop_to_form",
+            "includeForm": "other_form",
+            "type": "section"
+          },
+          {
+            "key": "country",
+            "keyContext": "country",
+            "includeForm": "country_form",
+            "type": "section"
+          }
+        ]
+      },
+      "country_form": {
+        "fields": [ 
+          {
+            "key": "code"
+          },
+          {
+            "key": "name"
+          },
+          {
+            "key": "html_signature",
+            "type": "tinymce",
+            "title": "title from the included form"
+          }
+        ]
+      },
+      "other_form": {
+        "fields": [
+          {
+            "key": "tstring",
+            "type": "tinymce"
+          }
+        ]
+      }
+    },
+
+    "fields": [
+      {
+        "key": "customer",
+        "type": "tabobject",
+        "items": [
+          {
+            "key": "customer/customer_id"
+          },
+          {
+            "key": "customer/human_data",
+            "keyContext": "customer/human_data",
+            "includeForm": "human_form",
+            "type": "tabobject"
+          }
+        ]
+      },
+      {
+        "key": "transaction_country",
+        "keyContext": "transaction_country",
+        "includeForm": "country_form",
+        "type": "tabobject"
+      }
+    ]
+    
+  }
+}

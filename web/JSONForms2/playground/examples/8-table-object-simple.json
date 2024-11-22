@@ -1,0 +1,82 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/fees",
+    "type": "object",
+    "properties": {
+      "range_values": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "fee_name": {
+							"title": "fee name",
+              "type": "string"
+            },
+            "range5": {
+							"title": "range5",
+              "type": "object",
+              "properties": {
+                "fixed": {
+									"title": "fixed",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "perc": {
+									"title": "perc",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/fees",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+				"title": "EUR fees",
+				"type": "table",
+				"key": "range_values"
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/fees",
+    "_JSONFORMS_CONTENT_VERSION": "2.0",
+		"range_values": {
+			"property1": {
+				"fee_name": "Такса Получаване",
+				"range10": {
+					"fixed": 10,
+					"percent": 10
+				}
+			},
+			"property2": {
+				"fee_name": "Такса Получаване",
+				"range10": {
+					"fixed": 11,
+					"percent": 11
+				}
+		  },
+			"property3": {
+				"fee_name": "Такса Получаване",
+				"range10": {
+					"fixed": 12,
+					"percent": 12
+				}
+		  }
+    }
+  }
+}

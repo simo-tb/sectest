@@ -1,0 +1,152 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      }, 
+      "range_values": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "fee_name": {
+              "title": "is dis laf2",
+              "type": "string"
+            },
+            "pgint": {
+              "type": "string",
+              "title": "is dis laf",
+              "format": "pgtimeinterval",
+              "default": "second"
+            }
+          }
+        }
+      },
+      "range_values123": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "fee_name": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "title": "mysec",
+            "items": [
+              {
+                "title": "EUR fees",
+                "type": "tableobject",
+                "key": "range_values",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                     {
+                      "title": "Id of row",
+                      "type": "helptext",
+                      "key": "range_values{}",
+                      "content": "<p>alert('hi);</p>My good tool {{objKey}}"  
+                    },
+                    {
+                      "title": "Fee Name",
+                      "key": "range_values{}/fee_name"
+                    },
+                    {
+                      "title": "Timer aka non-trivial",
+                      "type": "pgtimeinterval",
+                      "key": "range_values{}/pgint"
+                    }
+                  ]
+                }, 
+              },
+            ],
+          },
+          {
+            "type": "section",
+            "title": "mysec2",
+            "items": [
+              {
+                "title": "BGN fees",
+                "type": "tableobject",
+                "key": "range_values123",
+                "items": {
+                  "type": "tablerow",
+                  "items": [
+                    {
+                      "title": "Fee Name",
+                      "key": "range_values123{}/fee_name"
+                    }
+                  ]
+                }, 
+              },
+            ]
+          },
+          {
+            "type": "section",
+            "title": "mysec2",
+            "items": [
+              {
+                "title": "име",
+                "type": "section",
+                "items": [
+                  {
+                    "title": "малко име",
+                    "key": "name"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-tabobject-simple",
+    "range_values": {
+      "property1": {
+        "fee_name": "Такса Получаване",
+        "pgint": "hour",
+      },
+      "property2": {
+        "fee_name": "Такса Получаване",
+        "pgint": "second",
+      },
+      "momo": {
+        "fee_name": "Swag",
+        "pgint": "millennium",
+      }
+    },
+    "range_values123": {
+      "property1": {
+        "fee_name": "Такса Получаване123",
+      },
+      "property2": {
+        "fee_name": "Такса Получаване456",
+      },
+      "momo": {
+        "fee_name": "Swagerston",
+      }
+    }
+  }
+}

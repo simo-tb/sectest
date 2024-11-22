@@ -1,0 +1,138 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-select-advanced",
+    "type": "object",
+    "properties": {
+      "gender": {
+        "type": "string",
+        "title": "Gender",
+        "enum": [ "male", "female", "alien" ]
+      },
+      "gender2": {
+        "type": "string",
+        "title": "Gender",
+        "enum": [ "male", "female", "alien" ]
+      },
+      "ismale": {
+        "type": "boolean",
+        "title": "Are you male?"
+      },
+      "isfemale": {
+        "type": "boolean",
+        "title": "Are you female?"
+      },
+      "ispowered": {
+        "type": "boolean",
+        "title": "Is this computer turned on?",
+        "default": true,
+        "readOnly": true
+
+      },
+      "fieldset": {
+        "type": "array",
+        "maxItems": 3,
+        "title": "Choose the employee you want to hire",
+        "items": {
+          "type": "object",
+          "properties": {
+            "gender": {
+              "type": "string",
+              "title": "Employee gender",
+              "enum": [ "male", "female" ]
+            },
+            "age": {
+              "title": "Employee age",
+              "type": "string",
+              "enum": [ "18 - 30", "30 - 45", "45 - 60" ]
+            }
+          }
+        }
+      }
+    },
+    "required": ["gender2"]
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-select-advanced",
+    "jsonformVersion": "2.0",
+    "gridLayout": true,
+    "fields": [
+      {
+        "key": "gender",
+        "titleMap": {
+          "male": "Dude",
+          "female": "Dudette",
+          "alien": "I'm from outer space!"
+        }
+      },
+      {
+        "key": "gender2",
+        "title": "Gender re-ordered",
+        "options": {
+          "": "Please select",
+          "alien": "I'm from outer space!",
+          "male": "Dude",
+          "female": "Dudette"
+        }
+      },
+      {
+        "key": "ismale",
+        "type": "select",
+        "required": true
+      },
+      {
+        "key": "isfemale",
+        "type": "select",
+        "titleMap": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      {
+        "key": "ispowered",
+        "type": "select",
+        "titleMap": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      {
+        "type": "tabarray",
+        "key": "fieldset",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "title": "Employee gender",
+              "key": "fieldset[]/gender",
+              "type": "select"
+            },
+            {
+              "title": "Employee age group",
+              "key": "fieldset[]/age",
+              "type": "select"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-select-advanced",
+    "fieldset": [
+      {
+        "gender": "male",
+        "age": "30 - 45"
+      },
+      {
+        "gender": "female",
+        "age": "30 - 45"
+      }
+    ]
+  }
+}

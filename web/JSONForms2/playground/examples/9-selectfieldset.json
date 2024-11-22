@@ -1,0 +1,80 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "type": "object",
+    "properties": {
+      "connection": {
+        "anyOf": [
+          {
+            "title": "Outbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": [
+                  "outbound"
+                ]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "remote_ip": {
+                "title": "Remote IP",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "title": "Inbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": [
+                  "inbound"
+                ]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": "integer"
+              },
+              "whitelist": {
+                "title": "Whitelist",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "jsonformVersion": "2.0",
+    "fields": [
+      "*",
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "connection": {
+      "anyOfId": "inbound",
+      "whitelist": "Whitelist"
+    }
+  }
+}

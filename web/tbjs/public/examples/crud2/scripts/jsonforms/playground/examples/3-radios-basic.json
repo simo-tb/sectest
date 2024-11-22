@@ -1,0 +1,65 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/3-radios-basic",
+    "type": "object",
+    "properties": {
+      "language": {
+        "type": "string",
+        "title": "Best language",
+        "enum": [ "JavaScript", "Python", "PHP", "Perl", "Java", "C++", "Ruby", "Go" ]
+      },
+      "fantastic": {
+        "type": ["boolean", "null"],
+        "title": "Is it fantastic?"
+      },
+      "cool": {
+        "type": ["boolean", "null"],
+        "title": "Is it cool?"
+      },
+      "cool2": {
+        "type": "boolean",
+        "title": "Is it cool again?"
+      }
+    },
+    "required": ["language"]
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/3-radios-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "language",
+        "type": "radios"
+      },
+      {
+        "key": "fantastic",
+        "type": "radios",
+        "inline": true,
+        "toggleNextMap": {
+          "true": true
+        }
+      },
+      {
+        "key": "cool",
+        "type": "radios",
+        "titleMap": {
+          "false": "Not at all",
+          "true": "Very cool"
+        }
+      },
+      {
+        "key": "cool2",
+        "type": "radios",
+        "options": {
+          "false": "Not at all",
+          "true": "Very cool"
+        }
+      },
+      {
+        "title": "Submit",
+        "type": "submit"
+      }
+    ]
+  }
+}

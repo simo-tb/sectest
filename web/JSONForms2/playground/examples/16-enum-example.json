@@ -1,0 +1,61 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "type": "object",
+    "properties": {
+      "basic-enum": {
+        "type": "string",
+        "title": "Basic Enum",
+        "ordering": 100,
+        "enum": [
+          "Geography",
+          "Entertainment",
+          "History",
+          "Arts",
+          "Science",
+          "Sports"
+        ]
+      },
+      "enum-with-enumnames": {
+        "type": "number",
+        "ordering": 200,
+        "title": "Enum with EnumTitles",
+        "enum": [1, 2, 3],
+        "enumNames": ["Geography", "Arts", "Science"]
+      },
+      "enum-with-null": {
+        "type": ["string", "null"],
+        "title": "Enum with Nulls",
+        "ordering": 300,
+        "enum": ["Geography", "Arts", "Science"]
+      },
+      "enum-with-null-and-enumtitles": {
+        "type": ["number", "null"],
+        "title": "Enum with Null And EnumNames",
+        "ordering": 400,
+        "enum": [1, 2, 3],
+        "enumNames": ["Geography", "Arts", "Science"]
+      },
+      "enum-with-null-and-enumtitles-custom-null-for-some-reason": {
+        "type": ["number", "null"],
+        "title": "Enum with Null And EnumNames And CustomNullTitle",
+        "ordering": 500,
+        "enum": [1, 2, 3, null],
+        "enumNames": ["Geography", "Arts", "Science", "Null Value Title Custom"]
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset",
+    "jsonformVersion": "2.0",
+    "nullValueTitle": "Null Value Title",
+    "fields": [
+      "*",
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-inside-tabarray",
+    "type": "object",
+    "properties": {
+      "friends": {
+        "type": "array",
+        "title": "Friend",
+        "items": {
+          "title": "hello",
+          "type": "object",
+          "properties": {
+            "range_values123": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "properties": {
+                  "fee_name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-inside-tabarray",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "tabarray",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "title": "Fee Name",
+              "key": "friends[]/range_values123{}/fee_name"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+
+    ]
+  },
+
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-inside-tabarray",
+    "friends": [
+      {
+        "range_values123": {
+          "user_one": {
+            "fee_name": "cool"
+          },
+          "user_two": {
+            "fee_name": "cool2"
+          },
+          "user_three": {
+            "fee_name": "cool3"
+          },
+          "user_four": {
+            "fee_name": "cool4"
+          }  
+        }
+      },
+      {
+        "range_values123": {
+          "user_one1": {
+            "fee_name": "cool"
+          },
+          "user_two2": {
+            "fee_name": "cool2"
+          },
+          "user_three3": {
+            "fee_name": "cool3"
+          },
+          "user_four4": {
+            "fee_name": "cool4"
+          }  
+        }
+      }
+    ]
+  }
+}

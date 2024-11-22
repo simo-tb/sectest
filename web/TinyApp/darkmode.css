@@ -1,0 +1,888 @@
+.tinyapp-dark .container-fluid,
+.tinyapp-dark .nav_menu,
+.tinyapp-dark .navbar .navbar-default,
+.tinyapp-dark .tb-jf-root .tb-jf-node,
+.tinyapp-dark div.tab-pane,
+.tinyapp-dark .dark-mode-switch button,
+.tinyapp-dark .ls-styles .jumbotron,
+.tinyapp-dark .ls-styles .container-fluid .nav li ul,
+.tinyapp-dark select,
+.tinyapp-dark select>option,
+.tinyapp-dark .tb-jf-root div.tb-jf-input-class .items,
+.tinyapp-dark textarea,
+.tinyapp-dark div.selectize-dropdown-content>div, 
+.tinyapp-dark div.selectize-dropdown,
+.tinyapp-dark a.btn:not(.btn-success, .btn-secondary, .btn-danger, .btn-warning, .btn-primary, .btn-search, .btn-info),
+.tinyapp-dark table.table-striped>tbody>tr,
+.tinyapp-dark table.table-striped select,
+.tinyapp-dark table.table-striped textarea,
+.tinyapp-dark table.table-striped input,
+.tinyapp-dark .form-group .form-control,
+.tinyapp-dark table.table-striped>thead:not(.table-header, .original),
+.tinyapp-dark div#tb-jfp-form table.table-striped>tbody>tr,
+.tinyapp-dark table.table-striped>thead>tr.filter-row,
+.tinyapp-dark table.table-striped>thead>tr>th select,
+.tinyapp-dark table.table-striped>thead>tr>th select>option,
+.tinyapp-dark div.panel,
+.tinyapp-dark div.panel-heading,
+.tinyapp-dark .mce-container>div div.mce-menubar.mce-first,
+.tinyapp-dark .mce-container>div div.mce-flow-layout,
+.tinyapp-dark .bootstrap-datetimepicker-widget,
+.tinyapp-dark ul.nav>li.open ul.pull-right>li,
+.tinyapp-dark .selectize-dropdown>div.selectize-dropdown-content,
+.tinyapp-dark div.tb-dbr-api-dropdown,
+.tinyapp-dark div#tb-dbr-dropdown-export ul.dropdown-menu>li>a,
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu>table.table,
+.tinyapp-dark ul.dropdown-menu.checkbox-menu,
+.tinyapp-dark div.collapse.in,
+.tinyapp-dark div.collapsing,
+.tinyapp-dark div.collapse.in>div.panel-footer,
+.tinyapp-dark div.collapsing>div.panel-footer,
+.tinyapp-dark div.mce-menu,
+.tinyapp-dark div.mce-reset textarea,
+.tinyapp-dark div.mce-container-body.mce-abs-layout,
+.tinyapp-dark div.tb-os-container>ol.tb-os-select.tb-os-list,
+.tinyapp-dark div.tb-os-container>div.tb-os-container-list,
+.tinyapp-dark .tb-jf-root div.tb-jf-password-item-container>input,
+.tinyapp-dark .nav-tabs>li>a,
+.tinyapp-dark footer.hidden-print .pull-right .modal .modal-dialog .modal-content,
+.tinyapp-dark div.handsontable.htColumnHeaders table.htCore>tbody>tr>td,
+.tinyapp-dark div.selectize-dropdown div.selectize-dropdown-content>div,
+.tinyapp-dark ul.pagination>li.page-item>a,
+.tinyapp-dark div.modal-content,
+.tinyapp-dark div.modal-content .modal-header,
+.tinyapp-dark div.modal-content .modal-footer,
+.tinyapp-dark div.modal-content div.controls>span,
+.tinyapp-dark .tb-jf-root .input-group input,
+.tinyapp-dark .tb-jf-root .input-group span,
+.tinyapp-dark .right_col .row>h2.tb-notif-font-color.well,
+.tinyapp-dark .right_col .row>div>hr,
+.tinyapp-dark footer.hidden-print,
+.tinyapp-dark div.modal-content>div.modal-body>div>button,
+.tinyapp-dark input:not(#tb-tk-search-menu-input):not([disabled]),
+.tinyapp-dark td.data-cell button a.fa-check,
+.tinyapp-dark td.data-cell button.btn-default,
+.tinyapp-dark div.main_container h2.no-notifications,
+.tinyapp-dark div.tb-jf2-crud-fast-search div.tb-jf2-crud-compact-filters-operation select,
+.tinyapp-dark div.tb-jf2-crud-fast-search input.tb-jf2-crud-compact-filters-value-input {
+/*.tinyapp-dark .tb-jf-root div.controls div.tb-jf-input-class div.selectize-input input::placeholder {*/
+	background-color: #181a1b !important;	
+	border-color: #3e4446 !important;
+}
+
+.tinyapp-dark div.left_col.tb-tk-fixed-sidebar
+{
+	background-color: #2a3f54 !important;
+}
+
+
+
+.tinyapp-dark .mce-container, 
+.tinyapp-dark .mce-container *,
+.tinyapp-dark .mce-widget,
+.tinyapp-dark .mce-widget *,
+.tinyapp-dark .mce-resetr {
+	background: #181a1b !important;
+}
+
+.tinyapp-dark div.mce-container .mce-btn:hover, .tinyapp-dark div.mce-container .mce-btn.mce-active:hover, .tinyapp-dark div.mce-container .mce-btn.mce-active {
+	border-top-color: #35506b !important;
+	border-bottom-color: #35506b !important;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+}
+
+.tinyapp-dark footer.hidden-print {
+	border-bottom: 1px solid #3e4446 !important;
+}
+
+.tinyapp-dark ul.nav-tabs>li.active>a {
+    border-right: 6px solid #676767 !important;
+}
+
+.tinyapp-dark ul.bar_tabs>li.active {
+	border-right: 0;
+}
+
+.tinyapp-dark {
+    color-scheme: dark !important:
+}
+
+.tinyapp-dark div.modal-content>div.modal-body>div>button {
+    border: 1px solid #3e4446 !important;
+}
+
+.tinyapp-dark div.x_panel.tb-notification-box div.x_content div {
+	background-color: #ffffff !important;
+}
+
+.tinyapp-dark ul.editable-canvas-toolbar,
+.tinyapp-dark div.popup-content,
+.tinyapp-dark ul.toolbar-content-wrapper>li>a,
+.tinyapp-dark ul.toolbar-content-wrapper li.toolbar-item-range,
+.tinyapp-dark ul.toolbar-content-wrapper li.colorpicker-control,
+.tinyapp-dark ul.editable-canvas-toolbar input,
+.tinyapp-dark div.drawer-tool-mouse-tooltip {
+    background-color: black !important;
+}
+
+ul.toolbar-content-wrapper li.colorpicker-control {
+    margin-top: 2px;
+}
+
+.tinyapp-dark span.color-indicator {
+    border: 1px solid white;
+}
+
+.tinyapp-dark div#main-cont>div.modal.modal-hide-everything>div.modal-dialog>div.modal-content {
+	background-color: transparent !important;
+}
+
+.tinyapp-dark canvas:not(.lower-canvas, .upper-canvas) {
+	background: #292929 !important;
+	width: 300px;
+	height: 300px;
+}
+
+.tinyapp-dark .pager li>a {
+	background-color: #17191a !important;
+	border-color: #3a3e41 !important;
+}
+
+.tinyapp-dark div.table-responsive table.table-striped>thead.table-header.original>tr>th,
+.tinyapp-dark div.table-responsive table.table-striped>tbody>tr.tb-dbr-row-summary>td,
+.tinyapp-dark div.table-responsive table.table-striped>tbody>tr.tb-dbr-row-subsum>td,
+.tinyapp-dark div.handsontable.htColumnHeaders table.htCore>thead>tr>th {
+    background-color: #324252;
+}
+
+.tinyapp-dark .mce-btn i {
+	text-shadow: rgb(24, 26, 27) 1px 1px !important;
+	color: white !important;
+}
+
+.tinyapp-dark div.handsontable.htColumnHeaders table.htCore>thead>tr>th {
+	border: 1px solid #1f1f1f !important;
+}
+
+.tinyapp-dark div.table-responsive table.table-striped>thead.table-header.original>tr>th:not(:last-child),
+.tinyapp-dark div.table-responsive table.table-striped>tbody>tr.tb-dbr-row-summary>td:not(:last-child),
+.tinyapp-dark div.table-responsive table.table-striped>tbody>tr.tb-dbr-row-subsum>td:not(:last-child) {
+    border-right-color: #1f1f1f !important;
+    border-bottom-color: #1f1f1f !important;
+}  
+
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu>table.table>tbody>tr>th:hover,
+.tinyapp-dark input[type='file'].input,
+.tinyapp-dark label.mce-widget.mce-label.mce-abs-layout-item,
+.tinyapp-dark .mce-container span.mce-label {
+	color: white !important;
+}
+
+.fa-2x {
+	font-size: 1.3em;
+}
+
+.tinyapp-dark .main_container div ul.bar_tabs.hidden-print {
+	background-image: initial !important;
+	background-color: #1c1f20 !important;
+	border-bottom-color: #363b3d !important;
+}
+
+.tinyapp-dark div.tb-dbr-api-dropdown pre,
+.tinyapp-dark div.tb-dbr-cell-text-dropdown pre {
+	color: #c8c3bc;
+	background-color: #1e2021;
+	border-color: #3e4446;
+}
+
+.tinyapp-dark .main_container div.tb-tk-sidebar-header {
+	background-color: #2a3f54 !important;
+}
+
+.tinyapp-dark .selectize-input:after{
+	border-color: white transparent transparent transparent !important;
+}
+
+.tinyapp-dark .x_panel,
+.tinyapp-dark .form-control,
+.tinyapp-dark .selectize-input,
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu>table.table>tbody>tr>th,
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu>table.table>tbody>tr>td,
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu,
+.tinyapp-dark .table-bordered>tbody>tr>td,
+.tinyapp-dark .table-bordered>tbody>tr>th, 
+.tinyapp-dark .table-bordered>tfoot>tr>td,
+.tinyapp-dark .table-bordered>tfoot>tr>th, 
+.tinyapp-dark .table-bordered>thead>tr>td, 
+.tinyapp-dark .table-bordered>thead>tr>th,
+.tinyapp-dark .table-bordered,
+.tinyapp-dark div.tb-jf-plain-fieldset,
+.tinyapp-dark legend.tb-jf-legend,
+.tinyapp-dark ul.nav-tabs,
+.tinyapp-dark nav.navbar-default,
+.tinyapp-dark button.btn-default,
+.tinyapp-dark div.mce-container.mce-panel,
+.tinyapp-dark div.tb-os-container>div.tb-os-container-list>ol>li,
+.tinyapp-dark div.tb-os-container>div.tb-os-container-list>ol>li>span.tb-os-list-item-controls>button,
+.tinyapp-dark div.row div.x_panel div.tb-jf2-crud-fast-search {
+	border-color: #3e4446 !important;
+}
+
+.tinyapp-dark ul.tb-jf-array-uli>li.tb-jf-array-element {
+	background-color: #181a1b !important;
+	border-color: #3e4446 !important;
+}
+
+.tinyapp-dark .form-control[disabled],
+.tinyapp-dark .form-control[readonly],
+.tinyapp-dark .fieldset[disabled],
+.tinyapp-dark input.form-control[disabled],
+.tinyapp-dark input.form-control[readonly],
+.tinyapp-dark textarea.form-control[disabled],
+.tinyapp-dark textarea.form-control[readonly],
+.tinyapp-dark div.form-group input.form-control[data-locked="locked"] {
+    background-color: #3b3b3b !important;
+}
+
+.tinyapp-dark input.tb_descr_input_box,
+.tinyapp-dark input.tb-order-number,
+.tinyapp-dark button.tb-add-elements,
+.tinyapp-dark textarea {
+	border: 1px solid #4e4e4e !important;
+}
+
+.tinyapp-dark .ln_solid {
+	border-top: 1px solid #e5e5e5;
+	height: 1px;
+	border-top-color: #373c3e;
+	color: #e8e6e3;
+	background-color: #181a1b;
+}
+
+.tinyapp-dark .selectize-dropdown .active,
+.tinyapp-dark div#tb-dbr-dropdown-export ul.dropdown-menu>li>a:hover,
+.tinyapp-dark div.tb-dropdown-table div.dropdown-menu>table.table>tbody>tr:hover,
+.tinyapp-dark div.modal-content>div.modal-body>div>button:hover {
+	background-color: #2e3133 !important;
+}
+
+.tinyapp-dark td.data-cell button.btn-default:hover,
+.tinyapp-dark td.data-cell button a.fa-check:hover {
+    background-color: #555555 !important;
+}
+
+.tinyapp-dark td.data-cell button.btn-default:focus,
+.tinyapp-dark td.data-cell button a.fa-check:focus {
+    background-color: #555555 !important;
+}
+
+.tinyapp-dark .x_panel,
+.tinyapp-dark div#tb-dbr-dropdown-save-query>div.dropdown-menu,
+.tinyapp-dark .selectize-dropdown,
+.tinyapp-dark div.mce-menu-item {
+	background-color: #181a1b !important;
+}
+
+.tinyapp-dark,
+.tinyapp-dark a,
+.tinyapp-dark li:not(.active.in) a.draggable,
+.tinyapp-dark .nav_menu nav .navbar-brand,
+.tinyapp-dark .nav.navbar-nav>li>a,
+.tinyapp-dark .top_nav .nav .fa-bars,
+.tinyapp-dark .container .main_container .right_col small,
+.tinyapp-dark span.help-block,
+.tinyapp-dark .x_panel a#tb-dbr-show-hide-filters-link {
+	color: #e5e5e5 !important;
+}
+
+.tinyapp-dark .x_panel a#tb-dbr-show-hide-filters-link:hover{
+	font-weight: bold;
+	color: white !important;
+}
+
+.tinyapp-dark div.mce-reset>.mce-container-body>.mce-container>.mce-abs-layout.mce-container-body {
+	background-color: #111111 !important;
+	border-color: #3e4446 !important;
+}
+
+.tinyapp-dark div.mce-reset>div.mce-window-head {
+	background-color :#181a1b !important;
+	border-color: #3e4446 !important;
+}
+
+.tinyapp-dark div.mce-reset>div.mce-window-head>.mce-title {
+	color: #fff !important;
+}
+
+.tinyapp-dark .container .main_container .right_col {
+	background-color: /*#2a3f54*/ #292929 !important;
+	border-left: 2px solid #3e4446 !important;
+	color: #e5e5e5 !important;
+}
+
+.tinyapp-dark div.form-group button.btn.btn-default:hover {
+	background-color: #363636 !important;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody>tr>td>span.label-danger {
+	background-color: #942320 !important;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody>tr>td>span.label-warning {
+	background-color: #995f0d !important;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody>tr>td>span.label-default {
+	background-color: #5a6165 !important;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody>tr>td>span.label-success {
+	background-color: #4d853a !important;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody>tr>td>a {
+	color: #69a6d5 !important;
+	text-decoration-color: initial;
+}
+
+.tinyapp-dark div.jumbotron.table-responsive table.table>tbody,
+.tinyapp-dark div.jumbotron.table-responsive table.table>thead>tr>th {
+	border-color: #3a3e41 !important;
+}
+
+.tinyapp-dark textarea:focus {
+	-webkit-box-shadow: none;
+	outline: #3a3e41 !important;
+}
+
+.tinyapp-dark .top_nav .nav_menu .nav>li>a:hover,
+.tinyapp-dark select,gtgT
+.tinyapp-dark table.table-striped tbody tr div /*a.btn*/,
+.tinyapp-dark .ls-styles .container-fluid ul.nav>li a:hover,
+.tinyapp-dark .ls-styles .container-fluid ul.nav>li.active>a:hover,
+.tinyapp-dark .ls-styles .container-fluid ul.nav li a:focus,
+.tinyapp-dark ul.nav>li.open ul.pull-right>li>a:hover,
+.tinyapp-dark ul.nav>li.open>a:focus,
+.tinyapp-dark .selectize-control .selectize-input>div>a.remove,
+.tinyapp-dark .top_nav .nav>li>a:focus .fa-envelope,
+.tinyapp-dark .top_nav .nav>li>a:focus .fa-user,
+.tinyapp-dark .top_nav .nav>li>a:focus,
+.tinyapp-dark input#tb-tk-search-menu-input {
+	color: black !important;
+}
+
+.tinyapp-dark .top_nav .nav .open>a, 
+.tinyapp-dark .top_nav .nav .open>a:focus, 
+.tinyapp-dark .top_nav .nav .open>a:hover, 
+.tinyapp-dark .top_nav .nav>li>a:focus, 
+.tinyapp-dark .top_nav .nav>li>a:hover,
+.tinyapp-dark .dropdown-menu>li>a:focus, 
+.tinyapp-dark .dropdown-menu>li>a:hover {
+    background: #8a8a8a;
+}
+
+.tinyapp-dark .top_nav .nav>li>a:hover {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.tinyapp-dark .ls-styles .navbar .navbar-nav li.active a {
+	background-color: #292929 !important;
+	color: black !important; 
+}
+
+.tinyapp-dark tr.jsoneditor-highlight,
+.tinyapp-dark div.jsoneditor-field[contenteditable=true]:hover,
+.tinyapp-dark div.jsoneditor-field[contenteditable=true]:focus,
+.tinyapp-dark div.jsoneditor-navigation-bar {
+	background-color: black !important;
+} 
+
+.tinyapp-dark div.jsoneditor-value.jsoneditor-string {
+	color: #03ddff;
+}
+
+.tinyapp-dark div.jsoneditor-field.jsoneditor-highlight,
+.tinyapp-dark div.jsoneditor-value.jsoneditor-highlight {
+	background-color: black !important;
+	border: 1px solid #696905 !important;
+}
+
+.tinyapp-dark div.jsoneditor-tree button:focus {
+	background-color: #ff5400 !important;
+	outline: #000000 solid 1px !important;
+}
+
+.tinyapp-dark div.jsoneditor-menu {
+	background-color: #005f89 !important;
+	border-bottom: 1px solid black !important;
+}
+
+.tinyapp-dark table.jsoneditor-search div.jsoneditor-frame {
+	background-color: #151515 !important;
+}
+
+.tinyapp-dark div.jsoneditor {
+}
+
+.tinyapp-dark .ls-styles .container-fluid ul.nav>li.active>a {
+	color: #b2aca2 !important;
+}
+
+.tinyapp-dark .ls-styles .container-fluid div.collapse ul.navbar-nav>li.active>a {
+	background-color : #2c3032 !important;
+	background-image: none !important;
+}
+
+.tinyapp-dark textarea {
+	outline-color: #696969;
+}
+
+.tinyapp-dark ul.bar_tabs>li.active>a {
+	border-right: 6px solid #676767 !important;
+}
+
+.tinyapp-dark ul.bar_tabs>li {
+	border-left-color: #363b3d !important;
+	border-top-color: #363b3d !important;
+	border-right-color: #363b3d !important;
+}
+
+/*
+.tinyapp-dark div.table-responsive table.table-striped>tbody>tr:nth-of-type(odd),
+.tinyapp-dark div#tb-jfp-form table.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #223547 !important;
+}*/
+
+.tinyapp-dark table.table-striped input,
+.tinyapp-dark table.table-striped input,
+.tinyapp-dark table.table-striped select,
+.tinyapp-dark table.table-striped select>option,
+.tinyapp-dark table.table-striped textarea,
+.tinyapp-dark div.panel,
+.tinyapp-dark div.panel-heading,
+.tinyapp-dark .form-group .form-control,
+.tinyapp-dark a.btn,
+.tinyapp-dark select,
+.tinyapp-dark .tb-jf-root div.tb-jf-input-class .items,
+.tinyapp-dark input,
+.tinyapp-dark textarea,
+.tinyapp-dark div.selectize-dropdown-content>div,
+.tinyapp-dark div.tb-dbr-filter-row div.form-group input,
+.tinyapp-dark div.selectize-input,
+.tinyapp-dark div.selectize-dropdown>div.selectize-dropdown-content,
+.tinyapp-dark .daterangepicker div.ranges ul>li,
+.tinyapp-dark .daterangepicker .calendar-table>table.table-condensed>thead>tr>th>select,
+.tinyapp-dark .daterangepicker .calendar-time>select,
+.tinyapp-dark .daterangepicker .drp-buttons button.cancelBtn,
+.tinyapp-dark .bootstrap-datetimepicker-widget,
+.tinyapp-dark div.selectize-control div.selectize-input,
+.tinyapp-dark div.form-group div.hidden-print>input,
+.tinyapp-dark div.tb-dbr-range-input-wrapper>input,
+.tinyapp-dark div.x_panel .form-horizontal input,
+.tinyapp-dark div.x_panel .form-horizontal select,
+.tinyapp-dark div.x_panel .form-horizontal textarea,
+.tinyapp-dark div.form-group button,
+.tinyapp-dark .bootstrap-datetimepicker-widget td.day:hover,
+.tinyapp-dark .bootstrap-datetimepicker-widget th:hover,
+.tinyapp-dark .mce-container .mce-container>div>div>button>span,
+.tinyapp-dark .mce-container .mce-container>div>div>button>i,
+.tinyapp-dark div#tb-dbr-dropdown-save-query>div.dropdown-menu,
+.tinyapp-dark .selectize-dropdown>div.selectize-dropdown-content,
+.tinyapp-dark ul.dropdown-menu.checkbox-menu>li>label,
+.tinyapp-dark .selectize-dropdown .active,
+.tinyapp-dark .div#tb-customization-mode-message>span,
+.tinyapp-dark .tb-jf-root .in.active>a,
+.tinyapp-dark div.mce-menu-item .mce-ico,
+.tinyapp-dark div.mce-menu-item>span,
+.tinyapp-dark .ls-styles div.container-fluid div.row div#modules-tabs ul.nav-tabs>li>a:hover,
+.tinyapp-dark div.mce-reset textarea,
+.tinyapp-dark div.tb-os-container>ol.tb-os-select.tb-os-list>li>span,
+.tinyapp-dark ul.pager li>a,
+.tinyapp-dark .ls-styles .container-fluid div.collapse ul.navbar-nav>li>a:hover,
+.tinyapp-dark div.tb-os-container>div.tb-os-container-list>ol>li,
+.tinyapp-dark footer.hidden-print .pull-right .modal .modal-dialog .modal-content>button>span,
+.tinyapp-dark .nav-tabs>li>a,
+.tinyapp-dark div.selectize-dropdown div.selectize-dropdown-content>div,
+.tinyapp-dark div.handsontable.htColumnHeaders table.htCore>tbody>tr>td,
+.tinyapp-dark div.handsontable.htColumnHeaders table.htCore>thead>tr>th,
+.tinyapp-dark .tb-notif-font-color,
+.tinyapp-dark button.btn-secondary,
+.tinyapp-dark ul.pagination>li.page-item>a,
+.tinyapp-dark .tb-jf-root .input-group span, 
+.tinyapp-dark div.tb-jf2-crud-fast-search div.tb-jf2-crud-compact-filters-operation select,
+.tinyapp-dark div.tb-jf2-crud-fast-search input.tb-jf2-crud-compact-filters-value-input,
+.tinyapp-dark div.jsoneditor-field,
+.tinyapp-dark div.jsoneditor-navigation-bar,
+.tinyapp-dark div.jsoneditor .jsoneditor-search input,
+.tinyapp-dark ul.editable-canvas-toolbar i,
+.tinyapp-dark table.table tr td button:not(.btn),
+.tinyapp-dark div.modal-content>div.modal-body>div>button,
+.tinyapp-dark .datepicker .day,
+.tinyapp-dark .datepicker .prev,
+.tinyapp-dark .datepicker .picker-switch,
+.tinyapp-dark .datepicker .next,
+.tinyapp-dark .datepicker .month,
+.tinyapp-dark .datepicker .year,
+.tinyapp-dark .datepicker .decade,
+.tinyapp-dark .daterangepicker .hourselect,
+.tinyapp-dark .daterangepicker .hourselect option,
+.tinyapp-dark .daterangepicker .minuteselect,
+.tinyapp-dark .daterangepicker .minuteselect option,
+.tinyapp-dark .daterangepicker .secondselect,
+.tinyapp-dark .daterangepicker .secondselect option,
+.tinyapp-dark .timepicker .timepicker-hour,
+.tinyapp-dark .timepicker .timepicker-minute,
+.tinyapp-dark .timepicker .timepicker-second,
+.tinyapp-dark .timepicker .separator,
+.tinyapp-dark .timepicker .hour,
+.tinyapp-dark .timepicker .minute,
+.tinyapp-dark .timepicker .second {
+	color: white !important;
+}
+
+.tinyapp-dark table.table tr td button:not(.btn) {
+    background-color: #373737;
+}
+
+.tinyapp-dark img#qrcode-url {
+	padding: 10px;
+	background-color: white;
+}
+
+.tinyapp-dark h4.x_title.tb-notif-font-color {
+	color: #00b3dc !important;
+}
+
+.tinyapp-dark .ls-styles div.container-fluid div.row div#modules-tabs ul.nav-tabs>li:not(.active)>a {
+	color: #69a6d5 !important;
+	border: 1px solid #181a1b00 !important;
+}
+
+.tinyapp-dark .ls-styles .container-fluid div.collapse ul.navbar-nav>li>a:focus {
+	background-color: #2b2f31 !important;
+	color: #b2aca2 !important;
+	background-image: none; 
+}
+
+.tinyapp-dark .ls-styles .container-fluid div.collapse ul.navbar-nav>li>a {
+	background-color: #181a1b !important;
+	background-image: none;
+}
+
+.tinyapp-dark .ls-styles div.container-fluid div.row div#modules-tabs ul.nav-tabs>li:not(.active) {
+	border: none;
+}
+
+.tinyapp-dark div.tb-os-container>ol.tb-os-select.tb-os-list>li.tb-os-list-item-active {
+	background-color: #006da3;
+}
+
+.tinyapp-dark div.mce-menu-item-sep {
+	border-bottom: 1px solid #35506b !important;
+}
+
+.tinyapp-dark .mce-container .mce-container>div>div>button>i {
+	border-top-color: white !important;
+}
+
+.tinyapp-dark div.table-responsive table.table-hover>tbody>tr:hover,
+.tinyapp-dark div.selectize-dropdown-content>div:hover,
+.tinyapp-dark div.tb-os-container>ol.tb-os-select.tb-os-list>li:hover,
+.tinyapp-dark ul.pagination>li.page-item>a[onclick]:hover,
+.tinyapp-dark div.tb-os-container>div.tb-os-container-list>ol>li:hover,
+.tinyapp-dark div.selectize-dropdown div.selectize-dropdown-content>div:hover {
+	background-color: #131313 !important;
+}
+
+.tinyapp-dark .datepicker .day:hover,
+.tinyapp-dark .datepicker .prev:hover,
+.tinyapp-dark .datepicker .picker-switch:hover,
+.tinyapp-dark .datepicker .next:hover,
+.tinyapp-dark .datepicker .month:hover,
+.tinyapp-dark .datepicker .year:hover,
+.tinyapp-dark .datepicker .decade:hover,
+.tinyapp-dark .bootstrap-datetimepicker-widget .glyphicon-calendar:hover,
+.tinyapp-dark .bootstrap-datetimepicker-widget .glyphicon-time:hover,
+.tinyapp-dark .timepicker .timepicker-hour:hover,
+.tinyapp-dark .timepicker .timepicker-minute:hover,
+.tinyapp-dark .timepicker .timepicker-second:hover,
+.tinyapp-dark .timepicker .hour:hover,
+.tinyapp-dark .timepicker .minute:hover,
+.tinyapp-dark .timepicker .second:hover {
+    background-color: #313131;
+}
+
+.tinyapp-dark .bootstrap-datetimepicker-widget table td span:hover {
+    background-color: #eeeeee00;
+}
+
+.tinyapp-dark .timepicker a.btn > span:hover {
+    background-color: #313131 !important;
+}
+
+.tinyapp-dark a.btn:has(span.glyphicon), 
+.tinyapp-dark .daterangepicker .calendar-table {
+    border: 0;
+}
+
+.tinyapp-dark .daterangepicker div.ranges ul>li:hover,
+.tinyapp-dark .daterangepicker .prev:hover,
+.tinyapp-dark .daterangepicker .next:hover,
+.tinyapp-dark .daterangepicker .calendar-table>table>tbody>tr>td:hover {
+	background-color: #414141 !important;
+}
+
+.tinyapp-dark a.crud-customizable.col-non-customized {
+	color: #5cb85c !important;
+}
+
+.tinyapp-dark .daterangepicker th.available span {
+	border: solid white;
+	border-width: 0 2px 2px 0;
+} 
+
+.tinyapp-dark select.crud-customizable.col-non-customized {
+    border: 1px solid #5cb85c !important;
+    color: #5cb85c !important;
+}
+
+.tinyapp-dark select.crud-customizable.col-non-customized > option {
+	color: #5cb85c !important;
+}
+
+.tinyapp-dark a.crud-customizable.col-customized {
+	color: orange !important;
+}
+
+.tinyapp-dark select.crud-customizable.col-customized {
+    border: 1px solid orange !important;
+    color: orange !important;
+}
+
+.tinyapp-dark select.crud-customizable.col-customized > option {
+	color: orange !important;
+}
+
+.tinyapp-dark .daterangepicker td.off,
+.tinyapp-dark .daterangepicker td.off.in-range,
+.tinyapp-dark .daterangepicker td.off.start-date,
+.tinyapp-dark .daterangepicker td.off.end-date {
+	background-color: #595959;
+	color: #fff;
+}
+
+.tinyapp-dark .daterangepicker td.in-range {
+	background-color: #112832;
+	color: #fff;
+}
+
+.tinyapp-dark .pull-right button.btn-sm.btn-light {
+	color: #61caff !important;
+	background-color: #181a1b !important;
+}
+
+.tinyapp-dark button.btn-warning {
+	background-color: #995f0d;
+	border-color: #9a600d;
+	color: #e8e6e3;
+}
+
+.tinyapp-dark button.btn-warning:hover {
+	background-color: #c38e44;
+}
+
+.tinyapp-dark div#tb-dbr-dropdown-save-query>div.dropdown-menu>table>tbody>tr:hover{
+	color: #d0ccc6;
+	background-color 1px solid: #1e2021;
+}
+
+/*
+.tinyapp-dark .tb-jf-root div.controls>div.momo>input,
+.tinyapp-dark .tb-jf-root div.controls>div.row>input,
+.tinyapp-dark .tb-jf-root div.controls>input,
+.tinyapp-dark .tb-jf-root div.tb-os-container>div>input,
+.tinyapp-dark .tb-jf-root .in.active>a {
+    background-color: #181a1b !important;
+    border-top: 2px solid #242424 !important;
+    border-left: 2px solid #242424 !important;
+    border-right: 2px solid #242424 !important;
+    border-bottom: 2px solid #242424 !important;
+}
+*/
+
+/*.tinyapp-dark select:disabled,
+.tinyapp-dark input:disabled,*/
+.tinyapp-dark button.btn-secondary {
+    background-color: #3b3b3b !important;
+}
+
+/*
+.tinyapp-dark .tb-jf-root select:disabled,
+.tinyapp-dark .tb-jf-root div.controls>div.momo>input:disabled,
+.tinyapp-dark .tb-jf-root div.controls>div.row>input:disabled,
+.tinyapp-dark .tb-jf-root div.controls>input:disabled,
+.tinyapp-dark button.btn-secondary {
+    background-color: #3b3b3b !important;
+}
+*/
+
+.tinyapp-dark button.btn-secondary:hover {
+	background-color: #292929 !important;
+}
+
+.tinyapp-dark div.table-responsive table.table-striped>thead>tr>th input,
+.tinyapp-dark div.controls :not(.tb-jf-input-class) :not(.selectize-input) input,
+.tinyapp-dark div.form-group input,
+.tinyapp-dark div.selectize-input,
+.tinyapp-dark div.selectize-dropdown>div.selectize-dropdown-content,
+.tinyapp-dark div.tb-dbr-additional-filters .form-group div.selectize-input,
+.tinyapp-dark .daterangepicker .calendar-table,
+.tinyapp-dark .daterangepicker,
+.tinyapp-dark .daterangepicker .calendar-table>table.table-condensed>thead>tr>th>select,
+.tinyapp-dark .daterangepicker .calendar-time>select,
+.tinyapp-dark .daterangepicker .drp-buttons button.cancelBtn,
+.tinyapp-dark div.selectize-control div.selectize-input,
+.tinyapp-dark div.form-group div.hidden-print>input,
+.tinyapp-dark div.tb-dbr-range-input-wrapper>input,
+.tinyapp-dark div.x_panel .form-horizontal input,
+.tinyapp-dark div.x_panel .form-horizontal select,
+.tinyapp-dark div.x_panel .form-horizontal textarea,
+.tinyapp-dark div.form-group button:not(.btn-primary, .btn-secondary, .btn-warning, .btn-danger, .btn-search, .btn-success, .btn-info, .tb-os-btn-danger, .tb-os-btn-warning),
+.tinyapp-dark  {
+	background-color: #181a1b !important;
+}
+
+.tinyapp-dark .ls-styles .container-fluid .nav li a:hover,
+.tinyapp-dark table.jsoneditor-search div.jsoneditor-frame {
+	background-color: #292929 !important;
+}
+
+.tinyapp-dark li:not(.active.in) a.draggable:hover {
+	background-color: #696969;
+	border-color: #242424 #242424 #242424 transparent;
+	transition: 0.4s;
+}
+
+.tinyapp-dark li:not(.active.in) a.draggable:hover span {
+	color: white !important;
+	transition: 0.4s;
+}
+
+.tinyapp-dark div.selectize-dropdown-content {
+	padding: 0 !important;
+}
+
+.dark-mode-switch {
+	margin-top: 1.3rem;
+}
+
+.dark-mode-switch:hover {
+	opacity: 60%;
+    transition: 0.3s;
+}
+
+.dark-mode-switch button {
+	margin-top: 0.5rem;
+	border: 0;
+}
+
+.tinyapp-dark::-webkit-scrollbar, 
+.tinyapp-dark select::-webkit-scrollbar, 
+.tinyapp-dark textarea::-webkit-scrollbar, 
+.tinyapp-dark input::-webkit-scrollbar, 
+.tinyapp-dark div::-webkit-scrollbar,
+.tinyapp-dark table::-webkit-scrollbar, 
+.tinyapp-dark .selectize-dropdown-content::-webkit-scrollbar,
+.tinyapp-dark div#tb-api-params-modal::-webkit-scrollbar,
+.tinyapp-dark div.tb-dbr-api-dropdown pre::-webkit-scrollbar,
+.tinyapp-dark div.tb-dbr-cell-text-dropdown pre::-webkit-scrollbar,
+.tinyapp-dark ol.tb-os-select::-webkit-scrollbar {
+	background-color: #202324;
+	color: #aba499;
+}
+
+.tinyapp-dark::-webkit-scrollbar-corner, 
+.tinyapp-dark select::-webkit-scrollbar-corner, 
+.tinyapp-dark textarea::-webkit-scrollbar-corner, 
+.tinyapp-dark input::-webkit-scrollbar-corner,
+.tinyapp-dark div::-webkit-scrollbar-corner, 
+.tinyapp-dark table::-webkit-scrollbar-corner, 
+.tinyapp-dark .selectize-dropdown-content::-webkit-scrollbar-corner,
+.tinyapp-dark div#tb-api-params-modal::-webkit-scrollbar-corner,
+.tinyapp-dark div.tb-dbr-api-dropdown pre::-webkit-scrollbar-corner,
+.tinyapp-dark div.tb-dbr-cell-text-dropdown pre::-webkit-scrollbar-corner,
+.tinyapp-dark ol.tb-os-select::-webkit-scrollbar-corner { 
+	background-color: #181a1b;
+}
+
+.tinyapp-dark::-webkit-scrollbar-thumb, 
+.tinyapp-dark select::-webkit-scrollbar-thumb, 
+.tinyapp-dark textarea::-webkit-scrollbar-thumb, 
+.tinyapp-dark input::-webkit-scrollbar-thumb,
+.tinyapp-dark div::-webkit-scrollbar-thumb, 
+.tinyapp-dark table::-webkit-scrollbar-thumb, 
+.tinyapp-dark .selectize-dropdown-content::-webkit-scrollbar-thumb,
+.tinyapp-dark div.tb-dbr-api-dropdown pre::-webkit-scrollbar-thumb,
+.tinyapp-dark div.tb-dbr-cell-text-dropdown pre::-webkit-scrollbar-thumb,
+.tinyapp-dark ol.tb-os-select::-webkit-scrollbar-thumb {
+	background-color: #696969;
+}
+
+.tinyapp-dark form#tb-dbr-filters div.form-group div.tb-dbr-api-dropdown-container div#tb-api-params-modal::-webkit-scrollbar-thumb {
+	background-color: #c5c5c5 !important;
+}
+
+.tinyapp-dark div.tb-dbr-api-dropdown div#tb-api-params-modal {
+	background-color: #999999 !important;
+}
+
+.tinyapp-dark .mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #898989 !important;
+	color: #898989 !important;
+}
+
+.tinyapp-bg-red {
+    background-color: #fb928f;
+}
+
+.tinyapp-dark .tinyapp-bg-red {
+    background-color: #f52923 !important;
+}
+
+.tinyapp-bg-green {
+    background-color: #86d17d;
+}
+
+.tinyapp-dark .tinyapp-bg-green {
+    background-color: #317e29 !important;
+}
+
+.tinyapp-dark .has-error .control-label,
+.tinyapp-dark span.tb-jf-errortext {
+    color: #a94442 !important;
+}
+
+.tinyapp-dark .has-error .form-control {
+    border-color: #a94442 !important;
+}
+
+.tinyapp-dark .footer {
+    background-color: #181a1b !important;
+    border-color: #3e4446 !important;
+}
+
+.tinyapp-dark .border-bottom-thin {
+	border-bottom: 1px ridge orange;
+}
+
+.tinyapp-dark .modal-round-border {
+	border: 1px solid orange;
+	border-radius: 10px;
+}
+
+/*.tinyapp-dark div.selectize-control>div.selectize-input.locked {
+	cursor: not-allowed;
+	background-color: gray !important;
+}*/

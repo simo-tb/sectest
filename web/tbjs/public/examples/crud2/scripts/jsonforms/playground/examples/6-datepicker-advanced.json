@@ -1,0 +1,68 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-advanced",
+    "type": "object",
+    "properties": {
+      "contractstartdate": {
+        "type": "string"
+      },
+      "contractenddate": {
+        "type": "string"
+      },
+      "startdate": {
+        "type": "string"
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "title": "Начална дата на договора",
+        "description": "датите между 2011-01-01 и 2011-01-04 са забранени. Inline поле за избор вместо popup поле.",
+        "key": "contractstartdate",
+        "type": "datepicker",
+        "pluginoptions": {
+          "minDate": "2010-10-10",
+          "maxDate": "2015-01-01",
+          "disabledDates": ["2011-01-01", "2011-01-02", "2011-01-03", "2011-01-04"],
+          "inline": true
+        }
+      },
+      {
+        "title": "Крайна дата на договора",
+        "description": "всички дати с изключение на тези между 2011-01-01 и 2011-01-04 са забранени",
+        "key": "contractenddate",
+        "type": "datepicker",
+        "pluginoptions": {
+          "minDate": "2016-01-01",
+          "maxDate": "2016-01-10",
+          "enabledDates": ["2016-01-01", "2016-01-02", "2016-01-03", "2016-01-04"]
+        }
+      },
+      {
+        "title": "Първи работен ден",
+        "description": "всички дати с изключение на събота и неделя",
+        "key": "startdate",
+        "type": "datepicker",
+        "pluginoptions": {
+          "minDate": "2016-01-01",
+          "maxDate": "2016-10-10",
+          "daysOfWeekDisabled": [0,6],
+          "showClear": true
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/6-datepicker-advanced",
+    "contractstartdate": "2013-10-01"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/simple-table",
+    "type": "object",
+    "properties": {
+      "eur": {
+        "type": "object",
+        "title": "EUR",
+
+        "properties": {
+          "range_values": {
+            "type": "array",
+            "title": "Range Values title",
+            "items": {
+              "type": "object",
+              "title": "My range values",
+              "properties": {
+                "fee_name": {
+                  "title": "Name of user!",
+                  "type": "string"
+                },
+                "fee_img": {
+                  "type": "string",
+                  "title": "File to upload",
+                  "format": "base64file",
+                  "fileMimeTypes": ["image/png", "image/jpg", "image/gif", "image/jpeg"],
+                  "maxLength": 2000000,
+                  "filePreviewHeight": 200
+                },
+                "fee_img2": {
+                  "type": "string",
+                  "title": "File to upload",
+                  "format": "base64file",
+                  "fileMimeTypes": ["image/png", "image/jpg", "image/gif", "image/jpeg"],
+                  "maxLength": 2000000
+                },
+                "pgint": {
+                  "type": "string",
+                  "title": "PGTime Interval",
+                  "format": "pgtimeinterval"
+                }
+              }
+            }
+          }
+        }
+      },
+      "eur2": {
+        "type": "object",
+        "title": "EUR",
+
+        "properties": {
+          "range_values": {
+            "type": "array",
+            "title": "Range Values title",
+            "items": {
+              "type": "object",
+              "title": "My range values",
+              "properties": {
+                "fee_name": {
+                  "title": "Name of user!",
+                  "type": "string"
+                },
+                "fee_img": {
+                  "type": "string",
+                  "title": "File to upload",
+                  "format": "base64file",
+                  "fileMimeTypes": ["image/png", "image/jpg", "image/gif", "image/jpeg"],
+                  "maxLength": 2000000,
+                  "filePreviewHeight": 200
+                },
+                "fee_img2": {
+                  "type": "string",
+                  "title": "File to upload",
+                  "format": "base64file",
+                  "fileMimeTypes": ["image/png", "image/jpg", "image/gif", "image/jpeg"],
+                  "maxLength": 2000000
+                },
+                "pgint": {
+                  "type": "string",
+                  "title": "PGTime Interval",
+                  "format": "pgtimeinterval"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/simple-table",
+    "jsonformVersion": "2.0",
+    "required": true,
+    "fields": [
+      {
+        "title": "EUR fees",
+        "type": "table",
+        "key": "eur/range_values",
+        "items": {
+          "type": "tablerow",
+          "items": [
+            {
+              "title": "Fee Name",
+              "key": "eur/range_values[]/fee_name"
+            },
+            {
+              "title": "Fee image",
+              "key": "eur/range_values[]/fee_img"
+            },
+            {
+              "title": "Fee image2",
+              "key": "eur/range_values[]/fee_img2"
+            },
+            {
+              "key": "eur/range_values[]/pgint",
+              "title": "PostgreSQL101",
+              "type": "pgtimeinterval"
+            }
+          ]
+        }
+      },
+      {
+        "title": "EUR fees duplicate",
+        "type": "table",
+        "key": "eur2/range_values",
+        "items": {
+          "type": "tablerow",
+          "items": [
+            {
+              "title": "Fee Name",
+              "key": "eur2/range_values[]/fee_name"
+            },
+            {
+              "title": "Fee image",
+              "key": "eur2/range_values[]/fee_img"
+            },
+            {
+              "title": "Fee image2",
+              "key": "eur2/range_values[]/fee_img2"
+            },
+            {
+              "key": "eur2/range_values[]/pgint",
+              "title": "PostgreSQL101",
+              "type": "pgtimeinterval"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "eur": {
+      "range_values": [
+        {
+          "fee_name": "AAA",
+          "pgint": null
+        }
+      ]
+    }
+  }
+}

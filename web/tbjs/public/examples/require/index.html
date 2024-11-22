@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Require.JS</title>
+</head>
+<body>
+
+    <!--    <script src="./bower_components/requirejs/require.js" data-main="./scripts/config"></script> -->
+    <script src="./bower_components/lodash/lodash.js"></script>
+    <script src="./scripts/tbjs/js/tb.core.js"></script>
+    <script src="./scripts/tbjs/js/tb.xerrors.js"></script>
+    <script src="./scripts/tbjs/js/tb.request.js"></script>
+    <script src="./scripts/tbjs/js/tb.file.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+    <input id="input-file" type="file" />
+    <script type="text/javascript">
+        // var a = TB.parseQueryParams();
+        //
+        //
+        // window.addEventListener('error', function(e) {
+        //   console.info(e.error.errData)
+        //   alert(45)
+        // });
+        //
+        // ASSERT(0);
+        //
+        //
+        document.querySelector('#input-file').addEventListener('change', function() {
+          TB.File.loadFiles([document.querySelector('#input-file').files[0]])
+            .then(function(result) {
+              console.log(result)
+            })
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-egn-basic",
+    "type": "object",
+    "properties": {
+      "mo~od": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "title": "EGN",
+            "format": "egn"
+          }
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-egn-basic",
+    "fields": {
+      "field_0": {
+        "key": "mo~od",
+        "ordering": 10
+      },
+      "field_1": {
+        "type": "submit",
+        "title": "Submit",
+        "ordering": 20
+      }
+    },
+    "jsonformVersion": "2.0"
+  }
+}

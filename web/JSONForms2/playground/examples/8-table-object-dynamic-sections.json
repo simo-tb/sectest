@@ -1,0 +1,68 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-dynamic-sections",
+    "type": "object",
+    "properties": {
+      "car": {
+        "type": "object",
+        "properties": {
+          "engine": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "age": {
+          "type": "number",
+          "title": "Age"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        }
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/8-table-object-dynamic-sections",
+    "fields": [
+      {
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "title": "The Car",
+            "items": [
+              "car/engine"
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              "{}/age",
+              "{}/name"
+            ],
+            "isTemplateField": true
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "Go"
+      }
+    ],
+    "jsonformVersion": "2.0"
+  },
+  "content": {
+    "car": {
+      "engine": "powerful"
+    },
+    "simo": {
+      "name": "Simo",
+      "age": 20
+    }
+  }
+}

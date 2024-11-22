@@ -1,0 +1,192 @@
+<!--&html_start()-->
+<!doctype html>
+<html class="no-js ls-styles" lang="en">
+<!--/&html_start-->
+<!--&head_start()-->
+<head>
+  <meta charset="utf-8">
+
+  <title>JSON Form</title>
+  <style>
+    .container {
+      margin-top: 7rem;
+    }
+  </style>
+  <link rel="stylesheet" href="./deps/opt/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./deps/opt/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./style.css">
+<!--/&head_start-->
+
+  <!--&bootstrap_datetimepicker_css()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/datepicker/bootstrap-datetimepicker.min.css" />
+  <!--/&bootstrap_datetimepicker_css-->
+  <!--&selectize_bootstrap3_css()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/selectize/selectize.bootstrap3.css" />
+  <!--/&selectize_bootstrap3_css-->
+  <!--&jsonform_head()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/orderedselect/jquery.orderedselect.css" />
+  <!--/&jsonform_head-->
+<!--&head_end()-->
+</head>
+<!--/&head_end-->
+<!--&body_start()-->
+<body>
+<!--/&body_start-->
+  <!--&jsonform()-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a id="tb-jfp-title" class="navbar-brand"></a>
+      </div>
+
+      <form class="navbar-form navbar-right" role="search">
+        <button id="tb-jfp-btn-submit" class="btn btn-primary">
+          Submit
+        </button>
+        <button id="tb-jfp-btn-cancel" class="btn btn-danger">
+          Cancel
+        </button>
+      </form>
+
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div id="tb-jfp-msgs"></div>
+    <div id="tb-jfp-form"></div>
+  </div>
+  <!--/&jsonform-->
+
+  <!--&jquery_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/jquery.min.js"></script>
+  <!--/&jquery_js-->
+  <!--&jquery_ui_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/jqueryui/jquery.ui.custom.js"></script>
+  <!--/&jquery_ui_js-->
+  <!--&lodash_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/lodash4.min.js"></script>
+  <!--/&lodash_js-->
+  <!--&ajv_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/json-validators/ajv.min.js"></script>
+
+  <script type="text/javascript" src="./pub/jsonforms2/deps/scripts/ajv2tb.js"></script>
+  <!--/&ajv_js-->
+  <!--&ajv2tb_js()-->
+  <!--/&ajv2tb_js-->
+  <!--&moment_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/moment/min/moment.min.js"></script>
+  <!--/&moment_js-->
+  <!--&bootstrap_datetimepicker_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/datepicker/bootstrap-datetimepicker.js"></script>
+  <!--/&bootstrap_datetimepicker_js-->
+  <!--&tinymce_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/tinymce/tinymce.min.js"></script>
+  <!--/&tinymce_js-->
+  <!--&selectize_js()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/selectize/selectize.js"></script>
+  <!--/&selectize_js-->
+
+
+  <!--&jsonform_scripts()-->
+  <script type="text/javascript" src="./pub/jsonforms2/deps/tbjs/js/tb.core.js"></script>
+  <script type="text/javascript" src="./pub/jsonforms2/deps/tbjs/js/tb.xerrors.js"></script>
+  <script type="text/javascript" src="./pub/jsonforms2/deps/tbjs/js/tb.request.js"></script>
+  <script type="text/javascript" src="./pub/jsonforms2/deps/tbjs/js/tb.service.js"></script>
+
+  <script type="text/javascript" src="./pub/jsonforms2/deps/opt/orderedselect/jquery.orderedselect.js"></script>
+
+  <script type="text/javascript" src="./pub/jsonforms2/lib/jsonform.js"></script>
+  <script type="text/javascript" src="./pub/jsonforms2/lib/jsonform-api.js"></script>
+  <!--/&jsonform_scripts-->
+
+  <!--&jsonform_init()-->
+  <script>
+  window.TB = window.TB || {};
+
+  (function($) {
+    $(function() {
+      var queryParams = TB.parseQueryParams();
+      var apiUrl = TB.API_URL || queryParams['api_url'];
+      var apiKey = TB.API_KEY || queryParams['api_key'];
+
+
+      ASSERT.isDefined(apiUrl);
+      ASSERT.isDefined(apiKey);
+
+      var api = new TB.JSONForm.API({
+        apiUrl: apiUrl,
+        apiKey: apiKey,
+        serverParams: queryParams['server_params'] || null,
+      });
+      var $title = $('#tb-jfp-title');
+      var $cancel = $('#tb-jfp-btn-cancel');
+      var $submit = $('#tb-jfp-btn-submit');
+      var $form = $('#tb-jfp-form');
+      var $msgs = $('#tb-jfp-msgs');
+      var createMsgs = function(type, msg) {
+        return '<div class="alert alert-' + type + '">' + msg + '</div>';
+      };
+
+      $title.text(queryParams['form_title']);
+
+      $msgs.html(createMsgs('info', 'Loading...'));
+
+      if (!queryParams['exit_event_name']) {
+        $cancel.text('Back');
+      }
+
+      $cancel.on('click', function() {
+        if (queryParams['exit_event_name']) {
+          window.dispatchEvent(new Event(queryParams['exit_event_name']));
+        } else {
+          window.history.back();
+        }
+      });
+
+      $submit.on('click', function( e ) {
+        e.preventDefault();
+
+        var value = $form.jsonFormValue();
+
+        TRACE('Submitted form with value: ', value);
+
+        var jsonformValue = $form.jsonFormValue();
+
+        if(jsonformValue.errors instanceof Array && jsonformValue.errors.length > 0) {
+
+          return;
+        }
+
+        TRACE('Submitted form with value: ', jsonformValue.values);
+
+        api.formSubmit(jsonformValue.values)
+            .then(function() {
+              $msgs.html(createMsgs('success', 'Successfully saved settings!'));
+            }, function() {
+              $msgs.html(createMsgs('danger', 'Connection problem! Unable to submit form!'));
+            });
+      });
+
+      $msgs.on('click', '.alert', function() {
+        $(this).remove();
+      });
+
+      api.formLoad()
+        .then(function(result) {
+          $msgs.empty()
+          $form.jsonForm(result);
+        }, function() {
+          $msgs.html(createMsgs('danger', 'Connection problem! Unable to load form!'));
+        });
+
+    });
+  })(jQuery);
+
+  </script>
+  <!--/&jsonform_init-->
+<!--&body_end()-->
+</body>
+<!--/&body_end-->
+<!--&html_end()-->
+</html>
+<!--/&html_end-->

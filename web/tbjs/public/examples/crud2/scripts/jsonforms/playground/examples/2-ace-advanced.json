@@ -1,0 +1,129 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/2-ace-advanced",
+    "type": "object",
+    "properties": {
+      "field": {
+        "type": "string",
+        "maxLength": 10000,
+        "title": "A field"
+      },
+      "jsbin": {
+        "type": "object",
+        "properties": {
+          "javascript": {
+            "type": "string",
+            "title": "JavaScript"
+          },
+          "html": {
+            "type": "string",
+            "title": "HTML"
+          },
+          "css": {
+            "type": "string",
+            "title": "CSS"
+          }
+        }
+      },
+      "stylesheets": {
+        "type": "array",
+        "title": "stylesheets",
+        "items": {
+          "type": "object",
+          "title": "Stylesheet",
+          "properties": {
+            "css": {
+              "type": "string",
+              "title": "Nickname"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/2-ace-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "field",
+        "type": "ace",
+        "aceMode": "javascript"
+      },
+      {
+        "title": "Your personal JsBin",
+        "description": "Enter js, html and css in the respective tabs to get proper highlighting",
+        "type": "tabobject",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "title": "JavaScript",
+                "key": "jsbin/javascript",
+                "type": "ace",
+                "aceMode": "javascript"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "title": "HTML",
+                "key": "jsbin/html",
+                "type": "ace",
+                "aceMode": "javascript"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "title": "CSS",
+                "key": "jsbin/css",
+                "type": "ace",
+                "aceMode": "javascript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tabarray",
+        "key": "stylesheets",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "key": "stylesheets[]/css",
+              "type": "ace",
+              "aceMode": "javascript"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/2-ace-advanced",
+    "field": "\"schema\": { \n \"_JSONFORMS_VERSION\": \"2.0\", \n \"_JSONFORMS_CONTENT_VERSION\": \"2.0\", \n \"field\": { \n   \"type\": \"string\",\n   \"title\": \"A field\" \n  }\n}",
+    "jsbin": {
+      "javascript": "alert('Hello world');",
+      "html": "document.getElementById('#tb-jf-root').innerHTML = \"<h1>Hello world</h1>\";",
+      "css": "document.getElementById('#tb-jf-root').style.color =  \"red\";"
+    },
+    "stylesheets": [
+      {"css": "{\".dark\": { \"opacity\": 0 }}"},
+      {"css": "{\".hidden\": { \"display\": \"none\" }}"}
+    ]
+  }
+}
+

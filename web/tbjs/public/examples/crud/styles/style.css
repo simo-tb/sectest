@@ -1,0 +1,25 @@
+dialog {
+  min-width: 25%;
+}
+
+
+.tb-crud-cell-json-all {
+	font-style: italic;
+	cursor: pointer;
+}
+
+.tb-crud-sortable {
+	cursor: pointer;
+}
+
+.tb-crud-sortable:after {
+	display: inine;
+}
+
+.tb-crud-sort-asc:after {
+	content: '▲';
+}
+
+.tb-crud-sort-desc:after {
+	content: '▼';
+}

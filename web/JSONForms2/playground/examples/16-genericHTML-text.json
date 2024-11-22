@@ -1,0 +1,69 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "type": "object",
+    "properties": {
+      "mo~od": {
+        "type": ["null"],
+        "title": "Mood of the day",
+        "description": "Describe how you feel in short",
+        "content": "<scripT>alert('hello')</scripT><p>Hello world!</p><p><img src='https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png'></p><p><img src='https://www.google.com/photos/about/static/images/google.svg'></p>",
+        "format": "genericHTML",
+      },
+      "test": {
+        "type": ["null", "string"],
+        "title": "Name of test",
+        "description": "Sadness is real",
+      }
+    },
+  },
+
+  "form": {
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/1-input-text-basic",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mo~0od",
+        "title": "keys"
+      },
+      {
+        "key": "test",
+        "title": "test"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+
+  "content": {
+    "test": "sadness is real"
+  }
+}
+
+{
+  "form": {
+    "fields": [
+      {
+        "key": "files",
+      }
+    ]
+  },
+  "schema": {
+    "files": {
+      "type": ["array", "null"],
+      "title": "sadness",
+      "items": {
+        "type": "object",
+        "properties": {
+          "t": "string",
+          "uploaded_at": "string",
+        }
+      }
+    }
+  }
+}
+

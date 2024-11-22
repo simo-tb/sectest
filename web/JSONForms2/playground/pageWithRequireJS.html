@@ -1,0 +1,67 @@
+<!--&html_start()-->
+<!doctype html>
+<html class="no-js jf-styles" lang="en">
+<!--/&html_start-->
+<!--&head_start()-->
+<head>
+  <meta charset="utf-8">
+
+  <title>JSON Form</title>
+  <style>
+    .container {
+      margin-top: 7rem;
+    }
+  </style>
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/bootstrap/css/bootstrap-theme.min.css">
+<!--/&head_start-->
+
+  <!--&bootstrap_datetimepicker_css()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/datepicker/bootstrap-datetimepicker.min.css" />
+  <!--/&bootstrap_datetimepicker_css-->
+  <!--&selectize_bootstrap3_css()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/selectize/selectize.bootstrap3.css" />
+  <!--/&selectize_bootstrap3_css-->
+  <!--&jsonform_head()-->
+  <link rel="stylesheet" href="./pub/jsonforms2/deps/opt/orderedselect/jquery.orderedselect.css" />
+  <link rel="stylesheet" href="./pub/jsonforms2/css/style.css">
+  <!--/&jsonform_head-->
+<!--&head_end()-->
+</head>
+<!--/&head_end-->
+<!--&body_start()-->
+<body>
+<!--/&body_start-->
+  <!--&jsonform()-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a id="tb-jfp-title" class="navbar-brand"></a>
+      </div>
+
+      <form class="navbar-form navbar-right" role="search" enctype="multipart/form-data">
+        <button id="tb-jfp-btn-submit" class="btn btn-primary" type="submit">
+          Submit
+        </button>
+        <button id="tb-jfp-btn-cancel" class="btn btn-danger" type="button">
+          Cancel
+        </button>
+      </form>
+
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div id="tb-jfp-msgs"></div>
+    <div id="tb-jfp-form"></div>
+  </div>
+  <!--/&jsonform-->
+
+  <script data-require="require.js@*" data-semver="2.1.20" src="require.js" data-main="page-require.js"></script>
+  <!--/&jsonform_init-->
+<!--&body_end()-->
+</body>
+<!--/&body_end-->
+<!--&html_end()-->
+</html>
+<!--/&html_end-->

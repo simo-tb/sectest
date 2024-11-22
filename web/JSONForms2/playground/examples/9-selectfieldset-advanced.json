@@ -1,0 +1,108 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset-advanced",
+    "type": "object",
+    "properties": {
+      "connection": {
+        "anyOf": [
+          {
+            "title": "Outbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": ["outbound"]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": ["integer", "null"]
+              },
+              "remote_ip": {
+                "title": "Remote IP",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "title": "Inbound",
+            "type": "object",
+            "properties": {
+              "anyOfId": {
+                "type": "string",
+                "enum": ["inbound"]
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "port": {
+                "title": "Port",
+                "type": "integer"
+              },
+              "whitelist": {
+                "title": "Whitelist",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "title": "ip"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/9-selectfieldset-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "type": "selectfieldset",
+        "key": "connection",
+        "title": "Connection",
+        "items": [
+          {
+            "title": "Inbound",
+            "type": "section",
+            "key": "connection",
+            "anyOfId": "inbound",
+            "items": [
+              { "key": "connection/name" },
+              { "key": "connection/port" },
+              { "key": "connection/whitelist", "type": "tabarray" }
+            ]
+          },
+          {
+            "title": "Outbound",
+            "type": "section",
+            "key": "connection",
+            "anyOfId": "outbound",
+            "items": [
+              { "key": "connection/name" },
+              { "key": "connection/port" },
+              { "key": "connection/remote_ip" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "connection": {
+      "anyOfId": "outbound",
+      "name": "Test",
+      "port": null,
+      "remote_ip": "123"
+    }
+  }
+}

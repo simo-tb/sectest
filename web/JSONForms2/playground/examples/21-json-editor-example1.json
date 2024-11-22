@@ -1,0 +1,47 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/21-json-editor-example1",
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/21-json-editor-example1",
+    "type": "object",
+    "properties": {
+      "mood": {
+        "type": "string",
+        "title": "editable JSON editor",
+        "format": "json"
+      },
+      "mood2": {
+        "readOnly": true,
+        "type": "string",
+        "title": "NON editable JSON editor",
+        "format": "json"
+      }
+    }
+  },
+  "form": {
+    "strictNumberTypes": false,
+    "isStrict": false,
+    "liveValidation": true,
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/21-json-editor-example1",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "mood",
+        "type": "jsoneditor"
+      },
+      {
+        "key": "mood2",
+        "type": "jsoneditor"
+      },
+      {
+        "type": "submit",
+        "title": "Submit"
+      }
+    ]
+  },
+  "content": {
+    "$schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/21-json-editor-example1",
+    "mood": "{\n\t\"age\": 500,\n\t\"ip_address\": \"127.0.0.1\"\n}",
+    "mood2": "{\n\t\"age\": 500,\n\t\"ip_address\": \"127.0.0.1\"\n}"
+  }
+}
+

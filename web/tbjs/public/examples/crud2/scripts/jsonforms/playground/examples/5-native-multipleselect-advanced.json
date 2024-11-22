@@ -1,0 +1,118 @@
+{
+  "schema": {
+    "id": "http://jschemas.tbpro.com/tblib/jf/playground/5-native-multipleselect-advanced",
+    "type": "object",
+    "properties": {
+      "numbers": {
+        "type": "array",
+        "items": {
+          "enum": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
+          "type": "string"
+        },
+        "minItems": 2
+      },
+      "letters": {
+        "type": "array",
+        "items": {
+          "enum": ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t"],
+          "type": "string"
+        },
+        "maxItems": 3
+      },
+      "cities": {
+        "type": "array",
+        "items": {
+          "enum": ["Ruse","Yambol","Gabrovo","Varna"],
+          "type": "string"
+        }
+      },
+      "countries": {
+        "type": "array",
+        "items": {
+          "enum": ["Bulgaria", "Romania", "Serbia", "Croatia"],
+          "type": "string"
+        }
+      },
+      "menu": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "title": "Friend",
+          "properties": {
+            "menuItem": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["Musaka", "Tarator", "Shopska salad"],
+                "title": "Menu Item"
+              },
+              "default": ["Musaka"]
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "form": {
+    "schemaId": "http://jschemas.tbpro.com/tblib/jf/playground/5-native-multipleselect-advanced",
+    "jsonformVersion": "2.0",
+    "fields": [
+      {
+        "key": "numbers",
+        "title": "Order the numbers from high to low",
+        "type": "nativemultipleselect"
+      },
+      {
+        "key": "letters",
+        "title": "Select all consonants",
+        "type": "nativemultipleselect"
+      },
+      {
+        "type": "tabobject",
+        "title": "Geo Guesser",
+        "items": [
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "countries",
+                "title": "Sort the countries by population in descending order",
+                "type": "nativemultipleselect"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "cities",
+                "title": "Sort the cities by population in ascending order",
+                "type": "nativemultipleselect"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tabarray",
+        "title": "Menu",
+        "key": "menu",
+        "items": {
+          "type": "section",
+          "items": [
+            {
+              "key": "menu[]/menuItem",
+              "type": "nativemultipleselect",
+              "title": "Menu Item"
+            }
+          ]
+        }
+      },
+      {
+        "type": "submit",
+        "title": "submit"
+      }
+    ]
+  }
+}
